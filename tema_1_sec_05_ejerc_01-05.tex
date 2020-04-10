@@ -1,0 +1,94 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 5 Ejercicio 1}
+% Create a new 1st level heading
+Veamos que si hay uan correspondencia biyectiva entre $A\times B$ y $B\times A$. Sea $A\times B$ el conjunto de todas las 2-uplas tales que $\vect{x}:\{1,2\}\rightarrow A\cup B$ tales que $\vect{x}(1)\in A$ y $\vect{x}(2)\in B$. Sea $B\times A$ el conjunto de todas las 2-uplas tales que $\vect{y}:\{1,2\}\rightarrow A\cup B$ tales que $\vect{y}(1)\in B$ y $\vect{y}(2)\in A$. Por tanto si $\vect{x}(2)=\vect{y}(1)$ y $\vect{x}(1)=\vect{y}(2)$ se tiene que para todo $\vect{x}\in A\times B$ existe un único $\vect{y}\in B\times A$ y  
+para todo $\vect{y}\in B\times A$ existe un único $\vect{x}\in A\times B$
+\section{Tema 1 Sección 5 Ejercicio 2}
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Sea $n>1$. Veamos que hay una correspondencia biyectiva entre $A_1\times ...\times A_n$ y $(A_1\times ...\times A_{n-1})\times A_n$. Sea $\vect{x}$ la n-upla tal que $\vect{x}:\{1,...,n\}\rightarrow A_1\cup...\cup A_n$ Sea $\vect{y}$ la (n-1)-upla tal que $\vect{y}:\{1,...,n-1\}\rightarrow A_1\cup...\cup A_{n-1}$. Sea $\vect{z}$ la 1-upla tal que $\vect{z}:\{n\}\rightarrow A_{n}$ Sea $\vect{x}(i)=\vect{y}(i)$ para $i\in\{1,...,n-1\}$ y $\vect{x}(n)=\vect{z}(1)$. Por tanto $\vect{x}=(\vect{y},\vect{z})$. Luego, para cada $\vect{x}\in A_1\times ...\times A_n$ existe un único $(\vect{y},\vect{z})\in (A_1\times ...A_{n-1})\times A_n$ y para cada $(\vect{y},\vect{z})\in (A_1\times ...A_{n-1})\times A_n$ existe un único $\vect{x}\in A_1\times ...\times A_n$.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Sea una familia indexada $\{A_1,A_2,...\}$ y sea $B_i=A_{2i-1}\times A_{i}$ para cada entero positivo. Veamos que hay una correspondencia biyectiva entre $A_1\times A_2 \times ...$ y $B_1\times B_2 \times ...$. Sea  $\vect{x}$ la $\omega$-upla definida por $\vect{x}:\mathbb{Z}_{+} \rightarrow \cup_{i\in\mathbb{Z}_{+}}A_i$ tal que $\vect{x}(i)\in A_i$. Sea  $\vect{y}$ la $\omega$-upla definida por $\vect{y}:\mathbb{Z}_{+} \rightarrow \cup_{i\in\mathbb{Z}_{+}}B_i$  e $\vect{y}(i)$ es la 2-upla definida por $\vect{y}(i):\{1,2\}\rightarrow A_{2i-1}\cup A_{2i}$ tal que $\vect{y}(i)(1)\in A_{2i-1}$ e $\vect{y}(i)(2)\in A_{2i}$. Por tanto, si $\vect{x}(2i) = \vect{y}(i)(2)$ y $\vect{x}(2i-1) = \vect{y}(i)(1)$, es decir $\vect{x}(2i-2+j) = \vect{y}(i)(j)$ donde $i\in\mathbb{Z}_{+},j\in\{1,2\}$, entonces para cada $\vect{x}\in A_1 \times A_2 \times ...$ existe un $\vect{y}=((y(1)(1),y(1)(2)),(y(2)(1),y(2)(2)),...)\in B_1 \times B_2 \times ...$; y para cada $\vect{y}=((y(1)(1),y(1)(2)),(y(2)(1),y(2)(2)),...)\in B_1 \times B_2 \times ...$ existe un $\vect{x}\in A_1 \times A_2 \times ...$
+\section{Tema 1 Sección 5 Ejercicio 3}
+
+Sea $A=A_1 \times A_2 \times ...$ y $B=B_1 \times B_2 \times ...$. \begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que si $B_i\subset A_i$ para todo $i$ entonces $B \subset A$. Sea $\vect{x}\in B$ definido por $\vect{x}:\mathbb{Z}_{+}\rightarrow \cup_{i\in \mathbb{Z}_{+}} B_i$. Como $B_i \subset A_i$ para todo $i\in \mathbb{Z}_{+}$, se tiene que $B_1\subset A_1$. Supongamos que se cumple $\cup_{1\leq i \leq n} B_i\subset \cup_{1\leq i \leq n} A_i$ y $B_{n+1}\subset A_{n+1}$, entonces $(\cup_{1\leq i \leq n} B_i)\cup B_{n+1}\subset (\cup_{1\leq i \leq n} A_i)\cup B_{n+1}\subset (\cup_{1\leq i \leq n} A_i)\cup A_{n+1}$ por tanto $\cup_{1\leq i \leq n+1} B_i\subset \cup_{1\leq i \leq n+1} A_i$. Entonces, por el principio de inducción, $\cup_{i\in\mathbb{Z}_{+}} B_i\subset \cup_{i\in\mathbb{Z}_{+}} A_i$ por tanto $\vect{x}:\mathbb{Z}_{+}\rightarrow \cup_{i\in \mathbb{Z}_{+}} B_i\subset \cup_{i\in \mathbb{Z}_{+}} A_i\Rightarrow \vect{x}\in A$
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos que si $B\subset A$ y $B$ es no vacío entonces, para todo $i$, $B_i\subset A_i$. Si $B\subset A$ entonces $\vect{x}\in B\Rightarrow \vect{x}\in A$. Por tanto, $\vect{x}\in B_1\times B_2\times ...\Rightarrow \vect{x}\in A_1 \times A_2 \times ...$  Pero $\vect{x}\in B_1\times B_2\times ... \Leftrightarrow \vect{x}(i)\in B_i$ y $\vect{x}\in A_1\times A_2\times ... \Leftrightarrow \vect{x}(i)\in A_i$  para cada $i\in\mathbb{Z}_{+}$. Por tanto, $\vect{x}(i)\in B_i \Leftrightarrow \vect{x}\in B \Rightarrow \vect{x}\in A \Leftrightarrow \vect{x}(i)\in A_i$. Por tanto $\vect{x}(i)\in B_i \Rightarrow  \vect{x}(i)\in A_i$ implica $B_i\subset A_i$.
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Vemaos que si $A$ es no vacío, cada $A_i$ es no vacío. Si $A$ es no vacío, significa que existe al menos una $\omega$-upla $\vect{x}\in A$ tal que $\vect{x}(i)\in A_i$ para cada $i\in \mathbb{Z}_{+}$, luego si existe un $\vect{x}(i)\in A_i$ para cada $i\in \mathbb{Z}_{+}$, cada $A_i$ es no vacío. Si $A_i$ es no vacío para cada $i\in \mathbb{Z}_{+}$ se tendrá que la función $\vect{x}:\mathbb{Z}_{+}\rightarrow A_1\cup A_{2}\cup...$ produciría $\omega$-uplas $(x_1,x_2,..)$ que pertenecen a $A$. Por tanto $A$ no será vacío.\begin{itemize}
+\item \bf (d) \rm
+\end{itemize}
+Veamos que $A\cup B$ es lo mismo que $\Pi_{i\in\mathbb{Z}_{+}}A_i\cup B_i$. Si $\vect{x}\in A\cup B$ entonces $\vect{x}\in A$  o $\vect{x}\in B$. Por tanto $\vect{x}(i)\in  A_i$ o $\vect{x}(i)\in  B_i$ para todo $i\in\mathbb{Z}_{+}$ por tanto $\vect{x}(i)\in  A_i\cup B_i$. Por tanto $\vect{x}\in \Pi_{i\in\mathbb{Z}_{+}}A_i\cup B_i$. Luego  $\vect{x}\in A\cup B\Rightarrow \vect{x}\in \Pi_{i\in\mathbb{Z}_{+}}A_i\cup B_i$ si y solo si $A\cup B \subset\Pi_{i\in\mathbb{Z}_{+}}A_i\cup B_i$. Del mismo modo, si $\vect{x}\in \Pi_{i\in\mathbb{Z}_{+}}A_i\cup B_i$ entonces $\vect{x}(i)\in  A_i\cup B_i$ entonces $\vect{x}(i)\in  A_i$ o $\vect{x}(i)\in  B_i$ para todo $i\in\mathbb{Z}_{+}$ y $\vect{x}\in A$  o $\vect{x}\in B$ entonces $\vect{x}\in A \cup B$. Por tanto $\vect{x}\in \Pi_{i\in\mathbb{Z}_{+}}A_i\cup B_i\Rightarrow \vect{x}\in A\cup B$ si y solo si $ \Pi_{i\in\mathbb{Z}_{+}}A_i\cup B_i\subset A\cup B$. Entonces se concluye que $ \Pi_{i\in\mathbb{Z}_{+}}A_i\cup B_i= A\cup B$.
+\newline
+Veamos que $A\cap B$ es lo mismo que $\Pi_{i\in\mathbb{Z}_{+}}A_i\cap B_i$. Si $\vect{x}\in A\cap B$ entonces $\vect{x}\in A$  y $\vect{x}\in B$. Por tanto $\vect{x}(i)\in  A_i$ y $\vect{x}(i)\in  B_i$ para todo $i\in\mathbb{Z}_{+}$ por tanto $\vect{x}(i)\in  A_i\cap B_i$. Por tanto $\vect{x}\in \Pi_{i\in\mathbb{Z}_{+}}A_i\cap B_i$. Luego  $\vect{x}\in A\cap B\Rightarrow \vect{x}\in \Pi_{i\in\mathbb{Z}_{+}}A_i\cap B_i$ si y solo si $A\cap B \subset\Pi_{i\in\mathbb{Z}_{+}}A_i\cap B_i$. Del mismo modo, si $\vect{x}\in \Pi_{i\in\mathbb{Z}_{+}}A_i\cap B_i$ entonces $\vect{x}(i)\in  A_i\cap B_i$ entonces $\vect{x}(i)\in  A_i$ y $\vect{x}(i)\in  B_i$ para todo $i\in\mathbb{Z}_{+}$ y $\vect{x}\in A$ y $\vect{x}\in B$ entonces $\vect{x}\in A \cap B$. Por tanto $\vect{x}\in \Pi_{i\in\mathbb{Z}_{+}}A_i\cap B_i\Rightarrow \vect{x}\in A\cap B$ si y solo si $ \Pi_{i\in\mathbb{Z}_{+}}A_i\cap B_i\subset A\cap B$. Entonces se concluye que $ \Pi_{i\in\mathbb{Z}_{+}}A_i\cap B_i= A\cap B$. 
+\section{Tema 1 Sección 5 Ejercicio 4}
+Sean $m,n\in\mathbb{Z}_{+}$ y $X\neq \emptyset$
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Si $m\leq n$, veamos que hay una aplicación inyectiva $f:X^{m}\rightarrow X^{n}$. Sean $x_1,x_2,...,x_n\in X$ y defínase $f(x_1, x_2,...,x_m)=(x_1, x_2,...,x_m)$ si $m=n$ y $f(x_1, x_2,...,x_m)=(x_1, x_2,...,x_m,x_1,...,x_{n-m})$ si $m<n$.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos que hay una aplicación biyectiva $g:X^{m}\times X^{n}\rightarrow X^{m+n}$. esta función es la misma que $g:X^{m+n}\rightarrow X^{m+n}$. Por tanto, sea $x_1,x_2,...x_{m+n}\in X$ y sea $g(x_1,x_2,...x_{m+n})=(x_1,x_2,...x_{m+n})$
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Veamos que hay una aplicación inyectiva $h:X^{n}\rightarrow X^{\omega}$. Sea $x_1,x_2,...x_{n}\in X$. Entonces sea $h(x_1,x_2,...x_{n})=(x_1,x_2,...x_{n},2x_1,2x_2,...2x_{n},...,jx_1,jx_2,...jx_{n},...)$ donde $j\in\mathbb{Z}_{+}$
+\begin{itemize}
+\item \bf (d) \rm
+\end{itemize}
+Veamos que hay una aplicación biyectiva $k:X^{n}\times X^{\omega}\rightarrow X^{\omega}$. Veamos que $X^{n}\times X^{\omega}=X^{\omega}$. Se define $X^{\omega}=\Pi_{i\in \mathbb{Z}_{+}}X$. Si fuera $b$ una cota superior de $\mathbb{Z}_{+}$, se tendría que $b+n$ seria otra acota superior. Entonces $X^{n}\times X^{\omega}=X^{n}\times \Pi^b_{i=1}X=\Pi^{b+n}_{i=1}X$ pero como $\mathbb{Z}_{+}$ no tiene cota superior, se tiene  $\Pi^{b+n}_{i=1}X=\Pi_{i=\mathbb{Z}_{+}}$, por tanto $X^{n}\times X^{\omega}=X^{\omega}$. Por tanto la función $k:X^{n}\times X^{\omega}\rightarrow X^{\omega}$ es la misma que $k:X^{\omega}\rightarrow X^{\omega}$ y si $x_1,x_2,...\in X$ entonces  $k(x_1,x_2,...)=(x_1,x_2,...)$ es una función biyectiva.
+\begin{itemize}
+\item \bf (e) \rm
+\end{itemize}
+Veamos que hay una aplicación biyectiva $l:X^{\omega}\times X^{\omega}\rightarrow X^{\omega}$. Veamos que $X^{\omega}\times X^{\omega}=X^{\omega}$. Se define $X^{\omega}=\Pi_{i\in \mathbb{Z}_{+}}X$. Si fuera $b$ una cota superior de $\mathbb{Z}_{+}$, se tendría que $b+b$ seria otra acota superior. Entonces $X^{\omega}\times X^{\omega}=X^{\omega}\times \Pi^b_{i=1}X=\Pi^{b+b}_{i=1}X$ pero como $\mathbb{Z}_{+}$ no tiene cota superior, se tiene  $\Pi^{b+b}_{i=1}X=\Pi_{i=\mathbb{Z}_{+}}X$, por tanto $X^{\omega}\times X^{\omega}=X^{\omega}$. Por tanto la función $l:X^{\omega}\times X^{\omega}\rightarrow X^{\omega}$ es la misma que $l:X^{\omega}\rightarrow X^{\omega}$ y si $x_1,x_2,...\in X$ entonces  $l(x_1,x_2,...)=(x_1,x_2,...)$ es una función biyectiva.
+\begin{itemize}
+\item \bf (f) \rm
+\end{itemize}
+Si $A\subset B$, veamos que hay una aplicación inyectiva $m:\left(A^{\omega}\right)^n\rightarrow B^{\omega}$. Veamos que $\left(A^{\omega}\right)^n=A^{\omega}$. Se define $A^{\omega}=\Pi_{i\in \mathbb{Z}_{+}}A$. Si fuera $a$ una cota superior de $\mathbb{Z}_{+}$, se tendría que $n\cdot a$ seria otra acota superior. Entonces $\left(A^{\omega}\right)^n=\left(\Pi^a_{i=1}A\right)^n=\Pi^{na}_{i=1}X$ pero como $\mathbb{Z}_{+}$ no tiene cota superior, se tiene  $\Pi^{na}_{i=1}A=\Pi_{i=\mathbb{Z}_{+}}A$, por tanto $\left(A^{\omega}\right)^n=A^{\omega}$. Luego $m:\left(A^{\omega}\right)^n\rightarrow B^{\omega}$. es lo mismo que $m:A^{\omega}\rightarrow B^{\omega}$. Sea $x_1,x_2,...\in A$ entonces $m(x_1,x_2,...)=(x_1,x_2,...)$ es  una función inyectiva.
+\section{Tema 1 Sección 5 Ejercicio 5}
+Veamos cuáles de los siguientes conjuntos de $\mathbb{R}^{\omega}$ se pueden escribir como producto cartesiano de subconjuntos de $\mathbb{R}$
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Sea el conjunto $\{\vect{x}| x_i\in\mathbb{Z}\text{ para todo }i\}$. Por tanto este conjunto está dado por la $\omega$-tupla $(x_1,x_2,...)\in \mathbb{Z}^{\omega}$ por ejercicio 3 (a) se tiene que $\mathbb{Z}\subset \mathbb{R}\Rightarrow \mathbb{Z}^{\omega}\subset \mathbb{R}^{\omega}$ por tanto $\{\vect{x}| x_i\in\mathbb{Z}\text{ para todo }i\}\subset \mathbb{R}^{\omega}$
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Sea el conjunto $\{\vect{x}| x_i\geq i \text{ para todo }i\}$
+Si $i=1$ entonces $\{x_1|x_1 \geq 1 \} \subset \mathbb{R}$. Suponiendo que $\{x_n|x_n \geq n \} \subset \mathbb{R}$, se tiene que $x_n\geq n\Rightarrow x_n+1\geq n+1$ y si $x_{n+1}=x_n+1$, entonces se tiene que $\{x_{n+1}|x_{n+1} \geq n+1 \} \subset \mathbb{R}$. Luego, por el principio de inducción $\{x_i|x_i \geq i \} \subset \mathbb{R}$
+ para todo $i\in \mathbb{Z}_{+}$. Y por ejercicio 3 (a) se tiene que $\{\vect{x}|x_i \geq i \text{ para todo }i\}=(\{x_1|x_1 \geq 1\}\times \{x_2|x_2 \geq 2 \} \times ...)\subset \mathbb{R}^{\omega}$.
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Sea $\{\vect{x}|x_i\in\mathbb{Z}_{+}, \text{ para todo }i\geq 100\}$ dado que los $x_i$ no están definidos para $i<100$, este conjunto no se puede expresar como producto cartesiano de subconjuntos de $\mathbb{R}$
+\begin{itemize}
+\item \bf (d) \rm
+\end{itemize}
+Sea $\{\vect{x}|x_2=x_3\}$ dado que los $x_i$ no están definidos para $i\neq 2,3$, este conjunto no se puede expresar como producto cartesiano de subconjuntos de $\mathbb{R}$
+% Uncom\Rightarrow  a^n \cdot a^{0} =a^{n}ment the following two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}

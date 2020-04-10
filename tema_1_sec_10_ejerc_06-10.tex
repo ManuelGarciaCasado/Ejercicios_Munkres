@@ -1,0 +1,100 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 10 Ejercicio 6}
+Sea $S_{\Omega}$ el conjunto bien ordenado no numerable minimal.
+\begin{itemize}
+\item \bf (a)\rm
+\end{itemize}
+Veamos que $S_{\Omega}$ no tiene máximo. Si $S_{\Omega}$ es bien ordenado no numerable minimal, por definición, cualquier sección suya es numerable. Pero si $S_{\Omega}$ tuviera máximo $a$, por el teorema 10.2, habría una sección $S_{\Omega}-\{a\}$ que sería no numerable. Lo cual es una contradicción.
+\begin{itemize}
+\item \bf (b)\rm
+\end{itemize}
+Veamos que para todo  $a\in S_{\Omega}$ el subconjunto $X_a=\{x|a<x\}$ es no numerable. Dado que $S_\Omega$ es el conjunto bien ordenado no numerable minimal, existe un conjuto $A$ bien ordenado con máximo $\Omega$ tal que $S_{\Omega}$ es la sección no numerable y todas las demás secciones son numerables. Por tanto $S_a=\{x|x<a\}$ es numerable. Entonces, $B=A-S_a-\{a\}=\{x|a< x\leq \Omega\}$ es un conjunto bien ordenado con máximo $\Omega$. Por tanto hay una sección $S'_\Omega=\{x|x<\Omega, x\in B\}$ tal que es no numerable y cualquier otra sección de $B$ es numerable. Pero $S'_\Omega=X_a$. Por tanto, $X_a$ es no numerable. 
+\begin{itemize}
+\item \bf (c)\rm
+\end{itemize}
+Sea el subconjunto $X_0\subset S_{\Omega}$ definido por $X_0=\{x|x\in S_{\Omega}\text{ y } x \\\text{ no tiene inmediato predecesor} \}$. Un elemento $a\in S_{\Omega}$ no tiene inmediato predecesor $b$ si $\{x|a <x<b\text{ y }a\in S_{\Omega}, b\in S_{\Omega}\}\neq \varnothing $. Veamos que $X_0$ es no numerable. Supongamos que $X_0$ es numerable. Entonces, por el teorema 10.2, habrá una sección $S_a$ numerable tal que $X_0\subset S_a$. Sea $a$ el supremo de $S_a$, éste existe por ejercicio 1. Entonces $a$ es cota superior de $X_0$. Sea $c_0$ el supremo de $X_0$. Como $c_0\in S_{a}$, $c_0$ tiene inmediato sucesor por ejercicio 2(a). Sea $c_1$ el inmediato sucesor de $c_0$; $c_2$, el inmediato sucesor de $c_1$;... Se puede construir una sucesión de inmediatos sucesores $C=\{c_0,c_1,c_2,...\}$. Entonces, $C$ tiene un límite superior $a$. Supongamos que $a$ tiene inmediato predecesor $b$. Entonces $b<c_n\leq a$ para algún $n\in \mathbb{Z}_{+}\cup\{0\}$. Pero el inmediato sucesor de $b$ es $a$ y el inmediato sucesor de $c_n$ es $c_n$, luego $b<a=c_n<c_{n+1}$. Lo cual contradice el hecho de que $a$ es el supremo. Por tanto, no existe tal predecesor $b$  Por tanto, $a\in X_0$ y $a\geq c_n> c_0\geq a$ lo cual es contradictorio. Por tanto, $X_0$ es no numerable.
+\section{Tema 1 Sección 10 Ejercicio 7}
+Veamos que si $J$ es conjunto bien ordenado y $J_0$ es inductivo de $J$, entonces $J=J_0$. Por definición de inductivo $J_0 \subset J$. Por tanto, solamente hay que demostrar que $J\subset J_0$. Supongamos $J_0$ es inductivo y $J$ bien ordenado. Entonces, como $J$ es bien ordenado, para todo $\alpha \in J$ existe un $S_{\alpha}$. Por tanto, como $J_0$ es inductivo, para todo $\alpha \in J$ existe un $S_{\alpha}$ tal que $S_{\alpha}\subset J_0$ entonces $\alpha \in J_{0}$. Por tanto, para todo $\alpha \in J$  se tiene que $\alpha \in J_0$. Luego $J\subset J_0$. Luego $J=J_{0}$.
+\section{Tema 1 Sección 10 Ejercicio 8}
+\begin{itemize}
+\item \bf(a)\rm
+\end{itemize}
+Sean $A_1$ y $A_2$ dos conjuntos bien ordenados disjuntos con relaciones de orden $<_1$ y $<_2$ respectivamente. Se define la relación de orden en $A_1\cup A_2$ como $a<b$ si $a,b\in A_1$ y  $a<_1 b$ o $a,b\in A_2$ y  $a<_2 b$ o $a\in A_1$ y  $b\in A_2$. Veamos que es un buen orden. Sea $X\subset A_1\cup A_2$. Entonces si $X\cap A_1$ es no vacío, se tiene que $X\cap A_1\subset A_1$. Por ser $A_1$ bien ordenado, todo subconjunto no vacío está bien ordenado, por tanto, $X\cap A_1$ tiene mínimo. Por tanto, si $X\cap A_1\neq \varnothing$ y $X\cap A_2 = \varnothing$ el mínimo de $X$ existe y es el mínimo de $X\cap A_1$. Del mismo modo, si $X\cap A_2\neq \varnothing$ y $X\cap A_1= \varnothing$ el mínimo de $X$ existe y es el mínimo de $X\cap A_2$. En en caso de que $X\cap A_1\neq \varnothing$ y $X\cap A_2 \neq \varnothing$ se tiene que $X\cap A_1$ tiene mínimo $a_1$ y $X\cap A_2$ tiene mínimo $a_2$. Luego por definición, ya que $a_1\in A_1$ y $a_2\in A_2$ se tiene que $a_1<a_2$, luego $a_1$ es el mínimo de $X\cap A_1\cup X\cap A_2$ y por tanto de $X$. Entonces, en todo caso se tiene que $X$ tiene mínimo. Por tanto, $X$ es bien ordenado y $<$ es un buen orden.
+\begin{itemize}
+\item \bf(b)\rm
+\end{itemize}
+Defínase la relación de orden $<$ de la siguiente manera. Sean los conjuntos $A_{\alpha}$ bien ordenados por las relaciones de orden $<_{\alpha}$ donde $\alpha \in B$ y donde $B$ está bien ordenado. Entonces $a<b$ en $\cup_{\alpha \in B}A_{\alpha}$ si i) $a,b\in A_{\alpha}$ y $a<_{\alpha}b$ para cualquier $\alpha \in B$ o ii) $a\in A_{\alpha}$, $b\in A_{\beta}$ y $\alpha$ es menor que $\beta$ en $B$. Veamos que es un buen orden. Sea $X\subset \cup_{\alpha \in B}A_{\alpha}$. Entonces si $X\cap A_{\alpha}$ es no vacío, se tiene que $X\cap A_{\alpha}\subset A_{\alpha}$. Por ser $A_{\alpha}$ bien ordenado, todo subconjunto no vacío está bien ordenado, por tanto, $X\cap A_{\alpha}$ tiene mínimo. Por tanto, si $X\cap A_{\alpha}\neq \varnothing$ y $X\cap A_{\beta} = \varnothing$, para cualquier $\beta\neq \alpha$, el mínimo de $X$ existe y es el mínimo de $X\cap A_{\alpha}$. Sea $C\subset B$ el conjunto de los $\lambda$ para los cuales $X\cap A_{\lambda}\neq \varnothing$. Entonces se tiene que los $X\cap A_\lambda$ tendrán mínimos $a_{\lambda}$, respectivamente. Luego por definición, ya que $a_{\lambda}\in A_{\lambda}$ y $B$ es ordenado, el subconjuto  $C$ tendrá un mínimo $\lambda_{0}$, luego $a_{\lambda_0}$ es el mínimo de $X\cap \cup_{\alpha \in B}A_{\alpha}$ y por tanto de $X$. Entonces, en todo caso se tiene que $X$ tiene mínimo. Por tanto, $X$ es bien ordenado y $<$ es un buen orden.
+\section{Tema 1 Sección 10 Ejercicio 9}
+Se define el subconjunto $A\subset \mathbb{Z}_{+}^{\omega}$ formado por la sucesión infinita de $\vect{x}$ tales que acaba con una cadena de unos, $x_i=1$ a patir de un $n<i$. Sea el orden $\vect{x}<\vect{y}$ en A definido como $x_n<y_n$ y $x_i=y_i$ para $i>n$.
+\begin{itemize}
+\item \bf(a)\rm
+\end{itemize}
+Veamos que para todo $n$ existe una sección de $A$ que tiene el mismo orden que el orden del diccionario en $\mathbb{Z}^n_{+}$. Dos conjuntos tienen el mismo tipo de orden si existe una aplicación biyectiva entre ellos.
+Sea $B=\mathbb{Z}^n_{+}\times \{1\}\times \{1\}\times...\subset A$. Como se verá mas adelante, $A$ es bien ordenado, $B$ también lo es. Por tanto, según ejercicio 1, $B$ tiene un supremo ( llamémoslo  $b$) y por tanto, $B=S_{b}=\{x|x\in A \text{ y }x<b\}$ es una sección de $A$. Sea la aplicación $f:\mathbb{Z}^n_{+}\rightarrow S_{b}$, definida por $f(x_1,x_2,...,x_n)=(x_n,x_{n-1},...,x_1,1,1,...)$. Por tanto, se tiene que si $(a_1,a_2,a_3,...,a_n)<(b_1,b_2,b_3,...,b_n)$ entonces $a_i=b_i$ para todo $i<j$ y $a_j<b_j$ para algún $j\leq n$. Por tanto, según la definición se tiene que $(a_n,...,a_3,a_2,a_1,1,1,...)<(b_n,...,b_3,b_2,b_1,1,1,...)$ y $f(a_1,a_2,a_3,...,a_n)<f(b_1,b_2,b_3,...,b_n)$. Igualmente se tiene que si $f(a_1,a_2,a_3,...,a_n)<f(b_1,b_2,b_3,...,b_n)$ entonces $(a_n,...,a_3,a_2,a_1,1,1,...)<(b_n,...,b_3,b_2,b_1,1,1,...)$ y entonces $a_i=b_i$ para todo $i<j$ y $a_j<b_j$ para algún $j\leq n$ y por tanto $(a_1,a_2,a_3,...,a_n)<(b_1,b_2,b_3,...,b_n)$. Lo cual implica que si $f(a_1,a_2,a_3,...,a_n)<f(b_1,b_2,b_3,...,b_n)$ entonces $(a_1,a_2,a_3,...,a_n)<(b_1,b_2,b_3,...,b_n)$. Como para todo  $\vect{y}\in S_{b}$ existe un $f(\vect{x})=\vect{y}$ y un único $\vect{x}\in \mathbb{Z}^n_{+}$, se tiene que $f$ es biyectiva y por tanto, $\mathbb{Z}^n_{+}$ y una sección de $A$ tienen el mismo tipo de orden.
+\begin{itemize}
+\item \bf(b)\rm
+\end{itemize}
+Veamos que $A$ es bien ordenado con el orden antidiccionario.  Estonces $A_n=\mathbb{Z}^n_{+}\times \{1\}\times \{1\}\times...$ es subconjunto de $A$ para todo $n$. Si $n=1$, el conjunto $C_1=\{c|c\times 1 \times 1 \times ...\in X_1\}$ con $X_1\subset A_1$ es un subconjunto de $\mathbb{Z}_{+}$ y por tanto tiene mínimo $c_1$. Por definición de orden antidiccionario $c_1\times 1 \times 1 \times ...$ es el mínimo de $X_1$. Por tanto, todo subconjunto no vacío de $A_1$ tiene mínimo. Supongamos que todo subconjunto no vacío $X_{n-1}$ de $A_{n-1}$ tiene mínimo $c_{n-1}$. Entonces el conjunto $C_n=\{c|c\times X_{n-1}\}$ es un subconjunto de $\mathbb{Z}_{+}$ y por tanto tiene mínimo $c_n$. Por definición de orden antidiccionario $c_n\times c_{n-1}$ es el mínimo de $X_n$. Por tanto, todo subconjunto no vacío de $A_n$ tiene mínimo. Por inducción, para todo $n$, 
+todo subconjunto no vacío de $A_n$ tiene mínimo. Por tanto, todo subconjunto no vacío de $A$ tiene mínimo. Por tanto, $A$ está bien ordenado.
+\section{Tema 1 Sección 10 Ejercicio 10}
+Sean $J$ y $C$ conjuntos bien ordenados. Veamos que, no habiendo ninguna función sobreyectiva de una sección de $J$ en $C$, hay una única función de $h:J\rightarrow C$ que, verifica 
+\begin{eqnarray}
+h(x)=\text{mínimo}\{C-h(S_x)\}
+\end{eqnarray}
+para cada x, con $S_x$ una sección de $J$ por $x$.
+\begin{itemize}
+\item \bf(a)\rm
+\end{itemize}
+Supongamos que hay otra $k:S_{\alpha}\rightarrow C$ que verifica (1) tal que existe un $x\in S_{\alpha}\subset J$ mínimo para el cual $k(x)\neq h(x)$. Veamos que ese $x$ no es el mínimo de $S_{\alpha}$. Como $J$ es no vació y $S_{\alpha}$ es subconjuto de conjunto bien ordenado, tendrá un mínimo $y$ por ser bien ordenado. Entonces $S_{y}=\varnothing$. Por tanto, $h(y)=\text{mínimo}\{C\}$ y $k(y)=\text{mínimo}\{C\}$, luego $h(y)=k(y)$. Por tanto, $x$ no es $y$. Entonces $h(x)=\text{mínimo}\{C-h(S_x)\}$ y $k(x)=\text{mínimo}\{C-k(S_x)\}$ pero como $h(S_x)=k(S_x)$ , se tiene $h(x)=\text{mínimo}\{C-h(S_x)\}$ y $k(x)=\text{mínimo}\{C-k(S_x\}$ Luego $k(x)=\text{mínimo}\{C-h(S_x)\}$. Por tanto $h(x)=k(x)$, lo cual contradice la suposicion inicial. Entonces no existe tal $x$ que $h(x)\neq k(x)$. Por tanto, $h(x)=k(x)$ para todo $x\in S_{\alpha}$. Lo mismo ocurre si $k:J\rightarrow C$.
+\begin{itemize}
+\item \bf(b)\rm
+\end{itemize}
+Veamos que si existe una función $h:S_{\alpha}\rightarrow C$ que verifica (1) entonces existe una función $k:S_{\alpha}\cup\{\alpha\}\rightarrow C$ que verifica (1).
+Sea $k$ definida por
+\begin{eqnarray}
+k(x)=\begin{cases}
+h(x)\text{ para } x\in S_{\alpha}\nonumber\\
+\text{mínimo}\{C-h(S_x)\}\text{ para }x=\alpha
+\end{cases}
+\end{eqnarray}
+Entonces, se tiene que $k(x)=h(x)$ para todo $x\in S_{\alpha}$ por tanto $k(S_x)=h(S_x)$. Luego $k(x)=\text{mínimo}\{C-h(S_x)\}=\text{mínimo}\{C-k(S_x)\}$ para todo $x\in S_{\alpha}$. Cuando $x=\alpha$ se tiene $k(\alpha)=\text{mínimo}\{C-h(S_\alpha)\}=\text{mínimo}\{C-k(S_\alpha)\}$. Por tanto, 
+$k(x)=\text{mínimo}\{C-k(S_x)\}$ para todo $x\in S_{\alpha}\cup\{\alpha\}$ y $k$ verifica (1) en todo su dominio.
+\begin{itemize}
+\item \bf(c)\rm
+\end{itemize}
+Veamos que si $K\subset J$ y para todo $\alpha\in K$ existe una función $h_{\alpha}:S_{\alpha}\rightarrow C$ verificando (1) entonces existe una función 
+\begin{eqnarray}
+k:\bigcup_{\alpha \in K}S_{\alpha}\rightarrow C\nonumber
+\end{eqnarray}
+que también verifica (1). Dado que existe $h_{\alpha}:S_{\alpha}\rightarrow C$, se tiene que $k(S_{\alpha})=h_{\alpha}(S_{\alpha})$ por el ejercicio (b). Por tanto $k(S_{\alpha})$ verifica (1) para todo $\alpha \in K$. Entonces $\cup_{\alpha \in K}k(S_{\alpha})$ verifica (1). Como $k(\cup_{\alpha \in K}S_{\alpha})=\cup_{\alpha \in K}k(S_{\alpha})$, por las propiedades de conjuntos en las funciones, se tiene que $k(\cup_{\alpha \in K}S_{\alpha})$ también verifica (1).
+\begin{itemize}
+\item \bf(d)\rm
+\end{itemize}
+Veamos que para todo $\beta \in J$ existe una función $h_{\beta}:S_{\beta}\rightarrow C$ verificando (1). Sea $J_0\subset J$ el conjunto de los $\beta$ para los cuales $h_{\beta}:S_{\beta}\rightarrow C$ verifica (1). Entonces, si $\beta$ tiene inmediato predecesor $\alpha\in J$ defínase $S_{\beta}=\{\alpha\}\cup S_{\alpha}$. Como $h_{\beta}:S_{\beta}\rightarrow C$ verifica (1), se tiene que  $S_{\alpha}\subset J_0\Rightarrow \alpha \in J_0$ por ejercicio (b). Por tanto, se tiene que para todo $\alpha \in J$ tal que $\alpha$ es inmediato predecesor de $\beta$, $S_{\alpha}\subset J_0\Rightarrow \alpha \in J_0$.
+Si $\beta\in J_0$ no tiene inmediato predecesor sea $S_{\beta}=\cup_{\alpha<\beta}S_{\alpha}$ entonces $h_{\beta}:S_{\beta}\rightarrow C$ para todo $\beta\in J_0$ y por tanto $h_{\beta}:\cup_{\alpha<\beta} S_{\alpha}\rightarrow C$ y por ejercicio (c), $k:\cup_{\beta\in J_0}\cup_{\alpha<\beta} S_{\alpha}\rightarrow C$ Por tanto $k:S_{\alpha}\rightarrow C$. Luego renombrabdo $k=h_{\alpha}$ se tiene $h_{\alpha}:S_{\alpha}\rightarrow C$ luego $\alpha \in J_0$. Luego $S_{\alpha}\subset J_0\Rightarrow \alpha \in J_0$. Por el teorema de recursión transfinita, $J_0=J$ y se cumple que para todo $\beta \in J$ existe una función $h_{\beta}:S_{\beta}\rightarrow C$ verificando (1).
+\begin{itemize}
+\item \bf(e)\rm
+\end{itemize}
+Por (d) para todo $\beta\in J$ se tiene que existe $h_{\beta}:S_{\beta}\rightarrow C$ cumple (1). Entonces, por (c) para todo $\beta\in J$ se tiene que $k :\cup_{\beta\in J}S_{\beta}\rightarrow  C$ cumple (1). Y por (b) para todo $\beta\in J$ se tiene que $k :\{\beta\}\cup S_{\beta}\rightarrow  C$ cumple (1). Por tanto, para todo $\beta\in J$ se tiene que $k(\beta)=h(\beta)$. Luego, hay una única función  $h:J\rightarrow C$ que cumple (1).
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

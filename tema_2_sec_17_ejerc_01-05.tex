@@ -1,0 +1,32 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 17 Ejercicio 1}
+Sea $\mathcal{C}$ una coleción de subconjuntos de $X$ tal que $X,\varnothing\in \mathcal{C}$, la unión finita de elementos de $\mathcal{C}$ está en $\mathcal{C}$ y la intersección arbitraria de elementos de $\mathcal{C}$ está en $\mathcal{C}$. Veamos que $\mathcal{T}=\{X-C|C\in\mathcal{C}\}$ es una topología sobre $X$. Como $\varnothing\in \mathcal{C}$, $X-\varnothing=X\in \mathcal{T}$. Como $X\in \mathcal{C}$, $X-X=\varnothing\in \mathcal{T}$. Sea los $X-C_i$ con $i\in \mathbb{Z}_+$ conjuntos de la colección $\mathcal{T}$ de $X$. Como hay un $A\in \mathcal{C}$ tal que $A=\cup^n_{i=1}C_i$ se tiene que $X-A=X-(\cup^n_{i=1}C_i)$ y como $X-(\cup^n_{i=1}C_i)=\cap^n_{i=1}(X-C_i)$, por la ley de De Morgan, se tiene la unión finita de elementos de $\mathcal{T}$ está también en $\mathcal{T}$. Por otro lado, sean los $X-C_\alpha$ con $\alpha\in J$ (conjunto indexante) conjuntos de la colección $\mathcal{T}$ de $X$. Entonces hay un $B\in \mathcal{C}$ tal que $B=\cup_{\alpha\in J}C_\alpha$. Por tanto, se tiene que $X-B=X-(\cup^n_{i=1}C_i)$ y como $X-(\cap_{\alpha\in J}C_{\alpha})=\cup_{\alpha\in J}(X-C_\alpha)$, por la ley de De Morgan, se tiene que la unión arbitraria de conjuntos de $\mathcal{T}$ pertenece a $\mathcal{T}$. Por tanto, $\mathcal{T}$ es una topología.
+
+\section{Tema 2 Sección 17 Ejercicio 2}
+Veamos que si $A$ es cerrado en $Y$ e $Y$ es cerrado en $X$ entonces $A$ es cerrado en $X$.  Por teorema 17.2, como $Y$ es subespacio de $X$, $A$ es cerrado en $Y$ si, y sólo si, existe un cerrado $B\in X$ tal que $A=B\cap Y$. Como $Y$ es cerrado en $X$, y la intersección de cerrados en $X$ es cerrado en $X$, por teorema 17.1 caso (2), se deduce que $A$ es cerrado en $X$.
+
+\section{Tema 2 Sección 17 Ejercicio 3}
+Veamos que si $A$ es cerrado en $X$ y $B$ es cerrado en $Y$, entonces $A\times B$ es cerrado en $X\times Y$. Si $A$ es cerrado en $X$, $X-A$ es abierto en $X$; y si $B$ es cerrado en $Y$, $Y-B$ es abierto en $Y$. Por tanto, $(X-A)\times Y$ y $X\times(Y-B)$ son abiertos de $X\times Y$, por ser elementos de la subbase, teorema 15.2. Por tanto $X\times Y-A\times B=((X-A)\times Y)\cup (X\times(Y-B))$ es abierto de $X\times Y$. Por tanto $A\times B$ es cerrado.
+
+\section{Tema 2 Sección 17 Ejercicio 4}
+
+Veamos que si $U$ es abierto en $X$ y $A$ es cerrado en $X$ entonces $U-A$ es abierto en $X$ y $A-U$ es cerrado en $X$. Si $A$ es cerrado, $X-A$ es abierto, y si $U$ es abierto $X-U$ es cerrado. Se tiene que $U-A=U\cap (X-A)$ es abierto por ser intersección de dos abiertos en $X$. Además $A-U=A\cap(X-U)$ es cerrado por ser intersección de dos cerrados en $X$.
+\section{Tema 2 Sección 17 Ejercicio 5}
+
+Sea $X$ un conjunto ordenado con la topología del orden. Veamos que $\overline{(a,b)}\subset[a,b]$. Dado que $\overline{(a,b)}$ es la intersección de toddos los conjuntos cerrados de $X$ que contienen a $(a,b)$ y dado que $[a,b]$ es un conjunto cerrado que contiene a $(a,b)$, se deduce que $\overline{(a,b)}\subset[a,b]$. Si $a$ y $b$ fueran puntos de acumulación de $(a,b)$, siempre se daría que $[a,b]\subset \overline{(a,b)}$. Veamos que son puntos de acumulación de $(a,b)$. Si $U$ es entorno de $a$, entonces sea $U=\{x|x\in X \text{ y } c<x<a \text{ o } a<x<d\}$ para algunos $c,d\in X$ tales que $c<a$ y $d>b$. Entonces $U\cap[ (a,b)-\{a\}]=U\cap (a,b)\neq \varnothing$ y, por tanto, $a$ es punto de acumulación. lo mismo pasa para $b$. 
+
+
+
+
+
+
+
+\end{document}

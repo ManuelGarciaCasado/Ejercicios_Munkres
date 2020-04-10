@@ -1,0 +1,51 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 17 Ejercicio 11}
+Veamos que el producto de dos espacios de Hausdorff es de Hausdorff. Si $X$ e $Y$ son Hausdorff, existen entornos $U_1,U_2\subset X$ de $x_1,x_2$, respectivamente, y existen entornos $V_1,V_2\subset Y$ de $y_1,y_2$, respectivamente, tales que $U_1\cap U_2=\varnothing$ y $V_1\cap V_2=\varnothing$. Por tanto, $(U_1\cap U_2)\times (V_1\cap V_2)=\varnothing$. Pero $(U_1\times V_1)\cap (U_2\times V_2)=(U_1\cap U_2)\times (V_1\cap V_2)$. Luego existen entornos $U_1\times V_1$ de $x_1 \times y_1$ y $U_2\times V_2$ de $x_2 \times y_2$ tales que $(U_1\times V_1)\cap (U_2\times V_2)=\varnothing$ cuando $x_1\neq  x_2$ y $y_1\neq  y_2$. Por tanto, $X\times Y$ es Hausdorff.
+\section{Tema 2 Sección 17 Ejercicio 12}
+Veamos que un subespacio de un espacio de Hausdorff es de Hausdorff. Sea $Y\subset X$. Si $X$ es Hausdorff entonces dados cualesquiera par de elementos $x_1,x_2\in X$ existen entornos $U_1$ de $x_1$ y $U_2$ de $x_2$ tales que $U_1\cap U_2=\varnothing$. Si $x_1$ y $x_2$ son tales que pertenecen a $Y\cap X$ entonces existen  entornos $Y\cap U_1$ y $Y\cap U_2$ de $x_1$ y $x_2$ tales que $(Y\cap U_1)\cap (Y\cap U_2)=Y\cap (U_1\cap U_2)=Y \cap \varnothing =\varnothing$. Por tanto, $Y$ es Hausdorf en la topología de subespacio de $X$.
+\section{Tema 2 Sección 17 Ejercicio 13}
+Veamos que $X$ es de Hausdorff si, y sólo si, la diagonal definida como $\Delta= \left\{x\times x \vert x\in X\right\}$ es cerrada en la topología $X\times X$. Veamos que $X$ espacio de Hausdorff implica que $\Delta$ es cerrada en la topología $X\times X$. El espacio $X$ es Hausdorff si, y sólo si, la sucesión $\{x_n\}$ converge únicamente a $x$. Por tanto para cada par $x\times x$ hay una sucesión de puntos $x_n\times x_n$ que convergen a $x\times  x$. Por tanto, todos los puntos de $\Delta$ son puntos de acumulación de $\Delta$. Por tanto, $\Delta$ es cerrada. Por otro lado, si $\Delta$ es cerrada, para cada punto $x\times x$ existen dos sucesiones en $X\times X$ de puntos $\{x_n\times x\}$ y $\{x\times x_n\}$ disjuntas que convergen a él. Por tanto, para dos puntos $x_1\times y_1$ y $x_2\times y_2$ en $X\times X$ hay entornos $U=\{x_1\}\times \{y_{1,n}\}$ y $V=\{x_{2,n}\}\times\{ y_2\}$ disjuntos donde sus elementos convergen a $x_1\times y_1$ y $x_2\times y_2$  en $X\times X$, respectivamente. Por tanto, $X\times X$ es Husdorff. Por tanto, $X$ es Hausdorff como subespacio de $X\times X$.
+\section{Tema 2 Sección 17 Ejercicio 14}
+En la topología de los complementos finitos sobre $\mathbb{R}$, veamos a qué converge $x_n=1/n$. Los conjuntos del tipo $U=(-\infty, x)\cup (x,\infty)$ pertenecen a la topología de los complementos finitos. Sea $U_n=(-\infty, x_n)\cup (x_n,\infty)$. Entonces $\bigcap_{n\leq N}U_n$ también pertence a la topología. Si $N \rightarrow \infty$ entonces $\bigcap_{n\leq N}U_n\rightarrow \mathbb{R}-\bigcup_{n}\{x_n\}$. Por tanto, $1/n$ converge a $\bigcup_{n}\{1/n\}$
+\section{Tema 2 Sección 17 Ejercicio 15}
+Veamos que el axioma $T_1$ es equivalente a decir que para cada par de puntos de $X$, cada uno posee un entorno que no contiene al otro. El axioma $T_1$ dice que cada conjunto de $X$ con un número finito de puntos es cerrado. Es decir, el  conjunto $\{x_1\}$
+es cerrado y el conjunto $X-\{x_1\}$ es un abierto de $X$ que contiene a $x_2$. Ésto ocurre si, y solo, si $X-\{x_1\}$ es un entorno de $x_2$ que no contiene a $x_1$. Lo mismo ocurre intercambiando $x_1$ por $x_2$.
+\section{Tema 2 Sección 17 Ejercicio 16}
+\begin{itemize}
+\item \bf (a) \rm 
+\end{itemize} Determinemos la clausura de $K=\{1/n|n\in \mathbb{Z}_+\}$ en las topologías sobre $\mathbb{R}$ siguientes:
+
+Sea $\mathcal{T}_1=$ topología usual. Para todo entorno $U$ de $\{0\}$ se tiene que $K\cap U\neq \varnothing$. Por tanto, $K\cup\{0\}$ es la clausura de $K$ en $\mathcal{T}_1$.
+
+Sea $\mathcal{T}_2=$ la topología de $\mathbb{R}_K$. Se tiene que ningún entorno $U=(a,b)-K$ de $\{0\}$ interseca a $K$. Por tanto, $K$ es su propia clausura.
+
+Sea $\mathcal{T}_3=$ topología de los complementos finitos. Entonces, sea $U_n$ un abierto de $\mathcal{T}_3$ tal que $\mathbb{R}-U_n=\{1/n\}$. Entonces, $U_n$ es un abierto que contiene a $\{0\}$. Por tanto, los $U_n$ son entornos de $\{0\}$. Se tiene que $U_n\cap K= K-\{1/n\}\neq \varnothing$. Luego $K\cup \{0\}$ es la clausura de $K$ para ésta topología.
+
+Sea $\mathcal{T}_4=$ topología del límite superior con los conjuntos $(a,b]$ como base. Los $(-1, 1/n]$ son entornos de $\{0\}$. Se tiene que para todo $n\in \mathbb{Z}_+$, $(-1, 1/n]\cap K=\{1/m| m\geq n, n\in  \mathbb{Z}_+\}\neq \varnothing$. Por tanto, $K\cup \{0\}$ es la clausura de $K$ para ésta topología.
+
+Sea $\mathcal{T}_5=$ topología  con los conjuntos $(-\infty,a)=\{x|a>x\}$ como base. Se tiene que para todo entorno $U=(-\infty,a)$ de $\{0\}$, donde $a>0$, en esta topología, $U\cap K=(-\infty,a)\cap K= \bigcup_{n>N}\{1/n\}\neq \varnothing$ para algún $N$. Por tanto, $K\cup \{0\}$ es la clausura de $K$ para ésta topología.
+
+\begin{itemize}
+\item \bf (b) \rm 
+\end{itemize}
+Dado que un conjunto finito de puntos de $\mathbb{R}$ se puede escribir como $\{x_1,x_2,...x_n\}=\mathbb{R}-(-\infty, x_1)\bigcup_{i=2}^n (x_{i-1},x_i)\cup (x_n,\infty)$ en la topología usual $\mathcal{T}_1$, dicho conjunto finito es cerrado porque $(-\infty, x_1)\bigcup_{i=2}^n (x_{i-1},x_i)\cup (x_n,\infty)$ es abierto al ser una unión de abiertos. Luego $\mathcal{T}_1$ cumple el axioma $T_1$. Dado cualquier par de puntos $a,b\in \mathbb{R}$ se tiene que existe un $c$ tal que $a<c<b$. Por tanto, $a\in (-\infty,c)$ y $b\in (c,\infty)$ junto con $(-\infty,c)\cap(c,\infty)=\varnothing$ implica que $\mathbb{R}$ es Hausdorff.
+
+Dado que un conjunto finito de puntos de $\mathbb{R}-K$ se puede escribir como $\{x_1,x_2,...x_n\}-K=\mathbb{R}-\left((-\infty, x_1)\bigcup_{i=2}^n (x_{i-1},x_i)\cup (x_n,\infty)-K\right)$ en la topología usual $\mathcal{T}_2$, dicho conjunto finito es cerrado porque $(-\infty, x_1)\bigcup_{i=2}^n (x_{i-1},x_i)\cup (x_n,\infty)-K$ es abierto al ser una unión de abiertos. Luego $\mathcal{T}_2$ cumple el axioma $T_1$. Dado cualquier par de puntos $a,b\in \mathbb{R}-K$ se tiene que existe un $c$ tal que $a<c<b$. Por tanto, $a\in (-\infty,c)-K$ y $b\in (c,\infty)-K$ junto con $((-\infty,c)-K)\cap((c,\infty)-K)=\varnothing$ implica que $\mathbb{R}-K$ es Hausdorff.
+
+
+
+Se vió en ejercicio 14 que $\{1/n\}$ converge a $\bigcup_{n}\{1/n\}$ para $\mathcal{T}_3$ en $\mathbb{R}$. Por tanto, $\mathcal{T}_3$ no es Hausdorff. Si el compremento de un abierto es finito, por definición de cerrado, también es cerrado dicho compremento. Luego, $\mathcal{T}_3$ cumple el axioma $T_1$
+
+Dado cualquier par de puntos $a,b\in \mathbb{R}$ se tiene que existe un $c$ tal que $a\leq c<b$ y un $d$ tal que $b\leq d$. Por tanto, $a\in (-\infty,c]$ y $b\in (c,d]$ junto con $(-\infty,c]\cap(c,d]=\varnothing$ implica que $\mathbb{R}$ es Hausdorff para los abiertos de la topología $\mathcal{T}_4$. Por teorema 17.8, por ser Hausdorff también cumple el axioma $T_1$ .
+
+Dado cualquier par de puntos $a,b\in \mathbb{R}$ se tiene que existe un $c$ y un $d$ tales que $a< c<b<d$. Entonces $a\in (-\infty, c) $ y $b\in (-\infty, d)$. Pero $(-\infty, c)\cap(-\infty, d)=(-\infty, c)\neq \varnothing$. Por tanto, no existen abiertos $U_a$ de $a$ y $U_b$ de $b$ tales $U_a\cap U_b =\varnothing$. Por tanto, $\mathcal{T}_5$ no es Hausdorff. Ahora supongamos que cualquier conjunto finito de puntos en $\mathcal{T}_5$ es cerrado. Entonces $\{0\}$ es cerrado. Entonces $\mathbb{R}-\{0\}$ es abierto. Entonces $\mathbb{R}-\{0\}$ es igual a unión infinita o intersección finita de conjuntos del tipo $(-\infty,x)$. Pero esto no es posible porque para dos abiertos $U$ y $V$ de $\mathcal{T}_5$ se tiene que $U\cup V=U$ o $U\cup V=V$ y también $U\cap V=U$ o $U\cap V=V$. Por tanto, $\mathcal{T}_5$ no cumple el axioma $T_1$.
+
+\end{document}

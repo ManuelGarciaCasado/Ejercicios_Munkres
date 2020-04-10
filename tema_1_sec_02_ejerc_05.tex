@@ -1,0 +1,37 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Sección 2 Ejercicio 5 }
+
+Sea \(f : A \longrightarrow B\) , \(g: B \longrightarrow A\), \(h : B \longrightarrow A\) y \(i_C(x)=x\) tal que \(i_C:C\longrightarrow C\). \(i_A= g\circ f: A\longrightarrow A \) inversa por la izquierda y \(i_B= f\circ h: B\longrightarrow B \) inversa por la derecha.
+\newline
+\bf (a) \rm Demostración de: Si \( \exists g | g \circ f = i_A\) para \(f\), entonces \(f\) es inyectiva; y si \(\exists g | f\circ g = i_B\) para \(f\), entonces \(f\) es sobreyectiva.
+\newline
+Primero veamos que \( i_A (x)=x  \) es inyectiva. Sea \(i_A(a)=i_A(a')\), entonces \(a'=i_A(a')=i_A(a)=a\); si, y solo si, \(a=a'\).
+\newline
+Por el ejercicio 4(f) [\(g \circ f\) inyectiva \( \Rightarrow f \) inyectiva], si \(i_A=f^{-1}\circ f\) es inyectiva, entonces \(f\) es inyectiva.
+\newline
+Veamos que es \( i_B (x)=x  \) es sobreyectiva. Sea \(b \in B\), entonces \(\exists b\in B \text{ tal que } i_A(b)=b\). Luego \(i_B = f \circ f^{-1} \) es sobreyectiva. Esto implica que \(f\) es sobreyectiva, por el ejercicio 4(f), que dice [\(g \circ f \) sobreyectiva \(\Rightarrow  g\) sobreyectiva]
+\newline
+\bf (b) \rm Por ejercicio 5(a), si \(f: A \longrightarrow B\) no es sobreyectiva, entonces no existe inversa por la derecha \(g\) tal que \(f \circ g =i_B\). Por tanto \(f: [0,1] \longrightarrow [-1,1]\) con \(f(x)= \sqrt x\) no tiene inversa por la derecha por ser no sobreyectiva. Si embargo, \(g:[-1,1] \longrightarrow [0,1]\) con \(g(x)= x^2\) es inversa por la izquierda de \(f\).
+\newline
+\bf (c) \rm Por ejercicio 5(a), si \(f: A \longrightarrow B\) no es inyectiva, entonces no existe inversa por la izquierda \(g\) con \(g \circ f = i_A\). Por tanto \(f: [-1,1] \longrightarrow [0,1]\) con \(f(x)= x^2\) no tiene inversa por la izquierda por ser no inyectiva. Sin embargo, \(g:[0,1] \longrightarrow [-1,1]\) con \(g(x)= \sqrt x\) es inversa por la derecha de \(f\).
+\newline
+\bf (d) \rm Veamos si \(f\) tiene \(g_1\) con \(g_1 \circ f = i_A\) y \(g_2\) con \(g_2 \circ f = i_A\)  \(\Rightarrow g_1=g_2 \text{ o } g_1 \neq g_2 \).
+\newline
+Como \((g_1 \circ f)(a)= i_A(a)\) y \((g_2 \circ f )(a)= i_A(a)\) para todo \(a \in A\), se tiene que \((g_1  (f(a))=g_2 (f (a))\) para todo \(a \in A\). Por tanto \(g_1(b)= g_2(b)\) para todo \(b\in B\). La función inversa por la izquierda es única.
+\newline
+Que la función inversa por la derecha es única se demuestra de la misma manera. Sean\( g_1: B\Rightarrow A\) y \(g_2: B \Rightarrow A\) inversas por la derecha de \(f: B \Rightarrow A \); y   \(g: B \Rightarrow A\) la inversa por la izquierda d f. Como \((f \circ g_1)(b)= i_B(b)\) y \(( f \circ g_2)(b)= i_B(b)\) para todo \(b \in B\), se tiene que \(f (g_1(b))=f(g_2(b))\) para todo \(b \in B\). Usando la inversa por la izquierda y la propiedad asociativa, se tiene \((g \circ f )\circ g_1)(b)= ((g\circ f) \circ g_2)(b)\) para todo \(b\in B\). Por tanto, se tiene \((i_A \circ g_1)(b)= ( i_A \circ g_2)(b)\) para todo \(b\in B\). Como \(i_A \) es  inyectiva, \(i_A ( g_1(b))= i_A( g_2(b)) \Rightarrow g_1(b)=  g_2(b) \) para todo \(b\in B\).
+\newline
+\bf (e) \rm Si \(g\) es inversa por la izquierda de \(f\), entonces \(f\) es inyectiva. Si \(h\) es inversa por la derecha de \(f\), entonces \(f\) es sobreyectiva. Por tanto, \(f\) es biyectiva si \(h\) es inversa por la derecha y si \(g\) es inversa por la izquierda. Por otro lado, \(g \circ f \circ h=i_A \circ h\) y también \(g \circ f \circ h = g \circ i_B\) si, y solo si, \( i_A \circ h = g \circ i_B \). Entonces, ya que \( i_A \circ h = h\)  y que \(g \circ i_B = g\), se tiene \(g=h\).
+% Uncomment the following  lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}

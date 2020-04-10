@@ -1,0 +1,68 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 4 Ejercicio 03}
+% Create a new 1st level heading
+\begin{itemize}
+\item \bf (a) \rm 
+\end{itemize}
+Sea \(\mathcal{A}=\left\{ A| A\text{ es inductivo }\right\}\) Veamos que si \(A, B\in\mathcal{A}\Rightarrow A \cap B\in\mathcal{A}\). Como \(A \text{ inductivo } \Leftrightarrow  1\in A \text{ y },\forall x\in A, x+1\in A\). Sea \(1\in A,\forall x\in A, x+1\in A\) y sea \(1\in B,\forall y\in B, y+1\in B\). Por tanto, \(1\in A\cap B\). Si \(\forall z\in A\cap B\) entonces, \(z+1 \in A\) y \(z+1 \in B\) por tanto,  \(z+1 \in A\cap B\). Por tanto, \(A\cap B\) es inductivo. Por tanto, si para todo \(A\in \mathcal{A}, 1\in A, \forall x\in  A, x+1\in A\) se tiene que \(1\in \cap_{A\in \mathcal{A}}A, \forall x \in\cap_{A\in\mathcal{A}}A,x+1 \in\cap_{A\in\mathcal{A}}A\). Por tanto, \(\cap_{A\in\mathcal{A}}A\) es inductivo.
+\begin{itemize}
+\item \bf (b) \rm 
+\end{itemize}
+El conjunto \(\mathbb{Z}_{+}\) se define como
+\begin{eqnarray}
+\mathbb{Z}_{+}=\bigcap_{A\in \mathcal{A}}A \nonumber
+\end{eqnarray}
+con \(\mathcal{A}\) definido arriba. Por tanto ejercicio (a), \(\mathbb{Z}_{+}\) es inductivo. Veamos que si \(B\) inductivo y \(x\in B \Rightarrow x\in \mathbb{Z}_{+}\) entonces \(B=\mathbb{Z}_{+}\). Esto es decir lo mismo que \(B\) inductivo y \(B \subset \mathbb{Z}_{+} \Rightarrow B=\mathbb{Z}_{+}\). Luego \(B\) inductivo y \(B\subset \mathbb{Z}_{+}\Rightarrow B\supset \mathbb{Z}_{+}\). \(B\) es inductivo si, y solo si,\(1\in B\) y \(\forall x\in B\subset \mathbb{R}, x+1 \in B\). Supongamos que existe un \(x\in \mathbb{Z}_{+}\) pero \(x\notin B\). Entonces \(x\neq 1\), entonces \(x\neq 2\), entonces \(x\neq 3\),... entonces \(x\neq y+1\) donde \(y\in \mathbb{Z}_{+}\) es entero positivo. Por tanto \(x\) no es entero positivo.  Pero \(B\) está formado por enteros positivos. Luego \(\mathbb{Z}_{+}-B=\emptyset\). Luego \(B=\mathbb{Z}_{+}\).
+
+\section{Tema 1 Sección 4 Ejercicio 04}
+% Create a new 1st level heading
+\begin{itemize}
+\item \bf (a) \rm 
+\end{itemize}
+Veamos que dado \(n \in\mathbb{Z}_{+}\), todo subconjunto no vacio de \(\left\{1,2,3,...,n\right\}\)
+tiene un mayor elemento. Sea \(A\) el conjunto de todos los enteros positivos \(n\) para los cuales se cumple esa afirmación. Si \(n=1\), el subconjunto de \(\left\{1\right\}\) es él mismo y tiene un elemento mayor. Luego \(1\in A\). Suponiendo que \(n\in  A\) veamos que \(n+1\in A\). Si
+\(C\) es un subconjunto no vacío de \(\left\{1,2,3,...,n+1\right\}\). Entonces si \(C\) contiene únicamente a \(n+1\), éste es su elemento mayor. En caso contrario, considerese \(C\cap\left\{1,2,3,...,n\right\}\). Como \(n\in A\), este conjunto considerado tiene un elemento mayor \(m\). Entonces el elemento mayor de \(C\) es \(m\) o es \(n+1\). Luego todo subconjunto no vacío de \(\left\{1,2,3,...,n+1\right\}\) tiene un elemento mayor. Luego  \(n+1\in A\). Por tanto, por inducción se tiene que \(A =\mathbb{Z}_{+}\). Luego, para todo \(n\in \mathbb{Z}_{+}\) se tiene que todo subconjunto no vacío de \(\left\{1,2,3,...,n\right\}\)
+tiene un elemento mayor.
+\begin{itemize} 
+\item \bf (b) \rm 
+\end{itemize}
+Supongamos que \(D\) es un subconjunto no vacío de \(\mathbb{Z}_{+}\). Elijamos un \(n\in D\). Entonces, el conjunto  \(D\cap\left\{1,2,3,...,n\right\}\) es no vacío, y tendrá un máximo \(k\). Pero no se puede afirmar que \(k\) sea el elemento mayor de \(D\). Por eso no se puede deducir de (a) que todo subconjunto no vacío de \(\mathbb{Z}_{+}\) tiene un elemento mayor.
+
+\section{Tema 1 Sección 4 Ejercicio 05}
+
+\begin{itemize} 
+\item \bf (a) \rm 
+\end{itemize}
+Veamos que \(a,b\in\mathbb{Z}_{+}\Rightarrow a+b\in\mathbb{Z}_{+}\). Sea algún \(a\in\mathbb{Z}_{+}\) y \(X=\left\{x|x\in\mathbb{R}\text{ y }a+x\in\mathbb{Z}_{+}\right\}\). Como \(a+1\in\mathbb{Z}_{+}\) y \(1\in\mathbb{R}\) entonces \(1\in X\). Si \(y\in \mathbb{R}\), \(y+1\in \mathbb{R}\) por las propiedades del algebla en \(\mathbb{R}\); y si \(a+y\in\mathbb{Z}_{+}\), \(a+y+1\in\mathbb{Z}_{+}\), por ser \(\mathbb{Z}_{+}\) inductivo. Por tanto, si \(y\in X\), \(y+1\in X\). Luego \(X\) es inductivo. Como la intersección de todos los subconjuntos inductivos de \(\mathbb{R}\) es \(\mathbb{Z}_{+}\), se tiene que \(\mathbb{Z}_{+}\subset X\). Por tanto \(a,b\in\mathbb{Z}_{+} \Rightarrow b\in X\) entonces \( b\in\mathbb{R} \text{ y }a+b\in\mathbb{Z}_{+}\)
+\begin{itemize} 
+\item \bf (b) \rm 
+\end{itemize}
+Veamos que \(a,b\in\mathbb{Z}_{+}\Rightarrow a\cdot b\in\mathbb{Z}_{+}\). Sea algún \(a\in\mathbb{Z}_{+}\) y \(X=\left\{x|x\in\mathbb{R}\text{ y }a\cdot x\in\mathbb{Z}_{+}\right\}\). Como \(a\cdot 1=a\in\mathbb{Z}_{+}\) y \(1\in\mathbb{R}\) entonces \(1\in X\). Si \(y\in \mathbb{R}\), \(y+1\in \mathbb{R}\) por las propiedades del algebla en \(\mathbb{R}\); y si \(a\cdot y\in\mathbb{Z}_{+}\), \(a\cdot y+a= a\cdot \left(y+1\right)\in\mathbb{Z}_{+}\), por la propiedad de \(\mathbb{Z}_{+}\) del ejercicio (a). Por tanto, si \(y\in X\), \(y+1\in X\). Luego \(X\) es inductivo. Como la intersección de todos los subconjuntos inductivos de \(\mathbb{R}\) es \(\mathbb{Z}_{+}\), se tiene que \(\mathbb{Z}_{+}\subset X\). Por tanto \(a,b\in\mathbb{Z}_{+} \Rightarrow  b\in X\) entonces \( b\in\mathbb{R} \text{ y }a\cdot b\in\mathbb{Z}_{+}\)
+\begin{itemize} 
+\item \bf (c) \rm 
+\end{itemize}
+Veamos que \(a\in \mathbb{Z}_{+} \Rightarrow a-1\in \mathbb{Z}_{+}\cup \left\{0\right\}\). Sea \(X=\left\{x|x\in \mathbb{R}\text{ y } x-1\in \mathbb{Z}_{+}\cup \left\{0\right\}\right\}\). Entonces, como \(1\in \mathbb{R}\) y \(0=1-1\in \mathbb{Z}_{+}\cup \left\{0\right\}\), se tiene que \(1\in X\). Por otro lado, si \(x\in \mathbb{R}\), \(x+1\in \mathbb{R}\) por las leyes del álgebra en \(\mathbb{R}\). Y si \(x-1\in \mathbb{Z}_{+}\cup \left\{0\right\}\) entonces \(x\in\mathbb{Z}_{+}\cup \left\{0\right\}\) ya que \(x=1 \Rightarrow x-1\in \left\{0\right\}\subset\mathbb{Z}_{+}\cup \left\{0\right\}\) y si \(x\neq 1 \Rightarrow x \in\mathbb{Z}_{+}\subset\mathbb{Z}_{+}\cup \left\{0\right\} \) y ya que \(\mathbb{Z}_{+}\) es inductivo. Por tanto, \(x\in X\) y \(x\in X \Rightarrow x+1\in X\) y por tanto \(X\) es inductivo.  Como la intersección de todos los subconjuntos inductivos de \(\mathbb{R}\) es \(\mathbb{Z}_{+}\), se tiene que \(\mathbb{Z}_{+}\subset X\). Luego si \(a\in \mathbb{Z}_{+}\Rightarrow a\in X \Rightarrow a\in \mathbb{R} \text{ y } a-1\in \mathbb{Z}_{+}\cup \left\{0\right\}\) por tanto \(a\in \mathbb{Z}_{+}\Rightarrow a-1\in \mathbb{Z}_{+}\cup \left\{0\right\}\)
+\begin{itemize} 
+\item \bf (d) \rm 
+\end{itemize}
+Veamos que \( c,d \in \mathbb{Z}\Rightarrow c+d \in \mathbb{Z} \text{ y } c-d\in \mathbb{Z}\). Sea \(d=1\). Se ha visto que \( c\in \mathbb{Z}_{+}\Rightarrow c+1 \in \mathbb{Z}_{+}\cup \left\{0\right\} \text{ y } c-1\in \mathbb{Z}_{+}\cup \left\{0\right\}\). Definase \(\mathbb{Z}_{-}=\left\{a|a\in \mathbb{R} \text{ y } (-1)\cdot a\in \mathbb{Z}_{+}\right\}\) y por tanto \(\mathbb{Z}_{-}\cup\left\{0\right\}=\left\{a|a\in \mathbb{R} \text{ y } (-1)\cdot a\in \mathbb{Z}_{+}\cup\left\{0\right\}\right\}\). Entonces, \(c\in\left\{0\right\}\cup\mathbb{Z}_{-}\Rightarrow (-1)\cdot c\in \mathbb{Z}_{+}\cup\left\{0\right\}\Rightarrow (-1)\cdot c+1\in \mathbb{Z}_{+}\cup\left\{0\right\}\) por ejercicio (a) y ademas \(c\in\left\{0\right\}\cup\mathbb{Z}_{-}\Rightarrow (-1)\cdot c\in \mathbb{Z}_{+}\cup\left\{0\right\}\Rightarrow (-1)\cdot c-1\in \mathbb{Z}_{+}\cup\left\{0\right\}\) por ejercicio (c). Por tanto  \(c\in\left\{0\right\}\cup\mathbb{Z}_{-}\Rightarrow (-1)\cdot \left(c-1\right)\in \mathbb{Z}_{+}\cup\left\{0\right\}\Rightarrow c-1\in \mathbb{Z}_{-}\cup\left\{0\right\}\) y \(c\in\left\{0\right\}\cup\mathbb{Z}_{-}\Rightarrow (-1)\cdot \left(c+1\right)\in \mathbb{Z}_{+}\cup\left\{0\right\}\Rightarrow c+1\in \mathbb{Z}_{-}\cup\left\{0\right\}\). Por tanto, \(c\in\mathbb{Z}\Rightarrow c+1\in \mathbb{Z} \text{ y } c-1\in \mathbb{Z}\) ya que \(\mathbb{Z}=\mathbb{Z}_{-}\cup\left\{0\right\}\cup \mathbb{Z}_{+}\). Ahora, por ejercicio (a) se tiene que \(a,b \in \mathbb{Z}_{-}\cup\left\{ 0 \right\}\Rightarrow \left(-1\right)\cdot\left( a+b\right) =-a-b \in \mathbb{Z}_{+}\cup\left\{0\right\}\) por tanto \(a,b \in \mathbb{Z}_{-}\cup\left\{0\right\}\Rightarrow   a+b\in \mathbb{Z}_{-}\cup\left\{0\right\}\) por tanto 
+\(a,b \in \mathbb{Z}_{-}\cup\left\{0\right\}\cup \mathbb{Z}_{+}=\mathbb{Z}\Rightarrow  a+b \in \mathbb{Z}\). Como \(a \in \mathbb{Z}\Rightarrow -a \in \mathbb{Z}\), se tiene que también \(a,b \in \mathbb{Z}_{-}\cup\left\{0\right\}\cup \mathbb{Z}_{+}=\mathbb{Z}\Rightarrow  a-b \in \mathbb{Z}\)
+\begin{itemize} 
+\item \bf (e) \rm 
+\end{itemize}
+Veamos que \(a,b \in \mathbb{Z}\Rightarrow a\cdot b\in \mathbb{Z}\). Por ejercicio (b), si \(a,b \in \mathbb{Z}_{+}\Rightarrow a\cdot b\in \mathbb{Z}_{+}\) entonces \(a,b \in \mathbb{Z}_{+}\cup \left\{0\right\}\Rightarrow a\cdot b\in \mathbb{Z}_{+}\cup \left\{0\right\}\). Además, \(a \in \mathbb{Z}_{+}\cup \left\{0\right\} ,b\in \mathbb{Z}_{-}\cup \left\{0\right\}\Rightarrow a\cdot \left(\left(-1\right)\cdot b\right)\in \mathbb{Z}_{+}\cup \left\{0\right\}\). Por tanto,  \(a \in \mathbb{Z}_{+}\cup \left\{0\right\} ,b\in \mathbb{Z}_{-}\cup \left\{0\right\}\Rightarrow a\cdot b\in \mathbb{Z}_{-}\cup \left\{0\right\}\). Del mismo modo \(a \in \mathbb{Z}_{-}\cup \left\{0\right\} ,b\in \mathbb{Z}_{-}\cup \left\{0\right\}\Rightarrow a\cdot b\in \mathbb{Z}_{+}\cup \left\{0\right\}\). Luego \(a,b \in \mathbb{Z}\Rightarrow a\cdot b\in \mathbb{Z}\)
+% Uncomment the following two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}

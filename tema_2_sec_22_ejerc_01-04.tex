@@ -1,0 +1,41 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 22 Ejercicio 1}
+Sea $p:\mathbb{R}\rightarrow A$, donde $A=\{a,b,c\}$, definida por
+\begin{eqnarray}
+p(x)=\begin{cases}
+a & \text{ si }x>0\nonumber\\
+b & \text{ si }x<0\nonumber\\
+c & \text{ si }x=0\nonumber
+\end{cases}
+\end{eqnarray}
+Como $p^{-1}(a)\cup p^{-1}(b)\cup p^{-1}(c)=\mathbb{R}$, se tiene que $p$ es sobreyectiva. Por tanto, $p$ induce una topología  cociente $\mathcal{T}$ sobre $A$. Se tiene que $p(\varnothing)=\varnothing\in \mathcal{T}$; que $p(\mathbb{R})=A\in \mathcal{T}$;
+que si $U_\alpha$ entonces $p(\bigcup_\alpha U_\alpha)\in\{\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},A\}\subset\mathcal{T}$; y que si $U_i\in \mathbb{R}$ entonces $p(\bigcap_{i=1}^n U_i)\in\{\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},A\}\subset \mathcal{T}$. Por tanto, $p(\varnothing),p(\mathbb{R}),p(\bigcup_\alpha U_\alpha),p(\bigcap_{i=1}^nU_i)\in \mathcal{T}$
+\section{Tema 2 Sección 22 Ejercicio 2}
+\begin{itemize}
+\item \bf (a) \rm Sea $p:X\rightarrow Y$ continua. Veamos que si hay una aplicación continua $f:Y\rightarrow X$ tal que $p\circ f$ es la aplicación identidad de $Y$, entonces $p$ es una aplicación cociente.
+\end{itemize}
+Si $f$ es continua y $p$ también, entonces $p\circ f$ es continua. Como $p\circ f$ es la aplicación identidad, $f$ se define como inversa por la derecha de $p$ según ejercicio 5 de la sección 2. Por tanto, según se demostró en el apartado (a) de ejercicio 5 de la sección 2, $p$ es sobreyectiva. Como $p$ también es continua, para todo subconjunto abierto $U$ de $Y$ se tiene que $p^{-1}(U)$ es abierto en $X$. Como $f$ es continua, para todo abierto $p^{-1}(U)$ de $X$ se tiene que $f^{-1}(p^{-1}(U))$ es abierto de $Y$. Pero $f^{-1}(p^{-1}(U))=(p\circ f)^{-1}(U)=U$. Luego, un subconjunto es abierto $U$ de $Y$ si, y sólo si, $p^{-1}(U)$ es abierto en $X$. Luego $p$ es aplicación cociente.
+\begin{itemize}
+\item \bf (b) \rm Sea $A\subset X$. Una retracción de $X$ sobre $A$ es un función continua $r:X\rightarrow A$ tal que $r(a)=a$ para cada $a\in A$ Veamos que una retracción es una aplicación cociente.
+\end{itemize}
+Como $r^{-1}(A)=X$, $r$ es suprayectiva. Como $r$ es continua, para todo abierto $V$ de $A$ se tiene que $r^{-1}(V)$ es abierto de $X$. Ahora veamos que $f:A\rightarrow X$ definida por $f(x)=x$ es continua, que para todo abierto $U$  de $X$ se tiene que $f^{-1}(U)$ es abierto de $A$. Si $U\cap A=\varnothing$ entonces $f^{-1}(U)=\varnothing$. Si $U\cap A\neq \varnothing$ entonces $f^{-1}(U)=f^{-1}(U\cap A)=U\cap A$ que es abierto en $A$ por ser intersección finita de abiertos. Pero se deduce que $r\circ f$ es la aplicación identidad $i_A:A\rightarrow A$. Aplicando apartado (a) se deduce que $r$ es una aplicación cociente.
+\section{Tema 2 Sección 22 Ejercicio 3}
+Sea $\pi_1:\mathbb{R}\times \mathbb{R}\rightarrow \mathbb{R}$ la proyección sobre la primera coordenada. Sea $A$ el subespacio de $\mathbb{R}\times \mathbb{R}$ de los $x\times y$ para los cuales $x\geq 0$ o $y=0$ y sea $q:A\rightarrow \mathbb{R}$ la aplicación obtenida al restringir $\pi_1$. Veamos que $q$ es una aplicación cociente que no es abierta ni cerrada. Sea la inclusión $j:A\rightarrow \mathbb{R}\times \mathbb{R}$, que es continua por teorema 18.2 (a) de tal manera que $q=(\pi_1\circ j)$. La proyección $\pi_1$ también es continua, puesto que $\pi^{-1}(U)=U\times \mathbb{R}$ es abierto de $\mathbb{R}\times \mathbb{R}$ si $U$ es abierto de $\mathbb{R}$. Por tanto, $q=(\pi_1\circ j)$ es función continua por ser composición de dos funciones continuas, (teorema 18.2 (c)). Por otro lado, para todo $x\geq 0$ existe un $y\in \mathbb{R}$, tal que $x\times y \in A$ y $p(x\times y)=x$. Si $x<0$ entonces $x\times 0 \in A$ y $q(x\times 0)= x$. Por tanto, para todo $x \in \mathbb{R}$ existe un $x\times y\in A$ tal que $q(x\times y)=x$ y, entonces, $q$ es sobreyectiva. Además, sea  $U_1\times U_2$ abierto de $A\cap \mathbb{R}\times \mathbb{R}$ con $U_1$ abierto de $\mathbb{R}$, entonces $q(U_1 \times U_2)=U_1$. Por tanto, $q$ es aplicición cociente. Pero $U_1\times {0}$ es cerrado, puesto que $A-U_1\times \{0\}$ es abierto del subespacio de $A$ por ser la unión de los abiertos $\{x\times y | x\geq 0, y>0\}$ y $\{x\times y | x\geq 0, y<0\}$, y $q(U_1 \times \{0\})=U_1$ es abierto en $\mathbb{R}$. Por tanto, no es una aplicación cerrada.
+\section{Tema 2 Sección 22 Ejercicio 4}
+\begin{itemize}
+\item \bf (a) \rm Sea la relación de equivalencia sobre el plano $X=\mathbb{R}\times \mathbb{R}$ definida por $x_0\times y_0\sim x_1\times y_1$ si $x_0+y_0^2=x_1+y_1^2$. Veamos a qué espacio es homeomorfo el espacio cociente $X^*$, obtenido a partir de la relación de equivalencia sobre $X$.
+\end{itemize}
+Como se indica, sea $g:X\rightarrow \mathbb{R}$ definida por $g(x\times y)=x+y^2$. Ésta es una aplicación sobreyectiva, ya que para todo $z\in \mathbb{R}$ existe un $x\times y \in X$ tal que $z= x+y^2=g(x\times y)$. Sea $r:X\rightarrow X^*$ definida por las clases de equivalencia tales que $r(z\times w)=E_{x\times y}\in X^*$ si  $z\times \omega\in E_{x\times y}$, donde $E_{x\times y}=\{z\times w| x\times y\sim z\times w \text{ para }x\times y,z\times w\in X\}$. Entonces, por definición, $r$ es una aplicación cociente. Se tiene que  $g$ es constante para cada conjunto $r^{-1}(\{E_{x\times y}\})$ ya que $g(r^{-1}(\{E_{x\times y}\}))=\{x+y^2\}$. Además, $g$ es continua porque para todo $U\in \mathbb{R}$ se tiene que $g^{-1}(U)$ es abierto de $X$, por ser composicion de las funciones $\pi_1:X\rightarrow \mathbb{R}$, $\pi_2:X\rightarrow \mathbb{R}$ y las funciones algebraicas de adición y multiplicación de $\mathbb{R}^2$ en $\mathbb{R}$, por teorema 21.5. Además, la función $f:\mathbb{R}\rightarrow \mathbb{R}\times \mathbb{R}$ definida por $f(t)=(-2t)\times ( \sqrt{t})$ si $t\geq 0$ y $f(t)=(-t)\times (\sqrt{|-t|})$ si $t\leq 0$. Esta función $f$ es continua por ser convolución de funciones algebraicas y por teorema 18.4. Entonces como $(g\circ f)=i_{\mathbb{R}}$, por ejercicio 2(a) $g$ es una función cociente. Entonces, por corolario 22.3, se tiene que $X^*$ es homeomorfo a $\mathbb{R}$
+\begin{itemize}
+\item \bf (b) \rm Repitiendo (a),  pero ahora la relación de equivalencia se define por $x_0\times y_0\sim x_1\times y_1$ si $x_0^2+y_0^2=x_1^2+y_1^2$. Veamos a qué espacio es homeomorfo el espacio cociente $X^*$, obtenido a partir de la relación de equivalencia sobre $X$.
+\end{itemize}
+Procediendo como en apartado (a), sea $r:X\rightarrow X^*$ definida por las clases de equivalencia tales que $r(z\times w)=E_{x\times y}\in X^*$ si  $z\times \omega\in E_{x\times y}$, donde $E_{x\times y}=\{z\times w| x\times y\sim z\times w \text{ para }x\times y,z\times w\in X\}$. La función $g:X\rightarrow \overline{\mathbb{R}}_+$ definida como $g(x\times y )=x^2+y^2$ es suprayectiva, ya que para todo $t\in\overline{\mathbb{R}}_+$ existe algún $x\times y \in \mathbb{R}\times \mathbb{R}$ tal que $g(x\times y )=x^2+y^2= t$. Además, $g$ es continua porque para todo $U\in \overline{\mathbb{R}}_+$ se tiene que $g^{-1}(U)$ es abierto de $X$, por ser composicion de las funciones $\pi_1:X\rightarrow \mathbb{R}$, $\pi_2:X\rightarrow \mathbb{R}$ y las funciones algebraicas de adición y multiplicación de $\mathbb{R}^2$ en $\overline{\mathbb{R}}_+$, por teorema 21.5. Además, sea $f:\overline{\mathbb{R}}_+\rightarrow X$ la función definida por $f(t)=(\sqrt{|t|/2})\times(\sqrt{|t|/2})$ . Entonces $(g\circ f)=i_{\overline{\mathbb{R}}_+}$ y por ejercicio 2(a) $g$ es una función cociente. Entonces, por corolario 22.3, se tiene que $X^*$ es homeomorfo a $\overline{\mathbb{R}}_+$  
+\end{document}

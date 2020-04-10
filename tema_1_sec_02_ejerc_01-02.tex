@@ -1,0 +1,57 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 1 Sección 2 Ejercicio 1}
+Sea $f:A\rightarrow B$. Sean $A_0\subset A$ y $B_0\subset B$.
+\begin{itemize}
+\item \bf (a) \rm Veamos que $A_0\subset f^{-1}(f(A_0))$  y que la igualdad se da si $f$ es inyectiva.
+\end{itemize}
+Se tiene que $f(A_0)=\{y|y=f(x)\text{ para }x\in A_0\}$ y $f^{-1}(B_0)=\{x|y=f(x)\text{ para }y\in B_0\}$. Por tanto, $f^{-1}(f(A_0))=\{x|y=f(x)\text{ para }y\in \{z|z=f(w)\text{ para }w\in A_0\}\}$. Esto es $f^{-1}(f(A_0))=\{x|f(x)=f(w)\text{ para }w\in A_0\}\supset \{x|x=w\text{ para }w\in A_0\}=A_0$. Es decir  $f^{-1}(f(A_0))\supset A_0$. Si $f$ fuera inyectiva, $f(x)=f(w)\Leftrightarrow x=w$,  resultaría que $f^{-1}(f(A_0))=\{x|f(x)=f(w)\text{ para }w\in A_0\}= \{x|x=w\text{ para }w\in A_0\}=A_0$.
+\begin{itemize}
+\item \bf (b) \rm Veamos que $f(f^{-1}(B_0))\subset B_0$  y que la igualdad se da si $f$ es sobreyectiva.
+\end{itemize}
+Se tiene que $f(A_0)=\{y|y=f(x)\text{ para }x\in A_0\}$ y $f^{-1}(B_0)=\{x|y=f(x)\text{ para }y\in B_0\}$. Por tanto, $f(f^{-1}(B_0))=\{x|x=f(y)\text{ para }y\in \{z|w=f(z)\text{ para }w\in B_0\}\}$. Esto es $f(f^{-1}(B_0))=\{x|x=f(y)\text{ y } f(y)= w,\text{ para }w\in B_0, y\in A_0\}\subset \{x|(x=f(y)\text{ y } f(y)= w ,\text{ para }w\in B_0, y\in A_0)\text{ o }(x=w\neq f(y)\text{ para }w\in B_0, y\in A_0)\}=\{x|x=w\text{ para }w\in B_0\}=B_0$. Es decir  $f(f^{-1}(B_0))\supset B_0$. Si $f$ fuera sobreyectiva, $f(A)=B$ y no existiría $y\in B$ tal que $ y\neq f(x)$ para algún $x\in A$. Por tanto $f(f^{-1}(B_0))=B_0$.
+\section{Tema 1 Sección 2 Ejercicio 2}
+Sean $f:A\rightarrow B$ y $A_i\subset A$ y $B_i\subset B$ para $i=0,1$.
+\begin{itemize}
+\item \bf (a) \rm Veamos que $B_0\subset B_1\Rightarrow f^{-1}(B_0)\subset f^{-1}(B_1)$.
+\end{itemize}
+Como $(B_0\subset B_1)\Leftrightarrow (b\in B_0\Rightarrow b\in B_1)$, se tiene $f^{-1}(B_0)=\{x|y=f(x) \text{ para }y\in B_0\}=\{x|y=f(x) \text{ para }y\in B_0\subset B_1\}\subset \{x|y=f(x) \text{ para }y\in B_1\}=f^{-1}(B_1)$
+\begin{itemize}
+\item \bf (b) \rm Veamos que $f^{-1}(B_0\cup B_1)= f^{-1}(B_0)\cup f^{-1}(B_1)$.
+\end{itemize}
+Se tiene que $f^{-1}(B_0\cup B_1)=\{x|y=f(x) \text{ para }y\in B_0\cup B_1\}=\{x|y=f(x) \text{ para }y\in B_0\text{ o } y\in B_1\}=\{x|y=f(x) \text{ para }y\in B_0\}\cup \{x|y=f(x) \text{ para }y\in B_1\}=f^{-1}(B_0)\cup f^{-1}(B_1)$
+\begin{itemize}
+\item \bf (c) \rm Veamos que $f^{-1}(B_0\cap B_1)= f^{-1}(B_0)\cap f^{-1}(B_1)$
+\end{itemize}
+Se tiene que $f^{-1}(B_0\cap B_1)=\{x|y=f(x) \text{ para }y\in B_0\cap B_1\}=\{x|y=f(x) \text{ para }y\in B_0\text{ e } y\in B_1\}=\{x|y=f(x) \text{ para }y\in B_0\}\cap \{x|y=f(x) \text{ para }y\in B_1\}=f^{-1}(B_0)\cap f^{-1}(B_1)$
+\begin{itemize}
+\item \bf (d) \rm Veamos que $f^{-1}(B_0- B_1)= f^{-1}(B_0)- f^{-1}(B_1)$
+\end{itemize}
+Se tiene que $f^{-1}(B_0-B_1)=\{x|y=f(x) \text{ para }y\in B_0-B_1\}=\{x|y=f(x) \text{ para }y\in B_0\text{ e } y\notin B_1\}=\{x|y=f(x) \text{ para }y\in B_0\}\cap\{x|y=f(x) \text{ para }y\notin B_1\}=\{x|y=f(x) \text{ para }y\in B_0\}\cap\{x|y=f(x) \text{ para }y\notin B_1\}=\{x|y=f(x) \text{ para }y\in B_0\}-\{x|y=f(x) \text{ para }y\in B_1\}=f^{-1}(B_0)- f^{-1}(B_1)$
+\begin{itemize}
+\item \bf (e) \rm Veamos que $A_0\subset A_1\Rightarrow f(A_0)\subset f(A_1)$.
+\end{itemize}
+Como $A_0\subset A_1\Leftrightarrow (a\in A_0\Rightarrow a\in A_1)$, se tiene $f(A_0)=\{y|y=f(x) \text{ para }x\in A_0\}=\{y|y=f(x) \text{ para }x\in A_0\subset A_1\}\subset \{y|y=f(x) \text{ para }x\in A_1\}=f(A_1)$
+\begin{itemize}
+\item \bf (f) \rm Veamos que $f(A_0\cup A_1)= f(A_0)\cup f(A_1)$.
+\end{itemize}
+Se tiene que $f(A_0\cup A_1)=\{y|y=f(x) \text{ para }x\in A_0\cup B_1\}=\{y|y=f(x) \text{ para }x\in B_0\text{ o } x\in B_1\}=\{y|y=f(x) \text{ para }x\in B_0\}\cup \{y|y=f(x) \text{ para }x\in B_1\}=f(B_0)\cup f(B_1)$
+\begin{itemize}
+\item \bf (g) \rm Veamos que $f(A_0\cap A_1)\subset f(A_0)\cap f(A_1)$.
+\end{itemize}
+Se tiene que $f(A_0\cap A_1)=\{y|y=f(x) \text{ para }x\in A_0\cap A_1\}=\{y|y=f(x) \text{ para }x\in A_0\text{ y } x\in A_1\}=\{y|y=f(x) \text{ y } x=z \text{ para }x\in A_0,z\in A_1\}\subset\{y|y=f(x)=f(z) \text{ para }x\in A_0\text{ y } z\in A_1\}=\{y|y=f(x) \text{ para }x\in A_0\}\cap \{y|y=f(x) \text{ para }x\in A_1\}=f(A_0)\cap f(A_1)$.
+
+Si $f$ es inyectiva, $f(x)=f(z)\Rightarrow x=z$, esto es $x\in \{y|y=f(x)=f(z) \text{ para }x\in A_0\text{ y } z\in A_1\}\Rightarrow x\in\{y|y=f(x) \text{ y } x=z \text{ para }x\in A_0,z\in A_1\}$. Luego $\{y|y=f(x)=f(z) \text{ para }x\in A_0\text{ y } z\in A_1\}\subset \{y|y=f(x) \text{ y } x=z \text{ para }x\in A_0\text{ y } z\in A_1\}$. Se concluye que $f(A_0\cap A_1)=f(A_0)\cap f(A_1)$
+\begin{itemize}
+\item \bf (h) \rm Veamos que $f(A_0- A_1)\supset f(A_0)- f(A_1)$.
+\end{itemize}
+Sea $b'\in f(A_0-A_1)=\{b|f(a)=b $ para algún $a \in A_0-A_1\}=\{b|f(a)=b $ para algún $a \in A_0 $ y $a \notin A_1\} \Leftrightarrow b'\in \{b|f(a)=b $ para algún $a \in A_0\}$ y $b' \notin \{b|f(a)\neq b \text{ para todo }a \notin A_1\}$. Por otro lado, $b'\in f(A_0)-f(A_1) \Leftrightarrow b' \in \{b|f(a)=b \text{ para algún }a \in A_0\}$ y $ b' \notin \{b|f(a)=b \text{ para algún }a \in A_1\} \Leftrightarrow b' \in \{b|f(a)=b \text{ para algún }a \in A_0\text{ y }f(a)\neq b \text{ para todo }a \in A_1\}$. Por otro lado, se tiene que $a' \in A_0 - A_1 = \{a| a \in A_0 \text{ y }a \notin A_1 \} \Rightarrow a' \notin \{a| a \in A_0 \text{ y }a \in A_1\}$. Por tanto, $b' \in f(A_0-A_1)\Leftrightarrow b'\in \{b|f(a)=b \text{ para algún }a \in A_0\}\text{ y }b' \notin \{b|f(a)\neq b \text{ para todo }a \notin A_1\} \Rightarrow b'\notin \{b|f(a)=b \text{ para algún } a \in A_0\text{ y }f(a')\neq b \text{ para todo }a' \in A_1 \}\Leftrightarrow b' \notin \{b|f(a)=b \text{ para algún }a \in A_0\}\text{ o } b' \in \{b|f(a)=b \text{ para algún }a \in A_1\} \Leftrightarrow b' \notin f(A_0)-f(A_1)$. Es decir $b' \in f(A_0)-f(A_1) \Rightarrow b' \in f(A_0 - A_1)$ Es decir $f(A_0)-f(A_1) \subset f(A_0-A_1)$
+\end{document}

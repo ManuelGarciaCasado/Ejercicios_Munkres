@@ -1,0 +1,39 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 1 Ejercicio Complementario 8}
+Sea $\mathcal{A}$ la familia de todos los pares $(A,<)$ donde $A$ es un subconjunto de $\mathbb{Z}_{+}$ y $<$ es un buen orden de $A$ (se permite que $A$ sea vacío). Defínase $(A',<')\sim (A,<)$ si $(A',<')$ y $(A,<)$ tienen el mismo tipo de orden.
+Sea $[(A,<)]$ la clase de equivalencia de $(A,<)$, y $E$ el conjunto de todas las clases de equivalencia. Definimos $[(A,<)]\ll [(A',<')]$ si $(A,<)$ tiene el tipo de orden de una sección de $(A',<')$.
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que la relación $\ll$ está bien definida y que es un orden simple sobre $E$. Sea tiene que $[(\varnothing,\varnothing)]$ es el mínimo de $E$. i) Veamos que se cumple la no reflexibilidad. Si $[(A,<)]\ll [(A,<)]$ entonces,  
+$(A,<)$ tiene el mismo tipo de orden que una sección de $(A,<)$. Por tanto hay una función biyectiva $h:A\rightarrow A'$ y otra función biyectiva de $g:A' \rightarrow S_\alpha$ donde $S_\alpha$ es una sección de $A$. Por tanto, hay una función biyectiva $g\circ f$ de $A$ a una sección de $A$, siendo $<$ un buen orden de $A$. Lo cual es absurdo según el ejercicio 2(b).
+ii) Veamos que se cumple la transitividad. Si $[(A,<)]\ll [(A',<')]$ y $[(A',<')]\ll [(A'',<'')]$, veamos que se cumple $[(A,<)]\ll [(A'',<'')]$.
+Estonces, se tiene que $(A,<)$ tiene el mismo tipo de orden que una sección de $(A',<')$ y que $(A',<')$ tiene el mismo tipo de orden que una sección de $(A'',<'')$. Por tanto, hay una función biyectiva $h:A\rightarrow S_\alpha$, con $S_\alpha$ sección de $A'$ por $\alpha$ para algún $\alpha\in A'$, y otra función biyectiva de $g:A' \rightarrow A'' $, con $S_\beta$ sección de $A''$ por $\beta$ para algún $\beta\in A''$. Por tanto, $(g\circ h)(A)=g(S_{\alpha})=S_{g(\alpha)}$. Luego hay una función biyectiva $g\circ h: A\rightarrow S_\gamma$  donde $S_\gamma$ es una sección de $A''$ por $\gamma$ para algún $\gamma=g(\alpha)\in A''$. Luego $(A,<)$ y una sección de $(A'',<'')$ tienen el mismo tipo de orden. En  conclusión, $[(A,<)]\ll [(A',<')]$ y $[(A',<')]\ll [(A'',<'')]$, se cumple $[(A,<)]\ll [(A'',<'')]$.Veamos que se cumple iii). Veamos que si $[(A,<)],[(A',<')]\in E$, bien  $[(A,<)]\ll[(A',<')]$, bien $[(A',<')]\ll[(A,<)]$. Como $[(\varnothing,\varnothing)]$ es el mínimo de $E$, se tiene que $[(\varnothing,\varnothing)]\ll[(A,<)]$ para cualquier otro $[(A,<)]\in E$. Si hay dos elementos diferentes $[(A,<)],[(A',<')]$ de $E$ entonces $(A,<)$ y $(A',<')$ no tienen el mismo tipo de orden, no están en la misma clase de equivalencia. Como ambos conjuntos cumplen i) y ii) y son bien ordenados, según el ejercicio 4(a) se tiene que bien $(A,<)$ tiene el mismo tipo de orden que una sección de $(A',<')$, bien $(A',<')$ tiene el mismo tipo de orden que una sección de $(A,<)$. Luego, bien  $[(A,<)]\ll[(A',<')]$, bien $[(A',<')]\ll[(A,<)]$.  Por tanto, la relación $\ll$ es un orden simple sobre $E$.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Sea $\alpha=[(A,<)]$ un elemento de $E$. Veamos $(A,<)$ tiene el mismo tipo de orden que la sección $S_\alpha(E)$ de $E$ por $\alpha$. Sea la aplicación $f:A\rightarrow E$ tal que $f(x)= [(S_x(A), \text{restricción de} <)]$ para cada $x\in A$. Sea $A$ una sección $S_N$ de $\mathbb{Z}_{+}$ por $N$ para algún $N>1$. Entonces $f(1)=[(\varnothing,\varnothing)]$, $f(2)=[(\{1\},<_{\{1\}})]$. Supongamos que se cumple $f(n)=[(S_n,<_{n})]$ para $n<N$. Entonces, como $f(\cup_{n<N}\{n\})=\cup_{n<N}f(n)$ se tiene que $f(S_N)=\cup_{n<N}[(S_n,<_{n})]$. Pero $\cup_{n<N}[(S_n,<_{n})]=[(S_N,<_{N})]$. Luego si fuera $f(S_N)=S_{f(N)}$, como $f(S_N)=[(S_N,<_{N})]$, se tendría que $S_{[(S_N,<_{N})]}= [(S_N,<_{N})]$. Y entonces $S_{[(S_N,<_{N})]}$ y $(S_N,<_{N})$ tendrían el mismo tipo de orden. Veamos que $f(S_N)=S_{f(N)}$. Se tiene que $S_{f(N)}=\{\alpha| \alpha\in E \text{ y }\alpha\ll f(N)\}$. Entonces $S_{f(N)}=\{\alpha| \alpha\in E \text{ y }\alpha\ll [(S_N,<_{N})]\}$. Por otro lado $f(S_N)= \cup_{n<N}[(S_n,<_{n})]=\{\alpha| \alpha\in E \text{ y }\alpha=[(S_n,<_{n})], n<N\}$, como $n<N\Rightarrow f(n)\ll f(N) \Rightarrow [(S_n,<_{n})]\ll[(S_N,<_{N})]$, se tiene $f(S_N)=\{\alpha| \alpha\in E \text{ y }\alpha=[(S_n,<_{n})]\ll [(S_N,<_{N})]\}$ tanto, $f(S_N)=S_{f(N)}$.
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Veamos que $E$ está bien ordenado por $\ll$. Dado que $[(\varnothing,\varnothing)]$ es el mínimo de $E$ y dado que $\varnothing \subset A$, definase $f_A: A\rightarrow E$ donde $f(\alpha)= [(S_\alpha(E), \text{ retriccion de }<)]$. Luego, $f_A(\varnothing ) = S_{[(\varnothing,\varnothing)]}=[(\varnothing,\varnothing)]$ para todo elemento $A$ de $\mathcal{A}$. Entonces $[(\varnothing,\varnothing)]$ pertenece a cualquier subconjunto no vacío de $E$. Por tanto $[(\varnothing,\varnothing)]$ es el mínimo de cualquier subconjunto no vacío de $E$ por el orden$\ll$. Por tanto,$E$ está bien ordenado por $\ll$.
+\begin{itemize}
+\item \bf (d) \rm
+\end{itemize}
+Vemos que $E$ es no numerable. Si $h:E\rightarrow \mathbb{Z}_+$ es una biyección, entonces $h$ da lugar a un buen orden y además $E$ es numerable. En ese caso se tendría que $(\mathbb{Z}_+,<_{\mathbb{Z}_+})\sim (E,\ll)$ y por tanto, $(\mathbb{Z}_+,<_{\mathbb{Z}_+}), (E,\ll)\in [(E,\ll)]$. Por tanto $[(E,\ll)]\in E$. Por apartado (a), $(E,\ll)$ tiene el mismo tipo de orden que $S_{[(E,\ll)]} (E)$. Pero en ejercicio 2(b) se vió que ninguna sección de $E$ tiene el mismo tipo de orden que $E$. Por tanto, la suposición de que hay una biyección $h:E\rightarrow \mathbb{Z}_+$ es falsa, esto es que $E$ es no numerable.
+
+
+
+
+
+
+
+\end{document}

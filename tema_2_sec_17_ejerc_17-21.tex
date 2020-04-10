@@ -1,0 +1,135 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 17 Ejercicio 17}
+Consideremos la topología del límite inferior sobre $\mathbb{R}$ y la topología $\mathcal{T}_{rac}$ generada por la base $\mathcal{C}=\{[a,b)| a,b \text{ racionales en } \mathbb{R}\}$. Veamos la clausura de $A=(0,\sqrt{2})$ y de $B=(\sqrt{2},3)$. 
+
+En la topología del límite inferior, los entornos $[0,1/n)$ de $0$ son tales que $[0,1/n)\cap A=(0,1/n)\neq \varnothing$ para todo $n$. Por tanto $0\in \overline{A}$. Además, los entornos $[\sqrt{2}-1/n,\sqrt{2}+1/n)$ de $\sqrt{2}$ son tales que $[\sqrt{2}-1/n,\sqrt{2}+1/n)\cap A=[\sqrt{2}-1/n,\sqrt{2})\neq \varnothing$ para todo $n$. Por tanto $\sqrt{2}\in \overline{A}$. Luego $\overline{A}= [0,\sqrt{2}]$. En la topología del límite inferior, los entornos $[\sqrt{2},\sqrt{2}+1/n)$ de $\sqrt{2}$ son tales que $[\sqrt{2},\sqrt{2}+1/n)\cap B=(\sqrt{2}+1/n,3)\neq \varnothing$ para todo $n$. Por tanto $\sqrt{2}\in \overline{B}$. Además, los entornos $[3-1/n,3+1/n)$ de $3$ son tales que $[3-1/n,3+1/n)\cap B=[3-1/n,3)\neq \varnothing$ para todo $n$. Por tanto $3\in \overline{B}$. Luego $\overline{B}= [\sqrt{2},3]$
+
+Se tiene que para $0$ hay entornos $[-1/n,1/n)\in \mathcal{T}_{rac}$ tales que $1/(n+1)\in [-1/n,1/n)\cap A\neq \varnothing$.
+Se vió en ejercicio 11(d) de la sección 4 que $\sqrt{2}=1-\Sigma_{\{n|n\in \mathbb{Z}_+\}}\frac{(-1)^n}{2^n}$ es irracional. Por tanto, $1-\Sigma_{i=1}^{2n}\frac{(-1)^{i}}{2^i}<\sqrt{2}<1-\Sigma_{i=1}^{2n+1}\frac{(-1)^{i}}{2^i}$ . En la topología $\mathcal{T}_{rac}$, unos entornos de $\sqrt{2}$ vienen dados por $[1-\Sigma_{i=1}^{2n}\frac{(-1)^{i}}{2^i},1-\Sigma_{i=1}^{2n+1}\frac{(-1)^{i}}{2^i})$. Por tanto, si $C=[1-\Sigma_{i=1}^{2n}\frac{(-1)^{i}}{2^i},1-\Sigma_{i=1}^{2n+1}\frac{(-1)^{i}}{2^i})$ se tiene que $1-\Sigma_{i=1}^{2n}\frac{(-1)^{i}}{2^i}\in C\cap A\Rightarrow C\cap A \neq \varnothing $. Por tanto $\overline{A}=[0,\sqrt{2}]$
+
+Se tiene que para $3$ hay entornos $[3-1/n,3+1/n)\in \mathcal{T}_{rac}$ tales que $3-1/(n-1)\in [3-1/n,3+1/n)\cap B\neq \varnothing$. Además, $1-\Sigma_{i=1}^{2n}\frac{(-1)^{i}}{2^i}<\sqrt{2}<1-\Sigma_{i=1}^{2n+1}\frac{(-1)^{i}}{2^i}$ . En la topología $\mathcal{T}_{rac}$, unos entornos de $\sqrt{2}$ vienen dados por $[1-\Sigma_{i=1}^{2n}\frac{(-1)^{i}}{2^i},1-\Sigma_{i=1}^{2n+1}\frac{(-1)^{i}}{2^i})$. Por tanto, si $C=[1-\Sigma_{i=1}^{2n}\frac{(-1)^{i}}{2^i},1-\Sigma_{i=1}^{2n+1}\frac{(-1)^{i}}{2^i})$ se tiene que $1-\Sigma_{i=1}^{2n+1}\frac{(-1)^{i}}{2^i}\in C\cap B\Rightarrow C\cap B \neq \varnothing $. Por tanto $\overline{B}=[\sqrt{2},3]$
+\section{Tema 2 Sección 17 Ejercicio 18}
+Veamos las clausuras de los siguientes subconjuntos del cuadrado ordenado $I^2_0$ en la topología del orden:
+\begin{itemize}
+\item $A=\{(1/n)\times 0|n\in \mathbb{Z}_+\}$
+\end{itemize}
+Se tiene que $0\times 1$ es un punto de $I^2_0$. Sean los entornos de $0\times 1$ dados por los intervalos $(a,b)$ con $a=0\times 0$ y $b=x\times 1$ y $x\in (0,1]$. Entonces para todo $x\in (0,1]$ existe un $n\in \mathbb{Z}_+$ tal que $1/n<x$. Por tanto, $\{1/n \times 1\}\in (a,b)\cap  A\neq\varnothing$. Por tanto $\overline{A}=\{0\times 1\}\cup A$
+\begin{itemize}
+\item $B=\{(1-1/n)\times 1/2|n\in \mathbb{Z}_+\}$
+\end{itemize}
+Se tiene que $1\times 1/2\in I^2_0$. Los intervalos $(a,b)$ de $I^2_0$, con $a=\{x\}\times \{1/2\}$ tal que $x\in [0,1)$ y $b=\{1\}\times \{1\}$, son unos entornos de  $1\times 0$ puesto que $1\times 0\in (a,b)$. Además, para todo $x$ existe un $n\in \mathbb{Z}_+$ tal que $1-1/n>x$. Por tanto, $\{1-1/n\}\times 1/2\in (a,b) \cap  B \neq\varnothing$. Por tanto $\overline{B}= B\cup \{1\times 0\}$
+\begin{itemize}
+\item $C=\{x\times 0|\space 0<x<1\}$
+\end{itemize}
+Se tiene que $a_1\times 1$ con $a_1\in [0,1)$ es un punto de  $I^2_0$. Además, tiene entornos de tipo $(a,b)$ donde $a=a_1\times 1/2$ y $b=x\times 0$ Por tanto, para todo $x\in (a_1,1]$ $x > a_1$ existe un $y\in \mathbb{R}$ tal que $y<x$. Luego $y\times 0\in (a,b)\cap C\neq \varnothing$. Luego $a_1\times 1\in \overline{C}$ para todo $a_1\in [0,1)$. Los intervalos abiertos $(c,d)$ de $I^2_0$ son entornos de $d_1\times 0$, con $d_1\in (0,1]$, ya que $c=\{x\}\times \{0\}$, con $x\in [0,1)$, y que $d =\{d_1\}\times \{1/2\}$. Además, para todo $0<x\leq d_1$ existe un $y\in \mathbb{R}$ tal que $y>x$. Por tanto, $y\times 0\in (c,d) \cap  C \neq\varnothing$. Luego $(0,1]\times 0\in \overline{C}$. Por tanto, Luego $\overline{C}=\{[0,1)\times 1\}\cup C\cup \{(0,1]\times 0\}$
+\begin{itemize}
+\item $D=\{x\times 1/2| 0<x<1\}$
+\end{itemize}
+Se tiene que $a_1\times 1$ con $a_1\in [0,1)$ es un punto de  $I^2_0$. Además, tiene entornos de tipo $(a,b)$ donde $a=a_1\times 1/2$ y $b=x\times 0$ Por tanto, para todo $x\in (a_1,1]$ $x > a_1$ existe un $y\in \mathbb{R}$ tal que $y<x$. Luego $y\times 0\in (a,b)\cap D\neq \varnothing$. Luego $a_1\times 1\in \overline{D}$ para todo $a_1\in [0,1)$. Los intervalos abiertos $(c,d)$ de $I^2_0$ son entornos de $d_1\times 0$, con $d_1\in (0,1]$, ya que $c=\{x\}\times \{0\}$, con $x\in [0,1)$, y que $d =\{d_1\}\times \{1/2\}$. Además, para todo $0<x\leq d_1$ existe un $y\in \mathbb{R}$ tal que $y>x$. Por tanto, $y\times 0\in (c,d) \cap  D \neq\varnothing$. Luego $(0,1]\times 0\in \overline{D}$. Por tanto, Luego $\overline{D}=\{[0,1)\times 1\}\cup D\cup \{(0,1]\times 0\}$
+\begin{itemize}
+\item $E=\{1/2 \times x| 0<x<1\}$
+\end{itemize}
+Los intervalos abiertos $(a,b)$ de $I^2_0$, con $a=\{0\}\times \{0\}$ y $b=\{1/2\}\times \{x\}$ tal que $x\in [0,1]$, son unos entornos de $1/2\times 0$ puesto que $1/2\times 0\in (a,b)$. Además, para todo $0<x<1$ existe un $y\in \mathbb{R}$ tal que $y<x$. Por tanto, $1/2\times y\in (a,b) \cap  D \neq\varnothing$. Luego $1/2\times 0\in \overline{E}$. Los intervalos abiertos $(c,d)$ de $I^2_0$, con $c=\{1/2\}\times \{x\}$ y $d=\{1\}\times \{1\}$ tal que $x\in [0,1]$, son unos entornos de  $1/2\times 1$ puesto que $1/2\times 1\in (c,d)$. Además, para todo $0<x<1$ existe un $y\in \mathbb{R}$ tal que $x<y$. Por tanto, $1/2\times y\in (c,d) \cap  D \neq\varnothing$. Luego $1\times 1/2\in \overline{E}$. Finalmente $ \overline{E}=\{1/2\times x|0\leq x \leq 1\}$
+\section{Tema 2 Sección 17 Ejercicio 19}
+Sea $A\subset X$. Defínase la frontera de $A$ como $\rm Fr \it A= \overline{A}\cap \overline{(X-A)}$.
+\begin{itemize}
+\item (a)
+\end{itemize}
+Veamos que $\rm Int \it A\cap \rm  Fr\it A=\varnothing$ y $\overline{A}=\rm Int \it A\cup \rm Fr \it A$. Se tiene que $x\in \overline{A}$ si, y solo si, para todo entorno $U$ se tiene $U\cap A\neq \varnothing$. Se tiene que $x\in \overline{(X-A)}$ si, y solo si, para todo entorno $V$ de $x$ se tiene $V\cap (X-A)\neq \varnothing$. Por tanto, si $x\in \rm Fr \it A$ se tiene que $x\in \overline{A}$ y $x\in \overline{(X-A)}$  si, y solo si, 
+ para todos entornos $V$ y $U$ de $x$ se tiene que $U\cap A\neq \varnothing$ y que $V\cap (X-A)\neq \varnothing$. Pero si $x\in \rm Int\it A$ entonces para todo entorno $U$ de $x$ se tiene que $U\cap A\neq \varnothing$ pero existe un entorno $V$ de $x$ tal que $V\cap (X-A)= \varnothing$. Por tanto $\rm Int \it A \cap \rm Fr \it A = \varnothing$. Por el mismo argumento, tanto si $x\in \rm Int \it A$ como si $x\in \rm Fr\it  A$ se tiene que todos los  entornos $U$ de $x$ son tales que $U\cap A\neq \varnothing$. Luego $x\in \rm Int \it A$ o $x\in \rm Fr\it  A$ imploca $x\in \overline{A}$. Por tanto, $\overline{A}\supset\rm Int \it A\cup \rm Fr\it  A$. Si $x\in \overline{A}$ entonces existe un entorno $V$ de $x$ tal que o $x\in V\subset A$ y por tanto,$V\cap (X-A)=\varnothing$; o no existe tal entorno $V$ y todos los entornos $U$ de $x$ son tales que $U\cup \overline{(X-A)}\neq\varnothing$. Por tanto $x\in \overline {A}$ implica $x\in \overline {(X-A)}$ o $x\in \rm Int\it A$. Finalmente $\overline{A}=\rm Int\it A\cup \rm Fr \it A$
+\begin{itemize}
+\item (b)
+\end{itemize}
+Veamos que $\rm Fr\it A=\varnothing$ si, y solo si, $A$ es abierto y cerrado a la vez. Si  
+$\rm Fr\it A=\varnothing$, por el apartado (a), se tiene que $\overline{A}=\rm Int\it A$. Como ppr definición $\overline{A}$ es cerrado y $\rm Int\it A$ es abierto, de lo anterior se tiene que $\overline{A}$ y $\rm Int\it A$ son abiertos y cerrados a la vez. Por tanto, $A$ es abierto y cerrado a la vez.
+\begin{itemize}
+\item (c)
+\end{itemize}
+Veamos que $U$ es abierto si, y solo si, $\rm Fr\it U=\overline{U}-U$. Se tiene que $U$ es abierto si, y solo si, $U=\rm Int\it U$ y, por apartado (a), $\overline{U}-U=(\rm Int \it U \cup \rm Fr\it U)-U=(U\cup\rm Fr\it U)-U=\rm Fr\it U$.
+\begin{itemize}
+\item (d)
+\end{itemize}
+La unión de todos los conjuntos abiertos que contienen a $\overline{U}$ contien a la unión de todos los conjuntos abiertos que contienen a $U$. Por tanto $\rm Int \it U \subset \rm Int \it \overline{U}$. Si $U$ es abierto, entonces $U=\rm Int \it U\subset\rm Int \it \overline{U}$.
+
+\section{Tema 2 Sección 17 Ejercicio 20}
+Veamos cuál es la frontera de los siguientes conjuntos de $\mathbb{R}^2$:
+\begin{itemize}
+\item \bf (a) \rm $A=\{x\times y|y=0\}$
+
+\end{itemize}
+Se tiene que $A$ es cerrado por ser $\mathbb{R}^2-A$ abierto. Por tanto $A=\overline{A}$. Además $\overline{\mathbb{R}^2-A}=\mathbb{R}^2$. Por tanto, $\rm Fr \it A= A$
+\begin{itemize}
+\item \bf (b) \rm $B=\{x\times y|x>0 \text{ e }y\neq 0\}$
+\end{itemize}
+Se tiene que $B$ es abierto por ser unión de abiertos $U_1=\{x\times y| x>0, y>0\}$ y $U_2=\{x\times y| x>0, y<0\}$. Por tanto $B=\rm Int\it B$. Además $\overline{\mathbb{R}^2-B}=\mathbb{R}^2-B$ por ser cerrado. Por tanto, $\rm Fr \it B= \{x\times y | x = 0\}\cup \{x\times y | y = 0\}$
+\begin{itemize}
+\item \bf (c) \rm $C=A\cup B$
+\end{itemize} 
+Se tiene que $C=A\cup B=\{x\times y | x> 0 \text{ e } y\neq 0 \text{, o } y=0\}$. Por tanto, $\rm Fr \it C=\{x\times y| x=0\}$ ya que los puntos $x\times 0\notin \rm Fr \it C$
+\begin{itemize}
+\item \bf (d) \rm $D=\{x\times y|x\text{ es racional}\}$ 
+\end{itemize}
+Se tiene que $\overline{D}=D$, por tanto, $D$ es cerrado. Por otro lado $\overline{(\mathbb{R}^2-D)}=\mathbb{R}^2$. Por tanto $\rm Fr\it D=D$
+\begin{itemize}
+\item \bf (e) \rm $E=\{x\times y|0<x^2-y^2\leq 1\}$ 
+\end{itemize}
+Se tiene que $\overline{E}=\{x\times y|0\leq x^2-y^2\leq 1\}$. Por otro lado $\overline{(\mathbb{R}^2-E)}=\{x\times y|0\geq x^2-y^2\text{ o }x^2-y^2\geq 1\}$. Por tanto $\rm Fr\it E=\{x\times y|x^2-y^2=1\text{ o }x^2-y^2=0 \}$
+\begin{itemize}
+\item \bf (f) \rm $F=\{x\times y|x\neq 0\text{ e } y\leq 1/x\}$ 
+\end{itemize}
+Se tiene que $\overline{F}=\{x\times y|y\leq 1/x\}$ y por tanto $\overline{(\mathbb{R}^2-F)}=\{x\times y|y\geq 1/x\text{ o }x=0\}$. Por tanto $\rm Fr\it F=\{x\times y|y= 1/x\text{ o }x=0\}$
+\section{Tema 2 Sección 17 Ejercicio 21}
+Dadas las operación de clausura $\rm c\it :A\rightarrow \overline{A}$ y de complementario $\rm C\it :A\rightarrow X-A$ de subconjuntos $A$ de $X$, veamos que
+
+\begin{itemize}
+\item \bf (a) \rm No hay mas de 14 conjuntos diferentes al aplicar sucesivamente estas dos operaciones.
+\end{itemize}
+Se tiene que $\rm CC\it A=A$ y que $\rm cc\it A= \rm c\it A$.
+Además $\rm Int \it A= \rm CcC\it A$. Dado que $\rm Int\it A=\rm IntInt \it A= \rm CcCCcC\it A$, se tiene que $\rm cC\it A=\rm cCcCcCcC\it A$. Por tanto, 
+\begin{eqnarray}
+\rm cC\it A=\rm cCcCcCcC \it A\\
+\rm CcCcC\it A=\rm CcCcCcCcCcC \it A\\
+\rm cCcCcC\it A=\rm cCcCcCcCcCcC \it A\\
+\rm CcCcCcCcC\it A=\rm CcCcCcCcCcCcCcC \it A\\
+\rm cCcCcCcCcC\it A=\rm cCcCcCcCcCcCcCcC \it A\\
+\rm CcCcCcCcCcCcC\it A=\rm CcCcCcCcCcCcCcCcCcC \it A\\
+\rm cCcCcCcCcCcCcC\it A=\rm cCcCcCcCcCcCcCcCcCcC \it A\\
+\rm CcCcCcCcCcCcCcCcC\it A=\rm CcCcCcCcCcCcCcCcCcCcCcC \it A
+\end{eqnarray}
+\begin{eqnarray}
+\rm cCcC\it A=\rm cCcCcCcCcC \it A\\
+\rm cCcCc\it A=\rm cCcCcCcCcCc \it A\\
+\rm cCcCcCcC\it A=\rm cCcCcCcCcCcCcC\it A\\
+\rm cCcCcCcCc\it A=\rm cCcCcCcCcCcCcCc\it A\\
+\rm cCcCcCcCcCcC\it A=\rm cCcCcCcCcCcCcCcCcC\it A\\
+\rm cCcCcCcCcCcCc\it A=\rm cCcCcCcCcCcCcCcCcCc\it A\\
+\rm cCcCcCcCcCcCcCcC\it A=\rm cCcCcCcCcCcCcCcCcCcCcC\it A\\
+\rm cCcCcCcCcCcCcCcCc\it A=\rm cCcCcCcCcCcCcCcCcCcCcCc\it A
+\end{eqnarray}
+Las ecuaciones (9), (11), (13), (15) están repetidas. Por tanto, hay 16-4+2=14 conjuntos diferentes
+\begin{itemize}
+\item \bf (b) \rm Veamos un conjunto $A$ de $\mathbb{R}^2$ con la topología usual.
+\end{itemize}
+$A=(0,1)\cup (1,2)\cup \{3\}\cup([4,5]\cap\mathbb{Q})$
+\begin{eqnarray}
+\text{c} A=[0,2]\cup \{3\}\cup[4,5]\\
+\text{C}A=(-\infty,0]\cup \{1\}\cup[2,3)\cup (3,4)\cup((4,5)-\mathbb{Q})\cup(5,\infty)\\
+\text{cC}A=(-\infty,0]\cup \{1\}\cup[2,\infty)\\
+\text{Cc} A=(-\infty,0)\cup (2,3)\cup (3,4)\cup(5,\infty)\\
+\text{cCc} A=(-\infty,0]\cup [2,4]\cup[5,\infty)\\
+\text{CcCc} A=(0,2)\cup (4,5)\\
+\text{CcC} A=(0,1)\cup (1,2)\\
+\text{cCcC} A=[0,2]\\
+\text{CcCcCcC} A=(0,2)
+\end{eqnarray}
+
+
+\end{document}

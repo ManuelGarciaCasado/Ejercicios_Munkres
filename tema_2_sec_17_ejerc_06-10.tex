@@ -1,0 +1,46 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 17 Ejercicio 6}
+Sean $A, B$ y $A_{\alpha}$ subconjuntos del espacio $X$. Veamos que
+\begin{itemize}
+\item \bf (a) \rm  Si $A\subset B$ entonces $\overline{A}\subset\overline{B}$
+\end{itemize}
+Dado que $x\in \overline{A}$, se tiene que $x\in U$ para todo $U$ abierto de $X$ si ,y solo si, $U\cap A\neq\varnothing$. Por tanto, si $A\subset B$ entonces $U\cap B\neq\varnothing$ para todo $U$ abierto de $ X$ si ,y solo si, $x\in \overline{B}$. Por tanto, si $x\in \overline{A}$ entonces $x \in\overline{B}$ y se tiene que $\overline{A} \subset \overline{B}$
+
+\begin{itemize}
+\item \bf (b) \rm  $\overline{A\cup B}=\overline{A}\cup\overline{B}$
+\end{itemize}
+Dado $x\in \overline{A\cup B}$, se tiene que $x\in U$ para todo $U$ abierto de $X$ si ,y solo si, $U\cap (A \cup B)\neq\varnothing$. Por tanto $(U\cap A)\cup (U\cap B)=U\cap (A \cup B)\neq\varnothing$. Entonces $U\cap A\neq\varnothing$ o $U\cap B\neq\varnothing$ para todo $U$ abierto de $ X$ si ,y solo si, $x\in \overline{B}$ o $x\in \overline{A}$. Si ,y solo si, $x\in \overline{A}\cup\overline{B}$ . Por tanto, $x\in \overline{A\cup B}$ si, y solo si, $x \in\overline{A}\cup \overline{B}$, y se tiene que $\overline{A\cup B}=\overline{A} \cup \overline{B}$
+\begin{itemize}
+\item \bf (c) \rm  Si $\overline{\bigcup A_\alpha}\supset \bigcup\overline{A_\alpha}$
+\end{itemize}
+ 
+Supongamos que el índice toma valores finitos $\alpha\in \{1,2,...n\}$. Dado $x\in \bigcup\overline{A_\alpha}$, se tiene que $x\in U$ para todo $U$ abierto de $X$ si, y solo si, $\bigcup (U\cap A_\alpha)\neq\varnothing$. Como $\bigcup (U\cap A_\alpha)=U\cap\left( \bigcup A_\alpha\right)\neq\varnothing$ se tiene que $x\in \overline{\bigcup A_\alpha} $. Entonces $U\cap A_1\neq\varnothing$ o $U\cap A_2\neq\varnothing$... o $U\cap A_n\neq\varnothing$ para todo $U$ abierto de $ X$ si, y solo si, $x\in \overline{A_1}$ o $x\in \overline{A_2}$ ... o $x\in \overline{A_n}$. Si, y solo si, $x\in \bigcup \overline{A_\alpha}$ . Por tanto, $x\in \bigcup \overline{A_\alpha}$ si, y solo si, $x \in\overline{\bigcup A_\alpha}$ y $\alpha \in \{1,2...n\}$, y se tiene que $\bigcup\overline{ A_\alpha}=\overline{\bigcup A_\alpha}$ si $\alpha \in \{1,2...n\}$. Pero si $\alpha\in J$ donde $J$ es un conjunto indexante infinito, se tiene que la unión arbitraria de cerrados no es necesariamente un cerrado. Sea $x\notin\bigcup\overline{ A_\alpha}$ para $\alpha\in J$. Sean las clausuras $\overline{A_\alpha}$ de los $A_\alpha$ y supongamos que existe un elemento $x_\alpha\in \overline{A_\alpha}$ para cada clausura $\overline{A_\alpha}$ y además, los $x_\alpha$ convergen al elemento $x\in X$. entonces se tiene por definición que $x\in \overline{\bigcup A_\alpha}$ pero $x\notin \bigcup \overline{A_\alpha}$. Por tanto se tiene que $\bigcup \overline{A_\alpha}\subset\overline{\bigcup A_\alpha}$
+\section{Tema 2 Sección 17 Ejercicio 7}
+Veamos el fallo de lo siguiente: si $\{A_\alpha\}$ es una colección de conjuntos en $X$ y si $x\in \overline{\bigcup A_\alpha}$ entonces cada entorno $U$ de $x$ interseca a $\bigcup A_\alpha$. Así, $U$ debe intersecar algún $A_\alpha$, por lo que $x$ debe pertenecer a la clausura de algún $A_\alpha$. Por consiguiente $x\in \bigcup\overline{A_\alpha}$ y, por tanto, $\overline{\bigcup A_\alpha}\subset\bigcup\overline{A_\alpha}$. Pero para que $x$ pertenezca a la clausura de $A_\alpha$ es necesario que todos y cada uno de los entornos de $x$ intesequen a $A_\alpha$. Como hemos visto en ejercicio 6(c), si $x$ es el punto límite de ciertos puntos $x_\alpha$ de las clausuras de los $A_\alpha$ tal que $x\neq x_\alpha$ para todo $\alpha$, existe un abierto $x\in U$ que cumple que $U\cap A_\alpha=\varnothing$ para cualquier $A_\alpha$.
+\section{Tema 2 Sección 17 Ejercicio 8}
+Veamos si las igualdades siguientes se cumplen
+\begin{itemize}
+\item \bf (a) \rm  $\overline{A \cap B}= \overline{A}\cap \overline{B}$
+\end{itemize}
+Por definición de clausura, $A, B,A\cap B$ son cerrados si, y solo si, $A=\overline{A}$, $B=\overline{B}$ y $A\cap B=\overline{A\cap B}$. Por teorema 17.1, la interseción arbitraria de cerrados es cerrada, por tanto, si $A$ y $B$ son cerrados, $\overline{A}\cap\overline{B}=A\cap B=\overline{A\cap B}$. Si $A$ y $B$ no son cerrados, por teorema 17.5, $x\in \overline{A\cap B}$ si, y solo si, cada entorno $U$ de $x$ interseca a $A\cap B$. Además, $x\in \overline{A}\cap \overline{B}$ si, y solo si, cada entorno $U$ de $x$ interseca a $A$ e interseca a $B$. Puede ser que $A\cap B=\varnothing$ pero exista un $x$ tal que $x\in A'$ y $x\in B'$, con $A'$ $B'$ conjuntos de puntos límite de $A$ y $B$, respectivamente. Por tanto, todo $U$ entorno de $x$ interseca a $A$ e interseca a $B$, pero no interseca a $A\cap B$. Luego $\overline{A\cap B}\subset \overline{A}\cap \overline{B}$
+\begin{itemize}
+\item \bf (b) \rm  $\overline{\bigcap A_\alpha}= \bigcap \overline{A_\alpha}$
+\end{itemize}
+Por definición de clausura, $A_\alpha$ son cerrados si, y solo si, $A_\alpha=\overline{A_\alpha}$. Por teorema 17.1, la interseción arbitraria de cerrados es cerrada, por tanto. Si $A_\alpha$ son cerrados, $\bigcap\overline{A_\alpha}=\bigcap A_\alpha=\overline{\bigcap A_\alpha}$. Si alguno de ellos no es cerrado, digamos $A_\beta$ puede que $\left(\bigcap_{\alpha\neq\beta}A_\alpha\right)\cap A_\beta=\varnothing$ pero que exista un $x$ que pertenezca al conjuto de puntos de acumulación de $\bigcap_{\alpha\neq\beta}A_\alpha$ y de $A_\beta$ a la vez. En este caso, por teorema 17.5, $\overline{\bigcap A_\alpha}\subset \bigcap \overline{A_\alpha}$
+\begin{itemize}
+\item \bf (c) \rm  $\overline{ A-B}= \overline{A} -\overline{B}$
+\end{itemize}
+Si $A-B$ es cerrado, $A-B=\overline{A-B}$. Si $A$ y $B$ son cerrados, $X-B$ es abierto. Por tanto $A-B=A\cap (X-B)$ es abierto. Luego $\overline{A} -\overline{B}=A-B=A\cap (X-B)$ es abierto. Por tanto $\overline{A} -\overline{B}=A-B\subset \overline{A-B}$
+\section{Tema 2 Sección 17 Ejercicio 9}
+Veamos que si $A\subset X$ y $B\subset Y$ entonces $\overline{A\times B}=\overline{A}\times \overline{B}$ en la topología $X\times Y$. Por teorema 17.5, $x\in \overline{A\times B}$  si, y solo si, cada entorno $U\times V$ de $x$ es tal que $(U\times V)\cap (A\times B)\neq\varnothing$. Pero  $(U\cap A)\times (V\cap B)= (U\times V)\cap (A\times B)\neq\varnothing$. Entonces $(U\cap A)\times (V\cap B)\neq\varnothing$ para todo entorno $U\times V$ de $x$ si, y solo si, $x\in\overline{A}\times \overline{B}$. Por tanto, $x\in\overline{A}\times \overline{B}$ si, y solo si, $x\in\overline{A\times B}$. Luego  $\overline{A\times B}=\overline{A}\times \overline{B}$
+\section{Tema 2 Sección 17 Ejercicio 10}
+Veamos que cada topología del orden es de Hausdorff. Si $x,y\in X$ en la topología del orden, entonces $x<y$ o $y<x$. Supongamos que $x<y$. Sea $U$ un entorno de $x$  y $V$ un entorno de $y$.  Si no existe un $c$ tal que $x<c<y$, sean $U=\left[a_0,y\right)$ y $V=\left(x,b_0\right]$ donde $a_0$ es el mínimo de $X$ (si lo hay) y $b_0$ es el máximo de $X$ (si lo hay), se tiene que $U\cap V=\left[a_0,y\right)\cap\left(x,b_0\right]=\varnothing$. Si existe un $c$ tal que $x<c<y$, sean $U=\left[a_0,c\right)$ y $V=\left(c,b_0\right]$ donde $a_0$ es el mínimo de $X$ (si lo hay) y $b_0$ es el máximo de $X$ (si lo hay), se tiene que $U\cap V=\left[a_0,c\right)\cap\left(c,b_0\right]=\varnothing$
+\end{document}

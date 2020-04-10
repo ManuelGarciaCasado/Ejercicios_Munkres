@@ -1,0 +1,38 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 13 Ejercicio 5}
+Sea $X$ un espacio topológico y $\mathcal{A}$ una base para una topología sobre $X$. Veamos que la topología generada por $\mathcal{A}$ es igual a la intersección de todas las topologías sobre $X$ que contienen a $\mathcal{A}$. Sea $\mathcal{T}$ la topología generada por $\mathcal{A}$. Sean $\{\mathcal{T}_\alpha\}$ la colección de topologías tales que $\mathcal{A}\subset \mathcal{T}_\alpha$ para cada $\alpha$. Hay que probar que $\mathcal{T}=\cap\mathcal{T}_\alpha$. Se tiene que para cada abierto $U\in\mathcal{T}$ y cada $x\in U$, hay un elemento $A$ de la base tal que $x\in A$ y $A\subset U$. También se tiene que para cada $\mathcal{T}_\alpha$ hay una base $\mathcal{B}_\alpha$. Pero $\mathcal{A}\subset \mathcal{T}_\alpha\Rightarrow A\in \mathcal{T}_\alpha$. Por tanto para cada $x\in X$ y cada $A$ que contiene a $x$ existe un $B_\alpha\in \mathcal{B}_\alpha$ tal que $x\in B_\alpha$ Como el lema 13.3 dice, esto quiera decir  que $\mathcal{T}\subset \mathcal{T}_\alpha$. Pero decir $\mathcal{T}\subset \mathcal{T}_\alpha$ para todo $\alpha$ es lo mismo que decir $\mathcal{T}=\cap \mathcal{T}_\alpha$
+
+\section{Tema 2 Sección 13 Ejercicio 6}
+Veamos que las topologías de $\mathbb{R}_l$ y $\mathbb{R}_K$ no son comparables. Sean $\mathcal{T}'$ y $\mathcal{T}''$ las topologías de $\mathbb{R}_l$ y $\mathbb{R}_K$ con bases $\mathcal{B}'$ y $\mathcal{B}''$, respectivamente, definidas por los elementos $B'=[a,b)$ y $B''=(a,b)-\{1/n\}$ o $B''=(a,b)$  para cualesquiera $n\in \mathbb{Z}_+$ y $a<b$. Sea $x\in [a,b)$ entonces no es posible encontrar un interbalo $(c,d)$ ni tampoco un conjunto $(c,d)-\{1/n\}$ tal que $x\in (c,d)\subset [a,b)$ ni tampoco $x\in (c,d)-\{1/n\}\subset [a,b)$ para todo $x$, ya que si $x=a$, no es posible. Sea $x\in (a,b)$ entonces es posible encontrar un interbalo $[c,d)$ tal que $x\in [c,d)\subset (a,b)$. Pero si $x\in(a,b)-\{1/n\}$, no siempre es posible encontrar un intervalo $[c,d)$ tal que $x\in [c,d)\subset (a,b)-\{1/n\}$ para todo $x$, ya que si $a=-1$ y $b=1$, no es posible encontrar un intervalo $[c,d)$ que contenga a $x=0$ y que esté contenido en $(-1,1)-\{1,1/2...1/n\}$. Por tanto, las topologías de $\mathbb{R}_l$ y $\mathbb{R}_K$ no son comparables.
+\section{Tema 2 Sección 13 Ejercicio 7}
+Sean las topologías definidas como $\mathcal{T}_1$, topología usual;
+$\mathcal{T}_2$, topología de $\mathbb{R}_K$; $\mathcal{T}_3$, topología de los complementos finitos; $\mathcal{T}_4$, topología del límite superior con elementos base $(a,b]$; y $\mathcal{T}_5$, topología con todos los conjuntos $(-\infty,a)=\{x|x<a\}$ como base.
+Dado que para todo $x\in \mathbb{R}$ y todo intervalo $(-\infty,a)$ existe un intervalo $(c,d)$ tal que $x\in (c,d)\subset (-\infty,a)$ entonces $\mathcal{T}_5\subset \mathcal{T}_1$. Por lema 13.4, se tiene que $\mathcal{T}_5\subset \mathcal{T}_1\subset \mathcal{T}_2$. Se tiene que para todo $x\in \mathbb{R}$ y para todo conjunto $(a,b)-\{1/n\}$ o $(a,b)$ existe un conjunto $(c,d]$tal que $x\in (c,d]\subset(a,b)-\{1, 1/2...1/n\}$ o $x\in (c,d]\subset(a,b)$ incluso cuando $x=0$. Por tanto $\mathcal{T}_2\subset\mathcal{T}_4$. Por tanto $\mathcal{T}_5\subset\mathcal{T}_1\subset \mathcal{T}_2\subset\mathcal{T}_4$. Sean los elementos de $\mathcal{T}_3$ dados por $U_n=(-\infty,a_1)\cup(a_n,\infty)\cup_{i=2}^n(a_i-1,a_i)$ o $U=\mathbb{R}$. Entonces $\mathbb{R}-U_n=\{a_1,...,a_n\}$  o $\mathbb{R}-U=\varnothing$. Por tanto, se tiene que las familias $\{U_n\}\cup\{\mathbb{R}\}$ son bases para $\mathcal{T}_3$ y se tiene que para todo $x\in \mathbb{R}$ y todo $U_n\in\mathcal{T}_3$ existe un $(a,b)$ tal que $x\in(a,b)\subset U_n $. Por tanto, $\mathcal{T}_3\subset \mathcal{T}_1$. Pero, no para todo $x\in \mathbb{R}$ y no todo $U_n\in\mathcal{T}_3$ existe un $(-\infty,b)$ tal que $x\in(-\infty,b)\subset U_n $. Ni tampoco se tiene que para todo $x\in \mathbb{R}$ y no todo $(-\infty,a)\in\mathcal{T}_4$ existe un $U_n$ tal que $x\in U_n\subset (-\infty,a) $ Por tanto, $\mathcal{T}_3$ y $\mathcal{T}_5$ no son comparables. En conclusión,  $\mathcal{T}_3\subset \mathcal{T}_1\subset \mathcal{T}_2\subset\mathcal{T}_4$ y $\mathcal{T}_5\subset \mathcal{T}_1\subset \mathcal{T}_2\subset\mathcal{T}_4$
+\section{Tema 2 Sección 13 Ejercicio 8}
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que la colección numerable $\mathcal{B}=\{(a,b)|a<b ,a\text{ y }b\text{ racionales}\}$ es una base que genera la topología sobre $\mathbb{R}$. Si $x\in (a,b)$, existen $p,q,r,s\in \mathbb{Z}_+$ tales que $p/q<r/s$ y $x\in(p/q,r/s)\subset (a,b)$ dado que siempre hay unos $p,q,r,s$ tales que $a<p/q<r/s<b$. Por lema 13.2, la colección $\mathcal{B}$ forma una base de $\mathbb{R}$. 
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos que la colección numerable $\mathcal{C}=\{[a,b)|a<b ,a\text{ y }b\text{ racionales}\}$ es una base que genera una topología distinta de la topología sobre $\mathbb{R}_l$. Si $x\in (a,b)$, existen $p,q,r,s\in \mathbb{Z}_+$ tales que $p/q<r/s$ y $x\in[p/q,r/s)\subset (a,b)$ dado que siempre hay unos $p,q,r,s$ tales que $a<p/q<r/s<b$; pero no hay unos $p,q,r,s\in \mathbb{Z}_+$ tales que $a= p/q<r/s<b$ cuando $a$ es irracional. Por tanto no se cumple $x\in[p/q,r/s)\subset [a,b)$ para todo $x\in [a,b)$. Por tanto, $\mathcal{C}$ no forma una base de $\mathbb{R}_l$
+
+
+
+
+
+
+
+
+
+
+\end{document}

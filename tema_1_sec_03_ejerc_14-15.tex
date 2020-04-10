@@ -1,0 +1,26 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 3 Ejercicio 14}
+% Create a new 1st level heading
+Si \(C\) relación en \(A\) y \((a,b)\in C\), se define \(D\) relación en \(A\) donde \((b,a)\in D\).
+\newline
+\bf (a)\rm Veamos que \(C\) es simétrica si, y solo si, \(C=D\). Si \(C\) simétrica, entonces \(aCb \Rightarrow bCa\), y  
+\(bCa \Rightarrow aDb\), por la defenición de \(D\). Por tanto \((a,b)\in C \Rightarrow (a,b)\in D\), y \(C\subset D\)). Por tanto, si \((a,b)\in C\), se tiene \((a,b)\in D \text{ y } (b,a)\in D \). Por otro lado, \((b,a)\in D\Rightarrow (a,b)\in C\). Por tanto, por ser \(C\) simétrica,\((b,a)\in D\Rightarrow (b,a)\in C \). Luego \(D\subset C\). Se concluye que \(D=C\). Veamos la recíporca. Si \(D=C\), entonces \((b,a)\in D\Rightarrow (a,b)\in C\Rightarrow (a,b)\in D\). Por tanto \(D=C\Rightarrow D\) es simétrica y \(C\) es simétrica.
+\newline
+\bf (b)\rm Veamos que si \(C\) es relación de orden, entonces \(D\) es relación de orden. Veamos que \(D\) cumple las propiedades de orden si \(C\) las cumple. (Compara bilidad). Para cualesquiera \(x\) e \(y\) de \(A\) tales que\(x\neq y\), \(xCy\) o \(yCx\). Por tanto, como \(xCy\Leftrightarrow yDx \text{ y } yCx \Leftrightarrow xDy\), para cualesquiera \(x\) e \(y\) de \(A\) tales que\(x\neq y\), \(yDx\) o \(xDy\). \(D\) cumple comparabilidad. (No refrexividad) ningún \(x\in A\) verifica que \(xCx\). Por tanto, como \(xCx \Leftrightarrow xDx\), ningún \(x\in A\) verifica que \(xDx\). \(D\) cumple la no reflexividad. (Transitividad) si \(xCy \text{ y } yCz,\text{ entonces } xCz\). Como \(xCy \Leftrightarrow yDx, yCz \Leftrightarrow zDy,\text{ y } xCz\Leftrightarrow zDx\), se tiene que si \(yDx \text{ y } zDy,\text{ entonces } zDx\). Luego \(D\) cumple  transitividad. 
+\newline
+\bf (c) \rm Veamos que si un conjunto ordenado cumple la propiedad del ínfimo, entonces cumple la propiedad del supremo. Es decir, exista el ínfimo \(b\) de \(B_0\) para todo \(B_0\) en \(A\). Entonces \(b\) es el máximo del conjunto de cotas inferiores de \(B_0\). Es decir existe \(b\in\{c|\text{ para todo } x \in B_0, c \leq x\} \text{ tal que }y\leq b, \text{ para todo } y\in\{c|\text{ para todo } x \in B_0, c \leq x\}\), para todo \( B_0\subset A\). Luego, si \(b\in \{c|\text{ para todo } x \in B_0, c \leq x\},\text{ para todo } x \in B_0, b \leq x \text{ y }y\leq b, \text{ para todo } y\in\{c|\text{ para todo } x \in B_0, c\leq x\}\). Como \(B^*_0=\{c|\text{ para todo } x \in B_0, c \leq x\}\subset A\), se tiene que existe \(b\in A \text{ tal que } \text{ para todo } x \in B_0, b \leq x \text{ y }y\leq b, \text{ para todo } y\in B^*_0\). Por tanto,\(b\in \{c|y\leq c, \text{ para todo } y\in B^*_0 \text{ y } c\in A\}\), conjunto de cotas superiores de \(B^*_0\). Por lo anterior, existe \(b\in\{c|y\leq c, \text{ para todo } y\in B^*_0 \text{ y } c\in A\}\) tal que \(b\leq x\) para todo \(x\in B_0\). Si fuera \(B_0\subset\{c|y\leq c, \text{ para todo } y\in B^*_0 \text{ y } c\in A\}\) entonces \(b\) sería el mínimo de las cotas superiores de \(B^*_0\).
+% Uncomment the following two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}

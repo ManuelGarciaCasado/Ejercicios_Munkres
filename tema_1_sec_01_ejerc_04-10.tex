@@ -1,0 +1,110 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 1 Sección 1 Ejercicio 4}
+Sean $A,B$ conjuntos de numeros reales.
+\begin{itemize}
+\item \bf (a) \rm Veamos la negación del enunciado "Para todo $a\in  A$, se verifica que $a^2\in B$."
+\end{itemize}
+"Para almenos un $a\in A$, se verifica que $a^2\notin B$."
+\begin{itemize}
+\item \bf (b) \rm Veamos la negación del enunciado "Para almenos un $a\in  A$, se verifica que $a^2\in B$."
+\end{itemize}
+"Para todo $a\in A$, se verifica que $a^2\notin B$."
+\begin{itemize}
+\item \bf (c) \rm Veamos la negación del enunciado "Para todo $a\in  A$, se verifica que $a^2\notin B$."
+\end{itemize}
+"Para almenos un $a\in A$, se verifica que $a^2\in B$."
+\begin{itemize}
+\item \bf (d) \rm Veamos la negación del enunciado "Para almenos un $a\notin  A$, se verifica que $a^2\in B$."
+\end{itemize}
+"Para todo $a\notin A$, se verifica que $a^2\notin B$."
+\section{Tema 1 Sección 1 Ejercicio 5}
+Sea $\mathcal{A}\neq \varnothing$. 
+\begin{itemize}
+\item \bf (a) \rm Veamos si la afirmación "$x\in \bigcup_{A\in \mathcal{A}} A\Rightarrow x\in A$ para al menos un  $A\in \mathcal{A}$" es verdadera.
+\end{itemize}
+La afirmación es verdadera. Por definición, $\bigcup_{A\in \mathcal{A}}A=\{y|y\in A \text{ para algún }A\in \mathcal{A}\}$. Entonces $x\in \bigcup_{A\in \mathcal{A}}A\Leftrightarrow x\in \{y|y\in A \text{ para algún }A\in \mathcal{A}\}$. Como $x$ es uno de los elementos del conjunto, $x\in A$ para algún $A\in \mathcal{A}$.
+\begin{itemize}
+\item \bf (b) \rm Veamos si la afirmación "$x\in \bigcup_{A\in \mathcal{A}} A\Rightarrow x\in A$ para todo  $A\in \mathcal{A}$" es verdadera.
+\end{itemize}
+La afirmación es falsa. Por definición, $\bigcup_{A\in \mathcal{A}}A=\{x|x\in A \text{ para algún }A\in \mathcal{A}\}$. Entonces $x\in \bigcup_{A\in \mathcal{A}}A\Leftrightarrow x\in \{y|y\in A \text{ para algún }A\in \mathcal{A}\}$. Como $x$ es uno de los elementos del conjunto, $x\in A$ para algún $A\in \mathcal{A}$. Es decir, no se da que $x\in A$ para todo $A\in \mathcal{A}$
+\begin{itemize}
+\item \bf (c) \rm Veamos si la afirmación "$x\in \bigcap_{A\in \mathcal{A}} A\Leftrightarrow x\in A$ para al menos un $A\in \mathcal{A}$" es verdadera. 
+\end{itemize}
+La afirmación es verdadera. Por definición, $\bigcap_{A\in \mathcal{A}}A=\{x|x\in A \text{ para todo }A\in \mathcal{A}\}$. Entonces $x\in \bigcap_{A\in \mathcal{A}}A\Rightarrow x\in \{y|y\in A \text{ para todo }A\in \mathcal{A}\}$. Como $x$ es uno de los elementos del conjunto, $x\in A$ para todo $A\in \mathcal{A}$. Es decir, se da que $x\in A$ para algún $A\in \mathcal{A}$. Otra forma de verlo es que, como $\bigcap_{A\in \mathcal{A}}A\subset x\in\bigcup_{A\in \mathcal{A}}A$, resulta que $x\in \bigcap_{A\in \mathcal{A}}A\Rightarrow x\in\bigcup_{A\in \mathcal{A}}A$, que es verdad según apartado (a).
+\begin{itemize}
+\item \bf (d) \rm Veamos si la afirmación "$x\in \bigcap_{A\in \mathcal{A}} A\Rightarrow x\in A$ para todo $A\in \mathcal{A}$" es verdadera.
+\end{itemize}
+La afirmación es verdadera. Por definición, $\bigcap_{A\in \mathcal{A}}A=\{y|y\in A \text{ para todo }A\in \mathcal{A}\}$. Entonces $x\in \bigcap_{A\in \mathcal{A}}A\Leftrightarrow x\in \{y|y\in A \text{ para todo }A\in \mathcal{A}\}$. Como $x$ es uno de los elementos del conjunto, $x\in A$ para todo $A\in \mathcal{A}$.
+\section{Tema 1 Sección 1 Ejercicio 6}
+Veamos el contrarrecíproco de las afirmaciones del ejercicio 5.
+Sea $\mathcal{A}\neq \varnothing$. 
+\begin{itemize}
+\item \bf (a) \rm $x\notin A$ para todo  $A\in \mathcal{A} \Rightarrow x\notin \bigcup_{A\in \mathcal{A}}A$
+\end{itemize}
+\begin{itemize}
+\item \bf (b) \rm $x\notin A$ para algún $A\in \mathcal{A} \Rightarrow x\notin \bigcup_{A\in \mathcal{A}}A$
+\end{itemize}
+\begin{itemize}
+\item \bf (c) \rm $x\notin A$ para todo $A\in \mathcal{A} \Rightarrow x\notin \bigcap_{A\in \mathcal{A}}A$
+\end{itemize}
+\begin{itemize}
+\item \bf (d) \rm $x\notin A$ para algún $A\in \mathcal{A} \Rightarrow x\notin \bigcap_{A\in \mathcal{A}}A$
+\end{itemize}
+\section{Tema 1 Sección 1 Ejercicio 7}
+Sean $A,B,C$ conjuntos
+\begin{itemize}
+\item Veamos cómo se escribe $D=\{x| x\in A \text{ y }(x\in B \text{ o } x\in C)\}$
+\end{itemize}
+$D=\{x| x\in A \text{ y }x\in B \cup C\}= \{x|x\in A\cap (B\cup C)\}=A\cap (B\cup C)$
+\begin{itemize}
+\item Veamos cómo se escribe $E=\{x| (x\in A \text{ y }x\in B) \text{ o } x\in C)\}$
+\end{itemize}
+$E=\{x|( x\in A\cap B \text{ o }x\in C\}= \{x|x\in (A\cap B)\cup C)\}=(A\cap )B\cup C$
+\begin{itemize}
+\item Veamos cómo se escribe $F=\{x| x\in A \text{ y }(x\in B \Rightarrow x\in C)\}$
+\end{itemize}
+$F=\{x| x\in A \text{ y }(x\in B \subset C)\}= \{x|x\in A\cap (B\subset C)\}=(A\cap B)\subset (A\cap C)$
+\section{Tema 1 Sección 1 Ejercicio 8}
+Veamos que si $A$ tiene dos elementos, $\mathcal{P}(A)$ tiene cuatro elementos. Veamos qué pasa cuando $A$ tiene uno, tres o ningún elemento.
+Si $A=\{a,b\}$, entonces $\mathcal{P}(A)=\{\varnothing, \{a\},\{b\},A\}$. Si $A=\{a\}$, entonces $\mathcal{P}(A)=\{\varnothing, A\}$. Si $A=\{a,b,c\}$, entonces $\mathcal{P}(A)=\{\varnothing, \{a\},\{b\}, \{c\},\{a,b\},\{a,c\},\{b,c\},A\}$. Si $A=\varnothing$, entonces $\mathcal{P}(A)=\{\varnothing\}$
+\section{Tema 1 Sección 1 Ejercicio 9}
+Veamos las leyes de Morgan para $\bigcap_{A\in \mathcal{A}}A$ y  $\bigcup_{A\in \mathcal{A}}A$.
+
+Sea $x\in A-\bigcup_{B\in \mathcal{A}}B$ si, y sólo si, $x\in\{y|y\in A \text{ e }y\notin\bigcup_{B\in \mathcal{A}}B \}$ si, y sólo si, $x\in\{y|y\in A \text{ e }y\notin\{z|z\in B\text{ para algún }B\in \mathcal{A}\}\}$ si, y sólo si, $x\in\{y|y\in A \text{ e }y\notin B \text{ para todo }B\in \mathcal{A}\}$ si, y sólo si, $x\in\{y|y\in (A - B) \text{ para todo }B\in \mathcal{A}\}$ si, y sólo si, $x\in \bigcap_{B\in \mathcal{A}}(A-B)$.
+
+Sea $x\in A-\bigcap_{B\in \mathcal{A}}B$ si, y sólo si, $x\in\{y|y\in A \text{ e }y\notin\bigcap_{B\in \mathcal{A}}B \}$ si, y sólo si, $x\in\{y|y\in A \text{ e }y\notin\{z|z\in B\text{ para todo }B\in \mathcal{A}\}\}$ si, y sólo si, $x\in\{y|y\in A \text{ e }y\notin B \text{ para algún }B\in \mathcal{A}\}$ si, y sólo si, $x\in\{y|y\in (A - B) \text{ para algún }B\in \mathcal{A}\}$ si, y sólo si, $x\in \bigcup_{B\in \mathcal{A}}(A-B)$.
+
+\section{Tema 1 Sección 1 Ejercicio 10}
+Veamos cuales de los siguentes subconjuntos de $\mathbb{R}\times \mathbb{R}$ es igual al procucto cartesiano de dos subconjuntos de $\mathbb{R}$
+\begin{itemize}
+\item \bf (a) \rm Sea $\{(x,y)| x\text{ es entero}\}$
+\end{itemize}
+$\{(x,y)| x\text{ es entero}\}=\bigcup_{x\in \mathbb{Z}}(\{x\}\times \mathbb{R})=(\bigcup_{x\in \mathbb{Z}}\{x\})\times \mathbb{R}=\mathbb{Z}\times \mathbb{R}$
+\begin{itemize}
+\item \bf (b) \rm Sea $\{(x,y)| 0<y\leq 1\}$
+\end{itemize}
+$\{(x,y)| 0<y\leq 1\}= \mathbb{R}\times \{x|0<x\leq 1\}$
+\begin{itemize}
+\item \bf (c) \rm Sea $\{(x,y)| 0<y\leq 1\}$
+\end{itemize}
+$\{(x,y)| y>x\}$ no se puede escribir como producto escalar porque puesto que los elementos de los pares ordenados $(x,y)=\{\{x\},\{x,y\}\}$ de aquel conjunto no son independientes.
+\begin{itemize}
+\item \bf (d) \rm Sea $\{(x,y)| x\notin \mathbb{Z} \text{ e } y\in \mathbb{Z}\}$
+\end{itemize}
+$\{(x,y)| x\notin \mathbb{Z} \text{ e } y\in \mathbb{Z}\}=\{(x,y)| x\in \mathbb{R}-\mathbb{Z} \text{ e } y\in \mathbb{Z}\}= (\mathbb{R}-\mathbb{Z})\times \mathbb{Z}$ aquel conjunto no son independientes.
+\begin{itemize}
+\item \bf (e) \rm Sea $\{(x,y)| x^2+y^2< 1\}$
+\end{itemize}
+$\{(x,y)| x^2+y^2< 1\}$ no se puede escribir como producto escalar porque puesto que los elementos de los pares ordenados $(x,y)=\{\{x\},\{x,y\}\}$ de aquel conjunto no son independientes.
+
+
+\end{document}

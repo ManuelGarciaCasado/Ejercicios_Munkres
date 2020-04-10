@@ -1,0 +1,23 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 22 Ejercicio 5}
+Sea $p:X\rightarrow Y$ una aplicación abierta. Veamos que si $A$ es abierto en $X$, la aplicación $q:A\rightarrow p(A)$ obtenida al restringir $p$, es una aplicación abierta. Por definición de aplicación abierta,  $p(A)$ es abierto en $Y$ por ser $A$ abierto de $X$. Sea $U$  abierto de $X$. Entonces $p(U)$ es abierto de $Y$. Además, $q(U)=q(U\cap A)=p(U\cap A)$. Pero $p(U\cap A)$ es abierto de $Y$, luego $q(U)$ es abierto de $Y$. Entonces, si $V$ es abierto  en la topología de subespacio de $A$ sobre $X$, se tiene que $V\subset A$ y $q(V)=p(V)=p(V)\cap p(A)$ es abierto en la topología de subespacio de $p(A)$ sobre $Y$. Luego, $q$ es una aplicación abierta.
+
+\section{Tema 2 Sección 22 Ejercicio 6}
+Sea $\mathbb{R}_K$ el espacio topológico formado por los intervalos $(a,b)$ junto con los conjuntos $(a,b)-K$ donde $K=\{1/n| n\in \mathbb{Z}_+\}$. Sea $Y$ el espacio cociente de $\mathbb{R}_K$ como resultado de reducir $K$ a un único punto. Sea la aplicación cociente $p:\mathbb{R}_K\rightarrow Y$
+\begin{itemize}
+\item \bf (a) \rm Veamos que $Y$ cumple el axioma $T_1$, pero no es de Hausdorff.
+\end{itemize}
+El axioma $T_1$ dice que un conjunto finito de elementos del espacio $Y$ es cerrado. El espacio $Y$ es de Hausdorff si cada par de elementos de $Y$ tienen entornos disjuntos en $Y$. Sea $x\in \mathbb{R}_K$ el punto al que $K$ se reduce. Entonces  si $U=(a,b)$ entonces $p(U)=U$ y $p(U-K)=U-\{x\}$. Por tanto, $U$ y $U-\{x\}$ son elementos de la base del espacio $Y$. Entonces, el conjunto $\{x\}$ es cerrado, ya que $U-\{x\}$ es abierto en $Y$. Además, el conjunto $\{y\}$ con $y\neq x$ también es cerrado, puesto que $\mathbb{R}-\{y\}=(-\infty,y)\cup (y,\infty)$ es abierto, por ser unión de abiertos. Por tanto, $Y$ satisface el axioma $T_1$. Entonces, para cada abierto $V$ y $V-\{x\}$ de $Y$, resulta que $p^{-1}(V)=V$ y $p^{-1}(V-\{x\})=p^{-1}(V)-p^{-1}(\{x\})=V-K$ son abiertos de $\mathbb{R}_K$. Por tanto, $p$ es contínua. Se tiene que la sucesión $\{1,1/2,..1/n...\}$ para $n\in \mathbb{Z}_+$ converge a $0$, por teorema 21.3, la sucesión $\{p(1), p(1/2),..., p(1/n),...\}$ converge a $p(0)$ y converge a $x$ (puesto que $p(K)=\{x\}$), al mismo tiempo. Por teorema 17.10, el espacio $Y$ no es de Hausdorff.
+\begin{itemize}
+\item \bf (b) \rm Veamos que $p\times p :\mathbb{R}_K\times \mathbb{R}_K\rightarrow Y\times Y$ no es una aplicación cociente.
+\end{itemize}
+Veamos primero que la diagonal no es cerrada en $Y\times Y$, pero su imagen inversa es cerrada en $\mathbb{R}_K\times \mathbb{R}_K$. La diagonal se define como $\Delta = \{y\times y| y\in Y\}$. Se vió en ejercicio 17.13 que $Y$ es de Hausdorff si, y solo si, $\Delta $ es cerrada en $Y\times Y$. Como sabemos que $Y$ no es de Hausdorff por apartado (a), el producto escalar de dos espacios que no son de Hausdorff no es de Hausdorff (porque si $y_n \rightarrow a$ y $y_n \rightarrow b$ para $a\neq b$ en $Y$, resulta que $y_n \times y\rightarrow a\times y$ y $y_n \times y\rightarrow a\times y$  en $Y\times Y$). Por tanto, la diagonal $\Delta$ es abierta. Entonces $(p\times p)^{-1}(\Delta)=\{p^{-1}(y)\times p^{-1}(y)|y\in Y\}$ esto es $(p\times p)^{-1}(\Delta)=\{x\times x|x\in \mathbb{R}_K\}$ que es cerrado, ya que la unión $U=\{x\times y|x>y\text{ y }x\times y\in \mathbb{R}_K\times \mathbb{R}_K\}\cup \{x\times y|x<y\text{ y }x\times y\in \mathbb{R}_K\times \mathbb{R}_K\}$ de dos abiertos es abierta y $\{x\times x|x\in \mathbb{R}_K\}=\mathbb{R}_K\times \mathbb{R}_K-U$ es cerrado. Por tanto, $p\times p$ no es contínua. Esto implica que no es aplicación cociente.
+\end{document}

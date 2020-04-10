@@ -1,0 +1,59 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+\begin{document}
+
+% Create a new 1st level heading
+
+\section{Sección 2 Ejercicio 3}
+
+Sea \(f: A \longrightarrow B\) Sea \(A_i \subset A\) y \(B_i \subset B\) donde \(i\in\{0,1,3,...,N\}\). \newline
+Veamos que \(f^{-1}(\bigcup\limits_{i=0}^{N} B_i)=\bigcup\limits_{i=0}^{N} f^{-1}(B_i)\).
+\newline
+Se ha visto en ejercicio 2.2 que \(f^{-1}(B_0\cup B_1)=f^{-1}(B_0)\cup f^{-1}(B_1)\). Por tanto \newline
+\begin{equation}
+\begin{aligned}
+f^{-1}\left( \left[\bigcup\limits_{i=0}^{N-1}B_i\right] \cup B_N \right)=f^{-1}\left(\bigcup\limits_{i=0}^{N-1} B_i\right)\cup f^{-1}( B_N ) \\ 
+=f^{-1}\left(\bigcup\limits_{i=0}^{N-2} B_i\right)\cup f^{-1}( B_{N-1})\cup f^{-1}( B_N )
+\\ \vdots \\
+=\bigcup \limits_{i=0}^{N}f^{-1}\left( B_i \right)
+\end{aligned}
+\end{equation}
+\newline
+Se ha visto en ejercicio 2.2 que \(f^{-1}(B_0\cap B_1)=f^{-1}(B_0)\cap f^{-1}(B_1)\). Por tanto \newline
+\begin{equation}
+\begin{aligned}
+f^{-1}\left( \left[\bigcap\limits_{i=0}^{N-1}B_i\right] \cap B_N \right)=f^{-1}\left(\bigcap\limits_{i=0}^{N-1} B_i\right)\cap f^{-1}( B_N ) \\ 
+=f^{-1}\left(\bigcap\limits_{i=0}^{N-2} B_i\right)\cap f^{-1}( B_{N-1})\cap f^{-1}( B_N )
+\\ \vdots \\
+=\bigcap \limits_{i=0}^{N}f^{-1}\left( B_i \right)
+\end{aligned}
+\end{equation}
+\newline
+Se ha visto en ejercicio 2.2 que \(f(B_0\cup B_1)=f(B_0)\cup f(B_1)\). Por tanto \newline
+\begin{equation}
+\begin{aligned}
+f\left( \left[\bigcup\limits_{i=0}^{N-1}B_i\right] \cup B_N \right)=f\left(\bigcup\limits_{i=0}^{N-1} B_i\right)\cup f( B_N ) \\ 
+=f\left(\bigcup\limits_{i=0}^{N-2} B_i\right)\cup f( B_{N-1})\cup f( B_N )
+\\ \vdots \\
+=\bigcup \limits_{i=0}^{N}f\left( B_i \right)
+\end{aligned}
+\end{equation}
+\newline
+Se ha visto en ejercicio 2.2 que \(f(B_0\cap B_1) \subset f(B_0)\cap f(B_1)\). Por tanto \newline
+\begin{equation}
+\begin{aligned}
+f\left( \left[\bigcap\limits_{i=0}^{N-1}B_i\right] \cap B_N \right) \subset f\left(\bigcap\limits_{i=0}^{N-1} B_i\right)\cap f( B_N ) \\ 
+\subset f\left(\bigcap\limits_{i=0}^{N-2} B_i\right)\cap f( B_{N-1})\cap f( B_N )
+\\ \vdots \\
+\subset \bigcup \limits_{i=0}^{N}f\left( B_i \right)
+\end{aligned}
+\end{equation}
+\newline
+% Uncomment the following two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}

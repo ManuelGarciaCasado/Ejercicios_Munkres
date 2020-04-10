@@ -1,0 +1,78 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 4 Ejercicio 06}
+% Create a new 1st level heading
+Definase 
+\begin{eqnarray}
+a^{n+1}= a^n \cdot a \\
+a^{1}=a
+\end{eqnarray}
+El punto clave aquí es no suponer
+de antemano que \(\mathbb{Z}_{+}\in \mathbb{R}\) ya que esto se deduce del principio de inducción.
+Veamos que \(n,m\in \mathbb{Z}_{+}, a^n \cdot a^m =a^{n+m}\) por inducción. Si \(m=1\), se verifica que \(n\in \mathbb{Z}_{+}, a^n \cdot a =a^{n+1}\) por la definición de arriba. Supongamos que se cumple \(n\in \mathbb{Z}_{+}, a^n \cdot a^x =a^{n+x}\) para cierto \(x\in \mathbb{R}\), entonces multiplicando ambos lados por \(a\), se tiene que \(\left(a^n \cdot a^x \right)\cdot a= a^{n+x}\cdot a\). Por las leyes del algebra en lado izquierdo y definición en lado derecho, \(a^n \cdot \left( a^x \cdot a\right)= a^{n+x+1}\Rightarrow a^n \cdot  a^{x+1}= a^{n+x+1}\). Luego si se cumple para \(x\), se cumple para \(x+1\). Por tanto el conjunto \(X=\left\{x|n\in \mathbb{Z}_{+}, x\in \mathbb{R},a^n \cdot a^x = a^{n+x}\right\}\) es inductivo. Como \(\mathbb{Z}_{+}\) es la intersección de todos los conjuntos inductivos, se tiene que \(m \in \mathbb{Z}_{+}\Rightarrow m \in X\) y entonces \(n,m\in \mathbb{Z}_{+}\Rightarrow a^n \cdot a^m =a^{n+m}\).
+\newline
+Veamos que \(n,m\in \mathbb{Z}_{+},\left( a^n \right)^m =a^{n \cdot m}\) por inducción.
+Si \(m=1\), se verifica que \(n\in \mathbb{Z}_{+}, \left(a^n \right)^1 =a^{n}\) por la definición de arriba. Supongamos que se cumple \(n\in \mathbb{Z}_{+},\left( a^n \right)^x =a^{n\cdot x}\) para cierto \(x\in \mathbb{R}\), entonces multiplicando ambos lados por \(a^n\), se tiene que \(\left(a^n \right)^{x}\cdot a^n= a^{n\cdot x}\cdot a^n\). Por las leyes de algebra en lado izquierdo y por la propiedad anterior \(a^n \cdot a^y= a^{n+y}, y\in\mathbb{R}\) en el lado derecho, \(\left(a^n\right)^{x+1} =a^{n \cdot \left(x+1\right)}\). Luego si se cumple para \(x\), se cumple para \(x+1\). Por tanto el conjunto \(X=\left\{x|n\in \mathbb{Z}_{+}, x\in \mathbb{R},\left(a^n\right)^{x} =a^{n \cdot x}\right\}\) es inductivo. Como \(\mathbb{Z}_{+}\) es la intersección de todos los conjuntos inductivos, se tiene que \(m \in \mathbb{Z}_{+}\Rightarrow m \in X\) y entonces \(n,m\in \mathbb{Z}_{+}\Rightarrow \left(a^n\right)^{m} =a^{n \cdot m}\).
+\newline
+Veamos que \(m\in \mathbb{Z}_{+},a,b\in\mathbb{R},a^{m}\cdot b^{m}=\left( a\cdot b\right)^m\) por inducción. Para m=1, se tiene que \(a^{1}\cdot b^{1}=\left( a\cdot b\right)^1\). Por la primera propiedad en ambos lados, \(a\cdot b=\left( a\cdot b\right)\). Supongamos que se cumple \(a^{x}\cdot b^{x}=\left( a\cdot b\right)^x\) para \(x\in X\). Entonces multiplicando ambos lados por \(a \cdot b\), se tiene \(\left(a^{x}\cdot b^{x}\right)\cdot \left(a \cdot b\right)=\left( a\cdot b\right)^x\cdot \left(a \cdot b\right)\) Luego usando la leyes del algebra, \(\left(a^{x}\cdot a\right)\cdot \left( b^{x}\cdot b\right)=\left( a\cdot b\right)^x\cdot \left(a \cdot b\right)\). Usando la segunda propiedad de arriba en ambos lados, se tiene \(a^{x+1}\cdot  b^{x+1}=\left( a\cdot b\right)^{x+1}\). Por tanto, también se verifica para \(x+1\). Por tanto, el conjunto \(X=\left\{x|a,b,x\in \mathbb{R},a^{x}\cdot  b^{x}= \left(a\cdot b\right)^{x}\right\}\) es inductivo. Como \(\mathbb{Z}_{+}\) es la intersección de todos los conjuntos inductivos, se tiene que \(m \in \mathbb{Z}_{+}\Rightarrow m \in X\) y entonces \(m\in \mathbb{Z}_{+}\Rightarrow a^{m}\cdot  b^{m}= \left(a\cdot b\right)^{m}\).
+\section{Tema 1 Sección 4 Ejercicio 07}
+Sea \(a\in \mathbb{R}, a\neq 0\) y  defínase \(a^0=1\). Sea \(n\in \mathbb{Z}_{+} \text{ y } a^{-n}=1/a^{n}\). Veamos que \( a^n \cdot a^m =a^{n + m}\) para \(n,m\in \mathbb{Z}\), por inducción. Supongamos que \( a^n \cdot a^{x-1} =a^{n + x-1}\) para cierto \(x\in \mathbb{R}\). Entonces si \(x=1\), se tiene que  \( a^n \cdot a^{0} =a^{n + 0}\), que es lo mismo que \(a^n \cdot 1 =a^{n}\) por la definiciones de arriba y de ejercicio (6).
+ Por otro lado, \( a^n \cdot a^{x-1+1} =a^{n + x-1 +1}\Rightarrow  a^n \cdot a^{x} =a^{n + x} \). Luego se tiene que el conjunto \(X=\left\{x|x\in\mathbb{R},a^n \cdot a^{x-1} =a^{n + x-1} n\in\mathbb{Z}_{+}\right\}\) es inductivo, y por tanto,
+ \(\mathbb{Z}_{+}\subset X\) y se cumple que \(n,m\in\mathbb{Z}_{+}\Rightarrow a^n \cdot a^{m-1} =a^{n + m-1}\) o lo que es lo mismo \(n\in\mathbb{Z}_{+}, m\in\mathbb{Z}_{+}\cup\left\{0\right\}\Rightarrow a^n \cdot a^{m} =a^{n + m}\).
+ Por el mismo motivo, sea \(n\in \mathbb{Z}_{+}\cup\{0\}\) y \(x\in\mathbb{R}\) se tiene que si se cumple \( a^n \cdot a^{x-1} =a^{n + x-1}\) entonces \( a^n \cdot a^{1-1} =a^{n + 1-1}\Rightarrow  a^n \cdot a^{0} =a^{n}\Rightarrow  a^n \cdot 1 =a^{n}\).
+ Por otro lado,  \( a^n \cdot a^{x-1+1} =a^{n + x-1 +1}\Rightarrow  a^n \cdot a^{x} =a^{n + x} \).
+ Luego se tiene que el conjunto \(X=\left\{x|x\in\mathbb{R},a^n \cdot a^{x-1} =a^{n + x-1}, n\in\mathbb{Z}_{+}\right\}\) es inductivo, y por tanto, \(\mathbb{Z}_{+}\subset X\) y se cumple que \(n\in\mathbb{Z}_{+}\cup\left\{0\right\},m\in\mathbb{Z}_{+}\Rightarrow a^n \cdot a^{m-1} =a^{n + m-1}\) o lo que es lo mismo \(n,m \in\mathbb{Z}_{+}\cup\left\{0\right\}\Rightarrow a^n \cdot a^{m} =a^{n + m}\).
+ Defínase también \(\mathbb{Z}_{-}\cup\left\{0\right\}=\left\{k|k\in \mathbb{R}\text{ y }\left(-1\right)\cdot k\in \mathbb{Z}_{+}\cup \left\{0\right\}\right\}\). Sea \(n\in\mathbb{Z}_{+}\cup\left\{0\right\}, x\in\mathbb{R}\). Supóngase que \(a^n \cdot a^{-x} =a^{n-x}\).
+ Si \(x=1\) se tiene \(a^n \cdot  a^{-1} =a^{n-1}\). Por tanto \(a^n \cdot \left(1/a\right)=a^{n-1}\Rightarrow a^n \cdot \left[\left(1/a\right)\cdot a\right]=a^{n-1}\cdot a\). Luego \(a^n \cdot \left(1\right)=a^{n-1+1}\Rightarrow a^n \cdot 1=a^{n}\Rightarrow\).  Supongamos que \(a^n \cdot a^{-x} =a^{n-x}\). Luego \(\left(a^n \cdot a^{-x}\right) =a^{n-x}/a\). Multiplicando por \(1/a\) se tiene\(\left(a^n \cdot a^{-x}\right)\cdot\left(1/a\right) =a^{n-x}\cdot\left(1/a\right)\Rightarrow a^n \cdot 1/\left(a^x \cdot a\right)\ =a^{n-x}\cdot a^{-1}\Rightarrow a^n \cdot \left(1/a^{x+1} \right)\ =a^{n-x-1}\). Por tanto \(a^n \cdot a^{-\left(x+1\right)}=a^{n-\left(x+1\right)}\). Luego el conjunto \(X=\left\{x|x\in \mathbb{R},n\in\mathbb{Z}_{+}\cup\{0\}, a^n \cdot a^{-x} =a^{n-x}\right\}\) es inductivo, y por tanto \(\mathbb{Z}_{+}\subset X\). Por tanto, usando las leyes del algebra en los exponentes, se tiene \(n\in\mathbb{Z}_{+}\cup\{0\},m\in\mathbb{Z}_{-}\Rightarrow a^n \cdot a^{m} =a^{n+m}\text{ y }m\in\mathbb{Z}_{+}\cup\{0\},n\in\mathbb{Z}_{-}\Rightarrow a^n \cdot a^{m} =a^{n+m}\) es decir \(n,m\in\mathbb{Z}\Rightarrow a^n \cdot a^{m} =a^{n+m}\)
+\section{Tema 1 Sección 4 Ejercicio 08}
+\begin{itemize}
+\item\bf (a)\rm
+\end{itemize}
+Veamos que \(\mathbb{R}\) tiene la propiedad del ínfimo. Esto es, por definición, que el conjunto de las cotas inferiores de cada uno de los subconjuntos no vacíos de \(\mathbb{R}\), tiene un elemento mayor. Se vió en ejercicio 13 de sección 3 todo conjunto ordenado tiene la propiedad del supremo si, y solo si, tiene la propiedad del ínfimo. Por tanto, $\mathbb{R}$ tiene la propiedad del supremo si, y solo si, tiene la propiedad del ínfimo. Por el axioma (7), $\mathbb{R}$ tiene la propiedad del supremo y, por tanto, también del ínfimo.
+\begin{itemize}
+\item\bf (b)\rm
+\end{itemize}
+Veamos que $\inf\{1/n|n\in \mathbb{Z}_{+}\}=0$. Del ejercicio 2 (i) se tiene que $0<x\in \mathbb{R}\Rightarrow 1/x>0$. Llamemos $X=\{1/n|n\in \mathbb{Z}_{+}\}$ Como $1\in \mathbb{Z}_{+}$,  $1=1/1\in X$. Como $n\in \mathbb{Z}_{+}\Rightarrow n+1\in \mathbb{Z}_{+}$ por ser $\mathbb{Z}_{+}$ inductivo, $1/n\in X \Rightarrow 1/(n+1)\in X$ Ademas $n<n+1\Rightarrow 1/(n+1)<1/n$ por las leyes del álgebra del ejercicio 2 (j). Por tanto $0<1/(n+1)<1/n\leq 1$ para todo $n\in\mathbb{Z}_{+}$ por tanto $x>0$ para todo $x \in X $. Por tanto, 0 es una cota inferior de $X$. Por lo dicho, para todo $0< a, a\in \mathbb{R}$ existe un $N\in \mathbb{Z}_{+}$ tal que $1/N<a$. Es lo mismo que decir que para todo $n\in \mathbb{Z}_{+}$ existe algún $0\geq a, a\in \mathbb{R}$ tal que $1/n \geq a$. Por tanto el conjunto $\{a|a\in \mathbb{R}, a\leq 0\}$ es el conjunto de cotas inferiores de $X$ cuyo elemento mayor es $a=0$. Por tanto,$ 0= \inf\{X\}$.
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Veamos que si $0<a<1$, $\inf\{a^{n}|n\in \mathbb{Z}_{+}\}=0$. Sea $h=(1-a)/a$. Entonces $1+h=1/a>0$. Y también $1+h\geq 1+h$. Supongamos que se cumple $(1+h)^{x}\geq 1+xh \text{ para } x\in A\subset\mathbb{R}$, entonces  $(1+h)^{x}\cdot (1+h)\geq (1+xh)\cdot(1+h)$, luego  $(1+h)^{x+1}\geq 1+(x+1)h+ xh^2\geq 1+(x+1)h$. Por tanto, $A$ es inductivo. Por tanto $n\in\mathbb{Z}_{+}\Rightarrow (1+h)^{n+1}\geq 1+(n+1)h+ xh^2\geq 1+(n+1)h$. Vemos que se cumple $(1+h)^{n+1}\geq 1+(n+1)h+ xh^2\geq 1+(n+1)h$. Por las reglas del álgebra, $(1+h)^{n}=(1+h)^{n-1}\cdot(1+h) =(1+h)^{n-1}+(1+h)^{n-1}h$. Por tanto  $(1+h)^{n}\geq (1+h)^{n-1}+(1)^{n-1}h$. por tanto $(1+h)^{n}\geq (1+h)^{n-2}+(1)^{n-2}h+(1)^{n-1}h$ y asi recursivamente $(1+h)^{n}\geq 1+ \sum_{m=1}^{n}[(1)^{n-m}h]=1+nh$. Entonces $a^{-n}\geq 1-n+n/a>n(1/a-1)$. Por tanto $a^{n} < \frac{a}{n(1-a)}$. Por tanto $\inf\{a^{n}|n\in \mathbb{Z}_{+}\}\leq\frac{a}{1-a}\inf\{1/n|n\in \mathbb{Z}_{+}\}$. Por el ejercicio (b), se tiene que $\inf\{a^{n}|n\in \mathbb{Z}_{+}\}\leq 0$. Al ser $a>0$, $\inf\{a^{n}|n\in \mathbb{Z}_{+}\}\leq = 0$ 
+\section{Tema 1 Sección 4 Ejercicio 09}
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que todo subconjunto no vacío de $\mathbb{Z}$ acotado superiormente, tiene un máximo. Esto quiere decir que $\mathbb{Z}$ tiene la propiedad del supremo.  Sea $A$ un subconjunto no vacío acotado superiormente de $\mathbb{Z}$. Dado que $\mathbb{Z}=\mathbb{Z}_{-}\cup \{0\}\cup\mathbb{Z}_{+}$, si $A\cap\mathbb{Z}_{+}$ es no vacío, se tiene que $A\cap\mathbb{Z}_{+}$ tiene un máximo por la propiedad del supremo de $\mathbb{Z}_{+}$. Por tanto $A$ también tiene un máximo.
+\newline
+Si $A\cap\mathbb{Z}_{+}$ es vacío, entonces $A\cap(\mathbb{Z}_{-}\cup\{0\})$ es no vacío. Veamos que todo subconjunto no vacío de $\mathbb{Z}_{-}\cup\{0\} $ tiene un máximo.
+\newline
+Veamos que por inducción se tiene que para cada $n\in \mathbb{Z}_{+}$ todo suconjuto no vacío de $\{-n+1, ..., -1,0\}$ tiene un máximo. Sea $C$ el conjunto de los enteros positivos para los cuales se cumple que todo subconjunto no vacío de $\{-n+1, ..., -1,0\}$ tiene un máximo. Entonces $1\in C $ pues el máximo de $\{0\}$ es 0. Si $n\in C $, sea $D$ un subconjunto no vacío de $\{-n, ..., -1,0\}$. Entonces si $D=\{-n\}$,  $-n$ es el máximo elemento. En caso comtrario, consideremos en conjunto $D\cap\{-n+1, ..., -1,0\}$, que es no vacío. Como $n\in C$, el conjunto $D\cap\{-n+1, ..., -1,0\}$ tiene un máximo. Este máximo también es áximo de $D$. Por tanto, $n+1\in C$. Luego $C$ es inductivo y $C=\mathbb{Z}_{+}$ y por tanto,  para cada $n\in \mathbb{Z}_{+}$ todo suconjuto no vacío de $\{-n+1, ..., -1,0\}$ tiene un máximo.
+\newline
+Supongamos que  $B$ es un conjunto no vacío de $\mathbb{Z}_{-}\cup\{0\}$. Si $n\in B$, el conjunto $\{-n+1, ..., -1,0\}\cap B$ es no vacío y tendrá un máximo $k$. Éste $k$ será también máximo de $B$.
+\newline
+Por tanto, todo subconjunto no vacío de $\mathbb{Z}$ tiene un máximo.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos que si $x\notin \mathbb{Z}$ existe un único $n\in \mathbb{Z}$ tal que $n<x<n+1$. En ejercicio 5(c) se vió que $n, m\in \mathbb{Z}\Rightarrow n+m\in\mathbb{Z}\text{ y }n-m\in\mathbb{Z}$. Por tanto,  si suponemos que $n<x<n+1$ y $m<x<m+1$, donde $n\neq m$ , se tiene que $-m<-x<-m-1$. Por tanto $n-m<x-m<x-x=0$ y $x-x<n+1-x<n+1-m-1=n-m$. Luego $n-m<0$ y $0<n-m$. Lo cual es imposible. Luego $n=m$.
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Veamos que si $x-y>1$, existe al menos un $n\in \mathbb{Z}$ tal que  $y<n<x$. Si $x,y\in\mathbb{Z}$, por ejercicio 5(d), se tiene que $x-y=m\in\mathbb{Z}$. Entonces, si $m>1$, $ x=m+y>1+y>y$ y $y+1\in \mathbb{Z}$.Pero si $x\in\mathbb{R}$ e $y\notin\mathbb{Z}$, por ejercicio 9 (b), se tiene que $m-1<y<m$ con $m\in \mathbb{Z}$, luego $x-y>1\Rightarrow x>1+y$ . Por tanto $x>1+y>m>y$.
+\begin{itemize}
+\item \bf (d) \rm
+\end{itemize}
+Veamos que si $y<x$, existe un número racional $z$ tal que $y<z<x$. Del ejercicio (c) se tiene que si $m(x-y)>1$ existe un $n\in \mathbb{Z}$ tal que  $my<n<mx$. Por tanto se tiene que $y<n/m<x$. Si $0<m(x-y)<1$ se tiene $1<(2-1)/(mx-my)$. Luego existe un $l\in\mathbb{Z}$ tal que $1/(mx-my)<l<2/(mx-my)$Luego $1<l(mx-my)<2$ y también existe un $j\in \mathbb{Z}$ tal que $y<j/(lm)<x$
+% Uncom\Rightarrow  a^n \cdot a^{0} =a^{n}ment the following two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}

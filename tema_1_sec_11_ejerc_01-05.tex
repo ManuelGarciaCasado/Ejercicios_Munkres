@@ -1,0 +1,51 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 11 Ejercicio 1}
+Sean $a$ y $b$ números racionales. Sea $a\prec b$ si $a-b>0$ y $a-b\in \mathbb{Q}$ Veamos que esto define un orden parcial estricto sobre $\mathbb{R}$.
+(i) Veamos la no reflexibilidad. Si $a=b$, $a-a>0$ no es posible. Luego  $a\prec a$ no es posible.
+(ii) Veamos la transitibidad. Si $a-b>0$ y $b-c>0$ y $a-b\in \mathbb{Q}$ y $b-c\in \mathbb{Q}$ entonces $a-b + b-c> b-c>0$ y $a-b+b-c\in \mathbb{Q}$. Esto último viene de que si dos números son racionales, la suma de ellos también es racional). Luego  $a-c>0$ y $a-c\in \mathbb{Q}$. Luego si $a\prec b$ y $b\prec c$ entonces $a\prec c$.
+\section{Tema 1 Sección 11 Ejercicio 2}
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Sea $\prec$ un orden parcial estricto sobre $A$. Definamos $a\preceq b$ si bien $a\prec b$ o bien $a=b$. Veamos los axiomas de orden parcial.
+(i) Veamos que $a\preceq a $ para todo $a\in A$. Como  siempre se tiene $a=a$ para todo $a\in A$, entonces $a\prec a$ o $a=a$. Luego siempre se tiene $a\preceq a$ para todo $a\in A$. (ii) Veamos que $a\preceq b$ y $b\preceq a\Rightarrow a=b$. Si $a\preceq b$ y $b\preceq a$ entonces [bien $a\prec b$ o bien $a=b$] y [bien $b\prec a$ o bien $b=a$]. Como [$a\prec b$ y $b\prec a$], [$a\prec b$ y $b= a$] y [$b\prec a$ y $a= b$] son afirmaciones absurdas, [$b=a$ y $a= b$] es la única que no es  absurda. (ii) Veamos que $a\preceq b$ y $b\preceq c\Rightarrow a\preceq c$. Entonces [bien $a\prec b$ o bien $a=b$] y [bien $b\prec c$ o bien $b=c$]. Por lo tanto la unica afirmación no absurda es que [bien $a\prec b$ y $b\prec c$] o [bien $a=b$ y $b=c$]. Por la segunda regla de del orden parcial estricto se tiene [$a\prec b$ y $b\prec c$$\Rightarrow a\prec c$] y, por la relación de igualdad, [ $a=b$ y $b=a$$\Rightarrow a=c$]. Entonces bien $a\prec c$ o bien $a=c$. Por tanto $a\preceq c$.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Sea $P$ un orden parcial que verifica (i)-(iii) del ejercicio anterior. Sea definida la relación $S$ en $A$ como $aSb$ si $aPb$ y $a\neq b$. Veamos que $S$ es un orden parcial estricto sobre $A$. Si se cumple (i) para $P$, entonces $aPa$. pero a la vez se tendría que cumplir que $a\neq a$. Por tanto, $aSa$ nunca se da. Si se cumple (ii) entonces $aPb$ y $bPa$ implica $a=b$; y además $a\neq b$ y $b\neq a$. Por tanto, solo puede ser bien $aPb$, bien $bPa$. Si se cumple (iii), entonces $aPb$ y $bPc$ implica $aPc$; y además $a\neq b$ y $b\neq c$ implica $a\neq c$. Por tanto, $S$ cumple (1) y (2) de la definición de orden parcial estricto.
+\section{Tema 1 Sección 11 Ejercicio 3}
+Sea el orden parcial estricto $\prec$ en $A$ y sea el conjunto de los comparables con $x\in A$ definido por $B=\{y|y\in A \text{ y bien }y\prec x \text{, bien }x\prec y \}$
+En el ejemplo 1, $\prec$ es la afirmación "es subconjunto propio"; $A$ es la familia $\mathcal{A}$; $x\in A$ es $X\in \mathcal{A}$; y $B$ es $\mathcal{B}=\{Y|Y\in \mathcal{A} \text{ y bien }Y\text{ es subconjunto propio de  }X,$ 
+$\text{ bien }X\text{ es subconjunto propio de }Y\}$. Si $\mathcal{A}$ es la familia de todas las regiones circulares, y $X\in \mathcal{A}$ es un círculo con centro en el origen, $\mathcal{B}$ es el conjunto de todos los circulos con centro en el origen. Si $\mathcal{A}$ es la familia de todas las regiones circulares, y $X\in \mathcal{A}$ es un círculo tangente a un punto del eje $y$ hacia la derecha, $\mathcal{B}$ es el conjunto de todos los circulos tangentes al mismo punto del eje $y$ hacia la derecha. Por tanto, el conjunto $\mathcal{B}$ aplica a los conjuntos del ejemplo 1.
+En el ejemplo 2, $\prec$ esta definido por $(x_0,y_0),(x_1,y_1)\in \mathbb{R}^2$ si $y_0=y_1$ y $x_0<x_1$ y $A$ es $\mathbb{R}^2$; $x\in A$ es $(x_0,y_0)\in \mathbb{R}^2$; y $B$ es $B=\{(x_1,y_1)|(x_1,y_1)\in \mathbb{R}^2 \text{ y bien }(x_1,y_1)\prec (x_0,y_0), \text{ bien }(x_0,y_0)\prec (x_1,y_1)\}$. Dos puntos $(x_0,y_0),(x_1,y_1)$ de una recta horizontal cumplen que bien $y_0=y_1$ y $x_0<x_1$ o bien $y_0=y_1$ y $x_0>y_1$. $B$ describe bien una recta horizontal como conjunto maximal del conjunto de puntos que tienen la misma $y$. Pero en este caso, $B$ no describe el conjunto de rectas horizontales como conjunto simplemente ordenado maximal de $\mathbb{R}^2$, que tiene ese $\prec$ como orden parcial.
+\section{Tema 1 Sección 11 Ejercicio 4}
+Dados dos puntos $(x_0,y_0)$ y $(x_1,y_1)$ de $\mathbb{R}^2$ cumplen $(x_0,y_0)\prec (x_1,y_1)$ si $x_0<x_1$ y $y_0\leq y_1$. Veamos que las curvas $y=x^3$ e $y=2$ son subconjuntos simplemente ordenados maximales de $\mathbb{R}^2$, y que $y=x^2$ no lo es. Si $y=x^3$ entonces $(x_0,y_0)\prec (x_1,y_1)$ implica $(x_0,x^3_0)\prec (x_1,x^3_1)$. Por tanto, $x_0<x_1\Rightarrow x_0\cdot x_1^2<x_1^3\Rightarrow x_0^3<x_1^3$. Por tanto siempre se tiene que bien $x_0<x_1\Rightarrow y_0\leq y_1$, bien $x_1<x_0 \Rightarrow  y_1\leq y_0$ Luego bien $(x_0,y_0)\prec (x_1,y_1)$, bien $(x_1,y_1)\prec (x_0,y_0)$. Si $y=2$ entonces se tiene que $x_0<x_1$ y $y_0=2=y_1$. Por tanto, se tiene siempre bien $x_0<x_1$ y $y_1=y_0$, bien $x_1<x_0$ y $y_1=y_0$. Por tanto, 
+bien $(x_0,y_0)\prec (x_1,y_1)$, bien $(x_1,y_1)\prec (x_0,y_0)$. Si $y=x^2$, se tiene que para todo $(x_0,y_0$ existe algún punto $(x,y)$ tal que $(x_0,y_0)\prec (x,y)$  entonces se tiene que $x_0<x_1$ implica que $x_1^2\leq x_0^2$ si $x_1\leq 0$. Por tanto, hay pares de puntos que no cumplen $x_0<x_1$ y $y_0\leq y_1$, ni que $x_1<x_0$ y $y_0\leq y_1$. Por tanto, hay pares puntos de la curva $y=x^2$ que no cumplen bien que $(x_0,y_0)\prec (x_1,y_1)$, bien $(x_1,y_1)\prec (x_0,y_0)$. Por tanto no es un subconjunto simplemente ordenado maximal. Si $f(x)$ es una función de $\mathbb{R}$ en $\mathbb{R}$ que preserva el orden o es constante, entonces, por definiciones, $x_0< x_1\Rightarrow f(x_0)<f(x_1)$ o $f(x_0)=f(x_1)$ para cualesquiera $x_0,x_1\in \mathbb{R}$. Entonces 
+$(x_0,f(x_0))\prec (x_1,f(x_1))$ para cualesquiera $x_0,x_1\in \mathbb{R}$. Por tanto, el conjunto $\{(x,y)|y=f(x) \text{ y } f \text{ preserva el orden o es constante}\}$ es un conjunto simplemente ordenado maximal.
+\section{Tema 1 Sección 11 Ejercicio 5}
+Sea $\mathcal{A}$ una familia de subconjuntos. Supongamos que para toda subfamilia $\mathcal{B}$ de $\mathcal{A}$ que esté simplemente ordenada con la inclusión propia, la unión de los elementos de $\mathcal{B}$ pertenece a $\mathcal{A}$. Veamos que $\mathcal{A}$ no tiene ningún elemento que esté propiamente contenido en ningún otro elemento de $\mathcal{A}$. Es decir, existe un $A\in \mathcal{A}$ talque no existe un $B\in \mathcal{A}$ que cumpla $A\subsetneq B$. Es decir, existe un $A\in \mathcal{A}$ tal que para todo $B\in \mathcal{A}$ se cumple $B\subset A$. Según la suposición, $\cup_{B\in \mathcal{B}}B\in \mathcal{A}$ para cualquier $\mathcal{B}$. El lema de Zorn asegura que suponiendo que $X$ es un conjunto estrictamente parcial ordenado, si todo subconjunto  simplemente ordenado de $X$ tiene una cota superior en $X$, entonces $X$ tiene un elemento maximal. Es decir, si $Y\subset X$ y  existe un $x\in X$ talque $y\prec x$ o $y=x$ para todo $y\in Y$, entonces hay un $z\in X$ tal que no hay ningún $x\in X$ que cumpla $z\prec x $. Según el ejemplo 1 la relación de orden "es un subconjunto propio de" es un orden parcial para elementos de $\mathcal{A}$. Como $\mathcal{B}\subset \mathcal{A}$ y $\cup_{B\in \mathcal{B}}B\in \mathcal{A}$ entonces $\cup_{B\in \mathcal{B}}B$ es una cota superior en $\mathcal{A}$, puesto que para todo $C\in \mathcal{B}$ se tiene $C\subsetneq \cup_{B\in \mathcal{B}}B\Leftrightarrow C\prec \cup_{B\in \mathcal{B}}B $. Por tanto, según el lema de Zorn, $\mathcal{A}$ tiene un elemento maximal, es decir hay un elemento $D\in \mathcal{A}$ tal que para todo $C\in \mathcal{A}$ se tiene que $C\prec D$ o $C=D$, que es lo mismo que $C\subsetneq D$ o $C=D$. Es decir existe un $D\in \mathcal{A}$ tal que no hay $C\in \mathcal{A}$ que cumpla $D\subsetneq C$, que es lo que se quería probar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

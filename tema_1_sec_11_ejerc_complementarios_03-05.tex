@@ -1,0 +1,53 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+\section{Tema 1 Ejercicio Complementario 3}
+Sea $J$ y $E$ unos conjuntos bien ordenados. Exista la función que conserva el orden $k:J\rightarrow  E$. Veamos que $J$ tiene el mismo tipo de orden que $E$ o una sección de $E$. Sea $e_0\in E$ 
+Defínase 
+\begin{eqnarray}
+h(\alpha)=\begin{cases}
+\text{minimo}[E-h(S_\alpha)] & \text{ si }h(S_\alpha)\neq E \nonumber\\
+e_0 & \text{ si }h(S_\alpha)=E
+\end{cases}
+\end{eqnarray}
+Veamos que $h(\alpha)\leq k(\alpha)$ para todo $ \alpha\in J$. Dado que $k$ es una aplicación entre dos conjuntos bien ordenados y que preserva el orden, pero el apartado (a) del ejercicio 2 no aplica a $k$ por ser aplicación entre $J$ y $E$, en vez de plicación entre $J$ y $E$ o una sección de $E$. Por el teorema del ejercicio 1, existe una única aplicación que aplica $J$ en $E$ o en una sección de $E$. Sea $B$ el subconjunto de todos los $\alpha\in J$ tales que $h(\alpha)\leq k(\alpha)$. Pero $h(\beta)=\text{minimo}[E-h(S_\beta)]\leq k(\beta)$ y, por tanto, $\beta\in B$. Luego, por inducción transfinita, $B=J$. Por tanto $h(\alpha)\leq k(\alpha)$ para todo $\alpha \in J$. Si $h(S_\alpha)=E$ para algún $\alpha$ entonces $k(\alpha)\geq h(\alpha)=e_0=k(\beta)$, con
+$\beta\notin S_\alpha$, luego $\alpha<\beta\Rightarrow  k(\alpha)<k(\beta)$, lo cual es contradictorio. Luego $h(S_\alpha)\neq E$ para todo $\alpha \in J$. Por tanto, por el ejercicio 2 (a), $h(\alpha)= \text{mínimo}[E-h(S_\alpha)]$ y, equivalentemente, $h$ preserva el orden y aplica $J$ en $E$ o una sección de $E$. Como $h$ preserva el orden, es una función inyectiva porque $\alpha<\beta\Rightarrow h(\alpha)<h(\beta)$ implica que  $\alpha\neq \beta\Rightarrow h(\alpha)\neq h(\beta)$. Como $h$ aplica $J$ en $E$ o una sección de $E$, $h:J\rightarrow E$ es sobreyectiva o  $h:J\rightarrow S_{h(\alpha)}$ es sobreyectiva para algún $\alpha \in J$. Por tanto, $h:J\rightarrow E$ es biyectiva o  $h:J\rightarrow S_{h(\alpha)}$ es biyectiva para algún $\alpha \in J$. Por tanto, $J$ tiene el mismo tipo de orden que $E$ o una sección de $E$.
+\section{Tema 1 Ejercicio Complementario 4}
+\begin{itemize}
+\item \bf (a)\rm
+\end{itemize}
+Sea $A$ y $B$ conjuntos bien odenados por relaciones $<_A$ y $<_B$. Veamos que se verifica exactamente que i) $A$ y $B$ tienen el mismo tipo de orden, o ii) $A$ tiene el mismo tipo de orden que una sección de $B$, o iii) $B$ tiene el mismo tipo de orden que una sección de $A$. Sea el conjunto $A\cup B$ con el orden $\alpha<\beta$ tal que, bien $\alpha,\beta\in A$, y $\alpha<_A \beta$, bien $\alpha,\beta\in B$, y $\alpha<_B \beta$, o bien $\alpha\in A$ y $\beta\in B$. Se vió en ejercicio 8 de la sección 10 que $<$ es un buen orden en $A\cup B$. Sea la función $h:A\rightarrow A\cup B$ definida por  $h(\alpha)=\text{mininimo}[A\cup B-h(S_\alpha)]$ para todo $\alpha \in A$. Entonces, por ejercicio 2 (a), se tiene que $h$ conserva el orden y tiene por imagen $A\cup B$ o una sección de $A\cup B$. Entonces, por el ejercicio 3, $A$ tiene el mismo tipo de orden que $A\cup B$ o una sección de $A\cup B$. Por ejercicio 2 (b), ninguna sección de $A\cup B$ tiene el mismo tipo de orden que $A\cup B$ ni que ninguna otra sección de $A\cup B$. De la definición de $<$ se deduce que $A\cap B=\varnothing$. Pero $A$ es una sección de $A\cup B$. Lo cual es una contradicción. Por tanto, no existe $h:A\rightarrow A\cup B$ definida por  $h(\alpha)=\text{mininimo}[A\cup B-h(S_\alpha)]$. Sea $g:A\cup B \rightarrow B$ definida por $g(\alpha)=\text{mininimo}[B-k(S_\alpha)]$ para todo $\alpha \in A\cup B$. Entonces, por ejercicio 2 (a), se tiene que $g$ conserva el orden y tiene por imagen $B$ o una sección de $B$. Además, por las propiedades de las funciones $g(A\cup B)=g(A)\cup g(B)$ y por ser ordenada $\alpha<\beta \Rightarrow g(\alpha)<
+g(\beta)$. Por tanto, como se vio en ejercicio 2 (a), $g(S_\alpha)=S_{g(\alpha)}$. Cuando $\alpha$ es el mínimo de $B$ se tiene que  $g(A)=S_{g(\alpha)}$ y que $S_{g(\alpha)}$ es una sección de $B$. Por tanto, si existe tal aplicación $g$, $A$ y una sección de $B$ tienen el mismo tipo de orden. Sea $k:B \rightarrow A\cup B$ definida por  $k(\alpha)=\text{mininimo}[A\cup B-k(S_\alpha)]$ para todo $\alpha \in B$. Entonces, por ejercicio 2 (a), se tiene que $k$ conserva el orden y tiene por imagen $A\cup B$ o una sección de $A\cup B$. Entonces, por el ejercicio 3, $B$ tiene el mismo tipo de orden que $A\cup B$ o una sección de $A\cup B$. Además $A$ y cualquier sección de $A$ son secciónes de $A\cup B$. Por tanto, si existe tal $k$, $B$ tiene el mismo tipo de orden que $A$ o que una sección de $A$. Dado que ninguna sección de $A$ tiene el mismo tipo de orden que $A$ ni que otra sección diferente de $A$, y dado que ninguna sección de $B$ tiene el mismo tipo de orden que $B$ ni que otra sección diferente de $B$, las afirmaciones i), ii) y iii) son excluyentes entre si, porque de lo contrario se podrían construir funciones biyectivas de $A$ en secciones de $A$ o de $B$ en secciones de $B$.
+\begin{itemize}
+\item \bf (b)\rm
+\end{itemize}
+Sean $A$ y $B$ conjuntos ordenados no numerables. Sean las secciones de $A$ y $B$ numerables. Veamos que $A$ y $B$ tienen el mismo tipo de orden. No hay biyecciones entre conjuntos numerables y no numerables, porque de lo contrario, si hubiera una biyección $h$ entre $A$ y una sección de $B$  ( o entre $B$ y una sección de $A$), por el teorema 9, por ser las secciones numerables, habría también una función inyectiva $k$ de $\mathbb{Z}_{+}$ en una sección de $B$ (o de $\mathbb{Z}_{+}$ en una sección de $A$), eso significaría que habría una función inyectiva $k\circ h^{-1}$ de $\mathbb{Z}_{+}$ en $A$ (o de $\mathbb{Z}_{+}$ en $B$) cual contradice que sea no numerable. Por tanto, solo aplica la afirmación (i) del apartado (a). Por tanto, $A$ y $B$ tienen el mismo tipo de orden.
+\section{Tema 1 Ejercicio Complementario 5}
+Sea $X$ un conjunto y $\mathcal{A}$ el conjunto de los pares $(A,<)$ donde $A$ es un subconjunto de $X$ y $<$ es un buen orden de $A$. Defínase $\prec$ como $(A,<)\prec (A',<')$ si $(A,<)$ es igual a una sección de $ (A',<')$. Ésto quiere decir que hay una biyección entre $A$ y una sección de $A'$ que preserva el órden; esto es, $A$ y una sección de $A'$ tienen el mismo tipo de orden, con relaciones de orden $<$ y $<'$ respectivamente.
+\begin{itemize}
+\item \bf (a)\rm
+\end{itemize}
+Veamos que $\prec$ es un orden parcial estricto sobre $\mathcal{A}$. Veamos que cumple la no reflexiblilidad. Si $(A,<)\prec (A,<)$ entonces $(A,<)$ es igual a una sección de $(A,<)$. Entonces $<$ es igual a $<$ y hay una biyecció  entre $A$ y una sección de $A$, lo cual es una contradicción del ejercicio 2(b). Veamos que cumple a transitividad. Sea $(A,<)\prec (A',<')$ y $(A',<')\prec (A'',<'')$. Entonces $(A,<)$ es igual a una sección de $ (A',<')$ y $(A',<')$ es igual a una sección de $ (A'',<'')$. Por tanto, hay una biyección que preserva el orden entre $A$ y una sección de $A'$, y hay otra biyección que preserva el orden entre $A"$ y una sección de $A''$. Por tanto, hay una biyección que preserva el orden entre $A$ y una sección de $A''$. Por tanto, $(A,<)\prec (A'',<'')$. Luego, si $(A,<)\prec (A',<')$ y $(A',<')\prec (A'',<'')$ entonces $(A,<)\prec (A'',<'')$, cumpliéndose la transitividad.
+\begin{itemize}
+\item \bf (b)\rm
+\end{itemize}
+Sea $\mathcal{B}$ una subfamilia de $\mathcal{A}$ simplemente ordenada por $\prec$. Sea $B'$ la unión de todos los $B$ tales que $(B,<)\in \mathcal{B}$. Y sea $<'$ la unión de todas relaciones $<$ tales que $(B,<)\in \mathcal{B}$. Veamos que $(B',<')$ es un conjunto bien ordenado. Según se procede en el ejercicio 8 de la sección 10, sea $B'=\cup_{(B,<)\in \mathcal{B}}B$ y los $a,b\in B'$ cumplen $a<'b$ si  i) $a,b\in B$ y $a<b$ para cualquier $B$ o ii) $a\in A$ y $b\in A$ con $(A,<_A),(B,<_B)\in \mathcal{B}$ y $(A,<_A)\prec(B,<_B)$. Si $X\subset B'$ entonces $X\cap B\subset B$ para algún $B$. Luego $X\cap B$ es bien ordenado porque es subconjunto no vacío de conjunto bien ordenado. Además, si $X\cap B\neq \varnothing$ según el orden $<_B$ y $X\cap A=\varnothing$ entonces el mínimo de $X$ existe y es el mínimo de $X\cap B$ según el orden $<_B$. Entonces llamemos $b$ al mínimo de $X\cap B$, y $(A,<_A)\prec(B,<_B)$ entonces hay una biyección $f:A\rightarrow S_c$ que preserva el orden para algún $c\in B$ y $f^{-1}(b)$ existe y es el mínimo de $A$ y por tanto, el mínimo de $X\cap A$ según $<_A$. Por tanto, la unión de mínimos de los $X\cap A$ según los ordenes $<_C$ tiene un mínimo según la unión de los órdenes $<_C$. Es decir $X\subset B'$ tiene un mínimo según $<'$ y por tanto, $B'$ es bien ordenado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

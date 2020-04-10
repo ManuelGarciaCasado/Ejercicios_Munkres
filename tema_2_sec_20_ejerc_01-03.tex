@@ -1,0 +1,70 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 20 Ejercicio 1}
+\begin{itemize}
+\item \bf(a)\rm  Veamos que la distancia $d'$ definida por 
+\begin{eqnarray}
+d'(\vect{x},\vect{y})= |x_1-y_1|+...+|x_n-y_n|
+\end{eqnarray}
+sobre elementos de $\mathbb{R}^n$ induce la topología usual sobre $\mathbb{R}^n$.
+\end{itemize}
+Sea $U$ un abierto de $\mathbb{R}^n$. Entonces se puede escribir como $U=(a_1,b_1)\times (a_2,b_2)\times...\times(a_n,b_n)$ para ciertos $\vect{a},\vect{b}\in \mathbb{R}^n$. Se tiene que para $\vect{x}\in U$, $B_{d'}(\vect{x},\epsilon)=\{\vect{y}|d'(\vect{x},\vect{y})<\epsilon\}$. Por tanto, si $a_i=c_i-\delta$ y $b_i=c_i+\delta$ para $i\in\{1,...,n\}$ y $\delta>0$
+se tiene que $d'(\vect{x},\vect{y})<d'(\vect{a},\vect{b})=2n\delta<\epsilon$. Por tanto, para toda bola $B_{d'}(\vect{x},\epsilon)$ existe un $\delta<\epsilon/(2n)$ tal que $\vect{x}\in B_{d'}(\vect{x},\epsilon)\subset U$. Por tanto, $U$ también es abierto de la métrica inducida por $d'$.
+\begin{itemize}
+\item \bf(b)\rm  Veamos que la distancia $d'$ definida por 
+\begin{eqnarray}
+d'(\vect{x},\vect{y})=\left[|x_1-y_1|^p+...+|x_n-y_n|^p\right]^{\frac{1}{p}},\nonumber
+\end{eqnarray}
+con $p\geq 1$, sobre elementos $\vect{x}$ e $\vect{y}$ de $\mathbb{R}^n$ induce la topología usual sobre $\mathbb{R}^n$.
+\end{itemize}
+Sea $U$ un abierto de $\mathbb{R}^n$. Entonces se puede escribir como $U=(a_1,b_1)\times (a_2,b_2)\times...\times(a_n,b_n)$ para ciertos $\vect{a},\vect{b}\in \mathbb{R}^n$. Se tiene que para $\vect{x}\in U$, $B_{d'}(\vect{x},\epsilon)=\{\vect{y}|d'(\vect{x},\vect{y})<\epsilon\}$. Por tanto, si $a_i=c_i-\delta$ y $b_i=c_i+\delta$ para $i\in\{1,...,n\}$ y $\delta>0$
+se tiene que $d'(\vect{x},\vect{y})<d'(\vect{a},\vect{b})=n^{\frac{1}{p}}2\delta<\epsilon$. Por tanto, para toda bola $B_{d'}(\vect{x},\epsilon)$ existe un $\delta<\epsilon/(2\sqrt[p]{n})$ tal que $\vect{x}\in B_{d'}(\vect{x},\epsilon)\subset U$. Por tanto, $U$ también es abierto de la métrica inducida por $d'$.
+\section{Tema 2 Sección 20 Ejercicio 2}
+Veamos que el espacio $\mathbb{R}\times \mathbb{R}$ con la topología del diccionario es metrizable. Se tiene que los intervalos $(\vect{a},\vect{b})=\{\vect{x}| a_1<x_1<b_1 \text{ o }a_1=x_1=b_1 \text{ y }a_2<x_2<b_2 \text{ con }\vect{a},\vect{b},\vect{x}\in \mathbb{R}^2\}$ son elementos de la base de la topología del orden del diccionario. Defínase la función $d:(\mathbb{R}\times \mathbb{R})\times (\mathbb{R}\times \mathbb{R})\rightarrow \mathbb{R}$ como
+\begin{eqnarray}
+d(\vect{x},\vect{y})=
+\begin{cases}
+|x_2-y_2|& \text{ si }x_1=y_1\nonumber\\
+|x_1-y_1|& \text{ si }x_1\neq y_1\nonumber
+\end{cases}
+\end{eqnarray}
+Veamos que es una distancia. Se tiene que $\vect{x}=\vect{y}$ si, y solo si, $x_1=y_1$ y $x_2=y_2$; si, y solo si, $d(\vect{x},\vect{y})=0$. Por otro lado, si $\vect{x}<\vect{z}<\vect{y}$ entonces $x_1=y_1\Rightarrow z_1=x_1=y_1$ y, además,
+\begin{eqnarray}
+|x_2-y_2| = |x_2-z_2-y_2+z_2|
+\leq |x_2-z_2|+|y_2-z_2|\nonumber
+\end{eqnarray}
+implica $d(\vect{x},\vect{y})\leq d(\vect{x},\vect{z})+d(\vect{z},\vect{y})$. Por otro lado, si $\vect{x}<\vect{z}<\vect{y}$ y $x_1\neq y_1$, se tiene
+\begin{eqnarray}
+|x_1-y_1| = |x_1-z_1-y_1+z_1|
+\leq |x_1-z_1|+|y_1-z_1|\nonumber\\
+\leq |x_2-z_2|+|y_1-z_1|\text{ si }x_1=z_1\nonumber\\
+|x_1-y_1| = |x_1-z_1-y_1+z_1|
+\leq |x_1-z_1|+|y_1-z_1|\nonumber\\
+\leq |x_1-z_1|+|y_2-z_2|\text{ si }y_1=z_1\nonumber
+\end{eqnarray}
+ y entonces $d(\vect{x},\vect{y})\leq d(\vect{x},\vect{z})+d(\vect{z},\vect{y})$. Por tanto, $d$ es una distancia. Sea $B_d(\vect{x},\epsilon)$ una bola y $(\vect{a},\vect{b})$ un abierto de $\mathbb{R}\times \mathbb{R}$ en lo topología del orden del diccionario. Entonces, si $\vect{x}\in (\vect{a},\vect{b})$,  $\vect{a}<\vect{x}<\vect{b}$. Tomemos $\epsilon< \delta =\min\{d(\vect{a},\vect{x}),d(\vect{x},\vect{b})\}$. Entonces $B_d(\vect{x},\epsilon) \subset (\vect{a},\vect{b})$. Luego, siempre existe un elemento de la base de la topología inducida por la métrica que está contenido en cualquier abierto de la topología del orden en $\mathbb{R}\times \mathbb{R}$ 
+\section{Tema 2 Sección 20 Ejercicio 3}
+Sea $X$ un espacio métrico con distancia $d$
+\begin{itemize}
+\item \bf(a) \rm  Veamos que la funcion $d:X\times X\rightarrow \mathbb{R}$ es contínua.
+\end{itemize}
+Hay que demostrar que si $U\in \mathbb{R}$ es un abierto, entonces $d^{-1}(U)$ es un abierto. Por definición, $d^{-1}(U)=\{z\times y| d(z,y)<\epsilon\}$. Se tiene que las bolas $B_d(z,\epsilon)=\{y|d(z,y)<\epsilon\}$ son abiertos. Pero justamente $\bigcup_{z\in X}(\{z\}\times\{y|d(z,y)<\epsilon\})=\{x\times y|d(x,y)<\epsilon\}$. Luego $\bigcup_{z\in X}(\{z\}\times B_d(z,\epsilon))=\{x\times y|d(x,y)<\epsilon\}$. Por tanto $d^{-1}(U)=\bigcup_{z\in X }B_d(z,\epsilon)\times B_d(z,\epsilon)$ son abiertos en la topología producto. Por tanto, $d$ es continua.
+\begin{itemize}
+\item \bf(b) \rm  Sea $X'$ un espacio topológico construido a partir de $X$. Veamos que si la funcion $d:X'\times X'\rightarrow \mathbb{R}$ es contínua, entonces la topología de $X'$ es mas fina que la topología de $X$.
+\end{itemize}
+Hay que probar que si $U$ es un abierto de la topología de $X'$, $U$ es un subconjunto de $X$ y $d:X'\times X'\rightarrow \mathbb{R}$ es contínua, entonces 
+$\mathcal{T}\subset \mathcal{T}'$; donde $\mathcal{T}'$ es la topología de $X'$ y $\mathcal{T}$ es la topología de $X$. Por ser $d: X'\times X'\rightarrow \mathbb{R}$ es continua y  $d: X\times X\rightarrow \mathbb{R}$ continua por apartado (a), se tiene que la primera función es la restricción de la segunda. Por tanto, si $U$ es abierto de la topología de $X$, $B_d(x,\epsilon)\subset U$ para algún $\epsilon>0$, existe algún $\delta>0$ tal que $\delta<\epsilon$ y que $B_d(x,\delta)$ es abierto de $X'$. Como $B_d(x,\delta)\subset B_d(x,\epsilon)$ y, además como $B_d(x,\delta)$ y $ B_d(x,\epsilon)$ son elementos de las bases $\mathcal{T}'$ y $\mathcal{T}$, respectivamente, $\mathcal{T}\subset \mathcal{T}'$ por teorema 13.3.
+
+
+
+
+
+
+\end{document}

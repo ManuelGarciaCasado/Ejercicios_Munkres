@@ -1,0 +1,59 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 18 Ejercicio 11}
+Se define la función $F:X\times Y\rightarrow Z$ como continua en cada variable separadamente si para toda $y_0$ se tiene que $h:X\rightarrow Z$, definida por $h(x)=F(x\times y_0)$, es continua y si para cada $x_0$ de $X$ la funcion $k:Y\rightarrow Z$, definida por $k(y)=F(x_0\times y)$, es continua. Veamos que si $F$ es continua, entonces $F$ es continua es cada variable separadamente.
+Por hipotesis, $F$ es continua. Entonces para todo abierto $U$ de $Z$, $F^{-1}(U)$ es abierto de $X\times Y$. Por tanto $F^{-1}(U)=V\times W$ donde $V$ y $W$ son abiertos de $X$ e $Y$, respectivamente. Se vió en ejercicio 4 que la aplicaciones $f: X\rightarrow X\times Y$ y $g:Y\rightarrow X\times Y$ definidas por $f(x)=x\times y_0$ y $g(y)=x_0\times y$ son embebimientos. Por tanto, $f$ y $g$ son biyectivas y $f,f^{-1},g,g^{-1}$ son continuas. Como $h(x)=(F\circ f)(x)$ y $k(y)=(F\circ g)(y)$, por teorema 18.2(c) se tiene que $h$ y $k$ son continuas.
+\section{Tema 2 Sección 18 Ejercicio 12}
+Sea $F:\mathbb{R}\times \mathbb{R}\rightarrow \mathbb{R}$ definida por 
+\begin{eqnarray}
+F(x\times y)=\left\{
+\begin{array}{ll}
+xy/(x^2+y^2) &\text{ si }  x\times y\neq 0\times 0 \\
+0 & \text{ si }  x\times y= 0\times 0 
+\end{array}
+\right.
+\end{eqnarray}
+\begin{itemize}
+\item \bf(a) \rm Veamos que $F$ es continua en cada variable separadamente.
+\end{itemize}
+Se pueden definir $h:\mathbb{R}\rightarrow \mathbb{R}$ y $k:\mathbb{R}\rightarrow \mathbb{R}$
+como $h(x)=0$ si $y_0=0$ y como $k(y)=0$ si $x_0=0$ (en estos casos son continuas por ser constantes); y para $x_0\neq 0$ y $y_0\neq 0$ como
+\begin{eqnarray}
+h(x)=xy_0/(x^2+y_0^2)\nonumber\\
+k(y)=x_0y/(x_0^2+y^2)\nonumber
+\end{eqnarray}
+Por tanto, para cada abierto $U=(h(x_0)-\epsilon,h(x_0)+\epsilon)$ se tiene que $h^{-1}(U)$ contiene a $x_0$ y contiene a $(x_0-\delta, x_0+\delta)$ con $\delta =\min \{h(x_0)-\epsilon,h(x_0)+\epsilon\}$, por tanto contiene a  $x\in(x_0-\delta, x_0+\delta) $. Luego $h(x)\in U$. Por tanto, el conjuto $h^{-1}(U)=\{x|h(x)\in U\}$ es abierto. Por tanto, es continua. Por el mismo argumento, $k(y)$ es continua. Por tanto $F$ es continua en cada variable separadamente.
+\begin{itemize}
+\item \bf(b) \rm Calculemos la función $G:\mathbb{R}\rightarrow\mathbb{R}$ definida por $G(x)=F(x\times x)$
+\end{itemize}
+
+De la definicion de $F$ se tiene
+\begin{eqnarray}
+G(x)=\left\{
+\begin{array}{ll}
+1/2 &\text{ si }  x\neq 0 \\
+0 & \text{ si }  x= 0
+\end{array}
+\right.
+\end{eqnarray}
+Se tiene que para el abierto $U=(0,1)$ el conjunto $G^{-1}(U)=\{1/2\}$ es cerrado. Por tanto $g$ no es continua.
+
+\begin{itemize}
+\item \bf(c) \rm Veamos que $F$ no es continua.
+\end{itemize}
+Por teorema 18.2 (d), dado que $G$ es la función $F$ restringida a $x\times y\in \mathbb{R}\times \mathbb{R}$ tal que $x=y$, si $G$ no es continua, $F$ no puede ser continua, puesto que "$F$ continua $\Rightarrow$ G continua".
+\section{Tema 2 Sección 18 Ejercicio 13}
+Sea $A\subset X$ y $f:A\rightarrow Y$ continua e $Y$ de Hausdorff. Veamos que si $f$ se puede ampliar a la función continua $g:\overline{A}\rightarrow Y$ entonces $g$ está unívocamente determinada por $f$. Por ser continua, y como $Y$ es cerrado, se tiene que $f^{-1}(Y)= A$ es cerrado en $A$ (y por teorema 17.3, en $X$) y que $g^{-1}(Y)=\overline{A}$ también es cerrado en $\overline{A}$ (y por teorema 17.3, en $X$). Si $A$ es cerrado, se tiene que $g^{-1}(Y)=\overline{A}=A=f^{-1}(Y)$. Luego, por ser $Y$ de Hausdorff,  $f=g$.
+
+
+
+
+
+\end{document}

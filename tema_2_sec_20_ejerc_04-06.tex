@@ -1,0 +1,120 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 20 Ejercicio 4}
+Sea las topologías producto, uniforme y por cajas de $\mathbb{R}^\omega$
+\begin{itemize}
+\item \bf(a) \rm  ¿En qué topologías son contínuas las siguientes funciones de $\mathbb{R}$ en $\mathbb{R}^\omega$?
+\begin{eqnarray}
+f(t)=(t,2t,3t,...) \nonumber\\
+g(t)=(t,t,t,...) \nonumber\\
+h(t)=(t,\frac{1}{2}t,\frac{1}{3}t,...) \nonumber\\
+\end{eqnarray}
+\end{itemize}
+Sean las funciones $f_n(t)=nt, g_n(t)=t\text{ y } h_n(t)=\frac{1}{n}t$ las respectivas coordenadas $n$-ésimas de las funciones $f,g\text{ y }h$. Éstas funciones son funciones continuas de $\mathbb{R}$ en $\mathbb{R}$ por ejercicio 1 de sección 18. Esto es que para todo $t$ y todo $\epsilon_n>0$ existe un $\delta$ tal que $(t-\delta,t+\delta)\subset f_n^{-1}((f_n(t)-\epsilon_n,f_n(t)+\epsilon_n))$. Por teorema 19.6, las funciones $f,g\text{ y }h$ son continuas en la topología pruducto de $\mathbb{R}^\omega$.
+
+ Sea el elemento basico de $\mathbb{R}^\omega$ en la topología por cajas dado por 
+$B=(-1,1)\times (-1/4,1/4)\times ...\times (-1/n^2,1/n^2)\times ...$. Entonces $f^{-1}(B)$ no es abierto de $\mathbb{R}$. Esto se debe a que, si fuera continua, se tendría que  $f((-\delta,\delta))\subset B$ alrededor de 0. Aplicando la proyección $\pi_n$, sería $f_n((-\delta,\delta))=(-n\delta,n\delta)\subset(-1/n^2,1/n^2)$ una contradicción para algún $n$. Entonces $g^{-1}(B)$ no es abierto de $\mathbb{R}$. Esto se debe a que, si fuera continua, se tendría que  $g((-\delta,\delta))\subset B$ alrededor de 0. Aplicando la proyección $\pi_n$, sería $g_n((-\delta,\delta))=(-\delta,\delta)\subset(-1/n^2, 1/n^2)$ una contradicción para algún $n$. Entonces $h^{-1}(B)$ no es abierto de $\mathbb{R}$. Esto se debe a que, si fuera continua, se tendría que  $h((-\delta,\delta))\subset B$ alrededor de 0. Aplicando la proyección $\pi_n$, sería $h_n((-\delta,\delta))=(-\delta/n,\delta/n)\subset(-1/n^2,1/n^2)$ una contradicción para algún $n$. Por tanto, ninguna función $f,g,h$ es continua en la topología por cajas.
+
+ Sea la distancia $\overline{\rho}$  que induce la topología uniforme. Entonces 
+$\overline{\rho}(\vect{x},\vect{y})=\sup\{\overline{d}(x_n,y_n)|n\in \mathbb{Z}_+\}$ donde $\overline{d}(x_n,y_n)=\min\{|x_n-y_n|,1\}$. Luego
+\begin{eqnarray}
+ \overline{\rho}(f(t),f(s))=\sup\{\min\{n|s-t|,1\}|n\in \mathbb{Z}_+\}=\begin{cases}
+1 & \text{ si } s\neq t\nonumber\\
+0 & \text{ si } s= t\end{cases}\nonumber\\
+ \overline{\rho}(g(t),g(s))=\sup\{\min\{|s-t|,1\}|n\in \mathbb{Z}_+\}=\begin{cases}
+|s-t| & \text{ si } |s-t| < 1 \nonumber \\
+1 & \text{ si } |s-t| \geq 1 \nonumber
+\end{cases}\nonumber\\
+ \overline{\rho}(h(t),h(s))=\sup\{\min\{\frac{|s-t|}{n},1\}|n\in \mathbb{Z}_+\}\in [0,1]\nonumber
+\end{eqnarray}
+Por tanto $\overline{\rho}$ es una distancia para la imagen de $f$, de $g$ y de $h$. Además $B_{\overline{\rho}}(g(t),\epsilon)$ y $B_{\overline{\rho}}(h(t),\epsilon)$, con $0<\epsilon<1$, son abiertos de $\mathbb{R}^{\omega}$ y $\overline{\rho}$ induce la topología uniforme sobre las imagenes de $g$ y de $h$ sobre $\mathbb{R}^\omega$. Pero $B_{\overline{\rho}}(f(t),\epsilon)=\{0\}$ no es abierto para $0<\epsilon<1$. Por tanto, la imagen de $f$ no pertenece a la topología uniforme sobre $\mathbb{R}^\omega$.
+\begin{itemize}
+\item \bf(b) \rm  ¿En qué topologías convergen las siguientes sucesiones?
+\begin{eqnarray}
+\vect{w}_1=(1,1,1,1,...), & \vect{x}_1=(1,1,1,1,...), \nonumber\\
+\vect{w}_2=(0,2,2,2,...), & \vect{x}_2=(0,\frac{1}{2},\frac{1}{2},\frac{1}{2},...), \nonumber\\
+\vect{w}_3=(0,0,3,3,...), & \vect{x}_3=(0,0,\frac{1}{3},\frac{1}{3},...), \nonumber\\
+... & ...\nonumber\\
+\vect{y}_1=(1,0,0,0,...), & \vect{z}_1=(1,1,0,0,...),  \nonumber\\
+\vect{y}_2=(\frac{1}{2},\frac{1}{2},0,0,...), & \vect{z}_2=(\frac{1}{2},\frac{1}{2},0,0,...), \nonumber\\
+\vect{y}_3=(\frac{1}{3},\frac{1}{3},\frac{1}{3},0,...), & \vect{z}_3=(\frac{1}{3},\frac{1}{3},0,0,...),  \nonumber\\
+... & ...\nonumber
+\end{eqnarray}
+\end{itemize}
+Se tiene que
+\begin{eqnarray}
+|(w_i)_n-(w_j)_n|\in \{1,j,i,0\}\nonumber\\
+|(x_i)_n-(x_j)_n|\in \{\frac{|i-j|}{ij},\frac{1}{j},\frac{1}{i},0\}\nonumber\\
+|(y_i)_n-(y_j)_n|\in \{\frac{|i-j|}{ij},\frac{1}{j},\frac{1}{i},0\}\nonumber\\
+|(z_i)_n-(z_j)_n|\in \{\frac{|i-j|}{ij},\frac{1}{j},\frac{1}{i},0\}\nonumber
+\end{eqnarray}
+por tanto,
+\begin{eqnarray}
+\overline{\rho}(\vect{w}_i,\vect{w}_j)=\begin{cases}
+1&\text{ si }j\neq i\nonumber\\
+0&\text{ si }j = i\nonumber
+\end{cases}\nonumber\\
+\overline{\rho}(\vect{x}_i,\vect{x}_j)
+\begin{cases}
+\frac{1}{i}&\text{ si }j> i\nonumber\\
+\frac{1}{j}&\text{ si }j< i\nonumber\\
+0&\text{ si }j = i\nonumber
+\end{cases}\nonumber\\
+\overline{\rho}(\vect{y}_i,\vect{y}_j)=\begin{cases}
+\frac{1}{i}&\text{ si }j> i\nonumber\\
+\frac{1}{j}&\text{ si }j< i\nonumber\\
+0&\text{ si }j = i\nonumber
+\end{cases}\nonumber\\
+\overline{\rho}(\vect{z}_i,\vect{z}_j)\begin{cases}\frac{1}{i}&\text{ si }j> i\nonumber\\
+\frac{1}{j}&\text{ si }j< i\nonumber\\
+0&\text{ si }j = i\nonumber
+\end{cases}
+\nonumber
+\end{eqnarray}
+Todas las sucesiones $\{\vect{w}_i\},\{\vect{x}_i\},\{\vect{y}_i\},\{\vect{z}_i\}$ convergen a $\vect{0}$. Pero $B_{\overline{\rho}}(\vect{0},\epsilon)$ para $0<\epsilon<1$ no tiene elementos de $\{\vect{w}_i\}$ en la topología uniforme de $\mathbb{R}^\omega$, pero sí hay elementos de $\{\vect{x}_i\}$ ,$\{\vect{y}_i\}$ y $\{\vect{z}_i\}$ en la topología uniforme. Por ejercicio 6 de la seccion 19, los conjuntos $\{\vect{w}_i\},\{\vect{x}_i\},\{\vect{y}_i\},\{\vect{z}_i\}$ convergen en la topología producto. En la topología por cajas,  ni $\{\vect{w}_i\}$, ni $\{\vect{x}_i\}$ ni $\{\vect{y}_i\}$ convergen a $\{0\}$ porque no hay elementos de estas secuencias que pertenezcan al entorno $U=(-1/2,1/2)\times (-1/3,1/3)\times (-1/4,1/4)\times...$ de $\{0\}$.
+
+\section{Tema 2 Sección 20 Ejercicio 5}
+Veamos cuál es la clausura del subconjunto $\mathbb{R}^\infty$ de $\mathbb{R}^\omega$, formado por las sucesiones que son finalmente cero, en $\mathbb{R}^\omega$ en la topología uniforme. Supongamos que es $n$ el máximo entero para
+el cual $x_n \neq 0$ y llamemos $\{\vect{x}_n\}$ a la sucesión cuyos elementos son $(x_1, x_2, ..., x_n, 0, ...)$ y tal que tienden a $\vect{x}$ . Se tiene que $\overline{d}((\vect{x}_n(i),(\vect{x})(i))=\min\{|\vect{x}_n(i)-\vect{x}_n(i)|,1\}$, por tanto
+\begin{eqnarray}
+\overline{d}((\vect{x}_n(i),(\vect{x})(i))=\begin{cases}
+0 &\text{ si }i\leq n\nonumber\\
+|x_i|&\text{ si } i > n\text{ y } |x_i| <1 \nonumber\\
+1 &\text{ si } i > n\text{ y } |x_i| \geq 1
+\end{cases}
+\nonumber
+\end{eqnarray}
+entonces $\overline{\rho}(\vect{x}_n, \vect{x})=\sup_i \{\overline{d}((\vect{x}_n(i),(\vect{x})(i))\}\in [0,1]$. Por tanto, sea $\epsilon$ tal que $0<\epsilon <| \vect{x}(i)|$ para todo $i\geq N$. Entonces, si $\vect{x}\neq \vect{0}$, para toda sucesión $\{\vect{x}_n\}$ finalmente cero que tiende a $\vect{x}$ existe una bola $B_{\overline{\rho}}(\vect{x},\epsilon)$ y un $N$ tal que $\vect{x}_n\notin B_{\overline{\rho}}(\vect{x},\epsilon)$ para todo $n\geq N$. Por tanto, $\vect{x}$ no pertenece a la clausura de $\mathbb{R}^\infty$ en la topología uniforme. En cambio, si para todo $\epsilon$ existe un $N$ tal que $|\vect{x}(i)|< \epsilon$ para todo $i\geq N$ entonces $\vect{x}$ pertenece a la clausura de $\mathbb{R}^\infty$ en la topología uniforme porque hay un número infinito de elementos de $\{\vect{x}_n\}$ en la bola $B_{\overline{\rho}}(\vect{x},\epsilon)$
+
+\section{Tema 2 Sección 20 Ejercicio 6}
+Sea $\overline{\rho}$ una distancia uniforme sobre $\mathbb{R}^\omega$ y dados $\vect{x}=(x_1,x_2,...)\in \mathbb{R}^\omega$ y $0<\epsilon<1$. Defínase $U(\vect{x},\epsilon)=(x_1-\epsilon, x_1+\epsilon)\times (x_2-\epsilon, x_2+\epsilon)\times...$.
+
+\begin{itemize}
+\item \bf (a) \rm Veamos que $U(\vect{x},\epsilon)\neq B_{\overline{\rho}}(\vect{x},\epsilon)$.
+\end{itemize}
+Se tiene que $U(\vect{x},\epsilon)$ es un elemento de la base en la topología por cajas y $B_{\overline{\rho}}(\vect{x},\epsilon)$ es un elemento de la base de la topología uniforme. Como la topología por cajas es mas fina que la uniforme, hay que demostrar que $U(\vect{x},\epsilon)\subset B_{\overline{\rho}}(\vect{x},\epsilon)$. Si $\vect{y}\in U(\vect{x},\epsilon)$ entonces $|x_i-y_i|<\epsilon$ para todo $i\in\mathbb{Z}_{+}$. Supongamos que $y_i=x_i+\epsilon-\frac{1}{2i}$ para todo $i\in\mathbb{Z}_{+}$ con $0<\frac{1}{2i}<\epsilon$. Como \begin{eqnarray}
+\sup_i\{\min\{|x_i-y_i|,1\}\}=\sup_i\{|\epsilon-\frac{1}{2i}|\}=\epsilon,\nonumber
+\end{eqnarray}
+se tiene que $\vect{y}\notin B_{\overline{\rho}}(\vect{x},\epsilon)$ e $\vect{y}\in U(\vect{x},\epsilon)$. Por tanto, $B_{\overline{\rho}}(\vect{x},\epsilon)\neq U(\vect{x},\epsilon)$
+\begin{itemize}
+\item \bf(b) \rm Veamos que $U(\vect{x},\epsilon)$ ni siquiera es abierto en la topologia uniforme.
+\end{itemize}
+Si los $U(\vect{x},\epsilon)$ fueran abiertos en la topología uniforme, para cada elemento $\vect{y}$ de $U(\vect{x},\epsilon)$ existiría algún entorno $ U(\vect{y},\delta)$ con $\delta>0$ tal que $B_{\overline{\rho}}(\vect{y},\delta)= U(\vect{y},\delta)\subset U(\vect{x},\epsilon)$. Pero se ha visto que $B_{\overline{\rho}}(\vect{y},\delta)\neq U(\vect{y},\delta)$. Por tanto, $U(\vect{y},\delta)$ no es abierto de la topología uniforme.
+\begin{itemize}
+\item \bf(c) \rm Veamos que $B_{\overline{\rho}}(\vect{y},\epsilon)=\bigcup_{\delta<\epsilon}U(\vect{x},\delta)$.
+\end{itemize}
+Primero probemos que $B_{\overline{\rho}}(\vect{x},\epsilon)\subset\bigcup_{\delta<\epsilon}U(\vect{x},\delta)$. Si $\vect{y}\in B_{\overline{\rho}}(\vect{x},\epsilon)$ entonces 
+$\sup_i\{\min\{|x_i-y_i|,1\}\}<\epsilon$ entonces $|x_i-y_i|<\delta<\epsilon$ entonces $\vect{y}\in \bigcup_{\delta<\epsilon} (x_1-\delta,x_1+\delta)\times (x_2-\delta,x_2+\delta)\times ...=\bigcup_{\delta<\epsilon}U(\vect{x},\delta)$. Por tanto $B_{\overline{\rho}}(\vect{x},\epsilon)\subset\bigcup_{\delta<\epsilon}U(\vect{x},\delta)$
+
+Ahora probemos que $B_{\overline{\rho}}(\vect{y},\epsilon)\supset\bigcup_{\delta<\epsilon}U(\vect{x},\delta)$. Si $\vect{y}\in \bigcup_{\delta<\epsilon}U(\vect{x},\delta)$ entonces $|x_i-y_i|<\delta<\epsilon$ para todo $i\in\mathbb{Z}_{+}$. Supongamos que $y_i=x_i+\delta-\frac{1}{2i}$ para todo $i\in\mathbb{Z}_{+}$ con $0<\frac{1}{2i}<\delta<\epsilon$. Como \begin{eqnarray}
+\sup_i\{\min\{|x_i-y_i|,1\}\}=\sup_i\{|\delta-\frac{1}{2i}|\}=\delta,\nonumber
+\end{eqnarray}
+se tiene que $\vect{y}\in B_{\overline{\rho}}(\vect{x},\epsilon)$. Por tanto, $\bigcup_{\delta<\epsilon}U(\vect{x},\delta)\subset B_{\overline{\rho}}(\vect{x},\epsilon)$
+\end{document}

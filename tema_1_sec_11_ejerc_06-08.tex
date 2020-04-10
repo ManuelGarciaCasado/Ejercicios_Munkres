@@ -1,0 +1,39 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 11 Ejercicio 6}
+Una familia $\mathcal{A}$ de subconjuntos de $X$ es de tipo finito si se cumple que hay algún $B\subset X$ con $B\in \mathcal{A}$ si, y solo si, todo subconjunto finito de $B$ pertenece a $\mathcal{A}$. Veamos que si $\mathcal{A}$ es de tipo finito entonces $\mathcal{A}$ tiene un elemento que no está contenido propiamente en ningún otro elemento de $\mathcal{A}$. Sea $\mathcal{B}$ la familia formada por los subconjuntos finitos de $B$. Entonces, suponiendo que $\mathcal{A}$ es de tipo finito, se tiene que algún $B\in \mathcal{A}$ si, y solo si, para todo $C$ que pertenece a la familia de subconjuntos finitos $\mathcal{B}$ de $B$ se cumple $C\in\mathcal{A}$. Según ejercicio 6(a) de la sección 6, si $B$ es finito entonces $\mathcal{P}(B)$ es finito. En este caso $\mathcal{P}(B)=\mathcal{B}=\mathcal{A}$ y $\cup_{C\in\mathcal{B}}C\in\mathcal{A}$. Luego por el teorema de Kuratovski se cumple que $\mathcal{A}$ tiene un elemento que no está contenido en ningún otro elemento de $\mathcal{A}$. Por el contrario, si $B$ no es finito entonces $ B\notin \mathcal{B}$ y para todo $C\in \mathcal{B}$ se tiene que $C\subsetneq B$. Por tanto, $B$ es una cota superior de $\mathcal{B}$ en $\mathcal{A}$ con el orden parcial estricto definido por el ejemplo 1. Por tanto, el lema de Zorn asegura que $\mathcal{A}$ tiene un elemento maximal. El hecho de que $\mathcal{A}$ tiene elemento maximal con el orden parcial de "es subconjunto propio de " significa que hay un elemento en 
+$\mathcal{A}$ que no está contenido en ningún otro elemento de $\mathcal{A}$.
+\section{Tema 1 Sección 11 Ejercicio 7}
+Veamos que el lema de Tukey implica el principio del máximo de Hausdorff. Si $\prec$ es un orden parcial estricto sobre $A$,  $\mathcal{A}$ es la familia de todos subconjuntos de $A$ que están simplemente ordenados por $\prec$. Veamos primero que $\mathcal{A}$ es de tipo finito. Veamos que todos los subconjuntos finitos de $A$ están simplemente ordenados por $\prec$. Ya que para dos elementos $a,b\in B$ siendo $B$ finito se tiene que  bien $a\prec b$, bien $b\prec a$. Por tanto, todos los subconjuntos finitos de $A$ están en $\mathcal{A}$. Por tanto, $\mathcal{A}$ es de tipo finito. Por el lema de Tukey, se tiene que  $\mathcal{A}$ tiene un elemento tal que no está contenido en ningún otro elemento de $\mathcal{A}$. Por tanto, hay un elemento maximal simplemente ordenado que es subconjunto de A.
+\section{Tema 1 Sección 11 Ejercicio 8}
+Sea $A$ un subconjunto del espacio vectorial $V$. Sea $U_A\subset V$ el subespacio generado por $A$ tal que $\vect{u}\in U_A\Leftrightarrow \vect{u}=x_1\vect{a}_1+x_2\vect{a}_2+...+x_n\vect{a}_n$ donde $\vect{a}_1,\vect{a}_2,..., \vect{a}_n\in A$ y $x_1,x_2,...,x_n\in \mathbb{R}$.
+$A$ se dice linealmente independiente cuando $x_1\vect{a}_1+x_2\vect{a}_2+...+x_n\vect{a}_n=\vect{0}$  si, y solo si, $x_i=0$ para todo $1\leq i \leq n$.
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que si $A$ es independiente y $v\in V$ no pertenece al subespacio generado por $A$ entonces $A\cup \{v\}$ es independiente. Por tanto, si $A$ es linealmente independiente, $x_1\vect{a}_1+x_2\vect{a}_2+...+x_n\vect{a}_n=\vect{0}$  si, y solo si, $x_i=0$ para todo $1\leq i \leq n$ y si $\vect{v}\notin U_A$ entonces $\vect{v}\neq y(x_1\vect{a}_1+x_2\vect{a}_2+...+x_n\vect{a}_n)$ Por tanto $ x_1\vect{a}_1+x_2\vect{a}_2+...+x_n\vect{a}_n-y^{-1}\vect{v}\neq \vect{0}$, que es lo mismo que decir que 
+$x_1\vect{a}_1+x_2\vect{a}_2+...+x_n\vect{a}_n-y^{-1}\vect{v}=\vect{0}$ si, y solo si, $-y^{-1}=0$ y $x_i=0$ para todo $1\leq i \leq n$. Por tanto $A\cup\{\vect{v}\}$ es linealmente independente.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos que la familia $\mathcal{A}$ de los subconjuntos linealmente independientes de $V$
+tiene un elemento maximal. Por tanto, si $A\in \mathcal{A}$ hay un número finito de elementos $\vect{a}_i\in A$ que cumplen la condición de independencia lineal. Esto significa que todo $A\subset V$ que pertenece a $\mathcal{A}$ es finito y, por tanto, $\mathcal{A}$ es de tipo finito. Por apartado (a), si el número de elementos de $A$ que cumplen la condición de independencia lineal es menor que número de elementos de $B$ que cumplen la condición de independencia lineal, se tiene que $A\subsetneq B$. Por tanto, se cumple la condición del lema de Tukey, lo cual implica que existe un elemento en $\mathcal{A}$ que no está contenido en ningún otro elemento de $\mathcal{A}$. Por tanto, la familia de todos subconjuntos independientes de $V$ tiene un elemento maximal.
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+El elemento maximal de la familia de subconjuntos linealmente independientes de $V$ es la base de $V$ puesto que cualquier elemento de $V$ se puede expresar como combinación lineal de los elementos de la base.
+
+
+
+
+
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 3 Ejercicio 9}
+Se define el orden del diccionario \(<\) en \(A\times B\) como \(a_1 \times b_1< a_2 \times b_2\) si \(a_1<a_2\), o \(a_1=a_2\) y \(b_1<b_2\). Veamos que es relación de orden en \(A\times B\) cumpliendo las tres propiedades. (Comparabilidad) Veamos que si \(a_1\times b_1 \neq a_2 \times b_2\), entonces \(a_1\times b_1 < a_2 \times b_2 \text{ o } a_1\times b_1 > a_2 \times b_2 \). Si  \(a_1\times b_1 \neq a_2 \times b_2\) entonces \(a_1\neq a_2 \text{ o } a_1=a_2 \text{ y } b_1\neq b_2\). Por tanto, \(a_1< a_2 \text{ o } a_1=a_2 \text{ y } b_1< b_2, \text{ o }a_1< a_2 \text{ o } a_1=a_2 \text{ y } b_1> b_2, \text{ o }a_1> a_2 \text{ o } a_1=a_2 \text{ y } b_1< b_2, \text{ o }a_1> a_2 \text{ o } a_1=a_2 \text{ y } b_1 > b_2\). Agrupando términos, \([a_1< a_2 \text{ o } a_1=a_2 \text{ y } b_1< b_2], \text{ o }[a_1> a_2 \text{ o } a_1=a_2 \text{ y } b_1> b_2]\). Por tanto, si \(a_1\times b_1 \neq a_2 \times b_2\), entonces \(a_1\times b_1 < a_2\times b_2 \text{ o } a_1\times b_1 > a_2\times b_2 \) (No reflexiva) Veamos que no existe \(a\times b \in A \times B\) tal que \(a\times b < a\times b\). De lo contrario, se tendría que \(a<a\), o \(a=a\) y \(b<b\), pero se tiene que \(a=a\) y \(b=b\). Por lo tanto, no hay tal \(a \times b\). (Transitiva) Veamos que si  \(a_1\times b_1 < a_2 \times b_2\) y \(a_2\times b_2 < a_3 \times b_3\) entonces \(a_1\times b_1 < a_3 \times b_3\). Dado  \(a_1\times b_1 < a_2 \times b_2\) y \(a_2\times b_2 < a_3 \times b_3\), se cumple que [\(a_1 < a_2 \text{ o } a_1=a_2 \text{ y } b_1<b_2\)] y que [\(a_2 < a_3 \text{ o } a_2=a_3 \text{ y } b_2<b_3\)]. Entonces, \(a_1 < a_2 < a_3 \text{ o } a_1 = a_2 < a_3 \text{ y } b_1 < b_2 \text{ o } a_1 < a_2=a_3 \text{ y } b_2<b_3 \text{ o } a_1=a_2=a_3 \text{ y } b_1<b_2<b_3\). Esto es  \(a_1 < a_3 \text{ o } a_1 < a_3 \text{ y } [ b_1 < b_2 \text{ o } b_2<b_3] \text{ o } a_1=a_3 \text{ y } b_1<b_3\). Por tanto \(a_1\times b_1 < a_2 \times b_2\) y \(a_2\times b_2 < a_3 \times b_3 \Rightarrow a_1 < a_3 \text{ o } a_1=a_3 \text{ y } b_1<b_3\Rightarrow a_1\times b_1<a_3 \times b_3\)
+\section{Tema 1 Sección 3 Ejercicio 10}
+\bf (a) \rm Si \(f:A\longrightarrow B\) biyectiva y \(a<_{A} b \Rightarrow f(a)<_{B} f(b)\), entonces \(A\) y \(B\) tienen el mismo tipo de orden. Sea \(f: (-1,1)\longrightarrow \mathbb{R}\) tal que 
+\begin{equation}
+f(x)=\frac{x}{1-x^2}
+\end{equation}
+veamos que \( (-1,1)\text{ y } \mathbb{R}\) tienen el mismo tipo de orden. Veamos que \(f\) es sobreyectiva. \([b\in \mathbb{R}] \Rightarrow [\frac{a}{1-a^2}=b \in \mathbb{R}] \Rightarrow [a \in (-1,1)]\). Por tanto \([b\in \mathbb{R}] \Rightarrow [b=f(a) \text{ para algún } a \in (-1,1)]\). Veamos que es inyectiva. Lo es si \([f(a)=f(a')]\Rightarrow[ a=a']\). Entonces \(\frac{a}{1-a^2}=\frac{a'}{1-a'^2}\Rightarrow a(1-a'^2)=a'(1-a^2)\Rightarrow a-(1-a^2)a'-aa'^2=0\Rightarrow a'=\frac{(1-a)(1+a)\pm \sqrt{(1-a)^2(1+a)^2+4a^2}}{-2a} \Rightarrow a'=\frac{(1-a)(1+a)\pm \sqrt{(1-2a^2+a^4)+4a^2}}{-2a}=\frac{(1-a)(1+a)\pm \sqrt{(1+2a^2+a^4)}}{-2a}=\frac{(1-a^2)\pm (1+a^2)}{-2a}\Rightarrow a=a' \text{ o } a'=\frac{1}{a}\). Como \(a\in (-1,1)\), se descarta \(a'=\frac{1}{a}\), y se tiene que \(\frac{a}{1-a^2}=\frac{a'}{1-a'^2}\Rightarrow a=a'\). Por tanto, \(f\) es biyectiva. Por otro lado, \( a,b \in (-1,1) \)  y como \( [a<_{[0,1)}b  \Rightarrow  a^2 <_{[0,1)} b^2 \Rightarrow  -a^2 >_{(-1,0]} -b^2 \Rightarrow  1-a^2 >_{(0,1]} 1-b^2 \Rightarrow  \frac{1}{1-a^2} <_{[1,\infty)} \frac{1}{1-b^2}\Rightarrow  \frac{a}{1-a^2} <_{[0,\infty)} \frac{b}{1-b^2}]\text{ y } [a<_{(-1,0]}b  \Rightarrow  a^2 >_{(-1,0]} b^2 \Rightarrow  -a^2 <_{(-1,0]} -b^2 \Rightarrow  1-a^2 <_{(-1,0]} 1-b^2 \Rightarrow  \frac{1}{1-a^2} >_{[1,\infty)} \frac{1}{1-b^2} \Rightarrow  \frac{a}{1-a^2} <_{(-\infty,0]} \frac{b}{1-b^2}] \), se tiene que  \([a<_{(-1,1)}b \Rightarrow  \frac{a}{1-a^2} <_{\mathbb{R}} \frac{b}{1-b^2}] \). Es decir \( (-1,1)\text{ y } \mathbb{R}\) tienen el mismo tipo de orden. \newline
+\bf (b) \rm Sea \(g: \mathbb{R} \longrightarrow (-1,1)\) tal que
+\begin{equation}
+\begin{aligned}
+g(y)=\frac{2y}{1+\sqrt{1+4y^2}}
+\end{aligned}
+\end{equation}
+Veamos que \(g\) es inversa por la izquierda de \(f\)
+\begin{equation}
+\begin{aligned}
+g(f(x))=\frac{2f(x)}{1+\sqrt{1+4f(x)^2}}
+\\
+=\frac{2\frac{x}{1-x^2}}{1+\sqrt{1+4\big(\frac{x}{1-x^2}\big)^2}}\\
+=\frac{x}{1-x^2}\frac{2}{1+\sqrt{1+4\big(\frac{x}{1-x^2}\big)^2}}\\
+=\frac{2x}{1-x^2+\sqrt{\big(1-x^2\big)^2+4x^2}}\\
+=\frac{2x}{1-x^2+\sqrt{1-2x^2+x^4+4x^2}}\\
+=\frac{2x}{1-x^2+1+x^2}\\
+=x
+\end{aligned}
+\end{equation}
+Veamos que \(g\) es inversa por la derecha de \(f\)
+\begin{equation}
+\begin{aligned}
+f(g(y))=\frac{g(y)}{1-g(y)^2}
+\\
+=\frac{\frac{2y}{1+\sqrt{1+4y^2}}}{1-\big(\frac{2y}{1+\sqrt{1+4y^2}}\big)^2}\\
+=\frac{2y(1+\sqrt{1+4y^2})}{-4y^2+(1+\sqrt{1+4y^2})^2}\\
+=\frac{2y(1+\sqrt{1+4y^2})}{-4y^2+1+2\sqrt{1+4y^2}+1+4y^2}\\
+=y
+\end{aligned}
+\end{equation}
+% Uncomment the following two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}

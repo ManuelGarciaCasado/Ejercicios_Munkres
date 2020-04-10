@@ -1,0 +1,151 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 7 Ejercicio 1}
+% Create a new 1st level heading
+Veamos que $\mathbb{Q}$ es infinito-numerable. Dado que existe la aplicación biyectiva $g: \mathbb{Z}\rightarrow \mathbb{Z}_{+}$ definida por 
+\begin{eqnarray}
+g(n)=\begin{cases}
+2n & \text{ si } n>0 \nonumber\\
+-2n+1 & \text{ si } n\leq 0, \nonumber\\
+\end{cases}
+\end{eqnarray}
+se tiene que existe una aplicación biyectiva $h: \mathbb{Z}\times\mathbb{Z}_{+}\rightarrow \mathbb{Z}_{+}\times\mathbb{Z}_{+} $ tal que
+\begin{eqnarray}
+h(n,m)=\begin{cases}
+(2n,m) & \text{ si } n>0 \nonumber\\
+(-2n+1,m) & \text{ si } n\leq 0 \nonumber\\
+\end{cases}
+\end{eqnarray}
+Además, hay una aplicación sobreyectiva
+$k:\mathbb{Z}\times\mathbb{Z}_{+}\rightarrow \mathbb{Q}$
+definida por $k(n,m)=m/n$
+. Como $\mathbb{Z}_{+}\times\mathbb{Z}_{+}$ es numerable, también hay una aplicación sobreyectiva $f:\mathbb{Z}_{+}\rightarrow \mathbb{Z}_{+} \times \mathbb{Z}_{+}$. Por tanto se tiene que hay un aplicación sobreyectiva $ k\circ h^{-1} \circ f:\mathbb{Z}_{+}\rightarrow \mathbb{Q}$. Por tanto, $\mathbb{Q}$ es infinito numerable.
+\section{Tema 1 Sección 7 Ejercicio 2}
+Veamos que la función $f: \mathbb{Z}\rightarrow \mathbb{Z}_{+} $ tal que
+\begin{eqnarray}
+f(n)=\begin{cases}
+2n & \text{ si } n>0 \nonumber\\
+-2n+1 & \text{ si } n\leq 0 \nonumber\\
+\end{cases}
+\end{eqnarray}
+es biyectiva. Veamos que $f$ es inyectiva. Sean $n,m\in \mathbb {Z}$ tales que $n\neq m$. Entonces si $n>0$ y $m>0$, $n\neq m \Rightarrow 2n\neq 2m \Rightarrow f(n)\neq f(m)$. Si $n>0$ y $m\leq 0$ entonces $n\neq m \Rightarrow 2n\neq -2m+1 $  ya que $2n$ es par y $-2n+1$ es impar, luego $f(n)\neq f(m)$. Si $m>0$ y $n\leq 0$ entonces $n\neq m \Rightarrow 2m\neq -2n+1 $  ya que $2m$ es par y $-2n+1$ es impar, luego $f(n)\neq f(m)$. Si $n<0$ y $m<0$, $n\neq m \Rightarrow -2n+1\neq -2m+1 \Rightarrow f(n)\neq f(m)$. Por tanto $f$ es inyectiva. Veamos que es sobreyectiva. Sea $n\in \mathbb{Z}_{+}$ entonces $n$ es par o es impar. Si es par, por definición, existe un $m\in \mathbb{Z}_{+}$ tal que $n=2m$, luego existe $f^{-1} (\{n\})=f^{-1} (\{2m\})=m$ en $\mathbb{Z}$. Si no es par, por definición, también existe existe un $m\in\mathbb{Z}_{+}$ tal que $n=2m+1$, luego existe $f^{-1} (\{n\})=f^{-1} (\{2m+1\})=-m$ en $\mathbb{Z}$. Por tanto existe algún $f^{-1} (\{n\})\in\mathbb{Z}$ para todo $n\in \mathbb{Z}_{+}$.
+\newline
+Veamos que la función $g(x,y): \mathbb{Z}_{+}\times \mathbb{Z}_{+} \rightarrow A$ donde $A=\{(x,y)|(x,y)\in\mathbb{Z}_{+}\times \mathbb{Z}_{+}\text{ e } y\leq x\}$ está definida por $g(x,y)=(x+y-1,y)$ y es biyectiva. Veamos que $g$ es inyectiva. Supongamos que $(x+y-1,y)=(z+\omega-1,\omega)$ Pero entonces $(x+y-1,y)=(z+\omega-1,\omega)\Leftrightarrow y=\omega \text{ y } x+y-1=z+\omega-1\Rightarrow y=\omega \text{ y } x=z$. Por tanto $g(x,y)=g(z,\omega)\Rightarrow (x,y)=(z,\omega)$ lo cual define las funciones inyectivas. Veamos que $g$ es sobreyectiva. Sea $(x+y-1,y)\in A$ entonces $y\leq x+y-1$ con $x+y-1,y\in \mathbb{Z}_{+}$. Por tanto $y\leq x + y -1\Rightarrow  1 \leq x $, entonces $x\in\mathbb{Z}_{+}$ . Por tanto, para cada $(x+y-1,y)\in A$ existe algún $(x,y)\in \mathbb{Z}_{+}\times \mathbb{Z}_{+}$. Por tanto $g$ es sobreyectiva. Por tanto $g$ es biyectiva.
+\newline
+Sea $h:A\rightarrow \mathbb{Z}_{+}$ tal que $A$ está definida como antes y $g(x,y)=(x-1)x/2+y$. Veamos que es inyectiva. Sea $x\neq z$ y $y\neq \omega$, como $y\leq x$ y $\omega\leq z$, se tiene que $x\neq z\Rightarrow x^2/2-x/2+y\neq z^2/2-z/2+y$. Por tanto $x^2/2-x/2+y \neq z^2/2-z/2+y \Rightarrow x^2/2-x/2+y\neq z^2/2-x/2+\omega \Rightarrow x/2-x^2/2+y\neq z^2/2-z/2+\omega $. Por tanto $(x,y)\neq (z,\omega)\Rightarrow h(x,y)\neq h(z,\omega)$; esto es que $h$ es inyectiva. Supongamos que $-x/2+x^2/2+y = -z/2+z^2/2+\omega$ entonces $-x/2+x^2/2+z/2 -z^2/2=\omega-y$, entonces $(z-x)/2+(x+z)(x-z)/2=\omega-y\Rightarrow (x+z-1)(x-z)=2(\omega-y)$. Por tanto $(x+z-1)(x-z)=2(\omega-y)$ para cuales quiera $ x$ tal que $x\geq y$; y $z$ tal que $z\geq \omega$ lo cual es absurdo a no ser que $\omega=y$ y $x=z$. Por tanto, $h$ es inyectiva. Veamos que $h$ es sobreyectiva. Sea $h(x,y)=-x/2+x^2/2+y\in C\subset \mathbb{Z}_{+}$. Si $x=1$ e $y=1$ entonces $-x/2+x^2/2+y=1$ y $1\in C$. Supongamos que $n\in C$, veamos que $n+1\in C$. Luego $-x/2+x^2/2+y =n\Rightarrow -x/2+x^2/2+y +1/2 +1/2=n+1\Rightarrow x/2+x^2/2-1/2+y +1 +1/2=n+1 \Rightarrow (x+1)/2+(x-1)(x+1)/2+y+1 =n+1$. Por tanto $h(x,y)=n\Rightarrow h(x+1,y+1)=n+1$, por tanto $C=\mathbb{Z}_{+}$ y para todo $n\in \mathbb{Z}_{+}$ existe un $(x,y)\in A$ tal que $h(x,y)=n$. Y $h$ es sobreyectiva. Entonce $h$ es biyectiva.
+\section{Tema 1 Sección 7 Ejercicio 3}
+Sea $X=\{0,1\}$ veamos que hay una biyección $f:\mathcal{P}(\mathbb{Z}_{+})\rightarrow X^{\omega}$. Sea $C\subset \mathbb{Z}_{+}$ y por tanto $C\in \mathcal{P}(\mathbb{Z}_{+})$ definamos la aplicación tal que $x_i=\vect{x}(i)=1$ si $i\in C$ y $x_i=\vect{x}(i)=0$ si $i\notin C$, donde $\vect{x}=(x_1,x_2,...,x_i,...)\in X^{\omega}$. Por tanto
+\begin{eqnarray}
+f_i(C)=
+\begin{cases}
+1, & i\in C \nonumber\\
+0, & i\notin C\nonumber\\
+\end{cases}
+\end{eqnarray}
+Veamos que $f$ es inyectiva. Supongamos que $A,B\in\mathcal{P}(\mathbb{Z}_{+})$ pero $A\neq B$. Entonces hay al menos un $n\in\mathbb{Z}_{+}$ tal que $n\in A$ pero $n\notin B$ por tanto $f_n(A)=1\neq 0=f_n(B)$, entonces $\vect{f}(A)\neq\vect{f}(B)$. Lo cual significa que $f$ es inyectiva.
+\newline
+Veamos que $f$ es sobreyectiva. sea $\vect{x}\in X^{\omega}$ entonces si alguna de sus coordenadas no es cero, $x_i=1$ para algún $i\in \mathbb{Z}_{+}$, entonces existe algún $C$ tal que $i\in C\subset \mathbb{Z}_{+} $ y por tanto $C\in\mathcal{P}(\mathbb{Z}_{+})$. De lo contrario, si $\vect{x}=(0,0,...)$ lo cual indica que $C=\emptyset$, pero $\emptyset\in\mathcal{P}(\mathbb{Z}_{+})$. Por tanto, para todo $\vect{x}\in X^{\omega}$ existe algún $C\in \mathcal{P}(\mathbb{Z}_{+})$ tal que $\vect{f}(C)=\vect{x}$. Por tanto $f$ es sobreyectiva.
+\newline
+Entonces exite una aplicación biyectiva $f$.
+\section{Tema 1 Sección 7 Ejercicio 4}
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Sea el conjunto de los números algebraicos definido por $A=\{x|x\in \mathbb{R} \text{ y } x^n+a_{n-1}x^{n-1}+...+a_1x+a_0=0 \text{ para cualesquiera }a_{n-1},...,a_0\in\mathbb{Q} \text{ y cualquier }n\in \mathbb{Z}_{+} \}$. Veamos que $A$ es numerable. Defínase la $n+1$-upla $(\vect{a},n)=(a_0,a_1,...,a_{n-1},n)\in \mathbb{Q}^n\times\{n\}$ de los coeficientes de la ecuación algebraica. Suponiendo que la ecuación $x^n+a_{n-1}x^{n-1}+...+a_1x+a_0=0$ tiene un número finito de raices, el conjunto de estas raices es un subconjunto $B_{(\vect{a},n)}$ de $A$ y es numerable por ser finito. Por tanto $A=\cup_{n\in\mathbb{Z}_{+}}\left(\cup_{(\vect{a},n)\in \mathbb{Q}^n\times \{n\}}B_{(\vect{a},n)}\right)$. Dado que $\mathbb{Q}_{+}$ es numerable, y que existe un aplicación biyectiva $g:\mathbb{Q}_{+}\rightarrow \{0\}\cup \mathbb{Q}_{-}$ dada por $g(q)=1-q$, se tiene que $\{0\}\cup\mathbb{Q}_{-}$ es numerable. Por tanto $\mathbb{Q}=\mathbb{Q}_{+}\cup\{0\}\cup\mathbb{Q}_{-}$ es numerable por ser unión de conjuntos numerables. Por tanto $\mathbb{Q}^n$ es numerable ya que el producto finito de conjuntos numerables es numerable. Dado que la unión numerable de conjuntos numerable es numerable, $\cup_{(\vect{a},n)\in \mathbb{Q}^n\times \{n\}}B_{(\vect{a},n)}$ es numerable. Por tanto $A$ es numerable ya que es la unión numerable de conjuntos numerables.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Como los números reales $\mathbb{R}$ son no numerables y los números algebraicos $A\subset \mathbb{R}$ sí son numerables, lo números que son reales pero no son algebraicos tampoco son numerables. Es decir,
+\begin{eqnarray}
+[\mathbb{R} \text{ no numerable y }A \text{ numerable}]\Rightarrow [\mathbb{R}-A\text{ no numerable}]\nonumber\\
+\end{eqnarray}
+ya que de lo contrario, si fuera $\mathbb{R}-A$ numerable, $\mathbb{R}=(\mathbb{R}-A)\cup A$ sería numerable (porque la unión de conjuntos numerables es numerable) lo cual es falso por hipótesis. 
+\section{Tema 1 Sección 7 Ejercicio 5}
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Sea $A$ el conjunto de todas las funciones $f:\{0,1\}\rightarrow \mathbb{Z}_{+}$. Entonces $A=\{f_{nm}|f_{nm}:\{0,1\}\rightarrow \mathbb{Z}_{+} \text{ y } f_{nm}(0)=n,f_{nm}(1)=m \}$. Entonces,  para cada elemento de $A$ hay una 2-upla $(n,m)$ y, por tanto, hay una aplicación de $g:A\rightarrow \mathbb{Z}_{+}\times \mathbb{Z}_{+}$ y dado que existe la aplicación inyectiva $h:\mathbb{Z}_{+}\times \mathbb{Z}_{+}\rightarrow  \mathbb{Z}_{+}$ definida por $h(n,m)=2^n3^m$, se puede construir una aplicación inyectiva $h\circ g :A\rightarrow \mathbb{Z}_{+}$. Entonces, $A$ es numerable. 
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos si el conjunto $B_n$ de todas las funciones $f:\{1,2,3...,n\}\rightarrow \mathbb{Z}_{+}$ es numerable o no. Defínase formalmente $B_n=\{f_{\vect{a}}| f_{\vect{a}}(1)=a_1,f_{\vect{a}}(2)=a_2,...,f_{\vect{a}}(n)=a_n,\text{ donde } a_1,a_2,...,a_n\in \mathbb{Z}_{+}\}$. Entonces,  para cada elemento de $B_n$ hay una n-upla $\vect{a}$ y, por tanto, hay una aplicación de $g:B_n\rightarrow \mathbb{Z}^{n}_{+}$ y dado que existe la aplicación inyectiva $h:\mathbb{Z}^{n}_{+}\rightarrow  \mathbb{Z}_{+}$ (por ser numerable el producto cartesiano finito de cunjunyos numerables) se puede construir una aplicación inyectiva $h\circ g :B_n\rightarrow \mathbb{Z}_{+}$. Entonces, $B_n$ es numerable.
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Vemos si el conjunto $C=\cup_{n\in\mathbb{Z}_{+}}B_n$ es numerable o no. El teorema 7.5 asegura que la unión numerable de conjuntos numerables, es numerable. Por tanto, $C$ es numerable porque $\mathbb{Z}_{+}$ es numerable y $B_n$ es numerable para todo $n\in \mathbb{Z}_{+}$.
+\begin{itemize}
+\item \bf (d) \rm
+\end{itemize}
+Veamos si el conjunto de todas las funciones $f:\mathbb{Z}_{+}\rightarrow \mathbb{Z}_{+}$ es numerable o no. Defínase formalmente
+\newline
+$D=\{f_{\vect{a}}| f_{\vect{a}}(1)=a_1,f_{\vect{a}}(2)=a_2,f_{\vect{a}}(3)=a_3,...,\text{ donde } a_1,a_2,a_3...\in \mathbb{Z}_{+}\}$.
+\newline
+Entonces,  para cada elemento de $D$ hay una $\omega$-upla $\vect{a}$ y, por tanto, hay una aplicación de $g:D\rightarrow \mathbb{Z}^{\omega}_{+}$ y dado que no existe una aplicación inyectiva de $\mathbb{Z}^{\omega}_{+}$ en $ \mathbb{Z}_{+}$ (por ser no numerable el producto cartesiano numerable de conjunyos numerables) no se puede construir una aplicación inyectiva de $D$ en $\mathbb{Z}_{+}$. Entonces, $D$ es no numerable.
+\begin{itemize}
+\item \bf (e) \rm
+\end{itemize}
+Sea $E$ el conjunto de todas las funciones $f:\mathbb{Z}_{+}\rightarrow X$ donde $X=\{0,1\}$. Veamos si $E$ es numerable o no. Formalmente se define $E=\{f_{\vect{a}}| f_{\vect{a}}(n)=a_n \text{ donde }n\in \mathbb{Z}_{+} \text{ y } a_n\in X\}$ Entonces, para cada $\omega$-upla $\vect{a}\in X^{\omega}$ hay un elemento de $E$ y, por tanto, hay una aplicación inyectiva de $g:X^{\omega}\rightarrow E$ ya que si $\vect{a}\neq\vect{b}\Rightarrow f_{\vect{a}}(n)\neq f_{\vect{b}}(n)$ para algún $n\in \mathbb{Z}_{+}$ y por tanto $f_{\vect{a}}\neq f_{\vect{b}}$. Por tanto hay una aplicación sobreyectiva $h:E\rightarrow X^{\omega}$ definida por $h(f_{\vect{a}})=g^{-1}(\{f_{\vect{a}}\})$ para cada $f_{\vect{a}}\in E$. Pero no existe ninguna aplicación sobreyectiva de $X^{\omega}$ en $\mathbb{Z}_{+}$. Por tanto, tampoco existe ninguna aplicación sobreyectiva de $E$ en $\mathbb{Z}_{+}$. Por tanto, $E$ es no numerable.
+\begin{itemize}
+\item \bf (f) \rm
+\end{itemize}
+Sea $F$ el conjunto de todas las funciones $f:\mathbb{Z}_{+}\rightarrow X$ que son finalmente cero donde $X=\{0,1\}$. Formalmete se define $F=\cup_{N\in\mathbb{Z}_{+}}F_N$ donde $F_N=\{f_{\vect{a}}|f_{\vect{a}}(n)=a_n\text{ si }n\leq N, f_{\vect{a}}(n)=0\text{ si } n>N\}$. Entonces, para cada $N$-upla $\vect{a}\in X^{N}$ hay un elemento de $F_N$ y, por tanto, hay una aplicación inyectiva de $g:X^{N}\rightarrow F_N$ ya que si $\vect{a}\neq\vect{b}\Rightarrow f_{\vect{a}}(n)\neq f_{\vect{b}}(n)$ para algún $n\leq N, n\in \mathbb{Z}_{+}$. Por tanto hay una aplicación sobreyectiva $h:F_N\rightarrow X^{N}$ definida por $h(f_{\vect{a}})=g^{-1}(\{f_{\vect{a}}\})$ para cada $f_{\vect{a}}\in F_N$. Por tanto, los $F_N$ son numerables ya que $X^N$ es numerable por ser producto finito de conjunto numerable. Entonces $F$ es numerable por ser unión numerable de conjuntos  numerables.
+\begin{itemize}
+\item \bf (g) \rm
+\end{itemize}
+Sea $G$ el conjunto de todas las funciones $g:\mathbb{Z}_{+}\rightarrow X$ que son finalmente cero donde $X=\{0,1\}$. Formalmete se define $G=\cup_{N\in\mathbb{Z}_{+}}G_N$ donde $G_N=\{g_{\vect{a}}|g_{\vect{a}}(n)=a_n\text{ si }n\leq N, g_{\vect{a}}(n)=1\text{ si } n>N\}$. Entonces, para cada $N$-upla $\vect{a}\in X^{N}$ hay un elemento de $G_N$ y, por tanto, hay una aplicación inyectiva de $h:X^{N}\rightarrow G_N$ ya que si $\vect{a}\neq\vect{b}\Rightarrow g_{\vect{a}}(n)\neq g_{\vect{b}}(n)$ para algún $n\leq N, n\in \mathbb{Z}_{+}$. Por tanto hay una aplicación sobreyectiva $k:G_N\rightarrow X^{N}$ definida por $k(g_{\vect{a}})=h^{-1}(\{g_{\vect{a}}\})$ para cada $g_{\vect{a}}\in G_N$. Por tanto, los $G_N$ son numerables ya que $X^N$ es numerable por ser producto finito de conjunto numerable. Entonces $G$ es numerable por ser unión numerable de conjuntos  numerables.
+\begin{itemize}
+\item \bf (h) \rm
+\end{itemize}
+Sea $H$ el conjunto de todas las funciones $g:\mathbb{Z}_{+}\rightarrow X$ que son finalmente constantes donde $X=\{0,1\}$. Dado que $H=F\cup G$ donde $F$ y $G$ estan definidos en ejercicios (f) y (g). Se tiene que dado $F$ y $G$ son ambos numerables, la union numerable de conjuntos numerables es numerable. Por tanto $H$ es numerable.
+\begin{itemize}
+\item \bf (i) \rm
+\end{itemize}
+Sea $I$ el conjunto de todos los subconjuntos de dos elementos de $\mathbb{Z}_{+}$. Entonces, se define $I=\{\{m,n\}|m\in\mathbb{Z}_{+}, n\in(\mathbb{Z}_{+}-\{m\})\}$ Por tanto, se puede construir la función $f:I\rightarrow \mathbb{Z}_{+}\times \mathbb{Z}_{+}$ Dada por $f(\{n,m\})=(a,b)$ donde $a$ es el menor elemento de $\{n,m\}$ y $b$ es el mayor elemento de $\{n,m\}$. Como $n\neq m$ para cada uno de los $\{n,m\}\in I$ se tiene que si $\{n,m\}\neq\{k,n\}$ entonces $\{n,m\}\cap\{k,n\}=\{n\}$ o  $\{n,m\}\cap\{k,n\}=\emptyset$, pero en todo caso $\{n,m\}\cap\{k,n\}\notin I$. Entonces sea $a$ el menor elemento de $\{n,m\}$, sea $b$ el mayor elemento de $\{n,m\}$,sea $c$ el menor elemento de $\{k,n\}$, sea $d$ el mayor elemento de $\{k,n\}$. Entonces se cumple que  [$a=c$ y $b\neq d$] o [$a \neq c$ y $b = d$] o [$a \neq c$ y $b \neq d$]. En todo caso se tiene que $(a,b)\neq (c,d)$. Por tanto, $f(\{n,m\})\neq f(\{k,n\})$ siendo $f$ una función inyectiva. Dado que el corolario 7.4 asegura que $\mathbb{Z}_{+}\times \mathbb{Z}_{+}$ es numerable ya que hay una $g:\mathbb{Z}_{+}\times \mathbb{Z}_{+} \rightarrow \mathbb{Z}_{+}$ inyectiva. Entonces existe un aplicación inyectiva $g\circ f$ de $I$ en $\mathbb{Z}_{+}$. Por tanto $I$ es numerable.
+\begin{itemize}
+\item \bf (j) \rm
+\end{itemize}
+Veamos si el conjunto de conjuntos finitos de $\mathbb{Z}_{+}$ es numerable o no. Sea $J$ el conjunto de subconjuntos de $\mathbb{Z}_{+}$. Entonces, $J=\cup_{N\in \mathbb{Z}_{+}}J_N$ donde $J_N$ es la unión de subconjuntos de $\mathbb{Z}_{+}$ que tienen cardinal $N$. Sea $j_{i,N}\in J_N$ el conjunto tal que se pueden construir como $\vect{a}(i)=a_i\in j_{i,N}$ con $i\in \{1,2,...,N\}$. Entonces hay una función inyectiva $\vect{a}:\{1,2,...,N\}\rightarrow J_N$ tal que $\vect{a}\in j_{1,N}\times j_{2,N}\times ... \times j_{N,N}$ y  $J_N=\cup^{N}_{i=1}j_{i,N}$. Por tanto $J_N$ es la unión finita de conjuntos numerables. Dado que la unión finita de conjuntos numerables es numerable, los $J_N$ son numerables. Dado que la unión numerable  de conjuntos numerables es numerable, $J$ es numerable.
+\section{Tema 1 Sección 7 Ejercicio 6}
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que si $B\subset A$ y si  hay una función inyectiva $f:A\rightarrow B$ entonces $A$ y $B$ tienen el mismo cardinal.
+Sea $A_1=A$ y $B_1=B$. Sea también, para $n>1$, $A_n=f(A_{n-1})$ y $B_n=f(B_{n-1})$ entonces, nótese que $A_1\supset B_1\supset A_2\supset B_2 \supset ...$ Ahora se define la biyección $h:A\rightarrow B$ como
+\begin{eqnarray}
+h(x)=\begin{cases}
+f(x) & \text{ si }x\in A_n-B_n \text{ para algún }n\\
+x & \text{ en otro caso }\nonumber\\
+\end{cases}
+\end{eqnarray}
+Dado que $f$ es inyectiva, se vió en un ejercicio que se cumple que $f(A_n-B_n)=f(A_n)-f(B_n)=A_{n+1}-B_{n+1}$. Veamos que $h$ es inyectiva. Sean $x,y\in A_1$ y $x\neq y $. Entonces, si $x\notin A_1-B_1$ e  $y\notin A_1-B_1$ entonces $h(x)=x\neq y=h(y)\Rightarrow  h(x)\neq h(y)$. Si  $x\in A_1-B_1$ e  $y\in A_1-B_1$ entonces $h(x)=f(x)\neq f(y) =h(y)\Rightarrow  h(x)\neq h(y)$ dado que $f(A_1)$ es inyectiva. Si $x\in\cup_{n\in \mathbb{Z}_{+}}[A_n-B_n]$ e  $y\in \cup_{n\in \mathbb{Z}_{+}}[B_n-A_{n+1}]$ entonces $y\neq x$ por pertenecer a conjuntos que son disjuntos entre si. Entonces $h(x)=f(x)$ y $f(x)\in f(\cup_{n\in \mathbb{Z}_{+} }[A_n-B_n])$, entonces $f(x)\in\cup_{n\in \mathbb{Z}_{+}}f(A_n-B_n)=\cup_{n\in \mathbb{Z}_{+}}[f(A_n)-f(B_n)]=\cup_{n\in \mathbb{Z}_{+}}[A_{n+1}-B_{n+1}]$ por ser inyectiva. Por tanto, $h(x)\in\cup_{n\in \mathbb{Z}_{+}}[A_{n+1}-B_{n+1}]$ e $h(y)=y\in\cup_{n\in \mathbb{Z}_{+}}[B_{n}-A_{n+1}]$. Por tanto $h(x)\neq h(y)$ ya que pertenecen a conjuntos que son disjuntos entre si. Veamos que $h$ es sobreyectiva. Si $h(x)\in B$, entonces $h(x)\in \cup_{n\in \mathbb{Z}_{+}}[A_{n+1}-B_{n+1}$ o $h(x)\in \cup_{n\in \mathbb{Z}_{+}}[B_{n}-A_{n+1}$. Si  $h(x)\in \cup_{n\in \mathbb{Z}_{+}}[A_{n+1}-B_{n+1}$ entonces $h(x)=f(x)$, luego existe un $x\in A$. Si $h(x)\in \cup_{n\in \mathbb{Z}_{+}}[B_{n}-A_{n+1}$ entonces $h(x)=x$, luego existe un $x\in A$. Por tanto, es sobreyectiva.
+ \begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos que si hay funciones inyectivas $f:A\rightarrow C$ y $g:C\rightarrow A$, entonces $A$ y $C$ tienen el mismo cardinal. Si $A\subset C$ entonces se pueden construir los $A_n=f(A_{n-1})$, los $C_n=f(C_{n-1})$ y la función biyectiva $h:A\rightarrow C$ como
+\begin{eqnarray}
+h(x)=\begin{cases}
+f(x) & \text{ si }x\in A_n-C_n \text{ para algún }n\\
+x & \text{ en otro caso }\nonumber\\
+\end{cases}
+\end{eqnarray} 
+y por tanto, $A$ y $C$ tienen el mismo cardinal. Y si Si $C\subset A$ entonces se pueden construir los $C_n=g(C_{n-1})$, los $A_n=g(A_{n-1})$ y la función biyectiva $h:C\rightarrow A$ como
+\begin{eqnarray}
+h(x)=\begin{cases}
+g(x) & \text{ si }x\in C_n-A_n \text{ para algún }n\\
+x & \text{ en otro caso }\nonumber\\
+\end{cases}
+\end{eqnarray} y por tanto, $A$ y $C$ tienen el mismo cardinal. Entonces tanto si $A\subset C$ como si $C\subset A$, ambos tienen el mismo cardinal cuanto hay dos funciones inyectivas $g:C\rightarrow A$ y $fA\rightarrow C$
+% Uncom\Rightarrow  a^n \cdot a^{0} =a^{n}ment the following two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}

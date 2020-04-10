@@ -1,0 +1,28 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 10 Ejercicio 11}
+Sean $A$ y $B$ dos conjuntos. Veamos que tienen el mismo cardinal, o uno tiene mayor cardinal que el otro. Por el teorema del buen orden, existen relaciones de orden $<_A$ y $<_B$ tales que $A$ y $B$ está bien ordenados, respectivamente. Según ejercicio 6 de la sección 7, dos conjuntos $A$ y $B$ tiene el mismo cardinal si hay una biyección entre ellos. Y según ejercicio 7 de la sección 9, $A$ tiene mayor cardinal que $B$ si existe una aplicación inyectiva de $B$ en $A$, pero no existe una  aplicación inyectiva de $A$ en $B$. Sea $a$ el mínimo de $A$ y $b$ el mínimo de $B$. Si no existe función sobreyectiva de $A$ en $B$, hay una única función $f:A\rightarrow B$ que cumple
+\begin{eqnarray}
+f(x)=\begin{cases}
+b &\text{ para }x=a\\
+\text{mínimo}[B-f(S_x)]&\text{ para }x\neq a.
+\end{cases}
+\end{eqnarray}
+Entonces, si no existe función sobreyectiva de $A$ en $B$, no hay función biyectiva de $A$ en $B$ y por tanto $A$ y $B$ tienen distinto cardinal. Como $f$ es inyectiva por construcción, si hay tal función sobreyectiva $f$ que cumple (1), entonces $f$ es biyectiva, lo cual implica que $A$ y $B$ tiene el mismo cardinal.
+
+
+
+
+
+
+
+
+\end{document}

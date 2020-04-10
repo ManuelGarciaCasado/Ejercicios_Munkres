@@ -1,0 +1,71 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 9 Ejercicio 1}
+Veamos cómo definir una función inyectiva $f:\mathbb{Z}_{+}\rightarrow X^{\omega}$, donde $X=\{0,1\}$, sin usar el axioma de elección. Sea $\vect{f}(n)\in X^{\omega}$ donde $f_n(n)=1$ y $f_i(n)=0$ para $i\neq n$. Si $\vect{f}(n)=\vect{f}(m)$ entonces  $f_i(n)=f_i(m)$; por tanto $f_i(m)=0$ si $i\neq n$ y $f_i(m)=1$ si $i=n$. Luego $m=n$, lo cual implica que $f$ es inyectiva.
+\section{Tema 1 Sección 9 Ejercicio 2}
+Veamos si hay una función de elección de las siguientes familias.
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+La familia $\mathcal{A}$ de los subconjuntos no vacíos de $\mathbb{Z}_{+}$. Definamos $f:\mathcal{A}\rightarrow \cup_{A\in\mathcal{A}}A$ como
+$f(A)=\{n| n\leq i \text{ para todo } i\in A \}$. Por tanto, como $\mathbb{Z}_{+}$ cumple el principio del buen order, cada subconjunto no vacío $A$ de $\mathbb{Z}_{+}$ tiene un mínimo, entonces hay un único elemento en $f(A)$ para cada $A$. 
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+La familia $\mathcal{B}$ de los subconjuntos no vacíos de $\mathbb{Z}$. Dado que existe la función biyectiva $f:\mathbb{Z}\rightarrow \mathbb{Z}_{+}$ definida por 
+\begin{eqnarray}
+f(n)=
+\begin{cases}
+2n & \text{ si }n>0 \nonumber\\
+-2n+1 & \text{ si }n\leq 0, \nonumber
+\end{cases}
+\end{eqnarray}
+definamos $g:\mathcal{B}\rightarrow \cup_{B\in\mathcal{B}}B$ como
+$g(B)=\{n| n\leq i \text{ para todo } i\in f(B) \}$. Aquí es apricable el principio del buen orden. Por tanto, no se puede afirmar que todo subconjunto no vacío de $\mathbb{Z}_{+}$ tiene mínimo. Por tanto, es posible definir una función de elección sin el axioma de elección.
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+La familia $\mathcal{C}$ de los subconjuntos no vacíos de $\mathbb{Z}$. Dado que existe la función inyectiva $f:\mathbb{Q}\rightarrow \mathbb{Z}_{+}$ definida por
+\begin{eqnarray}
+f(q)=\begin{cases}
+\{2i|i,j\in \mathbb{Z}_{+}\text{ y } (q\cdot i),(q\cdot j)\in \mathbb{Z}\text{ y } i\leq j \text{ para todo }j\}& \text{ si }q> 0\nonumber\\
+1& \text{ si } q=0\nonumber\\
+\{2i+1|i,j\in \mathbb{Z}_{+}\text{ y } (q\cdot i),(q\cdot j)\in \mathbb{Z}\text{ y } i\geq j \text{ para todo }j\} & \text{ si } q< 0 \nonumber
+\end{cases}
+\end{eqnarray}
+definamos $g:\mathcal{C}\rightarrow \cup_{C\in\mathcal{C}}C$ como
+$g(C)=\{n| n\leq i \text{ para todo } i\in f(C) \}$. Aquí es apricable el principio del buen orden. Por tanto, se puede afirmar que todo subconjunto no vacío de $\mathbb{Z}_{+}$ tiene mínimo. Por tanto, es posible definir una función de elección sin el axioma de elección.
+\begin{itemize}
+\item \bf (d) \rm
+\end{itemize}
+La familia $\mathcal{D}$ de los subconjuntos no vacíos de $X^{\omega}$, donde $X=\{0,1\}$.  En la demostración del teorema 7.7 se demostró que cualquier función $g:\mathbb{Z}_{+}\rightarrow X^{\omega}$ no es sobreyectiva. Por tanto, esto implica que, según el lema 7.1 (sin usar el axioma de elección), cualquier función $f:X^{\omega}\rightarrow \mathbb{Z}_{+}$ no es inyectiva. Por tanto, no es posible encontrar una función de elección $h:\mathcal{D}\rightarrow \cup_{D\in\mathcal{D}}D$ como
+$h(D)=\{n| n\leq i \text{ para todo } i\in g(D) \}$.
+\section{Tema 1 Sección 9 Ejercicio 3}
+Sea $A$ un conjunto y $\{f_n\}_{n\in\mathbb{Z}_{+}}$ una familia indexada de funciones inyectivas $f_n:\{1,2,...,n\}\longrightarrow A$. Sea $ \mathcal{A}=\{A_n|A_m=f_m(\{1,2,...,m\})\subset A \text{ y }m=n,n\in \mathbb{Z}_{+}\}$. Por tanto, existe una función de elección $g:\mathcal{A}\longrightarrow \cup_{A_n\in \mathcal{A}}A_n$
+definida como $g(A_n)=f_n(n)$ y puesto que las $f_n$ son funciónes inyectivas, se tiene que si $n\neq m$ entonces $f_n(n)\neq f_m(m)$ y, por tanto,  $g(A_n) \neq  g(A_m)$. Entonces, la función $g$ es inyectiva. Además, sea $f(j)=A_j$ una función de $\mathbb{Z}_{+}$ en $\mathcal{A}$ entonces, $f$ es inyectiva. Entonces $(g\circ f)(j)=f_j(j)$ es una función de $\mathbb{Z}_{+}$ en $A$. Por tanto $f\circ g:\mathbb{Z}_{+}\longrightarrow A$ es inyectiva puesto que la composición de funciones inyectivas es inyectiva.
+\section{Tema 1 Sección 9 Ejercicio 4}
+En el teorema 7.5 se dice que existe una familia arbitraria de funciones sobrejectivas $f_n:\mathbb{Z}_{+}\rightarrow A_n$ donde $\{A_n\}_{n\in J}$ y $J$ es $\{1,2,...,N\}$ o es igual a $\mathbb{Z}_{+}$, y otra sobreyectiva $g:\mathbb{Z}_{+}\rightarrow J$ tales que se puede construir una función sobreyectiva $h:\mathbb{Z}_{+}\times \mathbb{Z}_{+}\rightarrow \cup_{n\in J}A_n$ definida como $h(i, j)=f_{g_(i)}(j)$. Pero en el teorema no se demuestra que exista un conjunto $C$ formado a partir de un único elemento de cada uno de los $A_n$, de tal manera que $C\subset \cup_{n\in J}A_n$ y el cardinal de $C\cap A_n$ es 1. Sería mas correcto decir: existe una familia arbitraria de funciones sobrejectivas $f_n:\mathbb{Z}_{+}\rightarrow A_n$ donde $\{A_n\}_{n\in J}$ y $J$ es $\{1,2,...,N\}$ o es igual a $\mathbb{Z}_{+}$, y otra sobreyectiva $g:\mathbb{Z}_{+}\rightarrow J$ tales que se puede construir una función sobreyectiva $h:\mathbb{Z}_{+}\times \mathbb{Z}_{+}\rightarrow \cup_{n\in J}A_n$ definida como $h(i, j)=f_{g_(i)}(j)$ y asúmase que dado un $j$ existe un conjunto $h(\mathbb{Z}_{+},j)=C_j$ formado a partir de un único elemento $a_n$ de cada uno de los $A_n$, de tal manera que $C_j\subset \cup_{n\in J}A_n$ y $\{a_n\}=C_j\cap A_n$.
+\section{Tema 1 Sección 9 Ejercicio 5}
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que si $f:A\rightarrow B$ es sobreyectiva entonces hay una  $h:B\rightarrow A$ que es la inversa por la derecha de $f$. Sea $\mathcal{A}$ una familia de subconjuntos $A_y$ de $A$ definidos por $A_y=\{x|y=f(x)\}$. Dado que $f$ es sobreyectiva, $A= \cup_{y \in B}A_y=\cup_{D\in \mathcal{A}}D$ y $A_y\cap A_z=\varnothing$ si $y\neq z$. Por el axioma de elección, existe un conjunto $C$ formado a partir de un único elemento $y$ de cada uno de los $A_y\in \mathcal{A}$ de tal manera que $C\subset \cup_{D\in \mathcal{A}}D$ y $C\cap D=\{x\}$ . Por tanto, como  $\cup_{D\in \mathcal{A}}D=\cup_{y\in B}A_y=A$, se tiene $C\subset \cup_{y\in B}A_y=A$ y $C\cap A_y=\{x\}$. Luego, para cada $y\in B$ existe un único elemento $x$ de $C\subset A$, sea $h(y)=x$ ese único elemento. Como además $f$ es sobreyectiva, $C=A$. Por tanto, $f(h(y))=f(x)=y$, lo cual significa que $h$ es la inversa por la derecha de $f$.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Sea $f:A\rightarrow B$ es inyectiva y $A$ entonces existe una función $g:B\rightarrow A$ que es inversa por la izquierda de $f$. Si $B-f(A)= \varnothing$ entonces $f$ es además sobreyectiva (luego biyectiva) y, por tanto, tiene inversa. Si $B-f(A) \neq \varnothing$ entonces $f$ no es sobreyectiva. Por tanto, $g(B-f(A))$ no está definida a no ser que se utilice el axioma de elección para asignar el conjunto $B-f(A)$ al conjunto $\{x\}$ y para asignar a cada subconjunto de $f(A)$ un subconjunto de $f(A)$. De este modo $g$ estaría definida para todo elemento de $B$.
+% Create a new 1st level heading
+% Uncom\Rightarrow  a^n \cdot a^{0} =a^{n}ment the following two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}

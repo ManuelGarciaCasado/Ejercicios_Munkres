@@ -1,0 +1,68 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 21 Ejercicio 5}
+Probemos que si $x_n\rightarrow x$ e $y_n\rightarrow y$ en el espacio $\mathbb{R}$ entonces 
+\begin{eqnarray}
+x_n+y_n\rightarrow x+y\nonumber\\
+x_n-y_n\rightarrow x-y\nonumber\\
+x_ny_n\rightarrow xy\nonumber
+\end{eqnarray}
+y en caso de que $y_n\neq 0$ e $y\neq 0$,
+\begin{eqnarray}
+x_n/y_n\rightarrow x/y\nonumber
+\end{eqnarray}
+Aplicando lo que se vió en el ejercicio 19.6, la sucesión $\vect{x}_1,\vect{x}_2,...$ converge a $\vect{x}$ en la topología producto $\mathbb{R} \times \mathbb{R}$ o $\mathbb{R} \times (\mathbb{R}-\{0\})$ si, y solo si, la sucesión $\pi_1(\vect{x}_1),\pi_1(\vect{x}_2),...$ converge a $\pi_1(\vect{x})$ y la sucesión $\pi_2(\vect{x}_1),\pi_2(\vect{x}_2),...$ converge a $\pi_2(\vect{x})$. Esto último se cumple porque $\pi_1(x_n\times y_n)=x_n\rightarrow x=\pi_1(x\times y)$ y $\pi_2(x_n\times y_n)=y_n\rightarrow y=\pi_2(x\times y)$. Por tanto, las sucesiones $x_n\times y_n$ convergen a $x\times y$ en $\mathbb{R}\times \mathbb{R}$. Del lema 21.4, se tiene que las funciones de adición, sustracción y multiplicación son funciones continuas de $\mathbb{R}\times \mathbb{R}\rightarrow \mathbb{R}$ y la división es función continua de $\mathbb{R}\times (\mathbb{R}-\{0\})\rightarrow \mathbb{R}$. Por el teorema 21.3, se tiene que las funciones $+:\mathbb{R}\times \mathbb{R}\rightarrow \mathbb{R}$, $-:\mathbb{R}\times \mathbb{R}\rightarrow \mathbb{R}$, $*:\mathbb{R}\times \mathbb{R}\rightarrow \mathbb{R}$ y $/:\mathbb{R}\times (\mathbb{R}-\{0\})\rightarrow \mathbb{R}$ definidas por $+(x_n,y_n)=x_n+y_n$, $-(x_n,y_n)=x_n-y_n$, $*(x_n,y_n)=x_ny_n$ y $/(x_n,y_n)=x_n/y_n$, respectivamente, convergen a $+(x,y)=x+y$, $-(x,y)=x-y$ ,$*(x,y)=xy$ y $/(x,y)=x/y$, respectivamente por ser contínuas.
+\section{Tema 2 Sección 21 Ejercicio 6}
+Sean las funciones $f_n:[0,1]\rightarrow \mathbb{R}$ definidas por $f_n(x)=x^n$. Veamos que la sucesión $(f_n(x))$ converge para cada $x\in[0,1]$ pero que no converge uniformemente. Se tiene que $f_n(x)$ converge a $f(x)=0$ para $x\in[0,1)$, y a $f(x)=1$ para $x=1$. Sea $A=(0,1)$. Entonces $f(\overline{A})=f([0,1])= \{0\}\cup \{1\}$, pero $f(A)=\{0\}$. Luego $\overline{f(A)}\subset f(\overline{A})$. Por teorema 18.1, $f$ no es continua. Por teorema 21.6 del límite uniforme, $(f_n)$ no converge uniformemente a $f$.
+\section{Tema 2 Sección 21 Ejercicio 7}
+Sea $X$ un conjunto, sea $f_n:X\rightarrow \mathbb{R}$ una sucesión de funciones, sea $\overline{\rho}$ la distancia uniforme sobre el espacio $\mathbb{R}^X$. Veamos que la sucesión $(f_n)$ converge uniformemente a la funcion $f:X\rightarrow \mathbb{R}$ si, y sólo si, la sucesión $(f_n)$ converge a $f$ como elementos del espacio metrico $(\mathbb{R}^X,\overline{\rho})$. Sea $\vect{x}=(x_\alpha)_{\alpha \in X}\in \mathbb{R}^X$. Es decir, $x_\alpha=\pi_\alpha(\vect{x})\in \mathbb{R}$. Entonces $\overline{\rho}(\vect{x},\vect{y})=\sup_{\alpha\in X}\{\overline{d}(x_\alpha,y_\alpha)\}$ con $\overline{d}(x_\alpha,y_\alpha)=\min\{|x_\alpha-y_\alpha|,1\}$. Lo que hay que demostrar es que  dado $\epsilon>0$ y todo $\alpha\in X$ existe un $N$ tal que  $|f_n(\alpha)-f(\alpha)|<\epsilon$ para todo $n>N$ si, y sólo si, dado un $\delta>0$ existe un $M$ tal que $\overline{\rho}(\vect{f}_m,\vect{f})<\delta$ para todo $m>M$, con $\pi_\alpha(\vect{f}_m)=f_{m,\alpha}=f_m(\alpha)$.
+
+Supongamos que dado un $\epsilon>0$ y todo $\alpha\in X$ existe un $N$ tal que  $|f_n(\alpha)-f(\alpha)|<\epsilon$ para todo $n>N$. Entonces $\min\{|f_n(\alpha)-f(\alpha)|,1\}\leq\min\{\epsilon,1\}\leq\epsilon$ para todo $n>N$ y todo $\alpha\in X$. Entonces $\sup_\alpha\{\min\{|f_n(\alpha)-f(\alpha)|,1\}\}<2\epsilon$ para todo $n>N$. Por tanto dado un $\epsilon>0$ existe un $N$ tal que $\overline{\rho}(\vect{f}_n,\vect{f})<2\epsilon$ para todo $n>N$.
+
+Ahora supongamos que dado un $\delta>0$ existe un $M$ tal que $\overline{\rho}(\vect{f}_m,\vect{f})<\delta$ para todo $m>M$, con $\pi_\alpha(\vect{f}_m)=f_{m,\alpha}=f_m(\alpha)$. Entonces dado un $\delta>0$ existe un $M$ tal que $\overline{\rho}(\vect{f}_m(\beta),\vect{f}(\beta))<\delta$ para todo $m>M$, con $\pi_\alpha(\vect{f}_m(\beta))=f_{m,\alpha}(\beta)=f_m(\alpha,\beta)$ para todo $\beta\in X$. Entonces $\vect{f}$ converge uniformemente en $\mathbb{R}^X$. Por teorema 21.6 del límite uniforme, $\vect{f}$ es continua como función de $X$ en $\mathbb{R}^X$. Por teorema 19.6 las $f_\alpha$ son continuas por ser la composición de las funciones continuas $\pi_\alpha$ y $\vect{f}$. Entonces, tómese la sucesión $\alpha_n$ que converge a $\alpha$. Renómbrese a $f_{\alpha_n}(\beta)$ como $f_n(\beta)$ y a $f_\alpha(\beta)$ como $f(\beta)$. Entonces $f_\alpha$ converge uniformemente, por teorema 21.3. Por tanto $f$ converge uniformemente.
+\section{Tema 2 Sección 21 Ejercicio 8}
+Sea $X$ un espacio topológico e $Y$ un espacio métrico. Sea $f_n:X\rightarrow Y$ una sucesión de funciones continuas. Sea $x_n$ una sucesion de puntos de $X$ que convergen a $x$. Veamos que si $(f_n)$ converge uniformemente a $f$ entonces $(f_n(x_n))$ converge a $f(x)$. Dado que se cumplen las condiciones del teorema del límite uniforme, $f$ es una función continua. Por tanto, dado que $f $ es continua y que $x_n\rightarrow x$ en $X$, el teorema 21.3 dice que la sucesión $f(x_n)$ converge a $f(x)$, esto es, dado un $\delta>0$ existe un $N$ tal que $d_Y(f(x_n),f(x))<\epsilon$ para todo $n>N$. Por la convergencia uniforme, dado un $\epsilon>0$, para algún $N$, resulta que $d_Y(f_n,f)<\epsilon$ para todo $x\in X$ y todo $n>N$. Por tanto, $d_Y(f_n(x_n),f(x_n))<\epsilon$ y $d_Y(f(x_n),f(x))<\delta$. Teniendo en cuenta la desigualdad triangular, $d_Y(f_n(x_n),f(x))\leq d_Y(f_n(x_n),f(x_n))+d_Y(f(x_n),f(x))<\epsilon+\delta$ para todo $n>N$. Por tanto, $f(x_n)$ converge a $f(x)$.
+\section{Tema 2 Sección 21 Ejercicio 9}
+Sea la función $f_n:\mathbb{R}\rightarrow \mathbb{R}$ definida por
+\begin{eqnarray}
+f_n(x)=\frac{1}{n^3\left(x-\frac{1}{n}\right)^2+ 1}
+\end{eqnarray}
+y sea $f_n:\mathbb{R}\rightarrow \mathbb{R}$ definida por $f(x)=0$.
+\begin{itemize}
+\item \bf (a) \rm Veamos que $f_n(x)\rightarrow f(x)$ para cada $x\in \mathbb{R}$.
+\end{itemize}
+Sea $d(a,b)=|a-b|$ sobre $\mathbb{R}$. Resulta que $|f_n(x)-f(x)|=\frac{1}{n^3\left(x-\frac{1}{n}\right)^2+ 1}$. Si $\epsilon>1$, se tiene que $|f_n(x)- f(x)|<\epsilon$ para todo $n>N$ y para todo $x\in \mathbb{R}$. Por otro lado, está claro que, dado un $\epsilon >0$, si $x=0$, existe un $N$ tal que $|f_n(0)-f(0)|=\frac{1}{n+ 1}<\epsilon$ para todo $n>N$. Pero si $\epsilon\leq 1$ y $x\neq 0$ entonces $\frac{1}{n^3\left(x-\frac{1}{n}\right)^2+ 1}<\epsilon$ implica $\frac{1}{n}\pm\sqrt{\frac{1-\epsilon}{\epsilon n^3}}<x$, que implica $\frac{1}{n}\left(1-\sqrt{\frac{1-\epsilon}{\epsilon}}\right)<\frac{1}{n}-\sqrt{\frac{1-\epsilon}{\epsilon n^3}}<x$. En este caso, para todo $n>N$ donde $N\geq\frac{1}{x}\left(1-\sqrt{\frac{1-\epsilon}{\epsilon}}\right)$ se tiene que $f_n(x)\in B_d(0,\epsilon)$. 
+\begin{itemize}
+\item \bf (b) \rm Veamos que  $f_n(x)$ no converge uniformemente a $f(x)$.
+\end{itemize}
+Por lo visto en apartado (a), dado un $1\geq \epsilon>0$, no existe un único $N$ tal que $\frac{1}{n^3\left(x-\frac{1}{n}\right)^2+ 1}<\epsilon$ para todo $x\in \mathbb{R}$ ya que $N\geq \frac{1}{x}\left(1-\sqrt{\frac{1-\epsilon}{\epsilon}}\right)$.
+\section{Tema 2 Sección 21 Ejercicio 10}
+Veamos que el conjunto $A=\{x\times y| xy=1\}\subset\mathbb{R}^2$ es cerrado.
+Sea la función $f:A_1\rightarrow \mathbb{R}$ definida por $f(x,y)=xy$ con $A_1=\{x\times y|xy\geq 1\}$ y $g:A_2\rightarrow \mathbb{R}$ definida por $g(x,y)=1$ con $A_2=\{x\times y|xy\leq 1\}$. Como $\mathbb{R}\times \mathbb{R}= A_1\cup A_2$ y $A=A_1\cap A_2$, y $f$ es continua por lema 21.4 y $g$ es continua por 18.2(a), por el lema del pegamento, se puede construir una función continua $h:\mathbb{R}\times \mathbb{R}\rightarrow\mathbb{R}$ definida por 
+\begin{eqnarray}
+h(x,y)=\begin{cases}
+xy & \text{ si }x\times y \in A_1\nonumber\\
+1 & \text{ si }x\times y \in A_2
+\end{cases}
+\end{eqnarray}
+Ahora usamos el teorema 18.1. Como $h$ es continua y $h(A)=\{1\}$ es cerrado, se tiene que $A=h^{-1}(\{1\})$ es cerrado en $\mathbb{R}\times\mathbb{R}$.
+
+Veamos que el conjunto $S^1=\{x\times y| x^2+y^2=1\}\subset\mathbb{R}^2$ es cerrado.
+Sea la función $f:S^1_1\rightarrow \mathbb{R}$ definida por $f(x,y)=x^2+y^2$, con $S^1_1=\{x\times y|x^2+y^2\geq 1\}$, y $g:S^1_2\rightarrow \mathbb{R}$ definida por $g(x,y)=1$ con $S^1_2=\{x\times y|x^2+y^2\leq 1\}$. Como $\mathbb{R}\times \mathbb{R}= S_1\cup S_2$ y $S^1=S^1_1\cap S^1_2$, y $f$ es continua por lema 21.4 y $g$ es continua por 18.2(a), por el lema del pegamento, se puede construir una función continua $h:\mathbb{R}\times \mathbb{R}\rightarrow\mathbb{R}$ definida por 
+\begin{eqnarray}
+h(x,y)=\begin{cases}
+x^2+y^2 & \text{ si }x\times y \in S^1_1\nonumber\\
+1 & \text{ si }x\times y \in S^1_2
+\end{cases}
+\end{eqnarray}
+Ahora usamos el teorema 18.1. Como $h$ es continua y $h(S^1)=\{1\}$ es cerrado, se tiene que $S^1=h^{-1}(\{1\})$ es cerrado en $\mathbb{R}\times\mathbb{R}$.
+
+Veamos que el conjunto $B^2=\{x\times y| x^2+y^2\leq 1\}\subset\mathbb{R}^2$ es cerrado. Sea la distancia euclidea $d(x_1\times y_1,x_2\times y_2)=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$ en $\mathbb{R}^2$. Entonces, $B_d(0,1)$ es un abierto contenido en $B^2$. Además, Sean los puntos $x\times y\in B^2$, entonces $x\left(1-\frac{1}{i}\right)\times y\left(1-\frac{1}{i}\right)\in B_d(0,1)$ con $i\in \mathbb{Z}_+$ ya que $d(0,x\left(1-\frac{1}{i}\right)\times y\left(1-\frac{1}{i}\right))=\left(1-\frac{1}{i}\right)\sqrt{x^2+y^2}\leq 1-\frac{1}{i}<1$. Por tanto, esos puntos convergen a los puntos de $B^2$. Por tanto, $B^2=\overline{B_d(0,1)}$. Por otro método, como la distancia $d(0\times 0, x\times y)$ es una función contínua (ver ejercicio 3(a)), la función $f:\mathbb{R}\times \mathbb{R}\rightarrow [0,1]$, definida por  $f(x\times y)=d(0\times 0, x\times y)$, es continua. Entonces $B^2=\{x\times y|f(x\times y)\in [0,1]\}$. Pero justo esta es la definición de función inversa. Por tanto, $B^2=f^{-1}([0,1])$ y por ser continua, aplicando teorema 18.1, se tiene que $B^2$ es carrado.
+\end{document}

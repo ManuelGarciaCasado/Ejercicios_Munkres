@@ -1,0 +1,164 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 20 Ejercicio 7}
+Sea la función de $h:\mathbb{R}^{\omega}\rightarrow \mathbb{R}^{\omega}$ definida por  $h(\vect{x})=(a_1x_1 +b_1,a_2x_2 +b_2,a_3x_3 +b_3,..)$ en la topología uniforme, donde $(a_1,a_2,a_3,...)$ y  $(b_1,b_2,b_3,...)$ son sucesiones de numeros reales con $a_i>0$ para todo $i$. Veamos bajo qué condiciones sobre $a_i$ y sobre $b_i$ es $h$ continua. Lo que hay que ver es bajo qué condiciones es $h^{-1}(B_{\overline{\rho}}(\vect{y},\epsilon))=B_{\overline{\rho}}(\vect{x},\delta)$ es un abierto de la topología uniforme. 
+Como $B_{\overline{\rho}}(\vect{y},\epsilon)=\{\vect{z}|\rho(\vect{y},\vect{z})<\epsilon\}$ y sean  $h(\vect{x})=\vect{y}$ y $h(\vect{w})=\vect{z}$. Se tiene que 
+\begin{eqnarray}
+\rho(\vect{y},\vect{z})=\sup_i\{\min\{|a_iw_i+b_i-a_ix_i-b_i|,1\}\}<\epsilon\nonumber\\
+\rho(\vect{y},\vect{z})=\sup_i\{\min\{a_i|w_i-x_i|,1\}\}<\epsilon\nonumber
+\end{eqnarray}
+Por tanto, si la secuencia $\{a_i\}$ converge, para todo $\epsilon>0$ existe un $\delta>0$ tal que $\rho(h(\vect{w}),h(\vect{x}))<\epsilon\Rightarrow \rho(\vect{w},\vect{x})<\delta$. Por tanto  $h^{-1}(B_{\overline{\rho}}(\vect{y}, \epsilon))=B_{\overline{\rho}}(\vect{x}, \delta)$.
+
+Por otro lado, para probar qué condiciones sobre $a_i$ y sobre $b_i$ son necesiraias para que $h$ sea homeomorfismo en la topología uniforme, hay que demostrar que $h^{-1}$ es contínua. Se tiene que $h^{-1}(\vect{x})=(\frac{x_1-b_1}{a_1},\frac{x_2-b_2}{a_2},...)$.  Lo que hay que ver es bajo qué condiciones es $h(B_{\overline{\rho}}(\vect{y},\epsilon))=B_{\overline{\rho}}(\vect{x},\delta)$ es un abierto de la topología uniforme. 
+Como $B_{\overline{\rho}}(\vect{y},\epsilon)=\{\vect{z}|\rho(\vect{y},\vect{z})<\epsilon\}$ y sean  $h^{-1}(\vect{x})=\vect{y}$ y $h^{-1}(\vect{w})=\vect{z}$. Se tiene que 
+\begin{eqnarray}
+\rho(\vect{y},\vect{z})=\sup_i\{\min\{ |\frac{w_i+b_i}{a_i}-\frac{x_i-b_i}{a_i}|,1\}\}<\epsilon\nonumber\\
+\rho(\vect{y},\vect{z})=\sup_i\{\min\{\frac{|w_i-x_i|}{a_i},1\}\}<\epsilon\nonumber
+\end{eqnarray}
+Por tanto, si la secuencia $\{\frac{1}{a_i}\}$ converge, para todo $\epsilon>0$ existe un $\delta>0$ tal que $\rho(h^{-1}(\vect{w}),h^{-1}(\vect{x}))<\epsilon\Rightarrow \rho(\vect{w},\vect{x})<\delta$. Por tanto  $h(B_{\overline{\rho}}(\vect{y}, \epsilon))=B_{\overline{\rho}}(\vect{x}, \delta)$.
+ 
+\section{Tema 2 Sección 20 Ejercicio 8}
+Sea $X$ el subconjunto de $\mathbb{R}^\omega$ de los $\vect{x}$ tales que $\sum x_i^2$ converge. Entonces se define la métrica
+\begin{eqnarray}
+d(\vect{x},\vect{y})=\left[\sum^{\infty}_{i=1}\left(x_i-y_i\right)^2\right]^{1/2}\nonumber
+\end{eqnarray}
+define una métrica en $X$. Aparte de las topologías por cajas, uniforme y producto que $X$ hereda de $\mathbb{R}^\omega$, $X$ tiene la topología que induce $d$, topología $\ell^2$-topología
+\begin{itemize}
+\item \bf (a) \rm Veamos que en $X$ se tiene 
+\begin{eqnarray}
+\text{topología por cajas }\supset \ell^2\text{-topología }\supset\text{ topología producto }\nonumber
+\end{eqnarray}
+\end{itemize}
+Veamos que la topología por cajas es mas fina que la topología-$\ell^2$. Supongamos que $\vect{y}\in U$ donde $U$ es un abierto sobre $X$ en la topología por cajas de tal manera que $U=\prod_i U_i$ donde $U_i=(x_i-\frac{\epsilon_i}{2},x_i+\frac{\epsilon_i}{2})$ Como $\vect{x},\vect{y}\in X$, resulta que $\sum_i (x_i-y_i)^2\leq \sum_i x_i^2+\sum_i y_i^2 $ converge. Sea $L=\max_{\vect{y}\in U}\{\sqrt{\sum_i (x_i-y_i)^2}\}$. Por tanto $\vect{y}\in B_d(\vect{x},2L)$. Luego la topología por cajas es mas fina que la topología-$\ell^2$.
+
+Veamos que la topología-$\ell^2$ es mas fina que la topología producto. Supongamos que $\vect{y}\in B_{d}(\vect{x},\epsilon)$. Sea $U$ un abierto sobre $X$ en la topología producto de tal manera que $U=\prod_i U_i$ donde $U_i=(x_i-\epsilon_i,x_i+\epsilon_i)$ para un número finito $N$ de $i$ y $U_i=\pi_i(X)$ para el resto.
+Como $\sqrt{\sum_i (x_i-y_i)^2}<\epsilon$ resulta que $|x_i-y_i|^2<\epsilon^2$ para todo $i\in\mathbb{Z}_+$. De esta manera $y_i\in (x_i-\epsilon,x_i+\epsilon)$ para un número finito de $i$ y $y_i\in \pi_i(X)$ para le resto. Por tanto, si $\vect{y}\in B_{d}(\vect{x},\epsilon)$ entonces $\vect{y}\in U$ tomando $\epsilon_i=\epsilon$.
+\begin{itemize}
+\item \bf (b) \rm El conjunto $\mathbb{R}^\infty$ de las sucesiones que son finalmente cero está contenido en $X$. Se tiene que $\mathbb{R}^\infty$ hereda cuatro topologías de $X$. Veamos que son todas distintas.
+\end{itemize}
+Se tiene que $\vect{0}\in\mathbb{R}^\infty$ por ser el conjunto $\{x_i|x_i\neq 0\text{ si } i\leq n\in \mathbb{Z}_+ \text{ y }x_i=0\text{ si } i> n\in \mathbb{Z}_+\}$ vacío para $\vect{x}=\vect{0}$. Sea $U=(-\frac{1}{2},\frac{1}{2})\times (-\frac{1}{3},\frac{1}{3})\times...\times(-\frac{1}{i},\frac{1}{i})\times...$ abierto en la topología por cajas. Veamos que para todo $\epsilon>0$ existe un $\vect{y}\in B_{\ell^2}(\vect{0},\epsilon)$ tal que $\vect{y}\notin U$. Sea $|y_i|=\frac{\epsilon}{n}$ para $i\leq n$ y $y_i=0$ para $i>n$. y que $\sqrt{\sum_i|y_i|^2}=\sqrt{\sum_{i=1}^n\frac{\epsilon^2}{n^2}}=\frac{\sqrt{n}}{n}\epsilon<\epsilon$.
+
+Sea $U(\vect{x},\epsilon)$ un abierto de la topología producto en $\mathbb{R}^\infty$. Veamos que para todo $\epsilon>0$ existe un $\vect{y}\in U(\vect{x},\epsilon)$ tal que $\vect{y}\notin B_{\overline{\rho}}(\vect{x},\delta)$. Sea $\pi_i(U(\vect{x},\epsilon))=(x_i-i\epsilon,x_i+i\epsilon)$ para un numero finito de $i$ y $\pi_i(U(\vect{x},\epsilon))=\mathbb{R}$ para el resto. Por ser $\vect{x},\vect{y}\in \mathbb{R}^\infty$, $x_i\neq 0$ para $i\leq n$ y $x_i=0$ para el resto de $i$; e $y_j\neq 0$ para $j\leq m$ y $y_j=0$ para el resto de $j$. Resulta que $|x_i-y_i|<i\epsilon$. Por tanto, para todo $\epsilon>0$ y todo $i$ existe algún $n$ tal que $|x_i-y_i|< n\epsilon$ y se tiene que $\overline{\rho}(\vect{x},\vect{y})=\sup_i\{\min\{|x_i-y_i|,1\}\}=1$ de tal manera que $\vect{y}\in U(\vect{x},\epsilon)$ tal que $\vect{y}\notin B_{\overline{\rho}}(\vect{x},\delta)$ con $\delta=n\epsilon<1$
+
+Veamos que la topología -$\ell^2$ es distinta de la topología uniforme para $X\cap\mathbb{R}^\infty$. Sea $\vect{y}\in B_{d}(\vect{x},\epsilon)$. Como $\overline{\rho}(\vect{x},\vect{y})=\sup_i\{\min\{|x_i-y_i|,1\}\}\leq \sqrt{\sum_i (x_i-y_i)^2}=d(\vect{x},\vect{y})<\epsilon$
+se tiene que $\vect{y}\in B_{\overline{\rho}}(\vect{x},\epsilon)$. Por tanto topología-$\ell^2$ es mas fina que la topologia uniforme en $X\cap\mathbb{R}^\infty$. Por el apartado (a), se tiene que
+\begin{eqnarray}
+\text{topología por cajas }\supset\ell^2\text{-topología }\supset \text{topología uniforme}\supset\text{ topología producto }\nonumber
+\end{eqnarray}
+\begin{itemize}
+\item \bf (c) \rm Veamos que las cuatro topologías que el cubo de Hilbert,
+\begin{eqnarray}
+H=\prod_{n\in \mathbb{Z}_+}\left[0,\frac{1}{n}\right],\nonumber
+\end{eqnarray}
+hereda como subespacio de $X$, son todas distintas.
+\end{itemize}
+Sean $\vect{x},\vect{y}\in H$ tal que $|x_i-y_i|\leq\frac{\epsilon}{i}$ , por tanto $\overline{\rho}(\vect{x},\vect{y})=\sup_i\{\min\{|x_i-y_i|,1\}\}= \epsilon<\epsilon \sqrt{\sum_i\frac{1}{n^2}}=d(\vect{x},\vect{y})$. Por tanto, si $\vect{y}\in B_{d}(\vect{x},\epsilon)$ entonces $\vect{y}\in B_{\overline{\rho}}(\vect{x},2\epsilon)$. Por tanto, la topología-$\ell^2$ es mas fina que la topología uniforme. Por tanto,
+\begin{eqnarray}
+\text{topología por cajas }\supset\ell^2\text{-topología }\supset \text{topología uniforme}\supset\text{ topología producto }\nonumber
+\end{eqnarray}
+\section{Tema 2 Sección 20 Ejercicio 9}
+Veamos que la distancia euclidea es una distancia en $\mathbb{R}^n$ donde se definen para $\vect{x},\vect{y}\in\mathbb{R}^n$ y $c\in \mathbb{R}$,
+\begin{eqnarray}
+\vect{x}+\vect{y}=(x_1+y_1,x_2+y_2,...,x_n+y_n)\nonumber\\
+c\vect{x}=(cx_1,cx_2,...,cx_n)\nonumber\\
+\vect{x}\cdot\vect{y}=x_1y_1+x_2y_2+...+x_ny_n\nonumber\\
+\end{eqnarray}
+\begin{itemize}
+\item \bf (a) \rm Veamos que $\vect{x}\cdot(\vect{y}+\vect{z})=
+\vect{x}\cdot\vect{y}+\vect{x}\cdot\vect{z}$
+\end{itemize}
+Por las definiciones de arriba, $\vect{x}\cdot(\vect{y}+\vect{z})=x_1(y_1+z_1)+...+x_n(y_n+z_n)=x_1y_1+x_1z_1+...+x_ny_n+x_nz_n=x_1y_1++x_ny_n+x_1z_1+...x_nz_n=\vect{x}\cdot\vect{y}+\vect{x}\cdot\vect{z}$
+\begin{itemize}
+\item \bf (b) \rm Veamos que $|\vect{x}\cdot \vect{y}|\leq \rVert\vect{x}\lVert \rVert \vect{y}\lVert$
+\end{itemize}
+Suponiendo $\vect{x},\vect{y}\neq 0$, $a=\frac{1}{\rVert \vect{x}\lVert}$ y $b=\frac{1}{\rVert \vect{y}\lVert}$ tenemos que 
+\begin{eqnarray}
+0\leq \lVert a\vect{x}\pm b\vect{y}\rVert \nonumber\\
+0\leq(a\vect{x}\pm b\vect{y})\cdot(a\vect{x}\pm b\vect{y})=a^2\lVert \vect{x}\rVert^2 +b^2\lVert \vect{y}\rVert^2\pm 2 ab\vect{x}\cdot\vect{y}\nonumber\\
+0\leq 2\pm 2 \frac{\vect{x}\cdot\vect{y}}{\lVert \vect{x}\rVert \lVert \vect{y}\rVert}\nonumber\\
+0\leq 2- 2 \frac{|\vect{x}\cdot\vect{y}|}{\lVert \vect{x}\rVert \lVert \vect{y}\rVert}
+\end{eqnarray}
+so $ |\vect{x}\cdot\vect{y}|\leq\lVert \vect{x}\rVert \lVert \vect{y}\rVert$
+\begin{itemize}
+\item \bf (c) \rm Veamos que $\rVert\vect{x}+ \vect{y}\rVert^2\leq \rVert\vect{x}\lVert^2+ \rVert \vect{y}\lVert^2$
+\end{itemize}
+Tenemos que
+\begin{eqnarray}
+\rVert\vect{x}+ \vect{y}\rVert^2=(\vect{x}+\vect{y})\cdot(\vect{x}+\vect{y})\nonumber\\
+=\lVert \vect{x}\rVert^2 +\lVert \vect{y}\rVert^2+ 2\vect{x}\cdot\vect{y}\nonumber
+\end{eqnarray}
+por apartado (b)
+\begin{eqnarray}
+(\vect{x}+\vect{y})\cdot(\vect{x}+\vect{y})\leq \lVert \vect{x}\rVert^2 +\lVert \vect{y}\rVert^2+2\lVert \vect{x}\rVert \lVert \vect{y}\rVert\nonumber\\
+\end{eqnarray}
+\begin{itemize}
+\item \bf (c) \rm Veamos que $d$ es una distancia.
+\end{itemize}
+Por la definición $d(\vect{x},\vect{y})=\sqrt{(x_1-y_1)^2+...+(x_n-y_n)^2}$ se tiene que $d(\vect{x},\vect{y})=\lVert \vect{x}-\vect{y}\rVert$. Por tanto $d(\vect{x},\vect{y})=\sqrt{(x_1-y_1)^2+...+(x_n-y_n)^2}\geq 0$ y $d(\vect{x},\vect{x})=0$. Además, como $\sqrt{(x_1-y_1)^2+...+(x_n-y_n)^2}=\sqrt{(y_1-x_1)^2+...+(y_n-x_n)^2}$ se tiene que $d(\vect{x},\vect{y})=d(\vect{y},\vect{x})$
+La desigualdad triangular se obtiene por la propiedad del apartado (c) $\lVert \vect{x}-\vect{y}\rVert= \lVert \vect{x}-\vect{z}+(\vect{z}-\vect{y})\rVert\leq \lVert \vect{x}-\vect{z}\rVert +\lVert \vect{z}-\vect{y}\rVert$. Esto es $d(\vect{x},\vect{y})\leq d(\vect{x},\vect{z})+d(\vect{z},\vect{y})$
+\section{Tema 2 Sección 20 Ejercicio 10}
+Sea $X$ el conjunto de los elementos $(x_1,x_2,...)$ de $\mathbb{R}^\omega$ tales que $\sum_ix_i^2$ converge. 
+
+\begin{itemize}
+\item \bf (a) \rm Veamos que si $\vect{x},\vect{y}\in X$ entonces $\sum_i|x_iy_i|$ converge.
+\end{itemize}
+Sea $C_x$ la constante a la que converge $\sum_i x_i^2$ y $C_y$ la constante a la que converge $\sum_i y_i^2$. Entonces $0\leq\sum_i\left(\frac{y_i}{\sqrt{C_y}}\pm\frac{x_i}{\sqrt{C_x}}\right)^2=\frac{\sum_iy_i^2}{C_y}+\frac{\sum_ix_i^2}{C_x}+2\frac{\sum_i(\pm y_ix_i)}{\sqrt{C_yC_x}}$. Por tanto $0\leq 2- 2\frac{\sum_i|y_ix_i|}{\sqrt{C_yC_x}}$ implica $\sum_i| y_ix_i|\leq \sqrt{C_y C_x}$.
+\begin{itemize}
+\item \bf (b) \rm Veamos que si $\vect{x},\vect{y}\in X$ entonces $\vect{x}+\vect{y}$ y $c\vect{x}$ con $c\in \mathbb{R}$ también pertenecen a $X$.
+\end{itemize}
+Sea $C_x$ la constante a la que converge $\sum_i x_i^2$ y $C_y$ la constante a la que converge $\sum_i y_i^2$. Se tiene que $\vect{x}+\vect{y}=(x_1+y_1,x_2+y_2,...)$ por tanto,
+\begin{eqnarray}
+\sum_i(x_i+y_i)^2=\sum_i(x_i^2+y_i^2+2x_iy_i)\nonumber\\
+=\sum_ix_i^2+\sum_iy_i^2+2\sum_ix_iy_i\nonumber\\
+=C_x+C_y+2\sum_ix_iy_i\nonumber
+\end{eqnarray}
+por tanto $\sum_i(x_i+y_i)^2\leq C_x+C_y+2\sqrt{C_xC_y}$, luego $\vect{x}+\vect{y}\in X$. Por otro lado $c\vect{x}=(cx_1,cx_2,...)$, por tanto $\sum_icx_i^2=c\sum_ix_i^2=cC_xin$ por tanto, $c\vect{x}\in X$
+\begin{itemize}
+\item \bf (c) \rm Veamos que $d(\vect{x},\vect{y})=\sqrt{\sum_{i=1}^\infty(
+x_i-y_i)^2}$ es una distancia bien definida en $X$.
+\end{itemize}
+Se tiene que $d(\vect{x},\vect{y})=\sqrt{\sum_{i=1}^\infty(
+x_i-y_i)^2}\geq 0$ y $d(\vect{x},\vect{x})=\sqrt{\sum_{i=1}^\infty(
+x_i-x_i)^2}=0$. Por otro lado $\sqrt{\sum_{i=1}^\infty(
+x_i-y_i)^2}=\sqrt{\sum_{i=1}^\infty(
+y_i-x_i)^2}$, por tanto $d(\vect{x},\vect{y})=d(\vect{y},\vect{x})$. Además, si $\vect{z}\in X$ también, 
+\begin{eqnarray}
+\sum_{i=1}^\infty(
+x_i-y_i)^2=\sum_{i=1}^\infty[
+x_i-z_i-(y_i-z_i)]^2\nonumber\\
+= \sum_{i=1}^\infty(x_i-z_i)^2+\sum_{i=1}^\infty(y_i-z_i)^2-2\sum_{i=1}^\infty(x_i-z_i)(y_i-z_i)\nonumber
+\end{eqnarray}
+por tanto $\sum_{i=1}^\infty(
+x_i-y_i)^2\leq \sum_{i=1}^\infty(
+x_i-z_i)^2+\sum_{i=1}^\infty(
+z_i-y_i)^2$. Téngase en cuenta la propiedad de los $a,b\in \mathbb{R}$ con $a,b>0$ dada por  $\sqrt{a}+\sqrt{b}=\sqrt{ a+b+2\sqrt{ab}}\geq \sqrt{a+b}$. Entonces $\sqrt{\sum_{i=1}^\infty(
+x_i-y_i)^2}\leq \sqrt{\sum_{i=1}^\infty(
+x_i-z_i)^2+\sum_{i=1}^\infty(
+z_i-y_i)^2}\leq \sqrt{\sum_{i=1}^\infty(
+x_i-z_i)^2}+\sqrt{\sum_{i=1}^\infty(
+z_i-y_i)^2}$. Se concluye que $d(\vect{x},\vect{y})\leq d(\vect{x},\vect{z})+d(\vect{z},\vect{y})$
+\section{Tema 2 Sección 20 Ejercicio 11}
+Veamos que si $d$ es una distancia sobre $X$, entonces
+\begin{eqnarray}
+d'(\vect{x},\vect{y})=\frac{d(\vect{x},\vect{y})}{1+d(\vect{x},\vect{y})}\nonumber
+\end{eqnarray}
+es una distancia acotada que induce la topología sobre X.
+Si $f(x)=x/(1+x)$ donde $f:\mathbb{R}\rightarrow \mathbb{R}$, el teorema del valor medio dice que existe algún $f'(c)$ finito tal que
+\begin{eqnarray}
+\frac{f(x)-f(y)}{x-y}=f'(c).
+\end{eqnarray}
+Entonces
+\begin{eqnarray}
+f(x)=f(y)+f'(c) (x-y)
+\end{eqnarray}
+Como $f'(x)=\frac{1}{(1+x)^2}$ , se tiene que $0<f'(c)\leq 1$ Sea $x=d(\vect{x},\vect{y})$ e $y=d(\vect{x},\vect{x})=0$. Entonces $d'(\vect{x},\vect{y})=d'(\vect{x},\vect{x})+Cd(\vect{x},\vect{y})=Cd(\vect{x},\vect{y})<\infty$ para algún $0<C\leq 1$. Por tanto, existe algún $0<C\leq 1$ finito tal que $\vect{y}\in B_{d'}(\vect{x},\epsilon)$ si, y solo si, $\vect{y}\in B_d(\vect{x},C\epsilon)$.
+
+
+\end{document}

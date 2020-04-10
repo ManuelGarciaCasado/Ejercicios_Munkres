@@ -1,0 +1,73 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 21 Ejercicio 1}
+Sea $A\subset X$. Sea $d$ una distancia para la topología de $X$. Veamos que $d|A\times A$ es una distancia para la topología de subespacio de $A$ sobre $X$. Si $x\in U$ y $U$ es abierto del espacio $X$ en la topología métrica entonces para todo $\epsilon>0$ tal que $B_d(x,\epsilon)\subset U$, las bolas $B_d(x,\epsilon)$ son abiertos en el espacio topológico métrico sobre $X$. Por tanto, si $A\subset X$, para cualesquiera $x,y,z\in A$, se tiene que $d(x,y)\geq 0$, $d(x,x)=0$;  $d(x,y)=d(y,x)$ y  $d(x,y)\leq d(x,z)+d(z,y)$. Por tanto, se tiene que $d|A\times A(x,y)\geq 0$, $d|A\times A(x,x)=0$;  $d|A\times A(x,y)=d|A\times A(y,x)$ y  $d|A\times A(x,y)\leq d|A\times A(x,z)+d|A\times A(z,y)$. Entonces $d|A\times A$ es una distancia sobre $A=A\cap X$. Por tanto, los $B_{d|A\times A}(x,\epsilon)=B_d(x,\epsilon)\cap A$ son elementos de la base de la topología métrica sobre $A$ como subespacio de $X$.
+
+Por otro lado, supongamos que $A$ tiene topología métrica inducida por $d|A\times A$. Si $x\in X$ y $B_d(x,\epsilon)\cap A\neq \varnothing$, sea $y\in B_d(x,\epsilon)\cap A$. Entonces, existe un $\delta>0$ tal que $B_{d|A\times A}(y,\delta)\subset B_d(x,\epsilon)\cap A$. Por tanto, la topología inducida por la distancia $d|A\times A$ es mas fina que la topología de subespacio de $A$ sobre $X$. 
+\section{Tema 2 Sección 21 Ejercicio 2}
+Sean $X$ e $Y$ espacios métricos con distancias $d_X$ y $d_Y$ respectivamente. Sea $f:X\rightarrow Y$ una función tal que para todos los pares de puntos $x_1,x_2\in X$ se tiene 
+\begin{eqnarray}
+d_Y(f(x_1),f(x_2))=d_X(x_1,x_2)\nonumber
+\end{eqnarray}
+Veamos que $f$ es un embebimiento, esto es, veamos que $f$ es continua y que existe un subconjunto $Z\subset Y$ tal que $f(X)=Z$ y $f^{-1}(Z)=X$.
+
+Primero, hay que demostrar que $f$ es continua, esto es, para cualquier abierto $V$ de la topología métrica de $Y$, se tiene que $f^{-1}(V)$ es abierto de la topología métrica de $X$. Sea $V=B_{d_Y}(y,\epsilon)$ con $y\in Y$ y $\epsilon>0$, entonces $f^{-1}(B_{d_Y}(y,\epsilon))=\{x|f(x)=y' \text{ y }d_Y(y,y')<\epsilon\}$. Pero $d_Y(y,y')=d_X(f^{-1}(y),f^{-1}(y'))$. Por tanto,
+\begin{eqnarray}
+ f^{-1}(B_{d_Y}(y,\epsilon))=\{x|f(x)=y' \text{ y }d_X(f^{-1}(y),f^{-1}(y'))<\epsilon\}\nonumber\\
+=\{x|d_X(f^{-1}(y),x)<\epsilon\}
+\nonumber
+\end{eqnarray}
+Luego $f^{-1}(B_{d_Y}(y,\epsilon))=B_{d_X}(f^{-1}(y),\epsilon)$ implica que $f$ es continua.
+
+Ahora veamos que existe un subconjunto $Z\subset Y$ tal que $f(X)=Z$ y $f^{-1}(Z)=X$. Como $X=\bigcup_{x\in X}B_{d_X}(x,\epsilon)$ para algún $\epsilon$ se tiene que $f(X)=f(\bigcup_{x\in X}B_{d_X}(x,\epsilon))$, entonces $f(X)=\bigcup_{x\in X}f(B_{d_X}(x,\epsilon))=\bigcup_{x\in X}B_{d_Y}(f(x),\epsilon))\subset \bigcup_{y\in Y}B_{d_Y}(y,\epsilon))=Y$. Por tanto, si $Z=\bigcup_{x\in X}f(B_{d_X}(x,\epsilon))$ se tiene que $f(X)=Z\subset Y$. Por tanto, $f^{-1}(Z)=\{x|f(x)\in Z\}=X$
+\section{Tema 2 Sección 21 Ejercicio 3}
+Sea $X_n$ un espacio métrico con distancia $d_n$ para $n\in \mathbb{Z}_+$
+\begin{itemize}
+\item \bf (a) \rm Veamos que 
+\begin{eqnarray}
+\rho(x,y)=\max\{ d_1(x_1,y_1),d_2(x_2,y_2),..., d_n(x_n,y_n)\}\nonumber
+\end{eqnarray}
+es una distancia para el espacio producto $X_1\times X_2\times ...\times X_n$.
+\end{itemize}
+Dado que $d_i(x_i,y_i)\geq 0$ se tiene que $\max_i\{d_i(x_i,y_i)\}\geq 0$; y como $d_i(x_i,x_i)=0$ resulta que $\max_i\{d_i(x_i,x_i)\}= 0$. Luego $\rho(x,y)\geq 0$ y $\rho(x,x)=0$. Además, como $d_i(x_i,y_i)=d_i(y_i,x_i)$, se tiene que $\max_i\{d_i(x_i,y_i)\}=\max_i\{d_i(y_i,x_i)\}$ por tanto $\rho(x,y)=\rho(y,x)$. Si $d_i(x_i,y_i)\leq d_i(x_i,z_i)+d_i(z_i,y_i)$ para cualquier $z_i=\pi_i(z)$ entonces $d_i(x_i,y_i)\leq d_i(x_i,z_i)+d_i(z_i,y_i)$. Por tanto, $\max_i\{d_i(x_i,y_i)\}\leq \max_i\{d_i(x_i,z_i)+d_i(z_i,y_i)\}\leq \max_i\{d_i(x_i,z_i)\}+\max_i\{d_i(z_i,y_i)\}$. Entonces $\rho(x,y)\leq \rho(x,z)+\rho(z,y)$
+\begin{itemize}
+\item \bf (b) \rm Sea $\overline{d}_i=\min\{d_i,1\}$. Veamos que
+\begin{eqnarray}
+D(x,y)=\sup\{ \overline{d}_1(x_1,y_1)/1,\overline{d}_2(x_2,y_2)/2,..., \overline{d}_n(x_n,y_n)/n\}\nonumber
+\end{eqnarray}
+es una distancia para el espacio producto $X_1\times X_2\times ...\times X_n$.
+\end{itemize}
+Como $\overline{d}(x_i,y_i)=\min\{d_i(x_i,y_i),1\}\geq 0$ y $i>0$, $\overline{d}(x_i,y_i)=\min\{d_i(x_i,y_i),1\}/i\geq 0$. Como $d_i(x_i,y_i)=d(y_i,x_i)$, $\min\{d_i(x_i,y_i),1\}/i=\min\{d_i(y_i,x_i),1\}/i$ resunta que $D(x,y)=\sup_i\{\overline{d}(x_i,y_i)\}=\sup_i\{\overline{d}(y_i,x_i)\}=D(y,x)$. Por tanto $D(x,y)=D(y,x)$. Como $d_i(x_i,z_i)\leq d_i(x_i,y_i)+d_i(y_i,z_i)$, entonces
+\begin{eqnarray}
+\overline{d}(x_i,z_i)\leq \overline{d}(x_i,y_i)+
+\overline{d}(y_i,z_i)
+\nonumber\\
+\leq \sup_i\{\overline{d}(x_i,y_i)+
+\overline{d}(y_i,z_i)\}\nonumber\\
+\leq \sup_i\{\overline{d}(x_i,y_i)\}+
+\sup_i\{\overline{d}(y_i,z_i)\}\nonumber
+\end{eqnarray}
+para todo $i\in\{1,2,...,n\}$  y resulta que
+\begin{eqnarray}
+D(x,z)=\sup_i\{\overline{d}(x_i,z_i)\}
+\leq \sup_i\{\overline{d}(x_i,y_i)\}+
+\sup_i\{\overline{d}(y_i,z_i)\}
+=D(x,y)+D(y,z).\nonumber
+\end{eqnarray}
+Por tanto, $D$ es una distancia en $X_1\times X_2\times...\times X_n$
+\section{Tema 2 Sección 21 Ejercicio 4}
+Veamos que $\mathbb{R}_\ell$ cumplen el primer axioma de numerabilidad. Primero hay que demostrar que para cada $x \in \mathbb{R}_\ell$ existe una base $\{U_i\}_{i\in \mathbb{Z}_+}$ de entornos de $x$ tal que para algún $i$, $U_i\subset U$  donde $U$ es entorno de $x$. Los elementos de la base de $\mathbb{R}_\ell$ son del tipo $[x-\delta,x+\delta)$. Los intervalos semiabiertos $[x-\delta+\epsilon/i, x+\delta)$ con $0<\epsilon<2\delta$ están contenidos en $[x-\delta,x+\delta)$ y son numerables.
+
+Veamos que el cuadrado ordenado $I_0^2$ cumple el primer axioma de numerabilidad. Se tiene que los intervalos $(x_1\times x_2,y_1\times y_2)$, $[0\times 0,y_1\times y_2)$ y $(x_1\times x_2,1\times 1]$ donde $x_1<y_1$ o $x_1=y_1$ e $x_2<y_2$, son abiertos de $I_0^2$. Sea $x_1\times x_2\in [0\times 0,x_1\times (x_2+\delta))$ y $x_2\neq 1$. Tómese la familia $\{[0\times 0 ,x_1\times (x_2+\delta-\epsilon/i)\}_{i\in\mathbb{Z}_+}$ entonces 
+$[0\times 0 ,x_1\times (x_2+\delta-\epsilon/i))\subset[0\times 0,x_1\times (x_2+\delta))$ para algún $i\in\mathbb{Z}_+$ para todo $\epsilon<\delta/2$. Sea $x_1\times x_2\in [0\times 0,(x_1+\delta)\times x_2)$ y $x_2=1$. Tómese la familia $\{[0\times 0 ,(x_1+\delta-\epsilon/i)\times 1)\}_{i\in\mathbb{Z}_+}$ entonces 
+$[0\times 0 ,(x_1+\delta-\epsilon/i)\times 1)\subset[0\times 0,(x_1+\delta)\times 1)$ para algún $i\in\mathbb{Z}_+$ y para todo $\epsilon<\delta/2$. Sea $x_1\times x_2\in (x_1\times (x_2-\delta),1\times 1]$. Tómese la familia $\{(x_1\times (x_2-\delta+\epsilon/i),1\times 1]\}_{i\in\mathbb{Z}_+}$ de entornos de $x_1\times x_2$, entonces 
+$(x_1\times (x_2-\delta+\epsilon/i),1\times 1]\subset (x_1\times (x_2-\delta),1\times 1]$ para algún $i\in\mathbb{Z}_+$, para todo $0<\epsilon<\delta/2$. Finalmente, sea $x_1\times x_2\in (x_1\times (x_2-\delta),x_1\times (x_2+\delta))$ y $x_2\neq 1$ y $x_2\neq 0$. Tómese la familia $\{(x_1\times (x_2-\delta),x_1\times (x_2+\delta-\epsilon/i))\}_{i\in\mathbb{Z}_+}$ entonces 
+$(x_1\times (x_2-\delta),x_1\times(x_2-\delta+\epsilon/i))\subset (x_1\times (x_2-\delta),x_1\times (x_2+\delta)$ para algún $i\in\mathbb{Z}_+$, para todo $0<\epsilon<\delta/2$. Sea $x_1\times x_2\in ((x_1-\delta)\times x_2,(x_1+\delta)\times x_2)$ y $x_2= 1$ o $x_2= 0$. Tómese la familia $\{((x_1-\delta)\times x_2,(x_1+\delta-\epsilon/i)\times x_2)\}_{i\in\mathbb{Z}_+}$ entonces $((x_1-\delta)\times x_2,(x_1+\delta-\epsilon/i)\times x_2)\subset ((x_1-\delta)\times x_2,(x_1+\delta)\times x_2)$ para algún $i\in\mathbb{Z}_+$, para todo $0<\epsilon<\delta/2$.
+\end{document}

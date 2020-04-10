@@ -1,0 +1,62 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 7 Ejercicio 7}
+Veamos que los conjuntos $D$ y $E$ del ejercicio 5 tiene el mismo cardinal. Entonces $D=\{f_{\vect{a}}|f_{\vect{a}}(n)=a_n\text{ donde }n\in \mathbb{Z}_{+}\text{ y }a_n\in \mathbb{Z}_{+}\}$ y $E=\{f_{\vect{a}}|f_{\vect{a}}(n)=a_n\text{ donde }n\in \mathbb{Z}_{+}\text{ y }a_n\in \{0,1\}\}$. entonces hay una aplicación biyectiva de $f:D\rightarrow \mathbb{Z}^{\omega}_{+}$ y otra aplicación biyectiva $g:E\rightarrow X^{\omega}$ con $X=\{0,1\}$. Hay una función biyectiva $h:\mathbb{Z}^{\omega}_{+}\rightarrow X^{\omega}$ definida por $h_{i}(\vect{x})=1$ si $i\in\{x|x=x_1+x_2+...+x_n,n\in\mathbb{Z}_{+}, x_n\in\mathbb{Z}_{+}\}$ y $h_{i}(\vect{x})=0$ si $i\notin\{x|x=x_1+x_2+...+x_n,\text{ para cada }n\in\mathbb{Z}_{+}, x_n\in\mathbb{Z}_{+}\}$. Por tanto, se tiene que hay una función biyectiva $f^{-1}\circ h^{-1}\circ g$ de $E$ en $D$ y, por tanto, existe una función inyectiva de $E$ en $D$ y una función inyectiva de $D$ en $E$.
+\section{Tema 1 Sección 7 Ejercicio 8}
+Sea $\mathcal{B}$ el conjunto de subconjuntos numerables de $X^{\omega}$ donde $X=\{0,1\}$. Nótese que $X^n\times \{0\}\times \{0\}\times ...\in \mathcal{B}$ y $X^n\times \{1\}\times \{1\}\times ...\in \mathcal{B}$ para todo $n\in \mathbb{Z}_{+}$. Además $X^n\times \{y_1\}\times \{y_2\}\times ...\in \mathcal{B}$ para cada $n\in \mathbb{Z}_{+}$ y cada $\vect{y}\in X^\omega$. Por tanto, existe un función biyectiva $f:X^{\omega}\times \mathbb{Z}_{+}\rightarrow \mathcal{B}$. Dado que existe una aplicación biyectiva $g:X^{\omega}\rightarrow \mathbb{Z}^{\omega}_{+}$ definida como en el ejercico 7, se tiene que existe una aplicacion biyectiva $h:X^{\omega}\times \mathbb{Z}_{+}\rightarrow \mathbb{Z}^{\omega}_{+}\times \mathbb{Z}_{+}$. Pero también hay una aplicación biyectiva de $\mathbb{Z}^{\omega}_{+}$ en $\mathbb{Z}^{\omega}_{+}\times \mathbb{Z}_{+}$. Luego se puede construir una función biyectiva de $X^{\omega}$ en $\mathbb{Z}^{\omega}_{+}$, de $\mathbb{Z}^{\omega}_{+}$ en  $X^{\omega} \times \mathbb{Z}_{+}$, y de $X^{\omega} \times \mathbb{Z}_{+}$ en $\mathcal{B}$. Luego existe una aplicación biyectiva entre $X^{\omega}$ y $\mathcal{B}$.
+\section{Tema 1 Sección 7 Ejercicio 9}
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Sea la función $h:\mathbb{Z}_{+}\rightarrow \mathbb{R}$
+\begin{eqnarray}
+& h(1)=1 &\nonumber\\
+& h(2)=2 &\nonumber\\
+& h(n)=\left[h(n+1)\right]^2-\left[h(n-1)\right]^2 & n\geq 2\nonumber\\
+\end{eqnarray}
+Dado que ésta no es una definición recursiva, redefinamos $h:\mathbb{Z}_{+}\rightarrow \mathbb{R}$ como
+\begin{eqnarray}
+& h(1)=1 &\nonumber\\
+& h(n)=\begin{cases}
+2 &  n=2 \nonumber\\
+\sqrt{h(n-1)+\left[h(n-2)\right]^2} & n> 2 \nonumber\\
+\end{cases}
+\end{eqnarray}
+Esta función define unívocamente $h(1)$ como elemento de $\mathbb{R}$, y los valores de $h$ para cada $n>1$ unívocamente en función de los valores $h$ para valores menores de $n$. Por tanto es una definición recursiva.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos que la ecuación de (a) no determina $h$ unívocamente. Sea $f(3)=-h(3)$ y $f(i)=h(i)$ para $i\neq 3$. Por tanto, $h(2)=[h(3)]^2-[h(1)]^2\text{ y }1=(-1)^2\Rightarrow h(2)=[-h(3)]^2-[h(1)]^2$, luego $f(2)=[f(3)]^2-[f(1)]^2$. Pero $f(3)\neq h(3)$ por tanto, $f\neq h$. Luego la misma fórmula define funciones distintas. Por tanto, no se cumple las condiciones del teorema.
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Sea la función $h:\mathbb{Z}_{+}\rightarrow \mathbb{R}$
+\begin{eqnarray}
+& h(1)=1 &\nonumber\\
+& h(2)=2 &\nonumber\\
+& h(n)=\left[h(n+1)\right]^2+\left[h(n-1)\right]^2 & n\geq 2\nonumber\\
+\end{eqnarray}
+Esta fórmula no define unívocamente $h$ por el mismo argumento que el apartado (b). Sin embargo, no se puede redefinir una $h$ tal que
+\begin{eqnarray}
+& h(1)=1 &\nonumber\\
+& h(n)=\begin{cases}
+2 &  n=2 \nonumber\\
+\sqrt{h(n-1)-\left[h(n-2)\right]^2} & n> 2 \nonumber\\
+\end{cases}
+\end{eqnarray}
+porque $h(3)=1$, pero $h(4)=\sqrt{-3}$ no está definido.
+% Create a new 1st level heading
+% Uncom\Rightarrow  a^n \cdot a^{0} =a^{n}ment the following two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 9 Ejercicio 6}
+Sea $\mathcal{A}$ es el conjunto de todos los conjuntos.
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que se cumple $\mathcal{P}(\mathcal{A})\subset \mathcal{A}$.  Dado un conjunto $A$, se tiene que $A\in \mathcal{P}(A)$. Por tanto, como  $\mathcal{A}$ es un conjunto, $\mathcal{A}\in \mathcal{P}(\mathcal{A})$. Supongamos que $B\in\mathcal{P}(\mathcal{A})$ entonces $B$ es un conjunto, subconjunto de $\mathcal{A}$. Entonces $B\in \mathcal{A}$ por ser un conjunto. Pero $B\in \mathcal{A} \Rightarrow B\in \mathcal{P}(\mathcal{A})$ es lo mismo que decir $\mathcal{P}(\mathcal{A})\subset \mathcal{A}$.\newline
+Por el axioma de elección, existe una función de elección $c:\mathcal{A}\rightarrow \cup_{B\in \mathcal{A}}B$ tal que $c(B)$ tiene un único elemento de $B$ para cada $B\in \mathcal{A}$, pero como $ \mathcal{A}\in \mathcal{A}$ por ser un conjunto, se tiene que $c(\mathcal{A})=\cup_{B\in \mathcal{A}}c(B)$ que es un conjunto con mas de un elemento, lo cual es contradictorio.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Sea $\mathcal{B}$ subconjunto de $\mathcal{A}$ tal que es el conjunto de todos los conjuntos que no son elementos de sí mismos. Formalmente, $\mathcal{B}=\{A|A\in \mathcal{A} \text{ y }A\notin A\}$. Si $\mathcal{B}\in \mathcal{B}$, entonces $\mathcal{B}\in \mathcal{A}$ y $\mathcal{B}\notin \mathcal{B}$. Y si $\mathcal{B}\notin \mathcal{B}$ entonces, $\mathcal{B}\in \mathcal{A}-\mathcal{B}$, por tanto $[\mathcal{B}\notin \mathcal{A}\text{ o }\mathcal{B}\in \mathcal{B}]$. Puesto que $\mathcal{B}\in \mathcal{A}$, solo queda que $\mathcal{B}\in \mathcal{B}$. Por tanto, si $\mathcal{B}\notin \mathcal{B}$ entonces $\mathcal{B}\in \mathcal{B}$. Por tanto $\mathcal{B}\in \mathcal{B}\Leftrightarrow \mathcal{B}\notin \mathcal{B}$. Por tanto, no se puede determinar si $\mathcal{B}$ es elemento de si mismo o no.
+
+\section{Tema 1 Sección 9 Ejercicio 7}
+Sean $A$ y $B$ dos conjuntos no vacíos. Si hay una función inyectiva de $A$ en $B$ pero no hay ninguna función inyectiva de $B$ en $A$ de dice que $B$ tiene mayor cardinal que $A$.
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que todo conjunto no numerable tiene cardinal mayor que $\mathbb{Z}_{+}$. Por el teorema 9.1, se tiene que un conjunto $A$ es infinito si, y solo si, hay una función inyectiva de $\mathbb{Z}_{+}$ en $A$. Por otro lado, un conjunto no vacío $B$ es numerable si, y solo si, existe una función inyectiva de $B$ en $\mathbb{Z}_{+}$. Contrarecíprocamente, no existe una función inyectiva de de $B$ en $\mathbb{Z}_{+}$ si, y solo si, $B$ es no numerable. Por tanto, si $A$ es infinito y no numerable, existe una función inyectiva de $\mathbb{Z}_{+}$ en $A$ y no existe ninguna función inyectiva de $A$ en $\mathbb{Z}_{+}$. Por tanto, $A$ tiene mayor cardinal que $\mathbb{Z}_{+}$.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos que si $A$ tiene mayor cardinal que $B$ y $B$ tiene mayor cardinal que $C$, entonces $A$ tiene mayor cardinal que $C$. 
+Si $A$ tiene mayor cardinal que $B$ entonces existe una función inyectiva $f:A\rightarrow B$ y si  $B$ tiene mayor cardinal que $C$ entonces existe una función inyectiva $g:B\rightarrow C$, por tanto, existe una función inyectiva $g\circ f: A\rightarrow C$. Se puede demostrar (vease ejercicio 4 sección 2) que dadas  $h:C\rightarrow B$ y $k:B \rightarrow A$, si $k\circ h$ es inyectiva entonces $h$ es inyectiva. Por tanto, si no existe $h$ inyectiva entonces no existe $k\circ h:C \rightarrow A$ inyectiva. Resumiendo, si existe $f:A\rightarrow B$ inyectiva y no existe $k:B\rightarrow A$ y si existe $g:B\rightarrow C$ inyectiva y no existe $h:C\rightarrow B$, entonces existe $f\circ g: A\rightarrow C$ inyectiva y no exite $k\circ h: C\rightarrow A$ inyectiva. Lo cual prueba que si $A$ tiene mayor cardinal que $B$ y $B$ tiene mayor cardinal que $C$, entonces $A$ tiene mayor cardinal que $C$. 
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Veamos como construir una sucesión $A_1, A_2, ...$ de conjuntos infinitos tales que para cada $n\in \mathbb{Z}_{+}$ el conjunto $A_{n+1}$ tiene mayor cardinal que $A_n$. Defínase $A_{n+1}=A_{n}\times A_1=A_1^{n+1}$. Se puede definir una función $f_{n+1}:A_n\rightarrow A_{n+1}$ para todo $n\in \mathbb{Z}_{+}$ como $f_{n+1}(\vect{x})=(x_1,x_2,...,x_n,a_1)$donde $a_1\in A_1$. Veamos que es inyectiva. Si $\vect{x}\neq \vect{y}$ entonces $(x_1,x_2,...,x_n,a_1)\neq (y_1,y_2,...,y_n,a_1)$. Por tanto $f_{n+1}(\vect{x})=f_{n+1}(\vect{y})\Rightarrow \vect{x}= \vect{y}$. Veamos que no existe cualquier función inyectiva  $g_{n+1}:A_{n+1}\rightarrow A_n$ para cada $n \in \mathbb{Z}_{+}$.
+Demostra que no existe $g_{n+1}:A_{n+1}\rightarrow A_n$ inyectiva es lo mismo que demostrar que no existe $h_{n+1}:A_{n}\rightarrow A_{n+1}$ sobreyectiva (ver demostración de teorema 7.8). Sea $h_{n+1}(\vect{x})=(h_{n+1,1}(\vect{x}),h_{n+1,2}(\vect{x}),...,h_{n+1,n+1}(\vect{x}))$.  Sea $\vect{y}\in A_{n+1}$ tal que
+\begin{eqnarray}
+y_j=\begin{cases}
+h_{n+1,j}(\vect{x}) & \text{ si }j\neq n+1 \nonumber\\
+a & \text{ si }j= n+1 \nonumber
+\end{cases}
+\end{eqnarray}
+donde $a\neq h_{n+1,n+1}(\vect{x})$. Entonces existe un $\vect{y}\neq h_{n+1}(\vect{x})$ para cualquier $\vect{x}$ y cualquier $h_{n+1}$. Por tanto, no hay función sobreyectiva $h_{n+1}$. Por tanto, no hay función inyectiva $g_{n+1}$. Luego $A_{n+1}$ tiene mayor cardinad que $A_n$ para cualquier $n$.
+\begin{itemize}
+\item \bf (d) \rm
+\end{itemize}
+Sea $A_{\omega}=A_1^{\omega}$ el conjunto $A_1\times A_1\times \dots$ Entonces veamos que $A_{\omega}$ tiene mayor cardinal que cualquier $A_n$ con $n\in \mathbb{Z}_{+}$. Se puede definir una función $f:A_n\rightarrow A_{\omega}$ para todo $n\in \mathbb{Z}_{+}$ como $f(\vect{x})=(x_1,x_2,...,x_n,a_1,a_1,...)$ donde $a_1\in A_1$. Veamos que es inyectiva. Si $\vect{x}\neq \vect{y}$ entonces $(x_1,x_2,...,x_n,a_1,a_1,...)\neq (y_1,y_2,...,y_n,a_1,a_1,...)$. Por tanto $f(\vect{x})=f(\vect{y})\Rightarrow \vect{x}= \vect{y}$. Veamos que no existe cualquier función inyectiva  $g:A_{\omega}\rightarrow A_n$ para cada $n \in \mathbb{Z}_{+}$.
+Demostra que no existe $g:A_{\omega}\rightarrow A_n$ inyectiva es lo mismo que demostrar que no existe $h:A_{n}\rightarrow A_{\omega}$ sobreyectiva (ver demostración de teorema 7.8). Sea $h(\vect{x})=(h_{1}(\vect{x}),h_{2}(\vect{x}),...,h_{n+1}(\vect{x}),...)$.  Sea $\vect{y}\in A_{\omega}$ tal que
+\begin{eqnarray}
+y_j=\begin{cases}
+h_{j}(\vect{x}) & \text{ si }j\neq n+1 \nonumber\\
+a & \text{ si }j= n+1 \nonumber
+\end{cases}
+\end{eqnarray}
+donde $a\neq h_{n+1}(\vect{x})$. Entonces existe un $\vect{y}\neq h(\vect{x})$ para cualquier $\vect{x}$ y cualquier $h$. Por tanto, no hay función sobreyectiva $h$. Por tanto, no hay función inyectiva $g$. Luego $A_{\omega}$ tiene mayor cardinad que $A_n$ para cualquier $n$.
+\section{Tema 1 Sección 9 Ejercicio 8}
+Veamos que $\mathcal{P}(\mathbb{Z}_{+})$ y $\mathbb{R}$ tienen el mismo cardinal. Dos conjuntos tienen en mismo cardinal si hay una función biyectectiya entre ellos. En el ejercicio 7.3 se vió que hay una correspondencia biyectiva entre $\mathcal{P}(\mathbb{Z}_{+})$ y $X^{\omega}$ por medio de una función que tal que vale 1 si el índice de la $\omega$-upla pertenece al subconjunto de $\mathbb{Z}_{+}$, y 0 si no pertenece. Veamos que hay una correspondencia biyectiva entre $X^{\omega}$ y $\mathbb{R}$. Sea la función $f:X^{\omega}\rightarrow \mathbb{R}$ definida como 
+\begin{eqnarray}
+f(\vect{x})=
+&(-1)^{x_1}\left(x_{n+2}2^{n-1}+x_{n+3}2^{n-2}+x_{n+4}2^{n-3}+...\right.\nonumber\\
+\left.+x_{2n+1}2^0+x_{2n+2}2^{-1}+...\right)&\nonumber\\
+&=(-1)^{x_1}\sum_{i=1}^{\infty}\left(x_{n+1+i}2^{n-i}\right)&\nonumber
+\end{eqnarray}
+donde $n\in \mathbb{Z}$ es el número de ceros que hay después de $x_1$ y antes de $x_{n+2}=1$ en $\vect{x}=(x_1,0,0,...,0,1,x_{n+3},...)$.
+Veamos que es $f$ es inyectiva. Supongamos que $\vect{x} \neq \vect{y}$ pero $f(\vect{x})=f(\vect{y})$. Entonces $x_i\neq y_i$ para algún $i$. Si $x_1\neq y_1$ y $x_i=y_i$ para $i\neq1$ entonces 
+\begin{eqnarray}
+f(\vect{x})=f(\vect{y})\Rightarrow (-1)^{x_1}\sum_{i=1}^{\infty}\left(x_{n+1+i}2^{n-i}\right)=(-1)^{y_1}\sum_{i=1}^{\infty}\left(x_{n+1+i}2^{n-i}\right)\nonumber
+\end{eqnarray}
+por tanto
+$(-1)^{x_1}=(-1)^{y_1}$, es decir $(-1)=(-1)^{0}$. Lo cual es absurdo. Si $0=x_i\neq y_i=1$ para $i=m>1$ , y $x_i= y_i$ para $i\neq m $, dado que \begin{eqnarray}(-1)^{x_1}\sum_{i=1}^{\infty}\left(x_{n+1+i}2^{n-i}\right)=(-1)^{y_1}\sum_{i=1}^{\infty}\left(y_{n+1+i}2^{n-i}\right),\nonumber
+\end{eqnarray}
+se tiene
+\begin{eqnarray}(-1)^{x_1}\sum_{i=1}^{\infty}\left(x_{n+1+i}2^{n-i}\right)=(-1)^{x_1}\left[2^m+\sum_{i=1}^{\infty}\left(x_{n+1+i}2^{n-i}\right)\right]\nonumber
+\end{eqnarray}
+por tanto $0=(-1)^{x_1}2^m$. Lo cual es absurdo. Por tanto, $f(\vect{x})=f(\vect{y})$ implica  $\vect{x}=\vect{y}$, siendo $f$ inyectiva. Veamos que es sobreyectiva. Supongamos que no hay $\vect{x}\in X^{\omega}$ tal que $f(\vect{x})=y\in \mathbb{R}$. Si $y\in \mathbb{R}$ entonces se puede escribir en base 2 como $(-1)^{y_1}y_2y_3...y_{n+1}.y_{n+2}y_{n+3}...$ que es lo mismo que $(-1)^{y_1}\sum_{i=1}^{\infty}\left(y_{1+i}2^{n-i}\right)$ en base 10. Por tanto, teniendo en cuenta que $x_1=y_1$, $x_i=0$ para $2\leq i \leq n+1$ y $x_{n+1+i}=y_{i+1}$ para $i\geq 1$. Por tanto $\vect{x}=(x_1,x_2,...)=(y_1,0,0,...,0,y_2,...,y_n,y_{n+1},...)$ y por tanto $f(\vect{x})=y$. Lo cual contradice la suposición anterior. Por tanto, $f$ es sobreyectiva. Consecuentemente,  $f$ es biyectiva. Por tanto, hay una biyección entre $\mathbb{R}$ y $X^{\omega}$ y por tanto entre $\mathcal{P}(\mathbb{Z}_+)$ y $\mathbb{R}$. Por tanto, $\mathcal{P}(\mathbb{Z}_+)$ y $\mathbb{R}$ tienen el mismo cardinal.
+
+
+
+  
+\end{document}

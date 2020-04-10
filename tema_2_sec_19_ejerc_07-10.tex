@@ -1,0 +1,51 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 19 Ejercicio 7}
+Veamos cuál es la clausura del subconjunto $\mathbb{R}^\infty$ de $\mathbb{R}^\omega$, que está dado por las sucesiones $(x_1,x_2,...)$ tales $x_i\neq 0$ que para un número finito de $i\in \mathbb{Z}_+$ en las topología por cajas y producto. Supongamos que es $n$ el máximo  entero para el cual $x_n\neq 0$ y llammemos $\vect{x}_n$ a la sucesión $(x_1,x_2,...,x_n,0,...)$ y $\vect{x}$ cuando $x_i= 0$ para un numero finito de $i$. Entonces, por ejercicio anterior, los $\vect{x}_n$ convergen a algún $\vect{x}$ puesto que $\pi_\alpha(\vect{x}_n)=0$ para $\alpha>n$ y $\pi_\alpha(\vect{x}_n)= x_{\alpha}$ cuando $\alpha\leq n$. Es decir $\pi_\alpha(\vect{x}_n)=0$ si $\alpha > n$; y $\pi_\alpha(\vect{x}_n)=\pi_\alpha(\vect{x})$ si $\alpha\leq n$. Los $\vect{x}_n$ convergen a $\vect{x}$ el la topología producto, no así en la topología por cajas. Como $\mathbb{R}^\omega$ hereda la topología Hausdorff de $\mathbb{R}$, los puntos límite de $\mathbb{R}^\infty$ son puntos de  $\mathbb{R}^\omega$. Por tanto, $\mathbb{R}^\omega = \overline{\mathbb{R}^\infty}$ en las topología producto.
+\section{Tema 2 Sección 19 Ejercicio 8}
+Sean las sucesiones de $\mathbb{R}^\omega$ dadas por $(a_1,a_2,...)$ y $(b_1,b_2,...)$ tales que $a_i>0$ para todo $i$; y sea la función $h:\mathbb{R}^\omega\rightarrow \mathbb{R}^\omega$ definida por $h((x_1,x_2,...))=(a_1x_1+b_1,a_2x_2+b_2,...)$. Veamos que si $\mathbb{R}^\omega$ está dotada de la topología producto entonces $h$ es un homeomorfismo. Primero hay que probar que $h$ es continua y luego hay que probar que $h^{-1}$ también es continua.  Se tiene que para cada $i\in \mathbb{Z}_+$ las coordenadas de $h(\vect{x})$ son $h_i(\vect{x})=\pi_i(h(\vect{x}))=a_i\pi_i(\vect{x})+b_i$. Probemos que las $h_i$ son continuas. Entonces hay que probar que si $U_i$ es abierto de $\mathbb{R}$ entonces $h^{-1}_i(U_i)$ también es abierto de $\mathbb{R}^{\omega}$. Si $U_i$ es un abierto de $\mathbb{R}$ que contiene a $h_i(\vect{x})$, $U_i$ contiene a $a_i\pi_i(\vect{x})+b_i=y_i$. Por tanto, el conjunto $V= \{\vect{x}|\vect{x}=\pi_i^{-1}(\frac{y_i-b_i}{a_i}) \text{ donde }y_i\in U_i\}$ es un abierto de $\mathbb{R}^{\omega}$ puesto que $\pi_i:\mathbb{R}^{\omega}\rightarrow \mathbb{R}$ es continua. Por tanto, $h^{-1}_i(U_i)$ son abiertos de $\mathbb{R}^{\omega}$ y $h_i: \mathbb{R}^{\omega}\rightarrow \mathbb{R}$ son continuas. Como $h_i=\pi_i \circ h\Rightarrow h=\pi_i^{-1} \circ h_i$, y la composición de dos funciones continuas es continua, $h$ es continua. Se puede definir como $h^{-1}:\mathbb{R}^\omega\rightarrow \mathbb{R}^\omega$ tal que $h^{-1}_i(\vect{x})=\frac{x_i-b_i}{a_i}$. Del mismo modo, se puede probar que $h^{-1}$ es continua. Por tanto, $h$ es biyectiva y continua. Luego $h$ es un  homomorfismo.
+\section{Tema 2 Sección 19 Ejercicio 9}
+Veamos que el axioma de elección es equivalente a afirmar que para cualquier familia de conjuntos no vacíos $\{A_\alpha\}_{\alpha\in J}$ y $J\neq \varnothing$ se tiene que el producto cartesiano $\prod_{\alpha\in J}A_\alpha$ es no vacío. Se tiene por el axioma de elección y por el lema 9.2 que se puede elegir un elemento de cada conjunto $A_\alpha$, llamémoslo $a_\alpha$, aunque sean conjuntos no disjuntos entre sí. Sean las funciones constantes $f_\alpha:A_\alpha\rightarrow \{a_\alpha\}$ definidas por $f_\alpha(x_\alpha)=a_\alpha$ para todo $x_\alpha\in A_\alpha$, para cada $\alpha\in J$. Tales funciones son continuas por teorema 18.2. Además, se puede construir el conjunto $\{\vect{a}\}=\prod_{\alpha\in J}\{a_\alpha\}$ donde $\vect{a}= (a_\alpha)_{\alpha\in J}$. Por tanto $\pi_\alpha(\prod_{\beta\in J}A_\beta)=f^{-1}_\alpha(a_\alpha)$. Se tiene que $\prod_{\beta\in J}A_\beta=\bigcap_{\alpha\in J}\pi^{-1}_\alpha(f^{-1}_\alpha(a_\alpha))\neq \varnothing$
+\section{Tema 2 Sección 19 Ejercicio 10}
+Sea $A$ un conjunto y $\{X_\alpha\}_{\alpha\in J}$ una familia indexada de espacios y $\{f_\alpha\}_{\alpha\in J}$ una familia indexada de funciones $f_\alpha:A\rightarrow X_\alpha$
+\begin{itemize}
+\item \bf (a) \rm Veamos que existe una única topología mas gruesa sobre $A$ relativa a la que hace continua a $f_\alpha$.
+\end{itemize}
+Llamemos $\mathcal{T}$ a la topología sobre $A$ que hace continua a las $f_\alpha$. Entonces, si $U_\alpha$ son abiertos de $X_\alpha$ entonces los $f^{-1}_\alpha(U_\alpha)$ son elementos de la topología $\mathcal{T}$ de $A$. Por tanto la topología mas gruesa es la que menos elementos tiene, la que tiene como abiertos los conjuntos  $f^{-1}_{\alpha_1}(U_{\alpha_1})\cap f^{-1}_{\alpha_2}(U_{\alpha_2})\cap ...\cap  f^{-1}_{\alpha_n}(U_{\alpha_n})$ para algún $n\in \mathbb{Z}_+$. 
+\begin{itemize}
+\item \bf (b) \rm Sea
+\begin{eqnarray}
+\mathcal{S}_\beta=\{f^{-1}_\beta(U_\beta)|U_\beta \text{ es abierto de }X_\beta\}
+\end{eqnarray}
+y sea $\mathcal{S}=\bigcup_{\beta \in J}\mathcal{S}_\beta$. Veamos que $\mathcal{S}$ es una subbase para $\mathcal{T}$.
+\end{itemize}
+Si fuera $\mathcal{S}$ una subbase, los elementos de la base $\mathcal{B}$ se podrían escribir como intersecciones finitas de elementos de la subbase $B=\bigcap_{i=1}^n S_i$. Como los elementos de la base son
+\begin{eqnarray}
+B=\bigcap_{i=1}^n \left(f^{-1}_{\alpha_i}(U_{\alpha_i})\right)
+\end{eqnarray}
+y como $f^{-1}_{\alpha_i}(U_{\alpha_i}) = f^{-1}_{\alpha_i}(\bigcup_{\beta\in J}U_\beta)=\bigcup_{\alpha_i\in J}f^{-1}_{\alpha_i} (U_{\alpha_i})$, puesto que $f^{-1}_{\alpha_i} (U_\beta)=\varnothing$ si $U_\beta\notin X_{\alpha_i}$, se tiene que  
+\begin{eqnarray}
+B=\bigcap_{i=1}^n \left(\bigcup_{\alpha_i \in J}f^{-1}_{\alpha_i}(U_{\alpha_i})\right).
+\end{eqnarray}
+Como $S_i=\bigcup_{\beta_i\in J}f^{-1}_{\beta_i}(U_{\beta_i})$ son elementos de $\mathcal{S}$, se tiene que $\mathcal{S}$ es una subbase de $\mathcal{T}$ sobre $A$. 
+\begin{itemize}
+\item \bf (c) \rm Veamos que la aplicación $g:Y\rightarrow A$ es continua relativa a $\mathcal{T}$ si, y solo si, las aplicaciones $f_\alpha\circ g$ son continuas.
+\end{itemize}
+Si $g:Y\rightarrow A$ son continuas relativas a $\mathcal{T}$, entonces $f_\alpha\circ g$ es continua relativa a $\mathcal{T}$ por ser convolución de dos funciones continuas. Por el contrariao, supongamos que $f_\alpha\circ g$ es continua relativa a $\mathcal{T}$. Entonces, $(f_\alpha\circ g)^{-1}(U_\alpha)$ es un abierto del espacio $Y$. Como $g^{-1}(f_\alpha^{-1}(U_\alpha))=(f_\alpha\circ g)^{-1}(U_\alpha)$ y puesto que $f_\alpha$ son continuas y puesto que los elementos de la base son $\bigcap_{i=0}^{n}f_{\alpha_i}^{-1}(U_{\alpha_i})\subset f_\alpha^{-1}(U_\alpha)$, se tiene que $f_\alpha^{-1}(U_\alpha)=V$ es abierto de $A$. Por tanto, $g^{-1}(V)$ es abierto de $Y$. Luego $g$ es continua.
+\begin{itemize}
+\item \bf (d) \rm Sea $f:A\rightarrow \prod_{\alpha\in J}X_\alpha$ definida por $f(a)=(f_\alpha(a))_{\alpha\in J}$ y sea $Z$ definido como el subespacio $f(A)$ del espacio producto $\prod_{\alpha\in J}X_\alpha$. Veamos que la imagen por $f$ de cada elemento de $\mathcal{T}$ es un abierto del subespacio $Z$.
+\end{itemize}
+Sea $U\in \mathcal{T}$. Lo que hay que demostrar es que $f(U)=Z\cap V$, donde $V$ es un abierto de $\prod_{\alpha\in J}X_\alpha$, es un elemento de la topología del subespacio $Z$ de $\prod_{\alpha\in J}X_\alpha$. Sean $V_\alpha$ abiertos de $X_\alpha$, para un número finito de $\alpha\in J$, o son todo $X_\alpha$. Entonces $\bigcap_{i=0}^n f^{-1}_{\alpha_i}(V_{\alpha_i})$ es un abierto de $A$. Entonces $U=A\cap\bigcap_{i=0}^n f^{-1}_{\alpha_i}(V_{\alpha_i})$ también es un abierto de $A$. Además $f(U)=(f_\alpha(U))_{\alpha\in J}=\left(f_\alpha(A)\cap \bigcap_{i=0}^n f^{-1}_{\alpha_i}(V_{\alpha_i})\right)_{\alpha\in J}$. Es decir, $f(U)=(f_\alpha(A)\cap \bigcap_{i=0}^n f_\alpha(f^{-1}_{\alpha_i}(V_{\alpha_i}))_{\alpha\in J}=(f_\alpha(A)\cap V_\alpha)_{\alpha\in J}$. Puesto que $f^{-1}_{\alpha_i}(V_{\alpha_i})=\bigcup_{\alpha_i\in J}f^{-1}_{\alpha_i}(V_{\alpha_i})$ se tiene que \begin{eqnarray}
+f_\alpha(f^{-1}_{\alpha_i}(V_{\alpha_i}))=f_\alpha(\bigcup_{\alpha_i\in J}f^{-1}_{\alpha_i}(V_{\alpha_i}))=V_\alpha\nonumber.
+\end{eqnarray}
+Por tanto $f(U)=(f_\alpha(A)\cap V_\alpha)_{\alpha\in J}=(f_\alpha(A))_{\alpha\in J}\cap (V_\alpha)_{\alpha\in J}$. Como $V=\bigcap_{\alpha\in J}\pi^{-1}_{\alpha}(V_\alpha)$ donde $V_\alpha$ es abierto de $X_\alpha$, para un número finito de $\alpha\in J$, o es $X_\alpha$; resulta que $f(U)=f(A)\cap V$. Por tanto, $f(U)$ es un abierto de la topologia de subespacio del espacio producto $\prod_{\alpha\in J}X_\alpha$.
+
+
+\end{document}

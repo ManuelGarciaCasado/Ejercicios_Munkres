@@ -1,0 +1,50 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 19 Ejercicio 1}
+Veamos la demostración del teorema 19.2. Sea $B_\alpha$ es elemento de la base $\mathcal{B}_\alpha$ de la topología sobre $X_\alpha$ para cada $\alpha\in J$. Veamos que la colección de los conjuntos
+\begin{eqnarray}
+\prod_{\alpha\in J} B_\alpha\nonumber
+\end{eqnarray}
+es una base de la topología por cajas sobre $\prod_{\alpha\in J} X_\alpha$. Si $U_\alpha$ es abierto de $X_\alpha$ que contiene al elemento $\vect{x}(\alpha)$, se tiene que $\vect{x}(\alpha)\in B_\alpha\subset U_\alpha$ por ser $B_\alpha$ elemento de la base de $X_\alpha\in J$. Entonces, como $B_\alpha\subset U_\alpha \text{ para todo }\alpha$ implica que $\prod_{\alpha\in J} B_\alpha\subset \prod_{\alpha\in J} U_\alpha$ y como $\vect{x}(\alpha)\in B_\alpha \text{ para todo }\alpha$ implica que $ \vect{x}\in\prod_{\alpha\in J} B_\alpha$, se tiene que $\vect{x}\in\prod_{\alpha\in J} B_\alpha\subset \prod_{\alpha\in J} U_\alpha$. Por tanto, la familia de conjuntos $\prod_{\alpha\in J} B_\alpha$ forma una base sobre $\prod_{\alpha\in J} X_\alpha$ de la topología por cajas.
+
+Sea $B_\alpha$ es elemento de la base $\mathcal{B}_\alpha$ de la topología sobre $X_\alpha$ para un número finito de $\alpha\in J$ y $B_\alpha=X_\alpha$ en el resto de los $\alpha\in J$. Si $U_\alpha$ es abierto de $X_\alpha$ para un número finito de valores de $\alpha$ y es $U_\alpha=X_\alpha$ en el resto, y $U_\alpha$ contiene al elemento $\vect{x}(\alpha)$, se tiene que $\vect{x}(\alpha)\in B_\alpha\subset U_\alpha$ por ser $B_\alpha$ elemento de la base de $X_\alpha\in J$. Entonces, como $B_\alpha\subset U_\alpha \text{ para todo }\alpha$ implica que $\prod_{\alpha\in J} B_\alpha\subset \prod_{\alpha\in J} U_\alpha$ y como $\vect{x}(\alpha)\in B_\alpha \text{ para todo }\alpha$ implica que $ \vect{x}\in\prod_{\alpha\in J} B_\alpha$, se tiene que $\vect{x}\in\prod_{\alpha\in J} B_\alpha\subset \prod_{\alpha\in J} U_\alpha$. Por tanto, la familia de conjuntos $\prod_{\alpha\in J} B_\alpha$ forma una base sobre $\prod_{\alpha\in J} X_\alpha$ de la topología producto.
+
+\section{Tema 2 Sección 19 Ejercicio 2}
+Veamos la demostración del teorema 19.3. Sea $A_\alpha$ es  subespacio de $X_\alpha$ para cada $\alpha\in J$. Veamos que $\prod_{\alpha\in J} A_\alpha$ es subespacio de $\prod_{\alpha\in J} X_\alpha$ tanto en la topología por cajas como en la topología producto. Si $U_\alpha$ es abierto en la topologia de $A_\alpha$ como subespacio de $X_\alpha$, se puede escribir como $V_\alpha \cap A_\alpha$, con $V_\alpha$ abierto en $X_\alpha$. Entonces como, por teorema 19.1, $\prod_{\alpha\in J} V_\alpha$ es una base de la topología por cajas de $\prod_{\alpha\in J} X_\alpha$, si $U_\alpha$ es abierto de $X_\alpha$; o $\prod_{\alpha\in J} V_\alpha$ es una base de la topología producto de $\prod_{\alpha\in J} X_\alpha$, si $U_\alpha$ es abierto de $X_\alpha$ o es igual a $X_\alpha$ para un número finito de valores de $\alpha$; se tiene que 
+
+\begin{eqnarray}
+\prod_{\alpha\in J} U_\alpha=\prod_{\alpha\in J} \left(V_\alpha\cap A_\alpha\right)=\left(\prod_{\alpha\in J} V_\alpha\right)\cap \left(\prod_{\alpha\in J}A_\alpha\right)
+\end{eqnarray}
+es una base de $\prod_{\alpha\in J}A_\alpha$ como subespacio de $\prod_{\alpha\in J}X_\alpha$.
+
+\section{Tema 2 Sección 19 Ejercicio 3}
+Veamos la demostración del teorema 19.4. Veamos que si cada $X_\alpha$ es un espacio de Hausdorff entonces $\prod_{\alpha\in J}X_\alpha$ es espacio de Hausdorff. Si $X_\alpha$ es de Hausdorff, existen entornos $U_\alpha$ de $x_\alpha$ y $V_\alpha$ de $y_\alpha$ tales que $U_\alpha \cap V_\alpha=\varnothing$. Como $U_\alpha$ y $V_\alpha$ son elementos de la base de $X_\alpha$ o son todo $X_alpha$ para un número finito de $\alpha\in J$, se tiene que $\prod_{\alpha\in J}U_\alpha$ y $\prod_{\alpha\in J}V_\alpha$ son elementos de la bese de $\prod_{\alpha\in J}X_\alpha$ tanto en topología por cajas como en topología producto. Además, como son entornos de $\vect{x}$ y de $\vect{y}$ respectivamente, y como
+
+\begin{eqnarray}
+\prod_{\alpha\in J} U_\alpha\cap \prod_{\alpha\in J} V_\alpha=\prod_{\alpha\in J} \left(U_\alpha\cap V_\alpha\right)=\varnothing\nonumber
+\end{eqnarray}
+se tiene que  $\prod_{\alpha\in J}X_\alpha$ también es de Hausdorff.
+\section{Tema 2 Sección 19 Ejercicio 4}
+Veamos que $\left(X_1\times X_2\times ...\times X_{n-1}\right)\times X_n$ es homeomorfo a $X_1\times X_2\times ...\times X_n$. Se vió en el ejercicio 2 de la sección 5 que existe una biyección entre $X_1\times X_2\times ...\times X_n$ y $ \left(X_1\times X_2\times ...\times X_{n-1}\right)\times X_n$. Sea $J=\{1,2,...,n\}$,  $X=\prod_{\alpha\in J}X_\alpha$,  $Y=\prod_{\alpha\in J-\{n\}}X_\alpha$ y $Z=X_n$ Entonces la función $f:Y\times Z\rightarrow X$ definida por $f(\left(y_1,y_2,...,y_{n-1}\right)\times z)=(x_1,x_2,...,x_n)$ tal que $y_\alpha=x_\alpha$ si $\alpha\neq n$ y $z=x_n$ es biyectiva y continua, puesto que para cada abierto $U\in X$, el conjunto $ f^{-1}(U)$ es abierto en $Y\times Z$. Por tanto, $ \left(X_1\times X_2\times ...\times X_{n-1}\right)\times X_n$ es homeomorfo a $X_1\times X_2\times ...\times X_n$.
+\section{Tema 2 Sección 19 Ejercicio 5}
+Veamos que una de las implicaciones de el teorema 19.6 se aplica a la topología por cajas. Veamos que si $f :A\rightarrow \prod_{\alpha \in J}X_\alpha$ es continua en la topología por cajas, las funciones  $f_\alpha :A\rightarrow X_\alpha$ son continuas en la topología de $X_\alpha$. Como la proyección $\pi_\alpha:\prod_{\alpha\in J}X_\alpha\rightarrow X_\alpha$ es continua, $f_\alpha =  \pi_\alpha\circ f$ y la convolución de dos funciones continuas es continua (teorema 18.2), se tiene que $f_\alpha$
+es continua. Pero si las $f_\alpha:A\rightarrow X_\alpha$ son continuas en $X_\alpha$ y $U_\alpha$ es abierto de $X_\alpha$, la funcion $f :A\rightarrow \prod_{\alpha \in J}X_\alpha$ no es necesariamente continua, ya que $f^{-1}(\prod_{\alpha\in J}U_\alpha)$ no es necesariamente un abierto de $A$ porque la intersección  de infinitos conjuntos dada por $\bigcap_{\alpha\in J }f^{-1}_\alpha(U_\alpha)$ puede no ser abierta.
+
+\section{Tema 2 Sección 19 Ejercicio 6}
+Sea la sucesión $\vect{x}_1,\vect{x}_2,...$
+elementos del espacio producto $\prod_{\alpha\in J}X_\alpha$. Veamos que la sucesión converge a $\vect{x}$ si, y sólo si, la sucesión $\pi_\alpha(\vect{x}_1),\pi_\alpha(\vect{x}_2),...$ converge a $\pi_\alpha(\vect{x})$ para cada $\alpha$. 
+
+Suponiendo que los $\vect{x}_1,\vect{x}_2,...$ convergen a $\vect{x}$, de la definición de convergencia de una sucesión, para cada entorno $U\subset \prod_{\alpha\in J}X_\alpha$ de $\vect{x}$ existe un $N\in \mathbb{Z}_+$ tal que $\vect{x}_{n}\in U$ para todo $n\geq N$. Por tanto, para cada $\alpha \in J$ existe un abierto $U_\alpha =\pi_\alpha(U)$ de $\pi_\alpha(\vect{x})$ tal que existe un $N\in \mathbb{Z}_+$ tal que $\pi_\alpha(\vect{x}_{n})\in U_\alpha$ para todo $n\geq N$. Es decir, los $\pi_\alpha(\vect{x}_1),\pi_\alpha(\vect{x}_2),...$ convergen a $\pi_\alpha(\vect{x})$ para cada $\alpha \in J$
+
+Reciprocamente, supongamos que
+los $\pi_\alpha(\vect{x}_1),\pi_\alpha(\vect{x}_2),...$ convergen a $\pi_\alpha(\vect{x})$ para cada $\alpha \in J$. Entonces se tiene que para cada $\alpha \in J$ existe un abierto $U_\alpha$ de $X_\alpha$ que contiene a $\pi_\alpha(\vect{x})$ y un $N\in \mathbb{Z}_+$ tal que $\pi_\alpha(\vect{x}_{n})\in U_\alpha$ para todo $n\geq N$. Por tanto, por definición de base de topología producto,  existe un abierto $U=\bigcap_{\alpha \in J}\pi^{-1}_{\alpha}(U_\alpha)$ que contiene a $\vect{x}$ y a los $\vect{x}_n=\pi^{-1}_\alpha(\pi_\alpha(\vect{x}_n))$ para todos los $n\geq N$. En la función inversa de las proyecciónes de la definición de $U$ se tiene que $U_\alpha$ es abierto de $X_\alpha$ para un número finito de $\alpha$ y es $X_\alpha$ en otro caso. Por tanto, si fuera topología por cajas, tendríamos una insersección infinita de abiertos que no se garantiza que $U$ sea un abierto.
+
+
+\end{document}

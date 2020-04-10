@@ -1,0 +1,62 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 1 Ejercicio Complementario 6}
+Veamos que el principio del máximo es equivalente al principio del buen orden. Veamos que decir i)"si existe un conjunto $X$ y una relación de orden parcial estricta $\prec$ sobre él entonces existe subconjunto de $X$ que es simplemente ordenado maximal", es lo mismo que decir que ii)"si $X$ es un conjunto, entonces existe una relación de orden en $X$ tal que está bien ordenado". Sean las definiciones del ejercicio 5, donde $A$ es un subconjunto bien ordenado de $X$ y $\mathcal{A}$ es el conjunto de pares $(A,<_A)$ donde $<_A$ es un orden en $A$, y el orden parcial estricto  $(A,<_A)\prec (B,<_B)$ es tal que $(A,<_A)$ es una sección de $(B,<_B)$, habiendo una biyección entre $A$ y una sección de $B$ que conserva el orden. Según el pricipio del máximo, existe un subconjunto $\mathcal{B}\subset \mathcal{A}$ tal que $\mathcal{B}$ es simplemente ordenado maximal. Esto quiere decir que si $(A,<_A)\in \mathcal{B}$ que para todo $(B,<_B)\in \mathcal{B}$ se cumple que $(A,<_A)\prec (B,<_B)$ o $(B,<_B)\prec (A,<_A)$ y además no existe otro $\mathcal{C}$ que cumpla esto y que cumpla $\mathcal{B}\subsetneq \mathcal{C}$. Por tanto, si $(B',<')$ está formado por $B'=\cup_{(B,<_B)\in \mathcal{B}}B$ y $<'=\cup_{(B,<_B)\in \mathcal{B}}<_B$ entonces $<'$ es un buen órden según se vió en ejercicio 5. Por tanto, si $(B', <')\in \mathcal{B}$ entonces $\mathcal{B}$ es el conjunto simplemente ordenado maximal. Dado que $B'$ está bien ordenado, si hay un $x\notin B'$, sea $(B'\cup \{x\},<'')$ donde $<''$ se define por $b<x$ para todo $b\in B'$. Por tanto $B'= S_x$ y $(B',<')\prec (B'\cup \{x\},<'')$ pero se ha supuesto que $(B'\cup \{x\}, <'')\notin \mathcal{B}$, lo cual es una contradicción. Por tanto, $B'=X$. Lo cual significa que $X$ está bien ordenado. Luego i)$\Rightarrow$ ii). Veamos que ii)$\Rightarrow$ i). Por tanto, sea $X$ bien ordenado por una relación de orden $<$ y $C$ un subconjunto de $X$ ordenado por $<_C$. Entonces, el ejercicio 1 asegura que dada una función $\rho$ que aplica secciones de $C$ en una sección $S_\alpha$ de $X$ entonces existe una única función $h_C:C\rightarrow S_\alpha$ tal que $h_C(a)= \rho(h_C|S_a)$, para todo $a\in C$ y para algún $\alpha\in X$. Por el ejercicio 2, $h_C$ preserva el orden. Pero dado que no existe la función que preserve el orden entre dos secciónes diferentes de $X$, solo puede ser que $C$ no es una sección de $X$ ni tampoco es $X$. Por tanto, si $a<_C b$ y $c<_D d$ se pueden construir otra  funcion $h_D: D \rightarrow S_a$, que preservan el orden de $<_D$ a $<_C$ para cualesquiera $a,b \in C$ y  $c,d \in D$. Además, por conservar el orden, estas funciones son biyecciones. Por tanto, se puede definir la relación parcial simple de $(D,<_D)\prec (C,<_C)$ y $(C,<_C)\prec (X,<)$, como en el ejercicio 5, para la familia $\mathcal{A}$ de pares $(A,<_A)$ de subconjuntos de $X$ con orden $<_A$. Puesto que $(X,<_X)$ es un elemento maximal de $\mathcal{A}$, como se vió en los ejercicios 6 y 7 de la sección 11, si $(X,<_X)$ pertenece el subconjunto $\mathcal{B}$ de $\mathcal{A}$, entonces $\mathcal{B}$ es el conjunto maximal simplemente ordenado. Por tanto, ii)$\Rightarrow$ i).
+
+\section{Tema 1 Ejercicio Complementario 7}
+Veamos que el axioma de elección es equivalente al teorema del buen orden.
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Sea la torre $(T,<)$ con $T\subset X$ bien ordenado con orden $<$ definida por una función de elección $c:\mathcal{B}\rightarrow \cup_{B\in\mathcal{B}}B$ con $c(B)\in B$ y donde $\mathcal{B}$ es una familia de subconjuntos de $X$ y tal que $x=c(X-S_x(T))$ para todo $x\in T$.
+Veamos que dos torres $(T_1,<_1)$ y $(T_2,<_2)$ son iguales o son la una sección de la otra. Supongamos que hay una $h:T_1\rightarrow T_2$ que preserva el orden y $h(T_1)$ es $T_2$ o una sección de $T_2$. Entonces, por ejercicio 2, $h(\alpha)=\text{mínimo}[T_2-h(S_\alpha)]$ para todo $\alpha\in T_1$. Además, si $T_2=X$ entonces $h(\alpha)=\text{mínimo}[X-h(S_\alpha)]$ para todo $\alpha\in T_1$ y también $h(\alpha)=\text{mínimo}[X-S_h(\alpha)]$. Pero $\alpha=c(X-S_\alpha(T_1))$ para todo $\alpha\in T_1$, por tanto, como $h$ ha de ser única y biyectiva, solo es posible que sea la función identidad $h(\alpha)=\alpha$ para todo $\alpha\in T_1$ y que la función de elección sea $ \text{minimo}(B)=c(B)$ para todo $B\in \mathcal{B}$. Por tanto existe una función de elección biyectiva que conserva el órden dada por $h:T_1\rightarrow T_2$ y $h(\alpha)=\alpha$ para todo $\alpha\in T_1$. por tanto $T_1=T_2$ o $T_1$ es una sección de $T_2$. Por tanto, $(T_1,<_1)$ es $(T_2,<_2)$ o $(T_1,<_1)\prec (T_2,<_2)$
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Sea $(T,<)$ una torre en $X$ y $T\neq X$. Veamos que hay una torre en $X$ de la cual $(T,<)$ es una sección. Sea $\mathcal{S}$ el conjunto de torres de $X$. Dado Por ejercicio 1, se puede construir un $T'=\cup_{(T,<_T)\in \mathcal{S}}T$ y $<'=\cup_{(T,<_T)\in \mathcal{S}}<_T$ tal que $<'$ es un buen órden, según se vió en ejercicio 5. Además, como $h:T\rightarrow T'$ donde $h(x)=x$ cumple que $h(T)=T'$ o $h(T)$ es una seción de $T'$ entonces $(T,<)\prec (T',<')$ o $(T,<)=(T',<')$ para cualquier $(T,<)\in \mathcal{S}$. Dado que $T'$ está bien ordenado, si hay un $x\notin T'$, sea $(T'\cup \{x\},<'')$ donde $<''$ se define por $b<x$ para todo $b\in T'$. Por tanto $T'= S_x$ y $(T',<')\prec (T'\cup \{x\},<'')$ pero se ha supuesto que $(T'\cup \{x\}, <'')\notin \mathcal{T}$, lo cual es una contradicción. Por tanto, $T'=X$. Entonces $(T',<')$ es una cota superior para cualquier subconjunto de $\mathcal{S}$. Por tanto, como $T'\neq T$, $(T',<')$ es el elemento maximal de $\mathcal{S}$. Por tanto, toda $(T,<)$ tal que $T\neq T'$ es una sección de $(T',<')$. 
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Sea $\{(T_k,<_k)|k\in K\}$ la familia de todas las torres de $X$. Sea $T=\cup_{k\in K}T_k$ y $<=\cup_{k\in K}<_k$. Según se ha visto en el apartado (b), la unión de todas las torres de $X$ es una torre tal que cualquier tra torre es un sección de ésta, y tal que el conjunto de esta torre es $X$. 
+\section{Tema 1 Ejercicio Complementario 8}
+
+
+
+
+
+
+
+\begin{eqnarray}
+\int_S \partial_i u_j n_i n_j d^2 x=0 \nonumber\\
+\partial_i u_i=0 \nonumber
+\end{eqnarray}
+\begin{eqnarray}
+u(x+\epsilon+\frac{\epsilon}{2},y,z)-u(x+\epsilon-\frac{\epsilon}{2},y,z)\nonumber\\+v(x,y+\epsilon+\frac{\epsilon}{2},y,z)-v(x,y+\epsilon-\frac{\epsilon}{2},z)\nonumber\\+w(x,y,z+\epsilon+\frac{\epsilon}{2})-w(x,y,z+\epsilon-\frac{\epsilon}{2})\nonumber\\
+-u(x-\epsilon+\frac{\epsilon}{2},y,z)+u(x-\epsilon-\frac{\epsilon}{2},y,z)\nonumber\\-v(x,y-\epsilon+\frac{\epsilon}{2},y,z)+v(x,y-\epsilon-\frac{\epsilon}{2},z)\nonumber\\-w(x,y,z-\epsilon+\frac{\epsilon}{2})+w(x,y,z-\epsilon-\frac{\epsilon}{2})=0\nonumber\\
+ u(x+\frac{\epsilon}{2},y,z)-u(x-\frac{\epsilon}{2},y,z) \nonumber\\
++v(x,y+\frac{\epsilon}{2},z)-v(x,y-\frac{\epsilon}{2},z)\nonumber\\
++w(x,y,z+\frac{\epsilon}{2})-w(x,y,z-\frac{\epsilon}{2})=0\nonumber
+\end{eqnarray}
+\begin{eqnarray}
+u(x+\epsilon+\frac{\epsilon}{2},y,z)-u(x-\frac{\epsilon}{2},y,z) \nonumber\\
++v(x,y+\frac{\epsilon}{2},z)-v(x,y-\frac{\epsilon}{2},z)\nonumber\\
++w(x,y,z+\frac{\epsilon}{2})-w(x,y,z-\frac{\epsilon}{2})\nonumber\\
++v(x,y+\epsilon+\frac{\epsilon}{2},y,z)-v(x,y+\epsilon-\frac{\epsilon}{2},z)\nonumber\\+w(x,y,z+\epsilon+\frac{\epsilon}{2})-w(x,y,z+\epsilon-\frac{\epsilon}{2})\nonumber\\
+-u(x-\epsilon+\frac{\epsilon}{2},y,z)+u(x-\epsilon-\frac{\epsilon}{2},y,z)\nonumber\\-v(x,y-\epsilon+\frac{\epsilon}{2},y,z)+v(x,y-\epsilon-\frac{\epsilon}{2},z)\nonumber\\-w(x,y,z-\epsilon+\frac{\epsilon}{2})+w(x,y,z-\epsilon-\frac{\epsilon}{2})=0\nonumber
+\end{eqnarray}
+\begin{eqnarray}
+u(x+\epsilon+\frac{\epsilon}{2},y,z) -2u(x-\frac{\epsilon}{2},y,z)+u(x-\frac{3\epsilon}{2},y,z)\nonumber\\
+w(x,y,z+\epsilon+\frac{\epsilon}{2})-2w(x,y,z-\frac{\epsilon}{2})+w(x,y,z-\epsilon-\frac{\epsilon}{2})\nonumber\\
++v(x,y+\epsilon+\frac{\epsilon}{2},y,z)-2v(x,y-\frac{\epsilon}{2},z)+v(x,y-\epsilon-\frac{\epsilon}{2},z)=0
+\end{eqnarray}
+
+
+
+
+\end{document}

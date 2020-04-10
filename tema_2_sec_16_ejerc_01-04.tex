@@ -1,0 +1,30 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 16 Ejercicio 1}
+Veamos que si $Y$ es un subespacio de $X$ y $A$ es un subconjunto de $Y$, entonces la topología que $A$ hereda como subespacio de $Y$ es la misma que la que hereda como subespacio de $X$. Sea $\mathcal{T}$ la topología de $X$ y $\mathcal{T}'$ la topología de subespacio de $Y$. Entonces hay que probar que  $\mathcal{T}'_A=\mathcal{T}_A$. Por definición, se tiene que $\mathcal{T}'=\mathcal{T}_Y$, luego $\mathcal{T}'=\{Y\cap U| U\in \mathcal{T}\}$. Por otro lado, $\mathcal{T}'_A=\{A\cap V| V\in \mathcal{T}'\}$. Entonces $\mathcal{T}'_A=\{A\cap V| V=Y\cap U, U\in \mathcal{T}\}$, entonces  
+$\mathcal{T}'_A=\{A\cap (Y\cap U)|  U\in \mathcal{T}\}$. Como $A$ es subconjunto de $Y$, $A\cap Y=A$. Por tanto, $\mathcal{T}'_A=\{A\cap U|  U\in \mathcal{T}\}=\mathcal{T}_A$.
+
+\section{Tema 2 Sección 16 Ejercicio 2}
+Sean $\mathcal{T},\mathcal{T}'$ topologías sobre $X$ tales que $\mathcal{T}\subsetneq\mathcal{T}'$. Veamos que se puede decir acerca de la topología subespacio sobre el subconjunto $Y$ de $X$. Se tiene que $U\in\mathcal{T}\Rightarrow U\in\mathcal{T}'$ y que existe un $V\in \mathcal{T}'$ tal que $V\notin \mathcal{T}$. Además $\mathcal{T}'_Y=\{A|A=U\cap Y\text{ y }U\in \mathcal{T}'\}$ y $\mathcal{T}_Y=\{A|A=U\cap Y\text{ y }U\in \mathcal{T}\}$. Por tanto, si $A\in\mathcal{T}_Y$ entonces existe un $U\in\mathcal{T}$ tal que $A=U\cap Y$, por tanto existe un $U\in\mathcal{T}'$ tal que $A=U\cap Y$, por tanto $A\in\mathcal{T}'_Y$. Luego $A\in\mathcal{T}_Y\Rightarrow A\in\mathcal{T}'_Y$. Es decir $\mathcal{T}_Y\subset\mathcal{T}'_Y$.
+
+\section{Tema 2 Sección 16 Ejercicio 3}
+Sea $Y=[-1,1]$ y sea $\mathcal{T}$ la topología usual de $\mathbb{R}$.
+Veamos si el conjunto $A=\{x|\frac{1}{2}<|x|<1\}$ es abierto de $\mathcal{T}_{Y}$ o no. Dado que $A=(\frac{1}{2},1)\cup (-1,-\frac{1}{2})=Y\cap[(\frac{1}{2},1)\cup (-1,-\frac{1}{2})]$,  se tiene que $A=Y\cap[(\frac{1}{2},1)\cup (-1,-\frac{1}{2})]$ y como $(\frac{1}{2},1), (-1,-\frac{1}{2})\in \mathcal{T}$, se tiene que $(-\frac{1}{2},-1)\cup (1,\frac{1}{2})\in\mathcal{T}$ y por tanto $A\in \mathcal{T}_Y$.
+Veamos si el conjunto $B=\{x|\frac{1}{2}<|x|\leq 1\}$ es abierto de $\mathcal{T}_{Y}$ o no. Dado que $B=[-1,-\frac{1}{2})\cup (\frac{1}{2},1]=Y\cap[(-2,-\frac{1}{2})\cup (\frac{1}{2},2)]$, se tiene que $B=Y\cap[(-2,-\frac{1}{2})\cup (\frac{1}{2},2)]$ y como $(\frac{1}{2},2), (-2,-\frac{1}{2})\in \mathcal{T}$, se tiene que $(\frac{1}{2},2)\cup (-2,-\frac{1}{2})\in\mathcal{T}$ y por tanto $B\in \mathcal{T}_Y$.
+Veamos si el conjunto $C=\{x|\frac{1}{2}\leq|x|<1\}$ es abierto de $\mathcal{T}_{Y}$ o no. Dado que $C=(-1,-\frac{1}{2}]\cup [\frac{1}{2},1)=Y\cap[(-1,-\frac{1}{2}]\cup [\frac{1}{2},1)]$, se tiene que $C=Y\cap[(-1,-\frac{1}{2}]\cup [\frac{1}{2},1)]$ y como $[\frac{1}{2},1), (-1,-\frac{1}{2}]\notin \mathcal{T}$, se tiene que $[\frac{1}{2},1)\cup (-1,-\frac{1}{2}]\notin\mathcal{T}$ y por tanto $C\notin \mathcal{T}_Y$. Veamos si el conjunto $D=\{x|\frac{1}{2}\leq |x|\leq 1\}$ es abierto de $\mathcal{T}_{Y}$ o no. Dado que $D=[-1,-\frac{1}{2}]\cup [\frac{1}{2},1]=Y\cap[(-2,-\frac{1}{2}]\cup [\frac{1}{2},2)]$, se tiene que $D=Y\cap[(-2,-\frac{1}{2}]\cup [\frac{1}{2},2)]$ y como $[\frac{1}{2},2), (-2,-\frac{1}{2}]\notin \mathcal{T}$, se tiene que $[\frac{1}{2},2)\cup (-2,-\frac{1}{2}]\notin\mathcal{T}$ y por tanto $D\notin \mathcal{T}_Y$.
+Veamos si el conjunto $E=\{x|0<|x|<1\text{ y }1/x\notin \mathbb{Z}_+\}$ es abierto de $\mathcal{T}_{Y}$ o no. Dado que $E=(-1,0)\cup(0,1)-\{1/n\}$ y $n\in \mathbb{Z}-\{0\}$ entonces $E=[\cup_{n\in \mathbb{Z}_+}(\frac{1}{n},\frac{1}{n+1})]\cup[\cup_{n\in \mathbb{Z}_-}(\frac{1}{n},\frac{1}{n-1})]$, se tiene que $E=Y\cap([\cup_{n\in \mathbb{Z}_+}(\frac{1}{n},\frac{1}{n+1})]\cup[\cup_{n\in \mathbb{Z}_-}(\frac{1}{n},\frac{1}{n-1})])$ y como $[\cup_{n\in \mathbb{Z}_+}(\frac{1}{n},\frac{1}{n+1})]\cup[\cup_{n\in \mathbb{Z}_-}(\frac{1}{n},\frac{1}{n-1})]\in \mathcal{T}$, por ser unión de abiertos de $\mathbb{R}$, se tiene que $E\in \mathcal{T}_Y$.
+\section{Tema 2 Sección 16 Ejercicio 4}
+La aplicación $f:X\rightarrow Y$ es abierta si dado el abierto $U$  de $X$, $f(U)$ es abierto de $Y$. Veamos que la aplicación $\pi_1:X\times Y\rightarrow X$ es abierta. Si $U$ es abierto de $X\times Y$ entonces por definición $U=A\times B$ donde $A$ es abierto de $X$ y $B$ es abierto de $Y$. Dado que por definición de proyección $\pi_1(x,y)=x$ $\pi_2(x,y)=y$ para cada $(x,y)\in U$ se tiene que $\pi_1(U)=A$ y $\pi_2(U)=B$ y, por tanto, $\pi_1$ y $\pi_2$ transforman abiertos de $X\times Y$ en abiertos de $X$ e $Y$, respectivamente. Es decir, son funciones abiertas.
+
+
+
+
+
+\end{document}

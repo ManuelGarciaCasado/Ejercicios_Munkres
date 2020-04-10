@@ -1,0 +1,69 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+\section{Tema 1 Ejercicio Complementario 1}
+Sea $J$ un conjunto bien ordenado y $C$ un conjunto. Sea $\mathcal{F}$ el conjunto de todas las aplicaciones que aplican secciones de $J$ en $C$. Veamos que dada una función $\rho:\mathcal{F}\rightarrow C$, existe una única función $h:J\rightarrow C$ tal que $h(\alpha)=\rho(h|S_{\alpha})$ para cada $\alpha\in J$. 
+\begin{itemize}
+\item \bf(a)\rm
+\end{itemize}
+Supongamos que hay otra $k:J\rightarrow C$ que verifica $k(\alpha)=\rho(k|S_{\alpha})$  para cada $\alpha\in J$ y sea $\beta\in J$ el menor elemento para el cual se cumple que $k(\beta)\neq h(\beta)$. Pero todo subconjunto no vacío de $J$ tiene un elemento mínimo. Si $\beta$ es ese mínimo, se tiene que $S_{\beta}=\varnothing$. Entonces, $h(\beta)=\rho(h|S_{\beta})=\rho(\varnothing)=\varnothing$ y $k(\beta)=\rho(\varnothing)=\varnothing$, por tanto $h(\beta)=k(\beta)$ y se contradice la suposición inicial. Si $\beta$ no es el mínimo de $J$, se tendrá que $h(S_{\beta})=k(S_{\beta})$ y por tanto $\rho(h|S_{\beta})=\rho(k|S_{\beta})$. Por tanto, se tiene $k(\beta)=h(\beta)$ que contradice la suposición inicial. 
+\begin{itemize}
+\item \bf(b)\rm
+\end{itemize}
+Veamos que si existe una función $h:S_{\alpha}\rightarrow C$ que verifica $h(x)=\rho(h|S_{x})$ entonces existe una función $k:S_{\alpha}\cup\{\alpha\}\rightarrow C$ que verifica $k(x)=\rho(k|S_{x})$.
+Sea $k$ definida por
+\begin{eqnarray}
+k(x)=\begin{cases}
+h(x)\text{ para } x\in S_{\alpha}\nonumber\\
+\rho(h|S_x)\text{ para }x=\alpha
+\end{cases}
+\end{eqnarray}
+Entonces, se tiene que $k(x)=h(x)$ para todo $x\in S_{\alpha}$ por tanto $k(S_x)=h(S_x)$. Luego $k(x)=\rho(h|S_x)=\rho(k|S_x)$ para todo $x\in S_{\alpha}$. Y cuando $x=\alpha$ se tiene $k(\alpha)=\rho(h|S_{\alpha})=\rho(k|S_{\alpha})$. Por tanto, 
+$k(x)=\rho(k|S_x)$ para todo $x\in S_{\alpha}\cup\{\alpha\}$,  verifica esto en todo su dominio.
+\begin{itemize}
+\item \bf(c)\rm
+\end{itemize}
+Veamos que si $K\subset J$ y para cada $\alpha\in K$ existe una función $h_{\alpha}\in \mathcal{F}$ definida por $h_{\alpha}:S_{\alpha}\rightarrow C$, verificando $h_\alpha(x)=\rho(h_\alpha|S_x)$ para todo $x\in S_\alpha$, entonces existe una función 
+\begin{eqnarray}
+k:\bigcup_{\alpha \in K}S_{\alpha}\rightarrow C\nonumber
+\end{eqnarray}
+que también verifica $k(x)=\rho(k|S_x)$ para todo $x\in \bigcup_{\alpha \in K}S_{\alpha}$. Dado que existe $h_{\alpha}:S_{\alpha}\rightarrow C$, se tiene que $k(S_{\alpha})=h_{\alpha}(S_{\alpha})$ por el ejercicio (b). Por tanto $k(S_{\alpha})$ verifica $k(x)=\rho(k|S_x)$ para todo $x\in S_\alpha$, para todo $\alpha \in K$. Como $k(\cup_{\alpha \in K}S_{\alpha})=\cup_{\alpha \in K}k(S_{\alpha})$ y $\cup_{\alpha \in K}\rho(k|S_\alpha)=\rho\left(\cup_{\alpha \in K}k(S_\alpha)\right)$, por las propiedades de conjuntos en las funciones, se tiene que $k$ también verifica $k(x)=\rho(k|S_x)$ para todo $x\in \cup_{\alpha \in K}S_{\alpha}$.
+\begin{itemize}
+\item \bf(d)\rm
+\end{itemize}
+Veamos que para todo $\beta \in J$ existe una función $h_\beta\in\mathcal{F}$ tal que $h_\beta:S_\beta\rightarrow C$ verificando $h_\beta(x)=\rho(h_\beta|S_x)$ en todo su dominio. Sea $J_0\subset J$ el conjunto de los $\beta$ para los cuales $h_{\beta}:S_{\beta}\rightarrow C$ verifica $h_\beta(x)=\rho(h_\beta|S_x)$. Entonces, si $\beta$ tiene inmediato predecesor $\alpha\in J$ defínase $S_{\beta}=\{\alpha\}\cup S_{\alpha}$. Como $h_{\beta}:S_{\beta}\rightarrow C$ verifica $h_\beta(x)=\rho(h_\beta|S_x)$ en todo su dominio, se tiene que  $S_{\alpha}\subset J_0\Rightarrow \alpha \in J_0$ por ejercicio (b). Por tanto, se tiene que si $\alpha\in J$ es inmediato predecesor de $\beta\in J_0$, $S_{\alpha}\subset J_0\Rightarrow \alpha \in J_0$.
+Si $\beta\in J_0$ no tiene inmediato predecesor, por la indicación, $S_{\beta}=\cup_{\alpha\in\{\gamma|\gamma<\beta\}}S_\alpha$ entonces, como $h_{\beta}:S_{\beta}\rightarrow C$ para todo $\beta\in J_0$, se tiene que $h_{\beta}: \cup_{\alpha\in\{\gamma|\gamma<\beta\}}S_\alpha\rightarrow C$ y, por ejercicio (c), existe un $k:\cup_{\beta\in J_0}\cup_{\alpha\in\{\gamma|\gamma<\beta\}}S_\alpha\rightarrow C$ tal que $k(x)=\rho(k|S_x)$ en todo su dominio. Renombrando $\cup_{\beta\in J_0}\cup_{\alpha\in\{\gamma|\gamma<\beta\}}S_\alpha=S_\delta$ para algún $\delta \in J$, resulta $k:S_{\delta}\rightarrow C$. Renombrando $k=h_{\delta}$ se tiene $h_{\delta}:S_{\alpha}\rightarrow C$ cumple $h_\delta(x)=\rho(h_\delta|S_x)$ en todo su dominio. Entonces, $\delta \in J_0$. Luego $S_{\delta}\subset J_0\Rightarrow \delta \in J_0$. Por el teorema de recursión transfinita, $J_0=J$ y se cumple que para todo $\beta \in J$ existe una función $h_{\beta}:S_{\beta}\rightarrow C$ verificando $h_\beta(x)=\rho(h_\beta|S_x)$.
+\begin{itemize}
+\item \bf(e)\rm
+\end{itemize}
+Por (d) para todo $\beta\in J$ se tiene que existe $h_{\beta}:S_{\beta}\rightarrow C$ cumple $h_\beta(x)=\rho(h_\beta|S_x)$ en todo su dominio. Entonces, por (c) para todo $\beta\in J$ se tiene que $k :\cup_{\beta\in J}S_{\beta}\rightarrow  C$ cumple $k(x)=\rho(k|S_x)$ en todo su dominio. Y por (b) para todo $\beta\in J$ se tiene que $k :\{\beta\}\cup S_{\beta}\rightarrow  C$ cumple $k(x)=\rho(k|S_x)$ en todo su dominio.. Por tanto, para todo $\beta\in J$ se tiene que $k(\beta)=h(\beta)$. Luego, hay una única función  $h:J\rightarrow C$ que cumple $h(x)=\rho(h|S_x)$ en todo su dominio.
+\section{Tema 1 Ejercicio Complementario 2}
+\begin{itemize}
+\item \bf(a)\rm
+\end{itemize}
+Sean $J$ y $E$ conjuntos bien ordenados y $h:J\rightarrow E$. Veamos que las siguientes afirmaciones son equivalentes: (i) $h$ preserva el orden y su imagen es $E$ o una sección de $E$. (ii) $h(\alpha)=\text{mínimo}(E-h(S_\alpha))$ para todo $\alpha$. Si se cumple la afirmación (i), entonces $\alpha < \beta \Rightarrow h(\alpha)<h(\beta)$ para $\alpha, \beta\in J$ y $h(J)=E$ o $h(J)=\{a|a\in E \text{ y }a<b\}=S_b$ para algún $b\in E$. Además, por el ejercicio 1 de la sección 10, si $J$ y $E$ son bien ordenados, ambos tienen la propiedad del supremo. Por tanto, si $\omega$ es el supremo de $K\subset J$, $h(S_\omega)\subset h(K)$. Dado cualquier $\alpha \in S_\omega$, como $\alpha<\omega \Rightarrow h(\alpha)<h(\omega)$ se tiene que $h(\alpha)\in h(S_{\omega})\Rightarrow h(\alpha)\in S_{h(\omega)}=\{a|a\in E\text{ y }a<h(\omega)\}$. Por tanto $h(S_{\omega})\subset S_{h(\omega)}$. Pero dado que $h(K)\subset S_b$ para algún $b\in E$. Pero por ser $E$ bien ordenado, existe $c$ mínimo de los elementos $b\in E$ para los cuales se cumple $h(K)\subset S_b$. Si $\omega \in K$ se tiene que $h(\omega)\in S_c$ y $h(\omega)\notin h(S_\omega)$. Por tanto $h(\omega)$ es el mínimo de los elementos de $E$ que no pertenecen a $h(S_\omega)$. Luego 
+$h(\omega)=\text{minimo}[E-h(S_\omega)]$ para cualquier $\omega\in J$. Veamos que (ii) implica (i). Supongamos que $h(\omega)=\text{minimo}[E-h(S_\omega)]$ para cualquier $\omega\in J$. Sea $B$ el conjunto de los $x$ de $J$ para los cuales  $h(S_x)=S_{h(x)}$. Supongamos que $\alpha\in J$ y $\beta \in S_\alpha \subset B$ y que se cumple que $h(\alpha)\leq h(\beta)$. Entonces $h(\alpha)\in S_{h(\beta)}\cup\{ h(\beta)\}=h(S_\beta)\cup\{ h(\beta)\}\subset h(S_\alpha)$. Pero por definición de $h(\alpha)= \text{mínimo}[E-h(S_\alpha)]$, $h(\alpha)\notin h(S_\alpha)$. Por tanto, $\beta<\alpha \Rightarrow h(\beta) < h(\alpha)$ y $h(S_\alpha)\subset S_{h(\alpha)}$ si $\beta \in S_\alpha\subset B$. Ahora sea $\gamma \in S_{h(\alpha)}$ para cualquier $\alpha \in J$. Entonces $\gamma< h(\alpha)$. Por tanto, $\gamma< \text{mínimo}[E-h(S_\alpha)]$. Por tanto, $\gamma \in h(S_\alpha)$. Por tanto, $S_{h(\alpha)} \subset h(S_\alpha)$ para cualquier $\alpha\in J$. Luego, por lo anterior $h(S_\alpha)=S_{h(\alpha)}$ para todo $\alpha \in B$. Por tanto, como $S_\alpha\Rightarrow \alpha \in B$, $B$ es inductivo. Por teorema de indución transfinita $B=J$. Por tanto, si $\alpha,\beta\in J$ y $\alpha<\beta \Rightarrow h(\alpha)<h(\beta)$ y además $h(S_\alpha)=S_{h(\alpha)}$. Por tanto $J$ preserva el orden. Supongamos que $h(J)\neq E$, entonces sea $x\notin J$, y construyamos un $J'=J\cup \{x\}$ y una $h':J'\rightarrow E$ tal que $h'(J)=h(J)$ y  $h'(x) = \text{mínimo}[E-h'(S_x)]$ Entonces  $h'(x) = \text{mínimo}[E-h'(J)]=\text{mínimo}[E-h(J)]$. Por tanto $h'$ satisface (ii), lo cual implica que $h'(S_x)=h(J)\Rightarrow S_{h'(x)}=h(J)$. Por tanto $h(J)=S_{\text{mínimo}[E-h(J)]}$. Es decir, $h(J)$ es $E$ o una sección de $E$ 
+\begin{itemize}
+\item \bf(b)\rm
+\end{itemize}
+Sea $E$ bien ordenado. Veamos que una sección de $E$ no tiene el mismo tipo de orden que $E$; y que una sección de $E$ no tiene el mismo tipo de orden que otra sección diferente de $E$. Veamos que existe una única función que preserva el orden de $J$ en $E$ y cuya imagen es $E$ o una sección de $E$. Suponiendo que hay una función $h:J\rightarrow E$. Dado $J$ bien ordenado, por el apartado (a), si la función $h$  preserva el orden y su imagen es $E$ o una sección de $E$ entonces $h(x)=\text{minimo}[E-h(S_x)]$. Supongamos que hay otra $k:J\rightarrow E$ que preserva el orden y cuya imagen es $E$ o una sección de $E$. Entonces, $k(x)=\text{minimo}[E-k(S_x)]$. Supongamos que $k(x)=h(x)$ para todo $x<y$ con $x,y\in J$ y $k(y)\neq h(y)$. Entonces, $k(y)=\text{minimo}[E-k(S_y)]$ y $h(y)=\text{minimo}[E-h(S_y)]$, pero $k(S_y)=h(S_y)$. Por tanto, 
+$k(y)=\text{minimo}[E-h(S_y)]=\text{minimo}[E-k(S_y)]=h(y)$. Lo cual contradice la suposición $k(y)\neq h(y)$. Por tanto, hay una única función que preserva el orden y cuya imagen es $E$ o una sección de $E$. Si $J=E$ y una sección de $S_\alpha\subset E$ tuvieran el mismo tipo de orden que $E$ ( $S_\beta\subset E$ con $\alpha < \beta$), habría una única función biyectiva $h:S_\alpha\rightarrow E$ (una única función biyectiva $h:S_\alpha\rightarrow S_\beta$) entre ambos conjuntos dada por $h(x)=\text{minimo}[E-h(S_x)]$ (data por $h(x)=\text{minimo}[S_\beta-h(S_x)]$), pero $E-h(S_\alpha)=\varnothing$ (pero $S_\beta-h(S_\alpha)=\varnothing$) por ser función sobreyectiva. Por tanto, $E=h(S_\alpha)$ ($S_\beta=h(S_\alpha)$) lo cual significa que existe la función identidad $i:E\rightarrow E$ ($i:S_\beta\rightarrow \beta$) dada por $i(\alpha)=\alpha$. contradiciendo el hecho de que $h$ es única. Por tanto, ninguna sección de $E$ tiene el mismo tipo de orden que $E$, ni ninguna sección de $E$ tiene el mismo tipo de orden que otra sección de $E$.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

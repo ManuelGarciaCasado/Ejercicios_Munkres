@@ -1,0 +1,60 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 18 Ejercicio 6}
+Veamos una función $f:\mathbb{R}\rightarrow \mathbb{R}$ que únicamente es contiua en un punto. Supongamos que $f$ es únicamente continua en $x$.  Entonces, por definición, para cada entorno $V$ de $f(x)$, existe un entorno $U$ de $x$ tal que $f(U)\subset V$ y para algún entorno $V'$ de $f(y)$, no existe ningún entorno $U'$ de $y$ tal que $f(U')\subset V'$. Por tanto, veamos una función tal que, si $(f(a),f(b))$ es entorno de $f(x)$, $f(U)\subset (f(a),f(b))$ con $U=(a,b)$ y $V'\subsetneq f(U')$.
+Sea $f(x)=x$  si $x\in \mathbb{Q}$ y $f(x)=0$ en otro caso. Entonces $f(0)=0$ y el intervalo $(f(0)-\epsilon,f(0)+\epsilon)=(-\epsilon,\epsilon)$ es un entorno de $f(0)$ tal que $f((-\epsilon,\epsilon))\subset (-\epsilon,\epsilon)$. Por tanto es $f$ continua en $x=0$. Pero para el entorno $V'=(f(y)-\epsilon, f(y)+\epsilon)\cup(-\epsilon,\epsilon)$ de $f(y)$, con $y\neq 0$, se cumple que: cuando $y\in \mathbb{Q}$, $V'=(y-\epsilon,y+\epsilon)$ y que para ningún entorno  $U=(y-\delta,y+\delta)$ de $y$ se tiene que $f(U)\subset (y-\epsilon,y+\epsilon)$ ya que $ f(U)=\mathbb{Q}\cap (y-\delta,y+\delta)\cup\{0\}$; cuando $ y\notin \mathbb{Q}$,$V'=(-\epsilon,\epsilon)$ y que para ningún entorno  $U=(y-\delta,y+\delta)$ de $y$ se tiene que $f(U)\subset (-\epsilon,+\epsilon)$ ya que $ f(U)=\mathbb{Q}\cap (y-\delta,y+\delta)\cup\{0\}$.
+
+\section{Tema 2 Sección 18 Ejercicio 7}
+
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Definamos una función $f:\mathbb{R}\rightarrow \mathbb{R}$ continua por la derecha para todo $a\in \mathbb{R}$ cuando
+\begin{eqnarray}
+\lim_{x\rightarrow a^+ }f(x)=f(a)\nonumber
+\end{eqnarray}
+Veamos que $f$ es continua considerada como funcion de $\mathbb{R}_l$ en $\mathbb{R}$. Por la definición de continua por la derecha en un punto $a$, se tiene que para todos los puntos $x$ tales que $a<x$ se tiene que existe un $\epsilon>0$ y un abierto $U=(a, a+\epsilon)$ tal que para todos los entornos $V=(f(a)-\delta,f(a)+\delta)$ de $f(a)$ se tiene que $f(U) \subset V$. Si $f$ es una función de $\mathbb{R}_l$ en $\mathbb{R}$, se tiene que $U'=[a,a+\epsilon)$ es un entorno de $a$. Por tanto, si $f: \mathbb{R}\rightarrow \mathbb{R}$ es continua por la derecha, para la función $f: \mathbb{R}_l\rightarrow \mathbb{R}$ se tiene que para todo entorno $V$ de $f(a)$ existe un entorno $U'$ de $a$ en la topología de $\mathbb{R}_l$ tal que $f(U')\subset V$.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Se puede conjeturar qué aplicaciones $f: \mathbb{R}\rightarrow \mathbb{R}$ son continuas cuando se consideran como funciones $f: \mathbb{R}\rightarrow \mathbb{R}_l$. Si $f$ de $\mathbb{R}$ en $\mathbb{R}$ es continua, para todo entorno $U$ de $x$ existe un entorno $V$ de $f(x)$ tal que $f(U)\subset V$, pero hay un $V'$ de $f(x)$ que es entorno de $f(x)$ en la topología $\mathbb{R}_l$, puesto que para cada abierto $(f(x)-\epsilon,f(x)+\epsilon)$ en la topología de  $\mathbb{R}$ existe un abierto de $[f(x),f(x)+\epsilon)$ en la topología de $\mathbb{R}_l$. Pero tiene que darse que $x\in (x-\delta,x+delta)=U$ y que $f(U)\subset [f(x),f(x)+\epsilon)$.  Del mismo modo, si $f: \mathbb{R}\rightarrow \mathbb{R}$ es continua por la derecha, se puede obtener una función $f: \mathbb{R}_l\rightarrow \mathbb{R}_l$ que es continua.
+\section{Tema 2 Sección 18 Ejercicio 8}
+Sea $Y$ un conjunto ordenado con la topoología del orden. Sean $f,g: X\rightarrow Y$ continuas
+\begin{itemize}
+\item \bf (a) \rm Veamos que el conjunto $\{x|f(x)\leq g(x)\}$ es cerrado en $X$.
+\end{itemize}
+Por teorema 18.1, como $f$ y $g$ son continuas, para cada conjunto cerrado $B\subset Y$ los conjuntos $f^{-1}(B)=\{x|f(x)\in B\}$ y $g^{-1}(B)=\{x|g(x)\in B\}$ son cerrados. Los conjuntos del tipo $\{x|a\leq x \leq b\}$ son cerrados en $X$. Sea $X-A_x=\{y|f(x)\leq y\leq g(x)\}$. Entonces $X-A_x$ es cerrado en $Y$ Por tanto $A_x=B_x\cup C_x$ es abierto en $Y$, donde $B_x=\{y|y<f(x)\}$ y $C_x=\{y|g(x)<y\}$ también son abiertos en $Y$. Por continuidad, $f^{-1}(B_x)$ y $g^{-1}(C_x)$ son abiertos. Además $f^{-1}\left(\bigcup_{x\in X}B_x\right)=\bigcup_{x\in X}f^{-1}(B_x)$  y $g^{-1}\left(\bigcup_{x\in X}C_x\right)=\bigcup_{x\in X}g^{-1}(C_x)$ son abiertos también en $X$. Pero $X-\{x|f(x)\leq g(x)\}=\bigcup_{x\in X}\left(f^{-1}(B_x)\cup g^{-1}(C_x)\right)=f^{-1}\left(\bigcup_{x\in X}B_x\right)\cup g^{-1}\left(\bigcup_{x\in X}C_x\right)$ es abierto en $X$. Luego $\{x|f(x)\leq g(x)\}$ es cerrado en $X$.
+\begin{itemize}
+\item \bf (a) \rm Veamos que la función $h:X\rightarrow Y$ definida por $h(x)=\min\{f(x),g(x)\}$ es continua.
+\end{itemize}
+Se ha visto que $A=\{x|f(x)\leq g(x)\}$ es cerrado. Del mismo modo $B=\{x|g(x)\leq f(x)\}$ es cerrado. Se tiene que $X=A\cup B$. Como $f$ y $g $ son continuas, $f|A$ y $g|B$ son continuas por teorema 18.2 (d). Además, si $x\in A\cap B$, $f(x)=g(x)$ y $h(x)=f|A(x)=g|B(x)$. Por tanto, se cumplen las condiciones del teorema del pegamento. Luego $h$ es continua.
+\section{Tema 2 Sección 18 Ejercicio 9}
+Sea $\{A_\alpha\}$ una colección de subconjuntos de $X$ tal que $X=\bigcup_\alpha A_\alpha$. Sean $f: X\rightarrow Y$ y sea $f|A_\alpha$ continua para cada $\alpha$.
+\begin{itemize}
+\item \bf (a) \rm Veamos que si la colección $\{A_\alpha\}$ es finita y si cada elemento de ella es un conjunto cerrado en $X$ entonces $f$ es continua.
+\end{itemize}
+Entonces se tiene que $A_\beta$ es cerrado. Como $X=\bigcup_\alpha A_\alpha$ se tiene que existe un $\beta$ tal que $A_\alpha \cap A_\beta\neq \varnothing$. además, $f|A_\alpha: A_\alpha \rightarrow Y$ y $f|A_\beta: A_\beta\rightarrow Y$ son contínuas. Por tanto, $f|(A_\alpha\cup A_\beta)$ es continua por el lema del pegamento. Del mismo modo, exite un $\gamma$ tal que $(A_\alpha \cap A_\beta)\cap A_\gamma\neq \varnothing $ y tal que $f|A_\gamma:A_\gamma\rightarrow Y$ es continua. Por el lema del pegamento $f|\left(A_\alpha\cup A_\beta \cup A_\gamma\right)$ es continua. Procediendo de este modo un numero finito de veces se tiene que $f|\left(\bigcup_\alpha A_\alpha\right)=f$ es continua.
+\begin{itemize}
+\item \bf (b) \rm Veamos el ejemplo de una colección $\{A_\alpha\}$ que es numerable y que cada elemento de ella es un conjunto cerrado en $X$ pero $f$ no es continua.
+\end{itemize}
+Sea $X=[0,1]$ con la topología usual de $\mathbb{R}$ y sean los conjuntos cerrados $A_1=\{0\}$ y $A_n=[1/n,1/(n+1)]$, para $n>1$, y la función $f:[0,1]\rightarrow \{1\}\cup\{0\}$ tal que $f(x)=0$ si $x\in (0,1]$ y $f(0)=1$. Entonces la colección $\{A_n\}$ es numerable, $[0,1]=\bigcup_{n\in \mathbb{Z}} A_n$. Pero $f|A_n$ es continua para cada $n$ pero $f$ no es continua.
+\begin{itemize}
+\item \bf (c) \rm Veamos que si la colección $\{A_\alpha\}$ es localmente finita (cada entorno $U\subset X$ de $x$ interseca a unos $A_\alpha$ para un numero finito de $\alpha$) y cada $A_\alpha$ es cerrado, entonces $f$ es continua.
+\end{itemize}
+Sean $A_{\alpha(x)}$ los conjuntos cerrados que intersecan al entorno $U$ de $x$ y $\{A_{\alpha(x)}\}$ la colección finita. Defínase $A_x= \bigcup_{\alpha(x)}A_{\alpha(x)}$. Entonces $f|A_x$ es continua por el apartado (a). Como los $A_x$ son cerrados, y como $X$ es un espacio topológico, es la unión finita de cerrados. Entonces existe un número finito de valores de $x$ tales  que $X=\bigcup_{x} A_x$. Por tanto para todo $x\in X$, existe un $y$ tal que $A_x\cap A_y\neq \varnothing$. Por tanto, por apartado (a), $f=f|(\bigcup_{x} A_x)$ es continua.
+\section{Tema 2 Sección 18 Ejercicio 10}
+Saen $f:A\rightarrow B$ y $g:C\rightarrow D$ continuas. Veamos que la función $f\times g:A\times C\rightarrow B\times D$ definida por $(f\times g)(a\times c)=f(a)\times g(c)$ es continua.
+sea $h=f\times g$. Por el teorema 18.4, se tiene que $h(a\times c)=h_1(a\times c)\times h_2(a\times c)$ es continua si $h_1:A\times C\rightarrow B$ y $h_2:A\times C\rightarrow D$ son continuas. Pero $h_1=f\circ \pi_1$ y $h_2=g\circ \pi_2$, donde $\pi_1: A\times C \rightarrow A$ y $\pi_2: A\times C \rightarrow C$ son las proyecciones del primer y segundo factor, respectivamente. Estas funciones son continuas, ya que $\pi_1^{-1}(U)=U\times C$ es abierto y $\pi_2^{-1}(V)=A\times V$ es abierto si $U$ y $V$ son abiertos en $A$ y $C$, respectivamente. Por teorema 18.2, la composición de dos funciones continuas es una función continua. Por tanto, $h_1$ es continua y $h_2$ es continua. Por tanto, $f\times g=h$ es continua.
+
+
+
+
+
+\end{document}

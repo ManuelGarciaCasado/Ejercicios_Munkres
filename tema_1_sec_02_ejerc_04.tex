@@ -1,0 +1,92 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+
+\section{Sección 2 Ejercicio 4}
+Sea \(f:A \longrightarrow B\) y \(g:B \longrightarrow C\) y \(C_0 \subset C\).
+\newline
+\bf (a) \rm 
+\newline Demostración de que
+\begin{equation}
+\left( g \circ f\right)^{-1} \left(C_0\right) = f^{-1}\left(g^{-1} \left(C_0 \right) \right)
+\end{equation}
+Se tiene que
+\begin{equation}
+\begin{aligned}
+\left( g \circ f \right)^{-1} \left( C_0 \right) = \left\{ a | \left(g \circ f \right)\left( a\right) \in C_0 \right\}
+\\
+= \left\{ a | \left(a,c\right) \in \left\{\left(a',c' \right)|\text{ para algún } b \in B, f\left( a'\right)= b \text{ y }  g \left( b \right)=c' \right\}, c \in C_0 \right\}
+\\
+= \left\{ a | \text{ para algún } b \in B, f\left( a\right)= b \text{ y }  g \left( b \right) \in C_0 \right\}
+\\
+= \left\{ a | \text{ para algún } b \in B, f\left( a\right)= b \text{ y }  b \in \left\{b'| g \left( b' \right) \in C_0 \right\} \right\}
+\\
+= \left\{ a | \text{ para algún } b \in B, f\left( a\right)= b \text{ y }  b \in g^{-1}\left( C_0\right) \right\}
+\\
+= \left\{ a | f \left(a\right) \in g^{-1}\left( C_0\right) \right\}
+\\
+=f^{-1} \left( g^{-1}\left( C_0\right) \right)
+\end{aligned}
+\end{equation}
+\bf (b) \rm Si \(f\) inyectiva y \(g\) inyectiva, entonces \( g\circ f \) es inyectiva. 
+\newline
+Sea \(f\) inyectiva, entonces \( [ f(a)=f(a')]\Rightarrow [a=a']\)
+\newline
+Sea \(g\) inyectiva, entonces \( [ g(b)=g(b')]\Rightarrow [b=b']\)
+\newline
+Por tanto, \([(g \circ f)(a) = (g \circ f)(a')] \Leftrightarrow \)
+\newline
+\(\Leftrightarrow [g ( f(a)) = g ( f(a'))] \Rightarrow   [ f(a) = f(a')] \Rightarrow [a=a'] \)
+\newline
+\bf (c) \rm Si \([(g \circ f)(a) = (g \circ f)(a')] \Rightarrow [a=a'] \), se puede a firmar que \([f(a) = g (a')] \Rightarrow [a=a'] \). Veamos que si \([(g \circ f)(a) = (g \circ f)(a')] \Rightarrow [a=a'] \), se puede a firmar que \([g(f(a))=g(f(a'))] \Rightarrow [a=a'] \Rightarrow [f(a)=f(a')]\) por la definición de \(f\). Además, supongamos que \(f\) es no inyectiva, es decir, \(f(a)=f(a')=b \) y \(a \neq a' \) para algún \(b \in B\), entonces \([f(a)=f(a')=b\) y \(g(f(a)) \neq g(f(a'))] \), luego \( [ g(b) \neq g(b)\) para algún \(b]\). Lo cual es absurdo. Por tanto, si \(g \circ f\) es inyectiva, entonces \(f\) es inyectiva.
+\newline
+\bf (d) \rm Si \(f\) sobreyectiva y \(g\) sobreyectiva, entonces \( g\circ f \) es sobreyectiva. 
+\begin{equation}
+\begin{aligned}
+\text{ Es decir, si}
+\\
+[b \in B] \Rightarrow [b=f\left( a\right) \text{ para almenos un } a \in A]
+\\ \text{y}
+\\
+[c \in C] \Rightarrow [c=g\left( b\right) \text{ para almenos un } b \in B]
+\\ \text{entonces}
+\\
+[c \in C] \Rightarrow [c=g\left( b\right) \text{ para almenos un } [b \in B]]
+\\ \Rightarrow [c=g\left( b\right)
+\text{ para almenos un } [b=f\left( a\right) \text{ para almenos un } a \in A]]
+\\ \text{ por tanto } \\
+[c \in C] \Rightarrow [c=g\left( f\left( a\right)\right) \text{ para almenos un } a \in A]
+\end{aligned}
+\end{equation}
+Por tanto, \(g \circ f \) es sobreyectiva.
+\newline
+\bf (e) \rm Sea \(g \circ f\) sobreyectiva. Entonces
+\begin{equation}
+\begin{aligned}\\
+[c \in C] \Rightarrow [c=g\left( f\left( a\right)\right) \text{ para almenos un } a \in A]
+\end{aligned}
+\end{equation}
+Es decir
+\begin{equation}
+\begin{aligned}
+\\
+[c \in C] \Rightarrow [(a,c) \in \left\{ \left(a'',c'' \right)|\text{ para algún } b \in B, f\left( a''\right)= b \text{ y } \right. \\ \left.  g \left( b \right)=c'' \right\} \text{ para almenos un } a \in A]
+\end{aligned}
+\end{equation}
+Por lo tanto,
+\begin{equation}
+\begin{aligned}
+\\
+[c \in C] \Rightarrow [g\left( b\right)= c\text{ para almenos un } b \in B]
+\end{aligned}
+\end{equation}
+Entonces \(g\) es sobreyectiva.
+\newline
+\bf (f) \rm Si \(g\) y \(f\) son inyectivas, \( g \circ f\) es inyectiva.\newline Si \(g\) y \(f\) son sobreyectivas, \( g \circ f\) es sobreyectiva.\newline Si  \( g \circ f\) es inyectiva, \( f\) es inyectiva. \newline Si \( g \circ f\) es sobreyectiva,  \( g \) es sobreyectiva.
+\end{document}

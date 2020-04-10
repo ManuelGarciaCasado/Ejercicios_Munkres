@@ -1,0 +1,45 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 10 Ejercicio 1}
+Se vió en el ejecicio 13 y 14(c) de la sección 3 que todo conjunto ordenado tiene la propiedad de ínfimo si, y solo si, tiene la propiedad del supremo.
+Veamos que si $A$ es un conjunto bien ordenado entonces tiene la propiedad del supremo.
+Por definición de conjunto bien ordenado, todo subconjunto no vacío $A_0\subset A$ tiene mínimo. Por definición de propiedad del supremo, hay que demostrar que, dada una relación de orden $<$ en $A$, si todo subconjunto no vacío $A_0\subset A$ tiene mínimo, $A_0$ tiene supremo (esto es mínimo de cotas superiores de $A_0$). Sea $A^*_0$ el conjunto de cotas superiores de $A_0$. Formalmente, $A^*_0=\{x| a \leq x\text{ para todo } a\in A_0 \text{ y }x\in A\}$. Si fuera $A_0=A$, $A^*_0$ tendría almenos un elemento. El mínimo elemento $b$ de $A^*_0$ existe debido a que $A$ es conjunto bien ordenado y a que $A^*_0\subset A$. Entonces $b$ es el mínimo de la cotas superiores de $A_0$. Por tanto, $b$ es el supremo de $A_0$. Supongamos que $A_0=A$ no tiene la propiedad del supremo.
+Luego, $A$ tiene la propiedad del supremo. 
+\section{Tema 1 Sección 10 Ejercicio 2}
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que si un conjunto es bien ordenado entonces todo elemento suyo excepto el máximo del conjunto (si lo hay) tiene inmediato sucesor. Si $A$ es ordenado con relación de orden $<$, $b\in A$ es inmediato sucesor de $a\in A$ si, y solo si, el conjunto $B=\{x| a<x<b\}$ es el conjunto vacío. Si $A$ es bien ordenado, todo subconjunto no vacío tiene mínimo. Supongamos que para todo par de elementos de  $A$ existe un elemento menor que el mayor de ellos y mayor que el menor de ellos. Entonces, supongamos que $B=\{x|\text{ para todo } a\in A \text{ tal que } a<x<b \text{ y } b\in A\}$ y $B\neq \varnothing$ entonces $B$ tiene un mínimo $c$, puesto que $B\subset A$. Entonces, $c\in B \Rightarrow a<c<b$. Sea ahora $C=\{x|\text{ para todo } a\in A \text{ tal que } a<x<c\}$. Este conjunto es no vacío por la suposición de que no hay inmediatos sucesores en $A$. Por tanto tiene un mínimo $d$ de $C$. Pero $a<d<c$ y $a<c<b$ implica $a<d<b$. Luego $c$ ya no es el mínimo elemento de $B$, lo cual es absurdo. Por tanto, $B$ es vacío y todo elemento de conjunto bien ordenado tiene inmediato sucesor.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos que hay un conjunto que no es bien ordenado y en el cual todo elemento suyo tiene inmediato sucesor. Sea $A=\{x|x=1/n \text{ donde }n\in \mathbb{Z}_{+}\}$. $A$ no tiene mínimo, ya que  el ínfimo $0$ no pertenece a $A$, y además como $1/(n+1)<1/n\Leftrightarrow n<n+1$ el conjunto $B=\{x|1/n<x<1/(1+n), x\in A, n\in\mathbb{Z}_{+}\}$ es vacío. 
+\section{Tema 1 Sección 10 Ejercicio 3}
+Veamos si $\mathbb{Z}_{+}\times \{1,2\}$ y $\{1,2\}\times\mathbb{Z}_{+}$ que son bien ordenados con el orden del diccionario tienen el mismo orden o no. Dos conjuntos $A$ y $B$ con relaciones de orden $<_A$ y $<_B$ se dice que tienen el mismo tipo de orden si hay una función $f:A\rightarrow B$ biyectiva que preserva el orden:
+\begin{eqnarray}
+a<_A b\Rightarrow f(a)<_B f(b)\nonumber
+\end{eqnarray}
+Entonces $\mathbb{Z}_{+}\times \{1,2\}$ y $\{1,2\}\times\mathbb{Z}_{+}$ con el orden del diccionario tienen el mismo tipo de orden si existe una función biyectiva $f:\{1,2\}\times\mathbb{Z}_{+}\rightarrow\mathbb{Z}_{+}\times \{1,2\}$ que preserva el orden. Supongamo que existe tal función $f$. Entonces $f(2,1)=(n,i)$ para algún $n\in\mathbb{Z}_{+}$ y algún $i\in\{1,2\}$. Entonces $(2,1)$ tiene infinitos predecesores $a$, pero no hay suficientes $f(a)$ tales que $f(a)<f(2,1)$ en $B$ ya que $n$ y $i$ son finitos. Por tanto, no hay tal función biyectiva. Luego, $\{1,2\}\times\mathbb{Z}_{+}$ y $\mathbb{Z}_{+}\times \{1,2\}$ no tienen el mismo tipo de orden.
+\section{Tema 1 Sección 10 Ejercicio 4}
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que hay un conjunto $A$ simplemente ordenado que no está bien ordenado si, y sólo si, algún subconjunto suyo tiene el mismo tipo de orden que $\mathbb{Z}_{-}$, que tiene el orden usual. Sea $B\subset A$ numerable. Por definición de mismo tipo de orden entre $B$ y $\mathbb{Z}_{-}$, hay una función biyectiva $f:\mathbb{Z}_{-}\rightarrow B$ que preserva el órden. Veamos que si $A$ no tiene mínimo, hay una función biyectiva $f:\mathbb{Z}_{-}\rightarrow B$ con $B\subset A$. Si $A$ no tiene mínimo, pero está ordenado, hay algún $x\in A$ tal que $x$ es cota superior de algún $B\subset A$ numerable. Sea $a$ el supremo de $B$ y $b_1\leq a$ el mayor elemento de $B$. Entonces $f(-1)= b_1$. Sea $b_2$ el mayor elemento de $B-\{b_1\}$ y $f(-2)= b_2$. Sea $b_2$ el mayor elemento de $B-\{b_1,b_2\}$ y $f(-3)= b_3$. Suponiendo que $b_n$ es el mayor elemento de $B-\{b_1,b_2,...,b_{n-1}\}$ y $f(-n)= b_n$ se cumple que $b_{n+1}$ es el mayor elemento de $B-\{b_1,b_2,...,b_{n}\}$ y $f(-n-1)= b_{n+1}$. Por tanto para todo $n\in \mathbb{Z}_{+}$ se puede encontrar un mayor elemento de  $B-\{b_1,b_2,...,b_{n-1}\}$ tal $f(-n)= b_{n}$. Por tanto existe un $B=\cup_{n\in \mathbb{Z}_{+}}\{b_n\}$ sin mínimo tal que $f(\mathbb{Z}_{-})=B$. Ahora veamos que si hay función biyectiva $f:\mathbb{Z}_{-}\rightarrow B$ que preserva orden entonces $A\supset B$ no tiene mínimo. Si es biyectiva, $f(\mathbb{Z}_{-})=B$ y preserva el orden, se tiene que $-m<-n\Rightarrow f(-m)<f(-n)$ y por ser biyectiva, para todo $b_n\in B$ se tiene que hay algún $-m<f^{-1}(b_n)$ y por tanto $f(-m)<b_n$. Luego no hay mínimo en $B$ y por tanto, no hay mínimo en $A$. Luego $A$ no es bien ordenado si, y solo si, hay un $B\subset A$ que tiene el mismo tipo de orden que $\mathbb{Z}_{-}$
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos que si $A$ es simplemente ordenado y todo subconjunto numerable suyo esta bien ordenado, entonces $A$ está bien ordenado. Supongamos que $A$ no esta bien ordenado. Sea $a_1$ el mínimo de la unión de los conjuntos numerables de $A$, entonces habrá un $a_2\in A$ tal que $a_2<a_1$ ya que de lo contrario, $a_1$ sería el mínimo. Además, suponiendo que $a_{n-1}<a_{n-2}$ con $a_{n-1},a_{n-2}\in A$, tiene que haber un $a_n\in A$ tal que $a_{n}<a_{n-1}$ porque de lo contrario, $a_{n-1}$ sería el mínimo. Por tanto, el mínimo de $A$ no está en el conjunto $B=\{a_1,a_2,...\}$. Pero, puesto $B$ es numerable, esto contradice el hecho de que todo subconjunto numerable tiene mínimo en $A$. Por tanto, el mínimo de $A$ está en $B$ y $A$ está bien ordenado.
+\section{Tema 1 Sección 10 Ejercicio 5}
+Veamos que el teorema del buen orden implica el axioma de elección. El teorema dice que si $A$ es un conjunto, entonces hay una relación de orden tal que $A$ tiene buen orden. Y el axioma de elección dice que dada una familia $\mathcal{A}$ existe un conjunto $C$ formado por un único elemento de cada elemento $A\in \mathcal{A}$, de tal manera que el cardinal de $C\cap A$ es uno. Sea $a_1\in A$ el mínimo elemento según el orden que dice el teorema. Entonces $A-\{a_1\}$ tiene mínimo por ser subconjunto de $A$. Sea $a_2\in A-\{a_1\}$ ese mínimo. Por tanto, suponiendo que $a_n$ es mínimo de $A-\{a_1,a_2,...,a_{n-1}\}$ se puede encontrar un $a_{n+1}$ que es mínimo de $A-\{a_1,a_2,...,a_{n}\}$. Sea $A_1=A$ y $A_n=A-\{a_1,a_2,...,a_{n-1}\}$ para cada  $n\in \mathbb{Z}_{+}-\{1\}$ Entonces se puede construir la familia  $\mathcal{A}=\{A_1,A_2,...\}$ y se tiene que existe un $C=\{a_1,a_2, a_3,...\}$ tal que $C\cap A_n=\{a_n\}$. 
+Por tanto, implica el principio de elección.
+  
+\end{document}

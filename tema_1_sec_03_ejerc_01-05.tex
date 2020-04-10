@@ -1,0 +1,43 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1, Sección 3, Ejercicio 1}
+
+Veamos la relación de equivalencia definida por \((x_0,y_0)R(x_1,y_1)\) tal que
+\(R=\{((x_0,y_0),(x_1,y_1))| (x_0,y_0) \text{ y } (x_1,y_1) \text{ son equivalentes si } x^{2}_{0}-y^{2}_{0}=x^{2}_{1}-y^{2}_{1} \}\). La propiedad reflexiva se tiene de que \((x_0,y_0)R(x_0,y_0)\) ya que la igualdad en definición de \(R\) es reflexiva: \( x^{2}_{0}-y^{2}_{0}=x^{2}_{0}-y^{2}_{0} \). Se da la propiedad de simetria \((x_0,y_0)R(x_1,y_1)=(x_1,y_1)R(x_0,y_0)\) ya que la igualdad en definición de \(R\) es simétrica: \( x^{2}_{0}-y^{2}_{0}=x^{2}_{1}-y^{2}_{1} \Leftrightarrow  x^{2}_{1}-y^{2}_{1}=x^{2}_{0}-y^{2}_{0} \). Se da la propiedad transitiva ya que si \((x_0,y_0)R(x_1,y_1)\) entonces \((x_1,y_1)R(x_2,y_2)\) ya que la igualdad en definición de \(R\) es transitiva: si \( x^{2}_{0}-y^{2}_{0}=x^{2}_{1}-y^{2}_{1} \text{ y } x^{2}_{1}-y^{2}_{1}=x^{2}_{2}-y^{2}_{2} \), entonces \( x^{2}_{0}-y^{2}_{0}=x^{2}_{2}-y^{2}_{2} \).
+\newline
+La clase de equivalencia \(E\) se define por medio de un elemento del plano \((x_0,y_0) \in \mathbb{R} \times \mathbb{R}\) y la relación de equivalencia \(R\) como el conjunto de subconjuntos de \(\mathbb{R} \times \mathbb{R}\) definidos por \(E((x_0,y_0),R)=\{((x,y)|(x,y)R(x_0,y_0)\}\)
+
+\section{Tema 1, Sección 3, Ejercicio 2}
+Sea \(C\) relación sobre \(A\) y \(A_0 \subset A\). Sea \(C\cap A_0 \times A_0\) restricción de \(C\) a \(A_0\). Como \(C=\{(x,y)\text{ tal que } x\in A \text{, } y \in A \text{ y } xRy\} \text{ y } A_0 \subset A\), entonces \(C\cap A_0 \times A_0 =\{(x,y) \text{ es tal que } x\in A_0 \text{, } y \in A_0 \text{ y } xRy\}\) ya que \((A\times B)\cap(C\times D)\Leftrightarrow (A \cap C)\times (B \cap D)\). Es decir, \(C\cap A_0 \times A_0\)  es una relación sobre \(A_0\).
+\section{Tema 1, Sección 3, Ejercicio 3}
+Sea \(C\) simétrica y transiva, estonces \(C\) es reflexiva?
+Como \(C\) es simétrica \(xCy\) entonces \(yCx\). Como es transitiva, entonces \(xCy\) y \(yCx\Rightarrow xCx\). Para afirmar la propiedad de simetría, primero se tiene que definir \(C \subset A\times A \text{ tal que } C = \{(x,y)| x \text{ está relacionado con } y\}\). En esta definición tiene que estar claro si \(x\) esta relacionado con \(x\) o si \(x\) no esta relacionado con \(x\)  puesto que \((x,x)\in C\) o  \((x,x)\notin C\). Las propiedades de transitiva y simétrica se deducen tambien de la definición de la relación.Contra ejemplo: sea  \(C \subset A\times A \text{ tal que } C = \{(x,y)| x \text{ es distinto de } y\}\). Si \(x\neq y\) entonces \(y\neq x\). Pero si  \(x\neq y\) y \(y\neq x\) no se tiene que \(x\neq x\).
+\section{Tema 1, Sección 3, Ejercicio 4}
+Sea \(f: A\longrightarrow B\) sobreyectiva. Y \(a_0 \sim a_1\) en A si \(f(a_0)=f(a_1)\).
+\newline
+\bf (a)\rm Veamos que tiene las propiedades de relación de equivalencia. (Reflexiva) Por la definición de función, se cumple\(f(a_0)=f(a_0)\) para todo \(a_0\). Por tanto, \(a_0 \sim a_0\). (Simétrica) Como \(f(a_0)=f(a_1) \Leftrightarrow f(a_1)=f(a_0)\). Por tanto \(a_0 \sim a_1 \Rightarrow a_1 \sim a_0\). (Transitiva) Como de \(f(a_0)=f(a_1) \text{ y }f(a_1)=f(a_2) \text{, se tiene que }  f(a_0)=f(a_2)\). Por tanto de \(a_0 \sim a_1 \text{ y } a_1 \sim a_2 \text{, se tiene que } a_0 \sim a_2\)
+\newline
+\bf (b) \rm Veamos que si \(A^{*}\) es el conjunto de las clases de equivalencia (esto es \(E=\{y| y\sim x\}\in A^{*} \text{ y } E\subset A\)), entonces existe una función biyectiva \(g: A^{*} \longrightarrow B\). Veamos que \(g\) es sobreyectiva. Por la definición de sobreyectiva, \([b\in B] \Rightarrow [b=g(E) \text{ para almenos un } E\in A^{*}]\). Por otro lado \(f\) es sobreyectiva, luego \([b\in B] \Rightarrow [b=f(a) \text{ para almenos un } a\in A]\). Supongamos \(\exists b\in B\) tal que \(b\neq g(E)\) para todo \(E\in A^{*} \text{ y toda } g\). Pero \([b\in B] \Rightarrow [b=f(a) \text{ para almenos un } a\in A]\Rightarrow [b=f(a)=f(c) \text{ para almenos un } c = a \in A]\),  entonces \([b\in B] \Rightarrow [b=f(c)\text{ para almenos un } c\sim a]\) Por tanto \([b\in B] \Rightarrow [b=f(c) \text{ para almenos un } c\in E \in A^{*}]\). Por tanto, ya que \(E \subset A\), existe una \(g\) que incumpla lo anterior haciendo que \(g(E)=f(c)\)  y, por tanto \(g(E)=b\)  . Luego existe \(g\) sobreyectiva.  Veamos si hay \(g\) inyectiva. \(g:A^{*}\longrightarrow B\) sería inyectiva si \([b=g(E)=g(E')=b']\Rightarrow [E=E']\). Sea \(b=g(E)=g(E')=b'\) entonces  \(\exists c \in E, c'\in E' \text{ con } E, E'\subset A \text{ tales que } f(c)=b\text{ y } f(c')=b\text{ por ser } f \text{ sobreyectiva }\). Pero si \( f(c)=b=b'= f(c')\) entonces \( c \sim c'\). Por tanto, \( E = E'\). Por lo tanto existe \(g\) inyectiva.
+\section{Tema 1, Sección 3, Ejercicio 5}
+Sea \(\mathbb{R} \times \mathbb{R}\supset S =\{(x,y)|y=x+1 \text{ y } 0<x<2\}, S' =\{(x,y)|y-x \in \mathbb{Z}\}\).
+\newline
+\bf (a) \rm Veamos que \(S'\) es relacion de equivalencia de en \(\mathbb{R}\).
+(Reflexividad) Se tiene que \(xS'x\), ya que \(y=x \Rightarrow x-x=0\in \mathbb{Z} \text{, con }(x,x)\in S'\) (Simetría) Veamos que si \(xS'y\) entonces \(yS'x\). Como \(xS'y \Rightarrow x-y=a\in  \mathbb{Z} \Rightarrow y-x=-a  \in \mathbb{Z}\Rightarrow yS'x\). Por tanto, se cumple simetría. (Transitividad) Veamos que  si \(xS'y\) y\(yS'z\) entonces \(xS'z\). Como \(xS'y \Rightarrow x-y=a\in  \mathbb{Z}  \text{ y como } yS'z \Rightarrow x-y=a\in  \mathbb{Z} \text{, entonces }x-z= x-y + y-z=a + b \in \mathbb{Z}\Rightarrow xS'z\). Ahora veamos que \(S \subset S'\). Si \((x,y)\in S\), entonces \(y=1+x\) y \(0<x<2\). Luego \((x,y)\in S \Rightarrow y-x=1 \Rightarrow y-x\in\mathbb{Z}\Rightarrow (x,y)\in S'\)
+\newline
+\bf (b) \rm Sean \(R_{i}\subset A\times A\) para \(i=1, 2, 3...\) relaciones de equivalencia sobre \(A\). Veamos que \(R_{i} \cap R_{j}\) es relación de equivalencia en A.
+Tengamos en cuenta que \((A\times B)\cap (A'\times B')=(A \cap A')\times (B \cap B')\)
+(Reflexividad) Si \(xR_{i}x \text{ y } xR_{j}x\) entonces \(x(R_{i}\cap R_{j})x\). Esto se tiene porque como \((x,x)\in R_{i} \text{ y } (x,x)\in R_{j} \) entonces \((x,x)\in (R_{i} \cap R_{j})\). (Simetría) Si \([xR_{i}y\Rightarrow yR_{i}x]\text{ y } [xR_{j}y \Rightarrow yR_{j}x]\) entonces \([x(R_{i}\cap R_{j})y\Rightarrow y(R_{i}\cap R_{j})x]\). Esto se tiene porque como \([(x,y)\in R_{i} \Rightarrow (y,x) \in R_{i}] \text{ y } [(x,y)\in R_{j}\Rightarrow (y,x)\in R_{j}]\) entonces \([(x,y)\in (R_{i} \cap R_{j})\Rightarrow (y, x)\in R_{i}] \text{ y }[(x,y)\in (R_{i} \cap R_{j})\Rightarrow (y, x)\in R_{j}]\). Por tanto \([(x,y)\in (R_{i} \cap R_{j})\Rightarrow (y, x)\in R_{i}\cap R_{j}]\). Entonces si \(R_{B}\) son relaciones de equivalencia en \(A\) para todo \(B \in \mathcal{B}\) entonces \(\bigcap\limits_{B\in \mathcal{B}}R_{B} \) es relación de equivalencia en \(A\). \newline
+\bf (c) \rm Como \(T=\bigcap \limits_{i\in \mathbb{N}}S_{i}\text{ con } S_{i} \text{ tales que }S\subset S_{i}\). Pero \(A\subset B \text{ y } A\subset C \Leftrightarrow A\subset B\cap C\). Entonces \(S\subset T\). Pero \(S\subset S\Rightarrow S\in \{S_{i}|S\subset S_{i}\} \Rightarrow \bigcap \limits_{i\in \mathbb{N}}S_{i}\subset S\). Luego \( S\subset T\subset S\). Es decir \(T= S\). Las clases de equivalencia de \(E\) de \(T\) en \(x\in A\) vienen dadas por \(E=\{ y | yTx \}\)
+% Uncomment the followinteng two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Complementarios Ejercicio 1}
+Sea $H$ un grupo que es un espacio topológico satisfaciendo el axioma $T_1$. Veamos que $H$ es un grupo topológico si, y sólo si, la aplicación de $H\times H$ a $H$ que envía $x\times y$ a $x\cdot y^{-1}$ es continua. Por ser $H$ un grupo topológico, la aplicaciones $f:H\times H\rightarrow H$, definida por $f(x\times y )=x\cdot y$, y $g:H\rightarrow H$, definida por $g(x)=x^{-1}$, son continuas. Se tiene que la identidad $i:H\rightarrow H$ definida por $i(x)=x$ es continua, (ver ejercicio 18.3). Por tanto, como el producto escalar de funciones continuas es continua (ver ejercicio 18.10), $i\times g: H\times H\rightarrow H\times H$ es continua. La composición de funciones continuas $f\circ (i\times g)$ es continua (teorema 18.2(c)). Por tanto, la función $f(i(x)\times g(y))=x\cdot y^{-1}$ es continua.
+
+Ahora supongamos que $h: H\times H\rightarrow H$ definida por $h(x\times y)= x\cdot y^{-1}$ es continua. Se sabe que $h$ es continua en cada variable por el ejercio 18.11. Por tanto, $h(x_0\times y) = x_0 \cdot y^{-1}$ es continua y $h(x\times y_0) = x\cdot y^{-1}_0$ es continua. En particular, cuando $x_0$ e $y^{-1}_0$ son el elemento neutro $1$ del grupo, se tiene que $g(y)=h(1\times y) =  1\cdot y^{-1}=y^{-1}$ es continua y que $i(x)=x\cdot 1=x$ es continua.
+\section{Tema 2 Complementarios Ejercicio 2}
+\begin{itemize}
+\item \bf (a) \rm Veamos que $(\mathbb{Z},+)$ es un grupo topológico.
+\end{itemize}
+Como $(\mathbb{Z},+)$ cumple el axioma $T_1$ los conjuntos unipuntuales $\{a\},\{b\}$ son cerrados en $\mathbb{Z}$. Por tanto, para la función $f:\mathbb{Z}\times\mathbb{Z}\rightarrow \mathbb{Z}$ definida por $f(a\times b)=a+b$ se tiene que $f^{-1}(\{a\})=\{c\times b|c+b=a,c,b\in\mathbb{Z}\}$ es cerrado; porque $\mathbb{Z}\times\mathbb{Z}-f^{-1}(\{a\})$ es abierto, por ser la unión de abiertos $\{c\times b|c+b>a,a\in \mathbb{Z}\}$ y $\{c\times b|c+b<a,a\in \mathbb{Z}\}$. Por tanto $f$ transforma cerrados en cerrados. Por teorema 18.1(3), $f$ es continua. Ahora sea $g:\mathbb{Z}\rightarrow \mathbb{Z}$ definida por $g(a)=-a$. Entonces $g(\{a\})=\{-a\}$. Por tanto $g$ transforma cerrados en cerrados. Por teorema 18.1(3), $g$ es continua. Por ser $g$ y $f$ continuas, el grupo $(\mathbb{Z},+)$ es grupo topológico.
+\begin{itemize}
+\item \bf (b) \rm Veamos que $(\mathbb{R},+)$ es un grupo topológico.
+\end{itemize}
+Se procede exactamente igual que en (a) pero sustituyendo $\mathbb{Z}$ por $\mathbb{R}$
+\begin{itemize}
+\item \bf (c) \rm Veamos que $(\mathbb{R}_+,\cdot)$ es un grupo topológico.
+\end{itemize}
+Como $(\mathbb{R}_+,\cdot)$ cumple el axioma $T_1$ los conjuntos unipuntuales $\{a\},\{b\}$ son cerrados en $\mathbb{R}_+$. Por tanto, para la función $f:\mathbb{R}_+\times\mathbb{R}_+\rightarrow \mathbb{R}_+$ definida por $f(a\times b)=a\cdot b$ se tiene que $f^{-1}(\{a\})=\{c\times b|c\cdot b=a,c,b\in\mathbb{R}_+\}$ es cerrado; porque $\mathbb{R}_+\times\mathbb{R}_+-f^{-1}(\{a\})$ es abierto, por ser la unión de abiertos $\{c\times b|c\cdot b>a,a\in \mathbb{R}_+\}$ y $\{c\times b|c\cdot b<a,a\in \mathbb{R}_+\}$. Por tanto $f$ transforma cerrados en cerrados. Por teorema 18.1(3), $f$ es continua. Ahora sea $g:\mathbb{R}_+\rightarrow \mathbb{R}_+$ definida por $g(a)=1/a$. Entonces $g(\{a\})=\{1/a\}$. Por tanto $g$ transforma cerrados en cerrados. Por teorema 18.1(3), $g$ es continua. Por ser $g$ y $f$ continuas, el grupo $(\mathbb{R}_+,\cdot)$ es grupo topológico.
+\begin{itemize}
+\item \bf (d) \rm Veamos que $(S^1,\cdot)$ es un grupo topológico, donde $S^1$ es el conjunto de todos los números complejos $z$ tales que $|z|=1$.
+\end{itemize}
+Como $(S^1,\cdot)$ cumple el axioma $T_1$ los conjuntos unipuntuales $\{a\}$, con $a=a_1+ia_2$ y $\{b\}$ con $b=b_1+ib_2$ son cerrados en $S^1$. Por tanto, para la función $f:S^1\times S^1\rightarrow S^1$ definida por $f(a\times b)=a\cdot b=a_1b_1-a_2b_2+i(a_2b_1+b_2a_1)$. Entonces, si $a\cdot a^*=|a|=1$ y $b\cdot b^*=|b|=1$, 
+\begin{eqnarray}
+a_1^2+a_2^2=1\nonumber\\
+b_1^2+b^2_2=1\nonumber\\
+(a_1b_1-a_2b_2)^2+(a_2b_1+b_2a_1)^2\nonumber\\
+=(a_1^2+a_2^2)b_1^2-a_1b_1a_2b_2+a_2b_1b_2a_1+(a_1^2+a_2^2)b_2^2\nonumber\\
+=1\cdot 1+0\nonumber
+\end{eqnarray}
+Se tiene que $f^{-1}(\{a\})=\{c\times b|c\cdot b=a,c,b\in S^1\}$ es cerrado; porque $S^1\times S^1-f^{-1}(\{a\})$ es abierto, por ser la unión de abiertos $\{e^{i\phi_1}\times e^{i\phi_2}|\phi_1+\phi_2 >\phi_3 \text{ y }\phi_1,\phi_2,\phi_3\in [0,2\pi)\}$ y $\{e^{i\phi_1}\times e^{i\phi_2}|\phi_1+\phi_2 <\phi_3 \text{ y }\phi_1,\phi_2,\phi_3\in [0,2\pi)\}$. Por tanto $f$ transforma cerrados en cerrados. Por teorema 18.1(3), $f$ es continua. Ahora sea $g:S^1\rightarrow S^1$ definida por $g(a)=g(e^{i\phi})=e^{-i\phi}=a^{-1}$ con $\phi\in [0,2\pi)$. Entonces $g(\{a\})=\{a^{-1}\}$. Por tanto $g$ transforma cerrados en cerrados. Por teorema 18.1(3), $g$ es continua. Por ser $g$ y $f$ continuas, el grupo $(S^1,\cdot)$ es grupo topológico.
+\begin{itemize}
+\item \bf (e) \rm Veamos que el grupos general lineal de matrices de orden $n$ no singulares $GL(n)$, bajo la multiplicación de matrices, es un grupo topológico.
+\end{itemize}
+Se tiene que el grupo $GL(n)$ tiene la tooología de subespacio de $\mathbb{R}^{n^2}$. Sea $f:\mathbb{R}^{n^2}\times \mathbb{R}^{n^2}\rightarrow\mathbb{R}^{n^2}$ la multiplicación de matrices dada por $f(A,B)=A\cdot B =C$. Por lema 21.4, $f$ es continua en la topología usual y en la topología de subespacio, por teorema 18. 2(b). Del mismo, la funcion $g:\mathbb{R}^{n^2}\rightarrow\mathbb{R}^{n^2}$ definida por $g(A)=A^{-1}$ donde $A\cdot A^{-1}=\mathbb{1}$ es continua.
+Por tanto, $GL(n)$ con la multiplicación de matrices es un grupo topológico.
+\section{Tema 2 Complementarios Ejercicio 3}
+Sea $H$ un subespacio de $G$. Veamos que si $H$ es un subgrupo del grupo topologico $G$, entonces $H$ y $\overline{H}$ son grupos topológicos. Por ser $G$, grupo topológico, existen funciones $f : G\times G\rightarrow G$, dada por $f(x\times y)=x\cdot y$, y $g: G\rightarrow G$, dada por $g(x)=x^{-1}$, que son continuas. Por ser $H$ un subespacio de $G$, si $U\in G$ es abierto, $U\cap H$ es abierto en $H$. Por, tanto, si $f^{-1}(U\cap H)= f^{-1}(U)\cap f^{-1}(H)= f^{-1}(U)\cap \{x\times y |x\cdot y \text{ y } x,y\in H\}$. Luego $f^{-1}(U\cap H)=f^{-1}(U)\cap H\times H=V_1\times V_2\cap H\times H$, con $V_1$ y $V_2$ abiertos en $G$. Por tanto $f^{-1}(U\cap H)= (V_1\cap H)\times (V_2 \cap H)$ que es abierto en $H\times H$. Del mismo modo, si $g^{-1}(U\cap H)= g^{-1}(U)\cap g^{-1}(H)= g^{-1}(U)\cap \{x^{-1} | x\in H\}$. Luego $g^{-1}(U\cap H)=g^{-1}(U)\cap H=V\cap H$, con $V$ abierto en $G$. Por tanto $g^{-1}(U\cap H)= V\cap H$ que es abierto en $H$. Por otro lado, si $x_n\times y_n$ es una sucesión de puntos en $H\times H$ que converge a $x\times y$ entonces $ x\times y \in \overline{H}\times \overline{H}$, ya que $\overline{H}\times \overline{H}=\overline{H\times H}$, por teorema 19.5. Por teorema 21.3, $f(x_n\times y_n)$ converge a $f(x\times y)$ y entonces $f(x\times y)\in \overline{H}$. Por tanto, continua la extensión $x\cdot y: \overline{H}\times \overline{H}\rightarrow \overline{H}$ de $f$ es continua. Procediendo igual, la extensión $x^{-1}:\overline{H}\rightarrow \overline{H}$ es continua. Por tanto, $H$ y $\overline{H}$ son grupos topológicos.
+
+
+\end{document}

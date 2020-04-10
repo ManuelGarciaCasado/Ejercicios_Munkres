@@ -1,0 +1,117 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 21 Ejercicio 11}
+\begin{itemize}
+\item \bf (a) \rm Sea $(s_n)$ una sucesión acotada de números reales y $s_n\leq s_{n+1}$ para todo $n\in \mathbb{Z}_+$. Veamos que $(s_n)$ converge.
+\end{itemize}
+Si la sucesión $(s_n)$ está acotada, tendrá cotas superiores. Sea $m$ el mínimo de las cotas superiores. Entonces $m$ es el supremo de las $(s_n)$. Esto es $s_n\leq m$ para todo $n\in \mathbb{Z}_+$. Por tanto, $m-s_1\geq m- s_2\geq m- s_{n}\geq m- s_{n+1}$. Entonces, exite un $N$ tal que dado un $\epsilon>0$ se tiene que $d(s_{n+1},m)\leq d(s_{n},m)\leq d(s_{N},m)\leq \epsilon\leq...\leq d(s_{1},m)$ para todo $n\geq N$. Por tanto, dado un entorno $U=(m-\epsilon,m+\epsilon)$ de $m$, se tiene que todos los $s_n\in U$ para $n>N$. Por tanto, $(s_n)$ converge a $m$.
+\begin{itemize}
+\item \bf (b) \rm Sea $(a_n)$ una sucesión de números reales y sea $s_n=\sum_{i=1}^{n}a_n$ tal que si $s_n\rightarrow s$, la serie infinita $\sum_{i=1}^{\infty}a_n$ converge a $s$. veamos que si $\sum a_i$ converge a $s$ y $\sum b_i$ converge a $t$ entonces $\sum (a_i+c b_i)$ converge a $t+cb$.
+\end{itemize}
+Como
+\begin{eqnarray}
+\sum_{i=1}^n\left( a_i+c b_i\right)=\sum_{i=1}^na_i+ c \sum_{i=1}^nb_i,\nonumber
+\end{eqnarray}
+resulta
+\begin{eqnarray}
+\sum_{i=1}^\infty\left( a_i+c b_i\right)=\sum_{i=1}^\infty a_i+ c \sum_{i=1}^\infty b_i.\nonumber
+\end{eqnarray}
+Por tanto, $\sum_{i=1}^\infty\left( a_i+c b_i\right)$ converge a $s+ct$.
+\begin{itemize}
+\item \bf (c) \rm Veamos que si $|a_i|\leq b_i$ para cada $i$ y  $\sum b_i$ converge, entonces la serie $\sum a_i$ converge.
+\end{itemize}
+
+Supongamos que $\sum b_i$ converge a $t$. Entonces, se tiene que existe un $N$ tal que
+\begin{eqnarray}
+t\geq\sum^{n+1}_{i=1}b_i\geq \sum^{n+1}_{i=1}|a|_i\geq \sum^n_{i=1}|a|_i\nonumber
+\end{eqnarray}
+para todo $n\geq N$. Por apartado (a), $\sum |a_i|$ converge. Por otro lado, como $|a_i|+a_i\geq 0$ para todo $i$, se tiene que existe un $N$ tal que
+\begin{eqnarray}
+\sum^{n+1}_{i=1}2|a_i|\geq \sum^{n+1}_{i=1}(|a|_i+a_i)=|a_{n+1}|+a_{n+1}+\sum^{n}_{i=1}(|a|_i+a_i)\geq \sum^n_{i=1}(|a|_i+a_i)\nonumber
+\end{eqnarray}
+para todo $n\geq N$. Por apartado (a), $\sum (|a_i|+a_i)$ converge. Por tanto, como $\sum a_i=\sum (|a_i|+a_i-|a_i|)$. Aplicando apartado (b), se tiene que $\sum a_i=\sum (|a_i|+a_i)-\sum |a_i|$ converge a la suma de dos numeros reales.
+\begin{itemize}
+\item \bf (d) \rm Dada la sucesión de funciones $f_:X\rightarrow \mathbb{R}$, sea la sucesión
+\begin{eqnarray}
+s_n(x)=\sum^{n}_{i=1}f_i(x)\nonumber
+\end{eqnarray}
+Veamos que $(s_n)$ converge uniformemente a $s$ si $|f_i(x)|\leq M_i$ para todo $i$ y todo $x\in X$, y si la serie $\sum M_i$ converge.
+\end{itemize}
+Como  $|f_i(x)|\leq M_i$ y para todo $i$ y todo $x\in X$, y si la serie $\sum M_i$ converge, por lo visto en apartado (c), la serie $\sum f_i(x)$ converge. Sea $s(x)$ la función a la que $\sum f_i(x)$ converge. Veamos que dado un $\epsilon>0$, existe un $N$ tal que $|s_n(x)-s(x)|<\epsilon$   para todo $n\geq N$ y todo $x\in X$. Sea $r_n=\sum_{i=n+1}^{\infty}M_i$. Se tiene que 
+\begin{eqnarray}
+|s_n(x)-s(x)|=|\sum_{i=1}^{n}f_i(x)-\sum_{i=1}^{\infty}f_i(x)|=|\sum_{i=n+1}^{\infty}f_i(x)|\nonumber
+\end{eqnarray}
+y, por la desigualdad triangular, $|\sum_{i=n+1}^{\infty}f_i(x)|\leq \sum_{i=n+1}^{\infty}|f_i(x)|$. Como de las condiciones del problema se obtiene $\sum_{i=n+1}^{\infty}|f_i(x)|\leq \sum_{i=n+1}^{\infty}M_i$ y $r_{n+1}\leq r_n$. Entonces resulta que $|s_n(x)-s(x)|\leq r_n$. Entonces, cosiderando $r_N<\epsilon$ se tiene que $|s_n(x)-s(x)|<\epsilon$ para todo $n\geq N$ y todo $x\in X$.
+\section{Tema 2 Sección 21 Ejercicio 12}
+Veamos la continuidad de las propiedades algebraicas sobre $\mathbb{R}$. Sea la distancia $d(x,y)=|x-y|$ sobre $\mathbb{R}$ y la distancia $\rho((x,y),(x_0,y_0))=\max\{|x-y|,|x_0-y_0|\}$ sobre $\mathbb{R}^2$
+\begin{itemize}
+\item \bf (a) \rm Veamos que la adición es continua.
+\end{itemize}
+De la definicion y desigualdad triangular de distancia $d$ se tiene que $d(x+y,x_0+ y_0)=|x+y-x_0+y-y_0|\leq |x-x_0|+|y-y_0|$. Pero $|x-x_0|+|y-y_0|\leq 2 |x-x_0|$ si $|x-x_0|\geq |y-y_0|$; o $|x-x_0|+|y-y_0|\leq 2 |y-y_0|$ si $|x-x_0|\leq |y-y_0|$. Por tanto $d(x+y,x_0+ y_0)\leq |x-x_0|+|y-y_0|\leq 2\rho((x,y),(x_0,y_0))$. Luego, dado un $\epsilon>0$ y un $x_0\times y_0$ resulta
+\begin{eqnarray}
+d(x+y,x_0+ y_0)\leq 2\rho((x,y),(x_0,y_0))<\epsilon\nonumber\\
+\rho((x,y),(x_0,y_0))<\frac{\epsilon}{2}\Rightarrow d(x+y,x_0+ y_0)<\epsilon\nonumber
+\end{eqnarray}
+para todo $x\times y$.
+Ahora consideremos la adición como una función $+:\mathbb{R}\times \mathbb{R}\rightarrow \mathbb{R}$. Entonces aplicando el teorema 21.1, la adición es continua.
+\begin{itemize}
+\item \bf (b) \rm Veamos que la multiplicación es continua.
+\end{itemize}
+De la definicion y desigualdad triangular de distancia $d$ se tiene que
+\begin{eqnarray}
+ d(xy,x_0y_0)=|xy-x_0y_0|\nonumber
+=|xy-x_0y_0-xy_0+xy_0|\nonumber\\
+=|x_0(y-y_0)+y_0(x-x_0)+(x-x_0)(y-y_0)|\nonumber\\
+\leq |x_0||y-y_0|+|y_0||x-x_0|+|x-x_0||y-y_0|\nonumber\\
+\leq |x_0|\max\{|y-y_0|,|x-x_0|\}+|y_0|\max\{|y-y_0|,|x-x_0|\}\nonumber\\
++(\max\{|y-y_0|,|x-x_0|\})^2\nonumber\\
+\leq \rho((x,y),(x_0,y_0))\left(|x_0|+|y_0|+\rho((x,y),(x_0,y_0))\right)\nonumber
+\end{eqnarray}
+Por tanto, si $\rho((x,y),(x_0,y_0))<\epsilon$ y $0< \epsilon<1$ entonces
+\begin{eqnarray}
+d(xy,x_0y_0)\leq \rho((x,y),(x_0,y_0))\left(|x_0|+|y_0|+\rho((x,y),(x_0,y_0))\right)<\epsilon\left(|x_0|+|y_0|+1\right);\nonumber
+\end{eqnarray}
+y si $\rho((x,y),(x_0,y_0))<\epsilon$ y $1\leq \epsilon$ entonces
+\begin{eqnarray}
+d(xy,x_0y_0)\leq \rho((x,y),(x_0,y_0))\left(|x_0|+|y_0|+\rho((x,y),(x_0,y_0))\right)<\epsilon^2\left(|x_0|+|y_0|+1\right)\nonumber
+\end{eqnarray}
+
+Luego, dado un $\epsilon>0$ y un $x_0\times y_0$ resulta que $\rho((x,y),(x_0,y_0))<\epsilon$ implica
+\begin{eqnarray}
+d(x+y,x_0+ y_0)<\begin{cases}\epsilon\left(|x_0|+|y_0|+1\right)  \text{ si }0<\epsilon<1\nonumber\\
+\epsilon^2\left(|x_0|+|y_0|+1\right) \text{ si }\epsilon\geq 1\nonumber
+\end{cases}
+\end{eqnarray}
+para todo $x\times y$.
+Ahora consideremos la multiplicación como una función de $\mathbb{R}\times \mathbb{R}$ en $ \mathbb{R}$. Entonces aplicando el teorema 21.1, la multiplicación es continua.
+\begin{itemize}
+\item \bf (c) \rm Veamos que la operación de tomar inversos es una aplicación es continua de $\mathbb{R}-\{0\}$ en $\mathbb{R}$.
+\end{itemize}
+Sea $a,b\in\mathbb{R}-\{0\}$. Resulta que $b\geq a>0$ si, y solo si, $\frac{b}{a}\geq 1$ si, y solo si, $\frac{1}{a}\geq \frac{1}{b}$. De este modo, si $x\in \mathbb{R}-\{0\}$ y $\frac{1}{x}\in (\frac{1}{b},\frac{1}{a})$ entonces $x\in (a,b)$.
+
+Sea $a,b\in\mathbb{R}-\{0\}$. Resulta que $0>b\geq a$ si, y solo si, $\frac{b}{a}\leq 1$ si, y solo si,$\frac{1}{a}\geq \frac{1}{b}$. De este modo, si $x\in \mathbb{R}-\{0\}$ y $\frac{1}{x}\in (\frac{1}{b},\frac{1}{a})$ entonces $x\in (a,b)$.
+
+Sea $a,b\in\mathbb{R}-\{0\}$. Resulta que $a>0> b$ si, y solo si, $\frac{a}{b}\leq 1$ si, y solo si,$\frac{1}{b}\leq \frac{1}{a}$. De este modo, si $x\in \mathbb{R}-\{0\}$ y $\frac{1}{x}\in (-\infty,\frac{1}{a})\cup(\frac{1}{b},\infty)$ entonces $x\in (a,b)-\{0\}$. 
+
+Sea $a\in\mathbb{R}-\{0\}$. Resulta que $a>0$ si, y solo si, $\frac{1}{a}> 0$. De este modo, si $x\in \mathbb{R}-\{0\}$ y $\frac{1}{x}\in (\frac{1}{a},\infty,)$ entonces $x\in (0,a)$.
+
+Sea $a\in\mathbb{R}-\{0\}$. Resulta que $0> a$ si, y solo si, $\frac{1}{a}< 0$. De este modo, si $x\in \mathbb{R}-\{0\}$ y $\frac{1}{x}\in (-\infty,\frac{1}{a})$ entonces $x\in (a,0)$.
+
+Por tanto, como para todo $x\in\mathbb{R}-\{0\}$ existe un entorno $V$ de $\frac{1}{x}$ tal que $\frac{1}{U}\subset V$ es un entorno de $x$. Por teorema 18.1, la inversa es una función continua.
+\begin{itemize}
+\item \bf (d) \rm Veamos que la operación de sustracción y cociente son funciones continuas.
+\end{itemize}
+La operación de sustracción es la composición de la operación de suma con la de cambio de signo. Dado que $-x\in (-b,-a)\subset \mathbb{R}$ si, y solo si, $x\in (a,b)$, la operación de cambio de signo es continua. Como la composición de dos funciones continuas es continua (vease teorema 18.2 (c)), la sustracción es continua.
+
+La operación de cociente es la composición de la operación de producto con la de inversa de uno de los factores. Dado que $ x\in \mathbb{R}$ e $y\in \mathbb{R}-\{0\}$ se tiene $x\times y \in \mathbb{R}\times (\mathbb{R}-\{0\})$ y $x\cdot \frac{1}{y}\in \mathbb{R}$. Como la composición de dos funciones continuas es continua (vease teorema 18.2 (c)), la operación de cociente es continua.
+
+
+
+\end{document}

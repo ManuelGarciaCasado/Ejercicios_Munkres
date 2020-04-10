@@ -1,0 +1,44 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 2 Sección 18 Ejercicio 1}
+Veamos que para $f:\mathbb{R}\rightarrow \mathbb{R}$ la definición $\delta-\epsilon$ implica la definición de conjunto abierto. Defínase como contínua la función $f:\mathbb{R}\rightarrow \mathbb{R}$ en $x_0$ si para todo $\epsilon>0$ existe un $\delta>0$ tal que para todo $x$ se tiene que $\vert x-x_0\vert <\delta\Rightarrow\vert f(x)-f(x_0)\vert<\epsilon $. Por tanto, para todo $x$ en el intervalo abierto $V=(x_0-\delta,x_0+\delta)$ de $\mathbb{R}$ se tiene que $f(x)\in U=(f(x_0)-\epsilon,f(x_0)+\epsilon)$. Luego, para todo $x_0\in \mathbb{R}$ y todo  entorno $U$ de $f(x_0)$ existe un entorno $V$ de $x_0$ tal que $f(V) \subset U$. Por tanto, por teorema 18.1(4), $f$ es continua. 
+
+\section{Tema 2 Sección 18 Ejercicio 2}
+Suponiendo que $f:X\rightarrow Y$ es continua, si $x$ es punto límite de un subconjunto $A$ de $X$, veamos si es cierto que $f(x)$ es punto límite de $f(A)$ o no. Si $x$ es punto límite de $A$, $x\in \overline{A}$. Si $f(x)$ es punto límite de $f(A)$, $f(x)\in \overline{f(A)}$. Dado que $f$ es continua, por teorema 18.1(b), se tiene que $f(\overline{A})\subset\overline{f(A)}$. Por tanto, si $x\in \overline{A}$ entonces $f(x)\in f(\overline{A})$ y, por tanto $f(x)\in \overline{f(A)}$. Pero si $f(x)\in f(\overline{A})$, no significa que $f(x)$ sea punto límite. Sea $x$ punto límite de $A$. Entonces $(A-\{x\})\cap U\neq \varnothing$ para todo abierto $U$. Supongamos que $f(x)$ no es punto límite de $f(A)$. Entonces existe un abierto $V$ en $Y$ tal que $(f(A)-\{f(x)\})\cap V=\varnothing $.  Por ser $f$ continua y $\varnothing$ abierto, entonces  $f^{-1}((f(A)-\{f(x)\})\cap V)$ abierto. Y por las propiedades de la función inversa del ejercicio 2 sección 2, se tiene que $f^{-1}((f(A)-\{f(x)\})\cap V)=(f^{-1}(f(A))-f^{-1}(\{f(x)\}))\cap f^{-1}(V)$. Es decir, $f^{-1}((f(A)-\{f(x)\})\cap V)=(A-\{x\})\cap f^{-1}(V)$.  Si fuera $f^{-1}(\varnothing)=\varnothing$, se tendría que existe un abierto $f^{-1}(V)$ tal que $(A-\{x\})\cap f^{-1}(V)=\varnothing$. Pero $f^{-1}(\varnothing)$ no está definido puesto que una función $g:A\rightarrow B$ con $A_0\subset A$ se define como $g(A_0)=\{a|a=g(b)\text{ para al menos un }b\in A_0\}$. Por tanto  no se puede decir que $x$ no sea punto límite de $A$. Luego no es cierto que si $x$ es punto límite de $A$ entonces es punto límite de $f(A)$ cuando $f$ es continua.
+\section{Tema 2 Sección 18 Ejercicio 3}
+Sean $X$ y $X'$ dos espacios topológicos de un mismo conjunto con topologías $\mathcal{T}$ y $\mathcal{T}'$. Sea $i:X'\rightarrow X$ la función identidad.
+\begin{itemize}
+\item\bf (a) \rm Veamos que si $i$ es contínua, $\mathcal{T}\subset \mathcal{T}'$
+\end{itemize}
+Como $i$ es identidad, transforma los subconjuntos $B'$ del espacio $X'$, que son elementos base de $\mathcal{T}'$ , en elementos $i(B')$ del conjunto $X$. Como $i$ es continua, si $U$ es abierto en $\mathcal{T}$ entonces $i^{-1}(U)$ es abierto en $\mathcal{T}'$. Como $U=i(U)$ se tiene que $U=i^{-1}(U)$. Por tanto, si $U\in \mathcal{T}$ entonces $U\in \mathcal{T}'$. Por tanto $\mathcal{T}\subset\mathcal{T}'$. Recíprocamente, suponiendo que $\mathcal{T}\subset\mathcal{T}'$. Se tiene que $U\in \mathcal{T}\Rightarrow U\in \mathcal{T}'$. Por tanto $U=i(U)$. Por tanto $U=i^{-1}(U)$. Entonces, si $U$ es abierto en $\mathcal{T}$ entonces $i^{-1}(U)$ es abierto en $\mathcal{T}'$. Por tanto, $i:X'\rightarrow X$ es continua.
+\begin{itemize}
+\item\bf (b) \rm Veamos que si $i$ un homeomorfismo, $\mathcal{T}=\mathcal{T}'$.
+\end{itemize}
+Si $i$ es homeomorfismo, $i$ e $i^{-1}$ son continuas. Como $U=i(U)$ y $U=i^{-1}(U)$ se puede aplicar el apartado (a) a $i:X'\rightarrow X$ y a $i^{-1}:X\rightarrow X'$
+\section{Tema 2 Sección 18 Ejercicio 4}
+Dados $x_0\in X$ e $y_0\in Y$ y las aplicaciones $f:X\rightarrow X\times Y$ y $g:Y\rightarrow X\times Y$ definidas por $f(x)=x\times y_0$ y $g(y)=x_0\times y$. Veamos que son embebimientos.
+Dado que $\mathcal{T}$ es la topología sobre $X\times Y$ y $\{x_0\},\{y_0\}$ son conjuntos sobre $X$ e $Y$ respectivamente, resulta que $\mathcal{T}_{\{x_0\}}$ e $\mathcal{T}_{\{y_0\}}$ son las topologías de subespacio de $X\times Y$ restringidas a $\{x_0\}\times Y$ y $X\times \{y_0\}$. Se tiene que si el conjunto $V_1\times V_2 \in X\times Y$ es abierto y $y_0 \in V_2$ entonces $f^{-1}(V_1\times V_2)=V_1$. Por tanto, $f$ es continua. Se tiene que si el conjunto $V_1\times V_2 \in X\times Y$ es abierto y $x_0 \in V_1$ entonces $g^{-1}(V_1\times V_2)=V_2$. Por tanto, $g$ es continua. Además, si $U_1$ es abierto en $X$, $f(U_1)=U_1\times \{y_0\}$ es abierto en $X\times \{y_0\}$ como subespacio de $X\times Y$. Igualmente, si $U_2$ es abierto en $Y$, $g(U_2)=\{x_0\}\times U_2 $ es abierto en $\{x_0\}\times Y$ como subespacio de $X\times Y$. Por tanto, $f^{-1}$ y $g^{-1}$ son contínuas. Por tanto, $f$ de $X$ en $X\times \{y_0\}$ y $g$ de $Y$ en $\{x_0\}\times Y$  son homeomorfismos. Por tanto, $f$ y $g$ son embebimientos.
+\section{Tema 2 Sección 18 Ejercicio 5}
+Veamos que el subespacio $(a,b)$ de $\mathbb{R}$ es homeomorfo a $(0,1)$ y que el subespacio $[a,b]$ de $\mathbb{R}$ es homeomorfo a $[0,1]$. Sea la función $f:\mathbb{R}\rightarrow \mathbb{R}$ definida por
+\begin{eqnarray}
+f(x)=\frac{a-x}{a-b}\nonumber ,
+\end{eqnarray}
+entonces,
+\begin{eqnarray}
+f^{-1}(x)=a-(a-b)x\nonumber.
+\end{eqnarray}
+La función $f$ es contínua porque los abiertos $(y_1,y_2)$ se trasforman en 
+\begin{eqnarray}
+(f^{-1}(y_1),f^{-1}(y_2))=(a-(a-b)y_1,a-(a-b)y_2),\nonumber
+\end{eqnarray}
+ que son abiertos de $\mathbb{R}$. La función $f^{-1}$ es contínua porque la imagen de los abiertos $(x_1,x_2)$ por medio de $f^{-1}$ son abiertos de  $(\frac{a-x_1}{a-b},\frac{a-x_2}{a-b})$, que son abiertos de $\mathbb{R}$. Por tanto, $f$ es un homeomorfismo de $\mathbb{R}$ en $\mathbb{R}$. Como $f(a)=0$, $f(b)=1$, $f^{-1}(0)=a$ y $f^{-1}(1)=b$, la imagen de los abiertos del subespacio $(0,1)$ son abiertos del subespacio $(a,b)$ y viceversa, por medio de $f$ y $f^{-1}$, se tiene que son subespacios homeomorfos. Como $f(a)=0$, $f(b)=1$, $f^{-1}(0)=a$ y $f^{-1}(1)=b$ la imagen de los abiertos del subespacio $[0,1]$ son abiertos del subespacio $[a,b]$ y viceversa, por medio de $f$ y $f^{-1}$, se tiene que son subespacios homeomorfos.
+
+
+\end{document}

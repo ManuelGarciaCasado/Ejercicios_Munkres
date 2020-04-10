@@ -1,0 +1,59 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+
+
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\section{Tema 1 Sección 4 Ejercicio 10}
+% Create a new 1st level heading
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que si $x>0$ y $0\leq h <1$ entones
+\begin{eqnarray}
+(x+h)^2\leq x^2+h(2x+1) \nonumber\\
+(x-h)^2\geq x^2-h(2x).\nonumber
+\end{eqnarray}
+Luego, por los axiomas del álgebra $(x-h)^2=(x-h)x-(x-h)h$,  $(x-h)^2=x^2-hx-xh+h^2=x^2-2hx+h^2$, como $0\leq h\Rightarrow 0=0\cdot h\leq h^2$  se tiene $(x-h)^2=x^2-2hx+h^2\geq x^2-2hx$. Por tanto, $(x-h)^2\geq x^2-2hx$. Por otro lado, como $h<1$ y $0\leq h$, multiplicando $h<1$ por $h$ se tiene $h^2<h<1$. Por tanto $(x+h)^2=x^2+2hx+h^2<x^2+2hx+h$. Luego $(x+h)^2<x^2+2hx+h$. Si $h=0$,$h^2=h$ y se tiene $(x+h)^2=x^2+2hx+h^2= x^2+2hx+h$. Por tanto, $(x+h)^2\leq x^2+2hx+h$ y entonces $(x+h)^2\leq x^2+h(2x+1)$.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Sea $x>0$. Veamos que si $x^2<a$
+entonces $(x+h)^2<a$ para algún $h>0$. Por la propiedad (8) de $\mathbb{R}$, dado que $x\in\mathbb{R}\Rightarrow x^2\in\mathbb{R}$; si $x^2<a$, existe un $z\in\mathbb{R}$ tal que $x^2<z$ y $z<a$. Si $h>0$ entonces $x^2<x^2+2hx< x^2+2hx+h^2=(x+h)^2$. Sea $z=(x+h)^2$ , entonces $(x+h)^2<a$. Ahora veamos que si $x^2>a$ entonces $(x-h)^2>a$ para algún $h>0$. Dado que $x\in\mathbb{R}\Rightarrow x^2\in\mathbb{R}$, por la propiedad (8) de $\mathbb{R}$ si $a<x^2$, existe un $z\in\mathbb{R}$ tal que $a<z$ y $z<x^2$. Si $h>0$ entonces $x^2>x^2-2hx$. Luego existe un $y\in\mathbb{R}$ por propiedad (8) tal que  $x^2>y$ e $y>x^2-2hx$. Luego $x^2-2hx<x^2-2hx+h^2=(x-h)^2$. Sea $y=(x-h)^2$ y $z=y$, entonces $(x-h)^2>a$.
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Veamos que, dado $a>0$, el conjunto $B=\{x|x\in \mathbb{R}, x^2<a\}$ está acotado superiormente y que $\exists z\in B$ tal que $z>0$. Del ejercicio (b), sea $0<z\in B\text{ y }0<y\notin B$ y $z^2<a< y^2$ entonces $z^2-y^2<a-a=0 \Rightarrow (z-y)\cdot (y+z)<0$ Por tanto $(z-y)<0\Rightarrow z<y$. Por tanto , para todo $z\in B$ existe un $y\in \mathbb{R}-B$ tal que $z<y$, por tanto, $B$ está acotado superiormente. Sea $b=\sup \{B\}$. Entonces, $b$ es el mínimo de las cotas superiores de $B$ por tanto $a = b^2$ ya que si fuera $a<b^2$ por la propiedad (8) de los numeros reales, existiría un $c\in \mathbb{R}-B$ tal que $z^2<a<c^2<b^2$ y por tanto $z<c<b$. y $b$ ya no sería el mínimo de las cotas superiores de   $B$.
+\begin{itemize}
+\item \bf (d) \rm
+\end{itemize}
+Veamos que si $a$ y $b$ son positivos y $a^2=b^2$, entonces $a=b$. Como $a^2=b^2\Rightarrow a^2-b^2=0\Rightarrow (a-b)\cdot(a+b)=0$. Como $a>0, b>0\Rightarrow a+b>0$, dividiendo entre $(a+b)>0$ se tiene que $a-b=0$. Por tanto $a=b$.
+\section{Tema 1 Sección 4 Ejercicio 11}
+Se define $m\in \mathbb{Z}$ par si $m/2\in \mathbb{Z}$
+\begin{itemize}
+\item \bf (a) \rm
+\end{itemize}
+Veamos que $m$ impar cuando $m=2n+1$, para algún $n\in \mathbb{Z}$. Se tiene que $m=2n+1\Rightarrow m/2=n+1/2$. Por tanto, como $0<1/2<1\Rightarrow n<n+1/2<n+1$, se tiene $n<m/2<n+1$. Dado que no hay ningún número entero entre dos enteros consecutivos, por ejercicio 9 (b), se concluye que $m/2\notin\mathbb{Z}$.
+\begin{itemize}
+\item \bf (b) \rm
+\end{itemize}
+Veamos que si $p$ y $q$ son impares, entonces $p\cdot q$ y $p^n$ con $n\in \mathbb{Z}_{+}$ son impares. Veamos que $pq$ es impar. Se tiene que $p=2n+1,q=2m+1$ para algún $n,m\in \mathbb{Z}$. Por tanto $p\cdot q = 4m\cdot n +2n+2m+1$. Por tanto $p\cdot q = 2k+1$ donde $ k= 2mn+n+m \in \mathbb{Z}$, luego es $pq$ es impar. Veamos que $p^n$ es impar con $n\in \mathbb{Z}_{+}$. Como $p$ impar, $p=p^1$ es impar. Luego se cumple para $n=1$. Supongamos que $p^n$ sea impar entonces $p\cdot p^n= p^{n+1}$ es impar por lo visto antes. Por tanto si se cumple para $n$, se comple para $n+1$. Luego por el principio de inducción, se tiene que $p^n$ es impar con $n\in \mathbb{Z}_{+}$.
+\begin{itemize}
+\item \bf (c) \rm
+\end{itemize}
+Veamos que si $a>0$ es racional, entonces $a=m/n$ para unos $n,m \in\mathbb{Z}_{+}$ se tiene que $n$ y $m$ no son pares los dos a la vez. Sea $n$ el menor elemento del conjunto $\{x| x\in\mathbb{Z}_{+}\text{ y } x\cdot a \in\mathbb{Z}_{+}\}$. Entonces $n\in\mathbb{Z}_{+}\text{ y } n\cdot a \in\mathbb{Z}_{+}$ Si $n$ fuera par, entonces $n/2\in\mathbb{Z}_{+}$  y pero $n\cdot a/2 \notin\mathbb{Z}_{+}$ porque de lo contrario, $n/2$ sería el mínimo. Por tanto, si $a=m/n$ y $n$ es par, $(n/2)\cdot (m/n)\notin\mathbb{Z}_{+}$ por tanto $m/2\notin\mathbb{Z}_{+}$ lo cual significa que $m$ es impar si $n$ es par.
+\begin{itemize}
+\item \bf (d) \rm
+\end{itemize}
+Veamos que $\sqrt{2}$ es irracional. Supongamos que es racional, entonces $\sqrt{2}= m/n$ donde $n,m\in \mathbb{Z}_{+}$. por tanto $m^2/n^2=2$. Luego $m^2
+$ es par ya que $m^2/2=n^2\in \mathbb{Z}_{+}$. Por tanto, $m$ también es par, puesto que el producto de dos numeros pares es par. Luego, por ejercicio (c), $n$ es impar. Por tanto, $m=2p$ donde $p\in \mathbb{Z}_{+}$. Luego $m^2/n^2=2\Rightarrow 4p^2/n^2=2\Rightarrow n^2 = 2p^2$ .Por tanto $n^2$ es par y eso implica que $n$ es par. Pero esto no puede ser.
+% Uncom\Rightarrow  a^n \cdot a^{0} =a^{n}ment the following two lines if you want to have a bibliography
+%\bibliographystyle{alpha}
+%\bibliography{document}
+
+\end{document}
