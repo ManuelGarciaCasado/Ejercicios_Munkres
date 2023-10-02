@@ -1,0 +1,62 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 28 Ejercicio 5}
+Veamos que un espacio $X$ es numeralmente compacto si, y sólo si, cada sucesión encajada $C_1\supset C_2\supset ...$ de conjuntos cerrados no vacíos de $X$ tiene intersección infinita no vacía.
+Veamos la condición de necesidad. Supongamos que $X$ es numeralmente compacto. Veamos que cada sucesión encajada $C_1\supset C_2\supset ...$ de conjuntos cerrados no vacíos de $X$ tiene intersección no vacía. Supongamos que existe una intersección $\bigcap_{n\in \mathbb{Z}_+}C_n=\varnothing$ de elementos cerrados no vacíos de una sucesión encajada. Entonces $X-\bigcap_{n\in\mathbb{Z}_+}C_n =X$. Por tanto, los $X-C_n$ forman un cubrimiento numerable $\{X-C_n\}_{n\in \mathbb{Z}_+}$ de abiertos. Entonces hay unión finita $\bigcup_{m_i, i\in\{1,2,...,n\}}(X-C_{m_i})=X$, con $m_i\in \mathbb{Z}_+$. Por tanto, $X-\bigcap_{m_i, i\in\{1,2,...,n\}}C_{m_i}=X$. Esto es, $\bigcap_{m_i, i\in\{1,2,...,n\}}C_{m_i}=\varnothing$. Por tanto, se contradice el hecho de que $C_n$ son conjuntos no vacíos. Por tanto, no existe tal sucesión encajada de cerrados no vacíos con intersección nula.
+
+Veamos la condición de suficiencia. Ahora supongamos que cada sucesión encajada $C_1\supset C_2\supset ...$ de conjuntos cerrados no vacíos de $X$ tiene intersección infinita no vacía. Veamos que $X$ es numeralmente compacto. Como los $C_n$ son cerrados y $\bigcap_{n\in \mathbb{Z}_+}C_n\neq \varnothing$ entonces la intersección finita $\bigcap_{m_i,i\in\{1,2,..., n\}}C_{m_i}$ tampoco es vacía. Supongamos que existe un cubrimiento de abiertos de $X$ que no tiene un subrecubrimiento finito y sean  $U_n= X-C_n$ tales abiertos junto con $V\supset\bigcap_{m_i,i\in\{1,2,..., n\}}C_{m_i}$. Pero por ser una sucesión encajada $\bigcap_{n\in \mathbb{Z}_+}C_n\subset\bigcap_{m_i,i\in\{1,2,..., n\}}C_{m_i}$. Como resulta que
+\begin{eqnarray}\bigcup_{m_i,i\in\{1,2,..., n\}}\left(X-C_{m_i}\right)\cup V\supset \left(X-\bigcap_{m_i,i\in\{1,2,..., n\}}C_{m_i}\right)\cup \bigcap_{m_i,i\in\{1,2,..., n\}}C_{m_i}\nonumber
+\end{eqnarray}
+Entonces $\bigcup_{m_i,i\in\{1,2,..., n\}}\left(X-C_{m_i}\right)\cup V\supset X$. Luego $\{X-C_{m_i}\}_{m_i,i\in\{1,2,..., n\}}\cup\{V\}$ es un cubribiento finito, contradiciendo la suposición inicial.
+\section{Tema 3 Sección 28 Ejercicio 6}
+Sea el espacio métrico $(X,d)$ y la isometría $f$ definida por $d(f(x),f(y))=d(x,y)$ para $f:X\rightarrow X$, donde $x,y\in X$. Veamos que si $f$ es una isometría y $X$ es compacto, entonces $f$ es biyectiva (un homeomorfismo). Si $a\notin f(X)$, elijamos un entorno $B_d(a,\epsilon)$ de $a$ tal que $B_d(a,\epsilon)\cap f(X)=\varnothing$. Entonces $d(a,f(x))\geq \epsilon$ para todo $x\in X$. Entonces, si $x_1\notin f(X)$ y $B_d(x_1,\epsilon)\cap f(X)=\varnothing$ implica $d(x_1,x_2)\geq \epsilon$ con $x_2=f(x_1)$. Entonces $d(f(x_1),f(x_2))= d(x_1,x_2)\geq \epsilon$. Renombrando $x_3=f(x_2)$ resulta $d(x_2,x_3)\geq \epsilon$. En general, dado $x_{n+1} = f(x_n)$, resulta que si $d(x_{n+1},x_n)=d(x_{n},x_{n-1})=...=d(x_2,x_1)\geq \epsilon$. Y ademas si $m> n$, $d(x_m,x_n)\geq d(x_{m-1},x_n)-d(x_{m},x_{m-1})\geq d(x_{m-1},x_n)\geq ...\geq d(x_{n+1},x_n)\geq \epsilon$. Por tanto $d(x_m,x_n)\geq \epsilon$ si $m\neq n$. Por tanto, $d(f(x_m),x_{n+1})\geq \epsilon$ para cada para $m\neq n$, en particular $d(f(x_{n+1}),x_{n+1})\geq \epsilon$ para todo $n\in \mathbb{Z}_+$. Luego, si
+ $\{f(X)\}\cup\{B_d(x_n,\epsilon)\}_{n\in \mathbb{Z}_+}$ es un cubrimiento de $X$, no existe un cubrimiento finito de $X$, porque eso implicaría que $B_d(x_{m_i},\epsilon)\cap B_d(x_{m_j},\epsilon)\neq \varnothing$ para ciertos $m_i\neq m_j$ y de esta manera $d(x,f(x))<\epsilon$ para algún $x\in X$. Luego $f$ es sobreyectiva. Si fuera $f(x)= f(y)$ para algún $x\neq y$ se violaría la definición $d(f(x),f(y))=d(x,y)=0$. Por tanto, $f$ es inyectiva. En conclusión, $f$ es un homeomorfismo.
+\section{Tema 3 Sección 28 Ejercicio 7}
+Sea la aplicación contráctil $f:X\rightarrow X$ definida por $d(f(x),f(y))<d(x,y)$ para $x\neq y$ en el espacio métrico $(X,d)$. Si existe un $\alpha<1$ tal que $d(f(x),f(y))<\alpha d(x,y)$ para todo $x\neq y$ donde $x,y\in X$ entonces se dice que $f$ es una contracción. Se define punto fijo $x\in X$ de la función $f$ si $x=f(x)$.
+
+\begin{itemize}
+\item \bf (a) \rm Veamos que si $X$ es un espacio compacto y $f$ es una contracción, $f$ tiene un único punto fijo.
+\end{itemize}
+Supongamos que hay dos puntos fijos, $a=f(a)$ y $b=f(b)$. Entonces $d(f(a),f(b))=d(a,b)$ y, por tanto, no existe tal $\alpha<1$ con $d(a,b)\leq\alpha d(a,b)$. Luego, si hay punto fijo, tiene que ser único.
+Sea $f^1=f$, $f^2=f\circ f^1$,..., $f^{n+1}=f\circ f^n$. Veamos $A=\bigcap_{n\in \mathbb{Z}_+}A_n$ con $A_n=f^n(X)$. Como $d(f(x),f(y))\leq\alpha d(x,y)\leq\alpha\epsilon<\epsilon$, resulta que $y\in B_d(x,\epsilon)$ implica $f(y)\in B_d( f(x),\alpha\epsilon)$, implica $f^n(y)\in B_d( f^n(x),\alpha^n\epsilon)$. Entonces $A_n\subset\bigcup_{x\in X}B_d( f^n(x),\alpha^n\epsilon)$. Por tanto $A\subset\bigcup_{x\in X}\left(\bigcap_{n\in \mathbb{Z}_+}B_d( f^n(x),\alpha^n\epsilon)\right)$. Además $f(B(x,\epsilon))=\{y|f^{-1}(y)\in B(x,\epsilon)\}=\{y|d(f^{-1}(y),x)<\epsilon\}\subset\{y|d(y,f(x))/\alpha\leq d(f^{-1}(y),x)<\epsilon\}=B(f(x),\alpha\epsilon)$. Por teorema 21.1, $f$ es continua. Además las sucesiones $(f^n(x))$ y $(f^n(y))$ tienen subsucesiones que convergen, por teorema 28.2, y cumplen que $d(f^n(x),f^n(y))\leq \alpha d(f^{n-1}(x),f^{n-1}(y))\leq...<\alpha^n\epsilon$. Por tanto, ambas sucesiones tienen subsucesiones que convergen al mismo punto. Por tanto, $A=\{x\}$ y existe un $x=f(x)$.
+\begin{itemize}
+\item \bf (b) \rm Veamos que si $X$ es un espacio compacto y $f$ es una aplicación contráctil, $f$ tiene un único punto fijo.
+\end{itemize}
+Supongamos que hay dos puntos fijos, $a=f(a)$ y $b=f(b)$. Entonces $d(f(a),f(b))=d(a,b)$ y, por tanto, contradice $d(a,b)< d(a,b)$. Luego, si hay punto fijo, tiene que ser único. Sea $A$ el conjunto definido en el apartado (a) y $x=f^{n+1}(x_n)$ para algún $n$. Si $a$ es el límite de alguna subsucesión de la sucesión $y_n=f^n(x_n)$, veamos que $a\in A$ y que $f(a)=x$. Por hipótesis, sea $(y_{n_i})$ la subsucesion donde $y_{n_i}\in B(a,\epsilon)$ para todo $n_i\geq N$. Entonces $f^{n_i}(x_{n_i})\in B(a,\epsilon)$. Como $y_{n_i}\in A^{n_i}\cap B(a,\epsilon)$ para todo $i\in \mathbb{Z}$ resulta que $y_{n_i}\in \bigcap_{n\in \mathbb{Z}}A^{n}\cap B(a,\epsilon) = A\cap B(a,\epsilon)$ para algún $n_i=n$. Por tanto $d(f^{n}(x_{n}),a)=d(y_{n},a)<\epsilon$ para algún $n$. Como $\epsilon\in (0,1)$ es arbitrario, $a=f^{n}(x_n)\in A$. Además $d(f^{n+1}(x_{n}),f(a))<d(f^{n}(x_{n}),a)$ implica que $d(f^{n+1}(x_{n}),f(a))<\epsilon$ para un $\epsilon\in (0,1)$ arbitrario. Es decir $f(a)=x$. En vez de fijar $x$ y hayar un $n$ tal que $x=f^{n+1}(x_n)$, se puede elegir $n$ tal que $x=f^{n+1}(x_n)\in A$. Como cada sucesión tiene una subsucesión que converge (por teorema 28.2), para cada conjunto infinito de $X$ hay un $a\in A$ y un $x\in A$ tales que $f(a)=x$. Por tanto, $f(A)=A$. De este modo por la propiedad de $d(f(x),f(y))<d(x,y)$ se llega al absurdo de que $\text{diám}f(A)< \text{diám}A$ ---Recordemos que $\text{diám}A =\sup \{d(a_1,a_2)|a_1,a_2\in A\}$.
+\begin{itemize}
+\item \bf (c) \rm Sea $X=[0,1]$. Veamos que $f(x)=x-x^2/2$ es una aplicación de $X$ en $X$ que es contráctil, pero no es una contración.
+\end{itemize}
+Como $x^2/2\geq 0$ se tiene que $d(f(x),f(y))=d(x-x^2/2,y-y^2/2)\leq d(x,y)$. Entonces cumple que $d(f(x),f(y))< d(x,y)$ para $x\neq y$.
+Por otro lado, veamos que $d(f(x),f(y))=d(x-x^2/2,y-y^2/2)\leq \alpha d(x,y)$ para todo $x,y\in X$ y $\alpha<1$. El teorema del valor medio del cálculo dice que si $0<x$ existe un $c\in (0,x)$ tal que  $f(x)-f(0)=f'(c)(x-0)$. Por tanto, $f(x)=(1-c)x$. Entonces $d(f(x),f(y))\leq \alpha d(x,y)$ donde $\alpha=(1-c)$ y $c$ es el máximo de los $c\in \{c_1,c_2\}$ tales que cumplen el teorema del valor medio $f(x)=(1-c_1)x$ y $f(y)=(1-c_2)y$.
+\begin{itemize}
+\item \bf (d) \rm Veamos que la aplicación $f(x)=[x+(x^2+1)^{1/2}]/2$ es una aplicación de $\mathbb{R}$ en $\mathbb{R}$ que es una aplicación contráctil que no es una contración y no tiene puntos fijos.
+\end{itemize}
+Como antes, aplicamos el teorema del valor medio
+\begin{eqnarray}
+f(x)=f(b)+\left(1/2+\frac{c}{2\sqrt{c^2+1}}\right)(x-b)\leq\alpha x\nonumber
+\end{eqnarray}
+donde 
+\begin{eqnarray}
+\alpha=\left(1/2+\frac{c}{2\sqrt{c^2+1}}\right)\nonumber
+\end{eqnarray}
+y $b$ es tal que
+\begin{eqnarray}
+\frac{b+\sqrt{b^2+1}}{2}-\left(1/2+\frac{c}{2\sqrt{c^2+1}}\right)b\leq 0.\nonumber
+\end{eqnarray}
+Pero no existe ningún $b$ que lo cumpla. Sin embargo, para la distancia usual de $\mathbb{R}$,
+\begin{eqnarray}
+f(x)-f(y)=\left(1/2+\frac{c}{2\sqrt{c^2+1}}\right)(x-y)\nonumber\\
+|f(x),f(y)|\leq \left(1/2+\frac{c}{2\sqrt{c^2+1}}\right)|x-y|<|x-y|\nonumber
+\end{eqnarray}
+Además, no hay punto fijo ya que $[x+(x^2+1)^{1/2}]/2=x$ no tiene solución.
+\end{document}

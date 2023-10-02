@@ -1,0 +1,38 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 25 Ejercicio 4}
+Sea $X$ un espacio localmente conexo por caminos. Veamos que cada conjunto abierto y conexo de $X$, también es conexo por caminos. Sea $U$ un abierto y conexo de $X$.  Entonces, por teorema 25.4, cada componente de $U$ es conexa por caminos. Pero por ser $U$ conexo, sólo tienen una única componente. Por tanto la única componente de $U$ es conexa por caminos. Por tanto, $U$ es conexo por caminos.
+\section{Tema 3 Sección 25 Ejercicio 5}
+Sea $X$ el conjunto de puntos racionales del intervalo $[0,1]\times 0$ de $\mathbb{R}^2$ y sea $T$ la unión de todos los segmentos que unen el punto $0\times 1$ con los puntos de $X$.
+\begin{itemize}
+\item \bf (a) \rm Veamos que $T$ es conexo por caminos, pero sólo es conexo por caminos en el punto $0\times 1$.
+\end{itemize}
+Sean $q\times 0$ los puntos racionales de $[0,1]\times 0$. Entonces los segmentos $T_q$ que unen a $0\times 1$ con $q\times 0$ vienen dados por las función continuas $f_q:[0,1]\rightarrow\mathbb{R}^2$ definidas por $f_q(t)= (0\times 1)(1-t)+t (q\times 0)$. Como $[0,1]$ es conexa y $f_q$ es continua, el segmento $T_q$ es conexo y además, por definición, es conexo por caminos. Como $T=\bigcup_{q\in[0,1]\cap \mathbb{Q}} T_q$ y los $T_q$ tienen el punto $0\times 1$ en común, $T$ es conexo por caminos. Sea $U=(-\epsilon,q+\epsilon)\times (-\epsilon,1)\cap T$ un entorno de $\vect{x}\in T_q-\{0\times 1\}$. Supongamos que existe un entorno $V$ de $\vect{x}$ conexo por caminos tal que $V\subset U$. Pero no hay ninguna función continua que una los puntos $\vect{x}\in V\cap T_q$ con los puntos 
+$\vect{y}\in V\cap T_p$ para $p\neq q$, porque pertencen a componentes diferentes. Ademas, las componentes conexas por caminos $(-\epsilon,q+\epsilon)\times (-\epsilon,1)\cap T_p$ de $U$, son abiertas. Por el teorema 25.4, estas componentes son localmente conexas por caminos.
+
+Ahora sea $U=(-\epsilon,q+\epsilon)\times (1-\epsilon,1+\epsilon)\cap T$ un entorno de $0\times 1$. Entonces, para cada par de puntos de $U$ existe un camino que los une. Por tanto, hay una única componente conexa por caminos que es abierta en $U$ y viene dada por $U$. Por tanto, $0\times 1$ es el único punto conexo por caminos localmente.
+
+\begin{itemize}
+\item \bf (b) \rm Veamos un subconjunto de $\mathbb{R}^2$ que es conexo por caminos, pero que no es localmente conexo en ninguno de sus puntos.
+\end{itemize}
+Como $T$ es conexo por caminos y localmente conexo únicamente en $0\times 1$, se tiene que añadir un conjunto de puntos de tal manera que $0\times 1$ deje de ser localmente conexo. Sean $p\times 1$ los puntos racionales de $[-1,0]\times 1$. Sean los segmentos $R_p$ que unen a $0\times 0$ con $p\times 1$ y sea $R=\bigcup_{p\in [-1,0]\cap\mathbb{Q}}R_p$. Entonces $R$ es conexo por caminos, pero sólo es conexo por caminos en el punto $0\times 0$, por apartado (a). Entonces $R\cup T$ es conexo por caminos. Puesto que son dos conjuntos conexos que tienen los puntos de la recta vertical $0\times[0,1]$ en común. Además, el punto $0\times 1$ ya no es conexo por caminos, puesto que el abierto $U=(-\epsilon,q+\epsilon)\times (1-\epsilon,1+\epsilon)\cap (T\cup R)$ es un entorno de $0\times 1$ que es separable. Esto es $U\cap R_p$    y $U\cap R_0$ son componentes abiertas de $T\cup R$, como subespacio de $\mathbb{R}^2$, que no son conexas por caminos en $0\times 1$
+\section{Tema 3 Sección 25 Ejercicio 6}
+Un espacio $X$ es débilmente conexo en $x$ si para cada entorno $U$ de $x$ existe un subespacio conexo de $X$, contenido en $U$, que contiene un 
+entorno de $x$. Veamos que si $X$ es débilmente conexo en cada punto de $X$, entonces $X$ es localmente conexo.
+Por definición de espacio $X$ débilmente conexo en $x$, existe un entorno $U$ de $x$, que contiene un subespacio conexo y, a su vez, este subespacio contiene un entorno $V$ de $x$. Por tanto, $V$ es un entorno conexo de $X$, puesto que si $V$ es abierto del subespacio de $X$, es abierto del espacio $X$. Por definición de localmente conexo, si $X$ es débilmente conexo en cada punto de $X$, entonces $X$ es localmente conexo en cada punto.
+\section{Tema 3 Sección 25 Ejercicio 7}
+Sin pérdida de generalidad, sea $a_i=\frac{1}{i}$, donde $i\in \mathbb{Z}_+$, y $p=0$ y sean $T_{ij}$ los segmentos de $\mathbb{R}^2$ que unen $\frac{1}{i+1}\times\frac{1}{j} $ con $ \frac{1}{i}\times 0 $, tales que $\frac{1}{i+1}\times\frac{1}{j}\notin T_{ij}$ pero $\frac{1}{i}\times 0\in T_{ij}$. Sea $X= \{0\times 0\}\cup \bigcup_{i,j\in \mathbb{Z}_+} T_{ij}$ la rama infinita. Se tiene que los puntos $\frac{1}{i}\times 0$ no son localmente conexos, ya que los abiertos $U_i\cap X$, donde $U_i=(\frac{1}{i}-\epsilon,\frac{1}{i}+\epsilon)\times (-\delta,\delta)$, contienen componentes abiertas dadas por $U_i\cap T_{i-1j}$. Lo mismo pasa con el punto $0\times 0$. Ahora considérese el subespacio $Y= [0,\frac{1}{n}]\times \mathbb{R}^2\cap X$ contenido en el entorno $V=(-\epsilon,\frac{1}{n}+\epsilon)\times (-\delta,\delta)$ de $0\times 0$.  Entonces $Y$ es conexo, y además, exite un entorno $U\cap Y$ de $0\times 0$, donde $U=(-\epsilon,\epsilon)\times (-\delta,\delta)$. Entonces, por definición, $X$ es debilmente localmente conexo en $0\times 0$.
+\section{Tema 3 Sección 25 Ejercicio 8}
+Sea $p:X\rightarrow Y$ una aplicación cociente. Veamos que si $X$ es localmente conexo, entonces $Y$ es localmente conexo. Por definición de aplicación cociente, $p$ es sobreyectiva, y un subconjunto $U$ de $Y$ es abierto en $Y$ si, y sólo si, $p^{-1}(U)$ es abierto en $X$. Sea $x\sim y$ si $p(x)=p(y)$. Sea $C$ una componente del abierto $U$ de $Y$. Veamos que $p^{-1}(C)$ es una unión de componentes de $p^{-1}(U)$. Sean $D$ y $E$ dos componentes de $p^{-1}(U)$, hay que probar que $D\cup E\subset p^{-1}(C)$. Supongamos que para cualquier componente $C$ de $U$ no existe ningún par de componentes $D$ y $E$ de $p^{-1}(U)$ tales que $ D\cup E\subset p^{-1}(C)$. Entonces $p^{-1}(C)\subsetneq D\cup E$. Entonces, bien $p^{-1}(C)\subsetneq D$, bien $p^{-1}(C)\subsetneq E$. Por tanto, como $p$ es aplicación cociente, $p^{-1}(U)=V$ es abierta. Como $X$ es localmente conexo, las componentes de $V$ son abiertas. Entonces $E$ y $D$ son dos componentes abiertas de $V$. Por tanto, se cumple una de las siguientes afirmaciones. Bien $p^{-1}(C)$ y $D$ son dos subespacios conexos de $X$ que tienen puntos en común y que son distintos. O bien $p^{-1}(C)$ y $E$ son dos subespacios conexos en $X$ que tienen puntos en común y que son distintos. Pero esto contradice el teorema 25.1. Por tanto, ha de ser $D\cup E\subset p^{-1}(C)$ para algún par de componentes $D$ y $E$ de $p^{-1}(U)$ en $X$. Entonces, para cada abierto $p^{-1}(U)$ en $X$, $U$ es abierto en $Y$. Entonces existe un abierto $E$ conexo que está contenido en $p^{-1}(U)$ y existe un abierto $p(E)$ tal que $p(E)\subset C\subset U$. Por tanto, si $X$ es localmente conexo, si $Y$ es localmente conexo bajo la aplicación $p:X\rightarrow Y$.
+
+\end{document}

@@ -1,0 +1,35 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 23 Ejercicio 9}
+Veamos que si $A$ es subconjunto propio de $X$, $B$ es subconjunto propio de $Y$ y $X$ e $Y$ son ambos conexos, entonces $(X\times Y)-(A\times B)$ es conexo. Por ser teorema 23.6, $(X\times Y)$ es conexo. Por ser $A\subsetneq X$ y $B\subsetneq Y$ resulta que $(X\times Y)\cap ((X-A)\times (Y-B))\neq \varnothing$. Además $(X-A)\times (Y-B)\subset (X\times Y)-(A\times B)$. Por tanto, $(X\times Y)\cap ((X\times Y)-(A\times B))\neq \varnothing$. Supongamos que $(X\times Y)-(A\times B)$ es disconexo y que $A=X-\{x\}$ y $B=Y-\{y\}$. Entonces $(X\times Y)-(A\times B)=(X\times \{y\})\cup (Y\times \{x\})$. Pero $X\times \{y\}$ es conexo por ser homeomorfo a $X$ y   $Y\times \{x\}$ es conexo por ser homeomorfo a $Y$. Entonces $(X\times \{y\})\cup (Y\times \{x\})$ es subespacio conexo por ser unión de subespacios conexos con el punto $x\times y$ en común. Por tanto, $(X\times Y)-(A\times B)$ es conexo, contradiciendo la suposición inicial.
+\section{Tema 3 Sección 23 Ejercicio 10}
+Sea $\{X_\alpha\}_{\alpha\in J}$ una familia de espacios conexos y $X=\prod_{\alpha\in J}X_\alpha$ el espacio producto. Sea $\vect{a}=(a_\alpha)$ un punto fijo de $X$.
+\begin{itemize}
+\item \bf (a) \rm Sea un subconjunto $K$ finito de $J$, y sea $X_K$ el subconjunto de $X$ de todos los $\vect{x}$ tales que $x_\alpha=a_\alpha$ para todo $\alpha\notin K$. Veamos que $X_K$ es conexo.
+\end{itemize}
+Se tiene que $\vect{a}\in X_K$ para todo $K$. Además, por teorema 23.6, el conjunto $\widetilde{X}_K=\prod_{\alpha\in K}X_\alpha$ es conexo por ser el producto cartesiano finito de espacios conexos. Ademas $\widetilde{X}_K$ es homeomorfo a $X_K$ puesto que para cada $\vect{y}\in \widetilde{X}_K$ hay un único  $(y_\beta)_{\beta\in K}\times (a_\alpha)_{\alpha\in (J-K)}\in X_K$. Por teorema 23.5, 
+$X_K$ es conexo.
+\begin{itemize}
+\item \bf (b) \rm Veamos que la unión $Y$ de los espacios conexos  $X_K$ es conexa.
+\end{itemize}
+Por teorema 23.3, como todos los $X_K$ tienen el punto $\vect{a}$ en común, y como $Y$ es la unión de espacios conexos con un único punto en común, $Y$ es conexo.
+\begin{itemize}
+\item \bf (c) \rm Veamos que $X$ coincide con la adherencia de $Y$ y que $X$ es conexo.
+\end{itemize}
+Supongamos que $U=\prod_{\alpha\in J}U_\alpha$ es un abierto de la topología producto en $X$ y $\vect{b}\in X$. Vemos que $U\cap Y\neq \varnothing$. Se tiene que existe algún $K$ tal que $ U_\alpha\neq X_\alpha$ si $\alpha \in K $ y $ U_\alpha=X_\alpha$ si $\alpha\notin K$. Por tanto, $(b_\alpha)_{\alpha\in K}\times (a_\alpha)_{\alpha\in J-K}\in U$ y, por definición $(b_\alpha)_{\alpha\in K}\times (a_\alpha)_{\alpha\in J-K}\in X_K\subset Y$. Por tanto $U\cap Y\neq \varnothing$, esto es $\overline{Y}=X$ y, por teorema 23.4, $X$ es conexo.
+\section{Tema 3 Sección 23 Ejercicio 11}
+Sea $p:X\rightarrow Y$ una aplicación cociente. Veamos que si $Y$ y los conjuntos de la forma $p^{-1}(\{y\})$ son conexos, entonces $X$ es conexo. Supongamos que el espacio $X$ es separable en $A=p^{-1}(\{y\})$ y $X-A=\bigcup_{z\in Y-\{y\}}p^{-1}(\{z\})$. Entonces $A$ y $X-A$ son abiertos y cerrados a la vez. Puesto que $p$ es una función cociente, $A$ es abierto en $X$ si, y solo si, $p(A)=\{y\}$ es abierto en $Y$. Igualmente, $p(X-A)$ es abierto. Se tiene que $p(p^{-1}(\{z\}))=\{z\}$, puesto que $p$ es sobreyectiva. Por tanto $p(X-A)=p(\bigcup_{z\in Y-\{y\}}p^{-1}(\{z\}))=\bigcup_{z\in Y-\{y\}}p(p^{-1}(\{z\}))=Y-\{y\}$ es cerrado. Entonces $p(X-A)$ es abierto y cerrado a la vez. Pero esto no es posible, puesto que $Y$ es conexo.
+\section{Tema 3 Sección 23 Ejercicio 12}
+Sea $Y\subset X$ y sean $X$ e $Y$ conexos. Veamos que si $A$ y $B$ forman una separación de $X-Y$, $Y\cup A$ e $Y\cup B$ son conexos. Supongamos que $Y\cup A$ es separable en $C$ y $D$. Entonces por teorema $23.2$, bien $Y\subset C$, bien $Y\subset D$ por ser $Y$ subespacio conexo de $Y\cup A$. Supongamos que $Y\subset C$ y que $D\subset A$.  Entonces $X=C\cup (D\cup B)$. Entonces $C$ no tiene puntos límite de $D$ y $B$ no tiene puntos límite de $A$, y por tanto, $B$ no tiene puntos límite de $D$. Por tanto, $C\cup B$ no tiene puntos límite de $D$. Por tanto $D$ es cerrado. De la misma manera, $D$ no tiene puntos límite de $C$ y $D$ tampoco tiene  puntos límite de $B$. Por tanto, $B\cup C$ no tiene puntos límite de $D$. Esto es, $B\cup C$ es cerrado y $D$ es abierto. Pero $D$ no puede ser abierto y cerrado a la ver de $X$. Por tanto, $Y\cup A$ no puede ser separable, es conexo. Lo mismo se deduce de $Y\cup B$.
+
+\end{document}

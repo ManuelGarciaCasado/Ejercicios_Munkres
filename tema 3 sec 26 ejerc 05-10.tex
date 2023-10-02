@@ -1,0 +1,54 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 26 Ejercicio 5}
+Veamos que, dados  $A$ y $B$ dos subespacios compactos disjuntos de un espacio de Hausdorff, existen abiertos $U$ y $V$ conteniendo a $A$ y a $B$, respectivamente.
+
+Por teorema 26.3, cada subespacio compacto de Hausdorff es cerrado. Entonces $B$ es cerrado y $X-B$ es abierto. Por tanto, $U=X-B\supset A$. Del mismo modo, $A$ es cerrado y $X-A$ es abierto. Por tanto, $V=X-A\supset B$.
+\section{Tema 3 Sección 26 Ejercicio 6}
+Veamos que, dada $f:X\rightarrow Y$ continua, donde $X$ es compacto e $Y$ de Hausdorff, se tiene que $f$ es aplicación cerrada (lleva conjuntos cerrados a conjuntos cerrados). Como $X$ es compacto y como $f$ es continua, por teorema 26.5, $f(X)$ es compacto. Por teorema 26.3, $f(X)$ es subespacio cerrado. Del mismo modo, si $U$ es cerredo en $X$, $f(U)$ es subespacio cerrado de $Y$, y por tanto, $f(U)$ es cerrado.
+\section{Tema 3 Sección 26 Ejercicio 7}
+Veamos que si $Y$ es compacto, la proyección $\pi_1:X\times Y\rightarrow X$ es cerrada. Se vió en ejercicio 16.4 que $\pi_1$ es una aplicación abierta ya que transforma abiertos $U\times V$ de $X\times Y$ en abiertos $U=\pi_1(U\times V)$ de $X$. Se tiene que $X\times Y-U\times V=(X\times(Y-V))\cup (X-U)\times Y)$ es cerrado. Se vió en ejercicio 2.2(f) que las aplicaciones conservan las uniones de conjuntos. Por tanto $\pi_1(X\times Y-U\times V)=\pi_1(X\times(Y-V))\cup\pi_1((X-U)\times Y)$. Luego $\pi_1(X\times Y-U\times V)=X$ es cerrado. No es necesario que $Y$ sea compacto.
+\section{Tema 3 Sección 26 Ejercicio 8}
+Sea $f:X\rightarrow Y$ una aplicación con $Y$ compacto y de Hausdorff. Veamos que, entonces, $f$ es continua si, y solo si, el grafo de $f$, definido por $G_f=\{x\times f(x)|x\in X\}$, es cerrado en $X\times Y$.
+
+Primero veamos que si $G_f$ es cerrado y $V$ es un entorno de $f(x_0)$, la intersección de $G_f$ y $X\times (Y-V)$ es cerrada. Se tiene que $X-V$ y $X$ son cerrados y, por ejercicio 17.3, $X\times (Y-V)$ es cerrado. La intersección de cerrados es cerrado. Se tiene que $G_f\cap (X\times (Y-V))$ es cerrado. Por tanto, $G_f\cap (X\times (Y-V))=\{x\times (f(x)-y))|x\in X,y\in V\}$ es cerrado, puesto que $f(X)$ es abierto. Por ejercicio 7, $\pi_1\left(G_f\cap (X\times (Y-V))\right)=\{ x|x\in X,y\in V,(f(x)-y)\in Y\}$ es cerrado. Pero, por definición de imagen inversa $\pi_1\left(G_f\cap (X\times (Y-V))\right)=X-f^{-1}(V)$. Por tanto, $f^{-1}(V)$ es abierto si $V$ es abierto. Luego $f$ es continua.
+
+Ahora supongamos que $f$ es continua, entonces dado el entorno $V$ de $f(x_0)\in Y$, se tiene que $f^{-1}(V)$ es abierto. Entonces $f^{-1}(V)\times V$ es abierto en $X\times Y$. Como $Y$ es compacto, para cada recubrimiento abierto $\mathcal{A}=\{A_\alpha\}_{\alpha\in J}$, existe un cubrimiento finito $\{A_{\alpha_i}\}_{i\leq n}$ de $Y$. Entonces existe un cubrimiento finito de $f(X)$. Por tanto para cada cubrimiento $\{f^{-1}(A_\alpha)\times A_\alpha\}_{\alpha\in J}$ de $G_f$ existe un cubrimiento finito $\{f^{-1}(A_i)\times A_i\}_{i\leq n}$ de $G_f$. Por tanto, $G_f$ es compacto. $G_f$ es subespacio de Hausdorff, ya que para todo para de puntos de $y,z\in Y$ existen entornos $V$ y $W$ respectivos que son disjuntos y, por tanto, $(f^{-1}(V)\times V)\cap  f^{-1}(W)\times W)=\varnothing$. Por teorema 26.3, $G_f$ es cerrado.
+\section{Tema 3 Sección 26 Ejercicio 9}
+Veamos la demostración del la generalización del lema del tubo: Sean $A$ y $B$ subespacios de $X$ e $Y$, respectivamente. Sea $N$ un abierto de $X\times Y$ conteniendo a $A\times B$. Si $A$ y $B$ son compactos, veamos que existen $U$ y $V$ en $X$ e $Y$, respectivamente, tales que $A\times B\subset U\times V\subset N$.
+
+Demostemos que para cada $x\times y$ de $A\times B$ existe un elemento básico $U_x\times Y_y$ de $X\times Y$ de tal manera que $U_x\times Y_y\subset N$. En tal caso, $A\times B=\bigcup_{x\times y\in A\times B}\{x\times y\}\subset \bigcup_{x\times y\in A\times B}U_x\times V_y\subset  (\bigcup_{x\in A}U_x)\times(\bigcup_{y\in B}V_y)=U\times V\subset N$. Como $A$ y $B$ son compactos, por teorema 26.7, $A\times B$ es compacto. Para cada cubrimiento $\{A_\alpha \times B_\alpha\}$ de $A\times B$, existe un cubrimiento finito $\{A_{\alpha_i}\times B_{\alpha_i}\}_{i\leq n}$ tal que  $A\times B\subset \bigcup_{i\leq n} A_{\alpha_i}\times B_{\alpha_i}$. Entonces sea $U_x\times V_y=\bigcap_{i\leq k}A_{\alpha_i}\times B_{\alpha_i}$ para algún $k\leq n$.
+\section{Tema 3 Sección 26 Ejercicio 10}
+\begin{itemize}
+\item \bf (a) \rm Obtengamos el siguiente resultado. Sea $f_n:X\rightarrow \mathbb{R}$ una sucesion de funciones continuas, con $f_n(x)\rightarrow f(x)$ para cada $x\in X$. Si $f$ es continua y si la sucesión $f_n$ es monótona creciente (esto es, $f_n(x)\leq f_{n+1}(x)$ para todo $n$ y $x$) con $X$ compacto, entonces la convergencia es uniforme.
+\end{itemize}
+Para que $f_n(x)$ converja a $f(x)$ es necesario que $\mathbb{R}$ sea Hausdorff, esto ocurre porque la topología usual de $\mathbb{R}$ es una topología con orden simple. Entonces, por ejercicio 26.6, $f_n$ y $f$ son aplicaciones cerradas. Hay que demostrar que existe un $N\in\mathbb{Z}_+$ y un $\epsilon>0$ tales que $d(f_n(x),f(x))<\epsilon$ para todo $n>N$ y todo $x\in X$. Como $f_n(x)\rightarrow f(x)$, para todo abierto $B_d(f(x),\epsilon )$ existe un $N$ tal que $f_n(x)\in B_d(f(x),\epsilon )$ para todo $n>N$. Por tanto, existe un $N$ tal que $d(f_n(x),f(x))=|f(x)-f_n(x)|=f(x)-f_n(x)<\epsilon$ para todo $n>N$ y todo $x\in X$.
+\begin{itemize}
+\item \bf (b) \rm Veamos que el teorema falla si no se exige la compacidad de $X$, o si no se exige que la sucesión $f_n$ sea monótona.
+\end{itemize}
+En el ejercio 21.9 se vio que las funciones $f_n:\mathbb{R}\rightarrow\mathbb{R}$ definidas por
+\begin{eqnarray}
+f_n(x)=\frac{1}{n^3\left(x-\frac{1}{n}\right)^2+1}
+\end{eqnarray}
+no convergen uniformemente a la función $f:\mathbb{R}\rightarrow\mathbb{R}$ nula, pero $f_n(x)\rightarrow 0$ para todo $x$. Aquí se da que no se cumple $f_n(x)\leq f_{n+1}(x)\leq ...$ para todo $n$ y todo $x$. Se tiene que las funciones $g_n:[-2,2]\rightarrow \mathbb{R}$ definidas por 
+\begin{eqnarray}
+g_n(x)=2-
+\frac{1}{n^3\left(x-\frac{1}{n}\right)^2+1}\nonumber
+\end{eqnarray}
+convergen a $g:[-2,2]\rightarrow\mathbb{R}$ definida por $g(x)=2$. Las funciones $g_n$ son compactas, pero no son monotonas crecientes, y no convergen uniformemente. Por el contrario, las funciones $h_n:\mathbb{R}\rightarrow\mathbb{R}$, difinidas por 
+\begin{eqnarray}
+h_n(x)=2-
+\frac{1}{n\left(x-1\right)^2+n}\nonumber
+\end{eqnarray}
+convergen a $h(x)=2$ y son monotonas crecientes, pero como $\mathbb{R}$ no es compacto, no convergen uniformemente.
+\end{document}

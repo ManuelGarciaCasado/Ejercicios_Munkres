@@ -1,0 +1,44 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 25 Ejercicio 1}
+Veamos cuáles son las componentes y las componentes conexas por caminos de $\mathbb{R}_\ell$. Se demostró que los intervalos del tipo $[a,b)$,  $(a,b)$ y los rayos del tipo $[a,\infty)$ y $(-\infty,b)$ son abiertos de $\mathbb{R}_\ell$. Sea $A$ un subconjunto de $\mathbb{R}_\ell$ de varios elementos. Si $A$ es un subespacio de $\mathbb{R}_\ell$ y $x\in A$, se tiene que $A\cap (-\infty,x)$ y  $A\cap [x,\infty,x)$ es una separación del subespacio $A$. Si $A=\{x\}$, entonces $A$ es subespacio conexo de $\mathbb{R}_\ell$. Por tanto, las componentes de $\mathbb{R}_\ell$ son los conjuntos unipuntuales puesto que $x\sim x$. La componentes conexas por caminos son también los conjuntos unipuntuales, puesto que $f:[x,x]\rightarrow\mathbb{R}_\ell$ definida por $f(x)=x$ es continua, $\{x\}$ es conexo como subespacio de $\mathbb{R}_\ell$ y $x\sim x$.
+
+Por teorema 23.8, las funciónes constantes son las únicas funciones continuas de $f:\mathbb{R}\rightarrow\mathbb{R}_\ell$ ya que tranforman intervalos y rayos conexos de $\mathbb{R}$ en conjuntos unipuntuales, que son conexos en $\mathbb{R}_\ell$.
+
+\section{Tema 3 Sección 25 Ejercicio 2}
+
+\begin{itemize}
+\item \bf (a) \rm Veamos cuáles son las componentes y las componentes conexas por caminos de $\mathbb{R}^\omega$ con la topología producto.
+\end{itemize}
+Por teorema 24.2, $\mathbb{R}$ es conexa, y por ejemplo 7 de la sección 23,  $\mathbb{R}^\omega$ con la topología producto también es conexo. Como $\mathbb{R}^\omega$ es un espacio conexo que contiene a cualesquiera dos puntos, $\mathbb{R}^\omega$ es su única componente. Además, cualesquiera dos punto $\vect{x}$ e $\vect{y}$ se pueden unir por la recta $f:[0,1]\rightarrow \mathbb{R}^\omega$ definida por $f(t)=(1-t)\vect{x}+ t\vect{y}$. Por tanto $\mathbb{R}^\omega$ es una componente conexa por caminos. 
+\begin{itemize}
+\item \bf (b) \rm Sea $\mathbb{R}^\omega$ con la topología uniforme. Veamos que $\vect{x}$ e $\vect{y}$ están en la misma componete de $\mathbb{R}^\omega$ si, y solo si, la sucesión $\vect{x}-\vect{y}=(x_1-y_1,x_2-y_2,...)$ está acotada.
+\end{itemize}
+Se vió que en ejercicio 8 de la sección 23 que $\mathbb{R}^\omega$ no es conexo en la topología uniforme, pero $\mathbb{R}^\infty$ sí lo es. Por tanto $\mathbb{R}^\omega-\mathbb{R}^\infty$ es conexo. La distancia que define la topología uniforme es
+\begin{eqnarray}
+\overline\rho(\vect{x},\vect{y})=\sup\{\min\{|x_\alpha -y_\alpha|,1\}| \alpha\in J\}\nonumber
+\end{eqnarray}
+Por tanto $\overline\rho(\vect{x},\vect{y})\leq 1$ para cualesquiera par de puntos de $\mathbb{R}^\omega$ y además $\overline\rho(\vect{x},\vect{y})=\overline\rho(\vect{x}-\vect{y},\vect{0})$. El elemento $\vect{x}-\vect{y}$ está acotado si, y solo si, existe un $M$ tal que $|x_\alpha-y_\alpha|\leq M$ para todo $\alpha\in J$. Supongamos que existe que un $\alpha\in J$ tal que $|x_\alpha-y_\alpha|>M$ para cualquier $M$. Entonces $\overline\rho(\vect{x}-\vect{y},\vect{0})=\sup\{\min\{|x_\alpha -y_\alpha|,1\}| \alpha\in J\}= 1$ para  $M\geq 1$. Entonces $\overline\rho(\vect{x},\vect{y})=\overline\rho(\vect{x}-\vect{y},\vect{0})=1$. Pero en este caso $\vect{y}\notin B_{\overline\rho}(\vect{x},1)$. Por tanto, bien $B_{\overline\rho}(\vect{x},\epsilon)\cap \mathbb{R}^\infty=\varnothing$ y $B_{\overline\rho}(\vect{x},\epsilon)\cap( \mathbb{R}^\omega-\mathbb{R}^\infty)\neq\varnothing$, bien $B_{\overline\rho}(\vect{x},\epsilon)\cap \mathbb{R}^\infty\neq\varnothing$ y $B_{\overline\rho}(\vect{x},\epsilon)\cap (\mathbb{R}^\omega-\mathbb{R}^\infty)=\varnothing$ para cualquier $\epsilon\leq 1$. Si $\epsilon>1$, tenemos $B_{\overline\rho}(\vect{x},\epsilon)=\mathbb{R}^\omega$. Esto significa que $\mathbb{R}^\infty$ no es la adherencia de $\mathbb{R}^\omega$. Por tanto, bien $\vect{x}\in \mathbb{R}^\infty$ e $\vect{y}\in \mathbb{R}^\omega-\mathbb{R}^\infty$, bien $\vect{y}\in \mathbb{R}^\infty$ y $\vect{x}\in \mathbb{R}^\omega-\mathbb{R}^\infty$. Por tanto si $\vect{x}-\vect{y}$ no está acotado, $\vect{x}$ e $\vect{y}$ pertencen a distintas componentes. Por tanto si $\vect{x}$ e $\vect{y}$ pertence la misma componente, $\vect{x}-\vect{y}$ está acotado.
+
+Supongamos que $\vect{x}\in \mathbb{R}^\infty$, que $\vect{y}\in \mathbb{R}^\omega-\mathbb{R}^\infty$ y que para todo $\alpha\in J$ existe un $M $ tal que $|x_\alpha-y_\alpha|\leq M$. Entonces $x_\alpha\neq 0$ para un número finito de $\alpha\in J$, digamos $\alpha_1,\alpha_2,...,\alpha_{N}$; y $y_\alpha\neq 0$ para un número infinito de $\alpha\in J$, digamos $\alpha_1,\alpha_2,...,\alpha_n,...$. Pero resulta que si $y_{\alpha_n}=n\sup_{i\in N}\{x_i\} $, se tiene que $|x_{\alpha_n}-y_{\alpha_n}|=n\sup_{i\in N}\{x_i\} $ para  $n>N$, contradicendo la suposición inicial.
+Por tanto, si $\vect{x}-\vect{y}$ esta acotado, $\vect{x}$ e $\vect{y}$ pertenecen a la misma componente.
+\begin{itemize}
+\item \bf (c) \rm Sea $\mathbb{R}^\omega$ con la topología por cajas. Veamos que $\vect{x}$ e $\vect{y}$ están en la misma componete de $\mathbb{R}^\omega$ si, y solo si, la sucesión $\vect{x}-\vect{y}$ es finalmente cero.
+\end{itemize}
+Se dice que $\vect{x}-\vect{y}$ es finalmente cero si  $x_\alpha-y_\alpha\neq 0$ para un numero finito de valores de $\alpha$, por definición de $\vect{x}-\vect{y}\in \mathbb{R}^\infty$. Supongamos $\vect{x}-\vect{y}$ no es finalmente cero, entonces $h(\vect{x})=\frac{\vect{x}-\vect{y}}{\sum_\alpha (x_\alpha-y_\alpha)^2}$ es un homeomorfismo de $\mathbb{R}^\omega$ en $\mathbb{R}^\omega$ tal que $h(\vect{x})$ está acotado, pero $h(\vect{y})$ no está acotado. Entonces el conjunto $A$ de elementos acotados de $\mathbb{R}^\omega$ es homeomorfo al conjunto de elementos que son finalmente cero $\mathbb{R}^\infty$. Del ejemplo 6 de la sección 23, se tiene que $\mathbb{R}^\omega$ con la topología por cajas tiene una partición formada por $A$ y $B$, donde $A$ es el conjuto conexo de elementos acotados y $B$ es el conjuto conexo de elementos no acotados de $\mathbb{R}^\omega$. Por tanto $\mathbb{R}^\infty$ y $\mathbb{R}^\omega-\mathbb{R}^\infty$ son componentes de $\mathbb{R}^\omega$ y $A$ y $B$ también son componentes de $\mathbb{R}^\omega$ . Por tanto, si $\vect{x}-\vect{y}\notin \mathbb{R}^\infty$ entonces $\vect{x}\in A$ y $\vect{y}\in B$. Y si $\vect{x},\vect{y}\in A$ o $\vect{x},\vect{y}\in B$ entonces $\vect{x}-\vect{y}\in \mathbb{R}^\infty$. En la otra dirección, supongamos que $\vect{x}-\vect{y}\in \mathbb{R}^\infty$ y que $\vect{x}\in A$ y $\vect{y}\in B$. Entonces existe un $\beta$ tal que $|y_\alpha|>|y_\beta|$  y tal que $x_\alpha|\leq |x_\beta|$ para todo $\alpha>\beta$. Entonces existe algún $\beta$ tal que $|x_\alpha-y_\alpha|>|x_\alpha-y_\beta|>0$ para todo $\alpha >\beta$ contradiciendo el hecho de que $\vect{x}-\vect{y}$ es finalmete cero. Como existe la aplicación $g:[0,1]\rightarrow A$    (aplicación $g:[0,1]\rightarrow B$) continua definida por $g(t)=(1-t)\vect{x}+t\vect{z}$ para cada par de puntos $\vect{x},\vect{z}\in A$ (cada par de puntos $\vect{x},\vect{z}\in B$), ambas componentes son continuas por caminos.
+
+\section{Tema 3 Sección 25 Ejercicio 3}
+
+Veamos que el cuadrado ordenado es localmente conexo pero no es localmente conexo por caminos. Se vió en el ejemplo 6 de la sección 24 que el cuadrado ordenado es conexo, pero no es conexo por caminos. Veamos que es localmente conexo. Sea $U$ un entorno de $x$. Entonces la componente de $U$ es todo $I^2_o$, puesto que $I^2_o$ es conexo. Como $I^2_o$ es una componente abierta para todo $U$ y todo $x$, entonces $I^2_o$ es localmente conexo. Como hay caminos en $I^2_o$ dados por $f_x:[a,b]\rightarrow x\times[c,d]$ con $c,d\in [0,1]$ y $c<d$, se tiene que las componentes conexas por caminos de $I^2_o$ de los entornos $U_x=x\times (y-\epsilon, y +\epsilon)$ con $0\leq y +\epsilon\leq 1$, bienen dadas por $U_x=x\times [0,1]$. Por tanto, las componentes conexas por caminos de los entornos de $x\times y$ son cerrados de $I^2_o$. Por teorema 25.4, $I^2_o$ no es conexa por caminos.
+
+\end{document}

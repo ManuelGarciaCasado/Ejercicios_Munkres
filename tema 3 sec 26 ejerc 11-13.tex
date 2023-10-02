@@ -1,0 +1,51 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 26 Ejercicio 11}
+Veamos que si $X$ es compacto y de Hausdorff y $\mathcal{A}$ es una colección de subconjutos cerrados y conexos de $X$ que están ordenados por la inclusión propia, entonces 
+\begin{eqnarray}
+Y=\bigcap_{A\in \mathcal{A}}A\nonumber
+\end{eqnarray}
+es conexa. Primero, veamos que, dada una separación $D\cup C$ de $Y$, y unos abiertos disjuntos $U$ y $V$ de $X$ tales que $D\subset U$ y $C\subset V$, se tiene que
+\begin{eqnarray}
+\bigcap_{A\in \mathcal{A}}\left(A-\left(U\cup V\right)\right)\neq \varnothing.\nonumber
+\end{eqnarray}
+Por ejercicio 5, como $X$ es conexo y de Hausdorff, existen los abiertos disjuntos $U$ y $V$. Sopongamos que $\varnothing=\bigcap_{A\in \mathcal{A}}\left(A-\left(U\cup V\right)\right)=\bigcap_{A\in \mathcal{A}}\left(\left(A-U\right)\cap \left(A-V\right)\right)=\bigcap_{A\in \mathcal{A}}\left(A-U\right)\cap \bigcap_{A\in \mathcal{A}}\left(A-V\right)$. Por tanto, $\bigcap_{A\in \mathcal{A}}\left(A-U\right)$ y $ \bigcap_{A\in \mathcal{A}}\left(A-V\right)$ forman una separación de
+\begin{eqnarray}
+\bigcap_{A\in \mathcal{A}}\left(A-U\right)\cup \bigcap_{A\in \mathcal{A}}\left(A-V\right)=\bigcap_{A\in \mathcal{A}}\left(\left(A-U\right)\cup \left(A-V\right)\right)
+\nonumber\\
+=\bigcap_{A\in \mathcal{A}}\left(A-U\cap V\right)=\bigcap_{A\in \mathcal{A}}A=Y.\nonumber
+\end{eqnarray}
+Pero si $C=\bigcap_{A\in \mathcal{A}}\left(A-U\right)$ y $D=\bigcap_{A\in \mathcal{A}}\left(A-V\right)$, esto contradice la suposición inicial. Por tanto, bien $Y$ no es conexo, bien $\bigcap_{A\in \mathcal{A}}\left(A-\left(U\cup V\right)\right)\neq \varnothing$. Pero
+\begin{eqnarray}
+\bigcap_{A\in \mathcal{A}}\left(A-\left(U\cup V\right)\right)\subset \bigcap_{A\in \mathcal{A}}\left(A-\left(D\cup C\right)\right)=\bigcap_{A\in \mathcal{A}}\left(A-Y\right)=\varnothing.\nonumber
+\end{eqnarray}
+Luego $Y$ es conexa.
+\section{Tema 3 Sección 26 Ejercicio 12}
+Sea $p:X\rightarrow Y$ una aplicación continua y sobreyectiva tal que $p^{-1}(\{y\})$ es compacto para cada $y\in Y$. Veamos que si $Y$ es compacto entonces $X$ es compacto. Pero primero veamos que si $U$ es un abierto tal que $p^{-1}(\{y\})\subset U$, existe un entorno $W$ de $y$ tal que $p^{-1}(W)$ está contenido en $U$. Se tiene que $\{y\}=p(p^{-1}(\{y\}))\subset p(U)$. Sea $W$ un entorno de $y$ tal que $y\in p(U)\subset W$, esto se puede hacer porque $Y$ es compacto (si $\mathcal{A}=\{W_\alpha\}_{\alpha\in J}$ es un cubrimiento de abiertos de $Y$, tomemos  $W=\bigcup_{i\leq n}W_{\alpha_i}$ para algún $n\in\mathbb{Z}_+$). Entonces $U\subset p^{-1}(W)$.  Entonces dado que $Y$ es compacta, $Y=\bigcup_{n\leq N}W_n$ para $W_n=\bigcup_{i\leq n}W_{\alpha_i}$, se tiene que como $f$ es sobreyectiva $X=f^{-1}(Y)$. Por tanto si $\mathcal{A}=\{W_\alpha\}_{\alpha\in J}$ es un cubrimiento de abiertos de $Y$, $\mathcal{B}=\{f^{-1}(W_\alpha)\}_{\alpha\in J}$ es un cubrimiento de $X$, y ademas $X=\bigcup_{n\leq N}p^{-1}(W_n)=p^{-1}(Y)$ para algún $N\in\mathbb{Z}_+$.
+\section{Tema 3 Sección 26 Ejercicio 13}
+Sea $G$ un grupo topológico.
+\begin{itemize}
+\item \bf (a) \rm Sean $A$ y $B$ subespacios de G. Si $A$ es cerrado y $B$ es compacto, veamos que $A\cdot B$ es cerrado.
+\end{itemize}
+Primero veamos que si $c$ no está en $A\cdot B$, hay un entorno $W$ de $c$ tal que $W\cdot B^{-1}$ no interseca a $A$. Recordemos que, por axioma T1, un conjunto de $G$ que tiene un número finito de puntos es cerrado. Por el enunciado resulta que $c\neq a\cdot b$ para todo $a\in A$ y  $b\in B$. Del ejercicio complementario 7(c) de la sección 22, se tiene que dado el conjunto cerrado $A\cdot B$ y el punto $c$ que no está en $A\cdot B$, existen conjuntos cerrados y disjuntos, $C$ y $D$ tales que $A\cdot B\subset D$ y $c\in C$. Entonces $A\cdot B\subset D$ y $c\in C$. Sea $C=\{c\}$ entonces, es compacto, ya que todo cubrimiento de $C$ por abiertos de $G$ tiene un subrecubrimiento finito. Por tanto, existe un abierto $W$ tal que $A\cdot B\subset D$ y $c\in C\subset W$. Entonces $C\cap D= \varnothing$ implica $C\cdot B^{-1}\cap D\cdot B^{-1}= \varnothing$. Por tanto, $A\subset D\cdot B^{-1}$ y $C\cdot B^{-1}\subset W\cdot B^{-1}$. Tomando $W$ tal que $W\subset G-A$, se tiene que $A$ no interseca a $W\cdot B^{-1}$ y $c\in W$.
+
+Entonces, como $G-A=\bigcup_{x\in W}W\cdot B^{-1}$ es abierto, $G\cdot B-A\cdot B =G-A\cdot B= \bigcup_{x\in W}W$ es abierto por ser unión de abiertos. Por tanto, $A\cdot B$ es cerrado.
+\begin{itemize}
+\item \bf (b) \rm Sea $H$ un subgrupo de $G$ y sea $p:G\rightarrow G/H$ la aplicación cociente. Si $H$ es compacto, veamos que $p$ es cerrada.
+\end{itemize}
+Recordemos que $G/H=\bigcup_{x\in G}xH$ donde $xH=\{x\cdot h|h \in H\}$ y donde $x^{-1}Hx=H$ para cada $x\in G$. Recordemos que la aplicación sobreyectiva $p:G\rightarrow G/H$ se define como aplicación cociente cuando, todo $U$ es abierto de $G/H$ si, y solo si, $p^{-1}(U)$ es abierto de $G$. Sea $A$ cerrado en $G$, entonces $A\cdot H$ es cerrado en $G/H$ por apartado (a), ya que $H$ es compacto. Entonces, si $x\notin A$ existen abiertos disjuntos $U$ y $V$ tales que $A\subset U$ y $x\in V$. Por ejercicio complementario 5(c) de la sección 22, $p$ es una aplicación abierta. Es decir, si $V$ es abierto de $G$, $p(V)$ es abierto de $G/H$. Sea el entorno $V$ de $x$ que no interseca a $A$, entonces $p(V)$ es entorno de $xH$ que no interseca a $p(A)$. Por tanto, si $x\notin A$ entones $xH\notin AH$,entonces $xH\notin p(A)$, ya que $p(A)\subset AH$. Por tanto, $\bigcup_{x\notin A} p(V) =\bigcup_{xH\notin p(A)} p(V) =G/H-p(A)$ es abierto y $p(A)$ es cerrado.
+\begin{itemize}
+\item \bf (c) \rm Sea $H$ un subgrupo compacto de $G$. Veamos que si $G/H$ es compacto, $G$ es compacto.
+\end{itemize}
+Al ser $G/H$ compacto, cada cubrimiento $\mathcal{A}=\{A_\alpha H\}_{\alpha\in J}$  cubrimiento de $G/H$ admite un cubrimiento finito de $G/H$. Sea $G/H\subset \bigcup_{i\leq n}A_{\alpha_i} H$. Por la aplicación cociente del apartado (b), $G= p^{-1}(G/H)\subset p^{-1}\left(\bigcup_{i\leq n}A_{\alpha_i} H\right)=\bigcup_{i\leq n}p^{-1}(A_{\alpha_i} H)$. Por tanto, cualquier cubrimiento $\mathcal{B}=p^{-1}(A_{\alpha} H)$ de $G$ admite un cubrimiento finito y $G$ es compacto.
+\end{document}

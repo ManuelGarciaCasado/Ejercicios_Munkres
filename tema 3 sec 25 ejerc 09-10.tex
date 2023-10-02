@@ -1,0 +1,39 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 25 Ejercicio 9}
+Sea $G$ un grupo topológico y $C$ la componente de $G$ que contiene al elemento unidad $e$. Veamos que $C$ es un subgrupo normal de $G$. $C$ es un subgrupo normal de $G$ si, y solo si, $x\cdot h \cdot x^{-1}\in C$ para todo $h\in C$ y todo $x\in G$. Si $C$ es la componente que contiene a $e$ entonces contiene a $x\cdot x^{-1}=e$ para cualquier $x\in G$. Entonces $e= x\cdot e \cdot x^{-1}\in C$ para todo $x\in G$. Como $x\cdot h \in xC$ para todo $x\in G$ y todo $h\in C$, se tiene que $x\cdot e= x\in xC$.
+Como $h\cdot x^{-1}\in Cx^{-1}$ para todo $x^{-1}\in G$ y todo $h\in C$, se tiene que $e\cdot x^{-1}= x^{-1}\in Cx^{-1}$. Como $(x\cdot h )\cdot x^{-1}\in xCx^{-1}$ para todo $x\in G$ y todo $h\in C$, se tiene que $(x\cdot e)\cdot x^{-1}= e\in xCx^{-1}$. Como $xCx^{-1}$ y $C$ son dos conjuntos conexos que tienen un punto en común, por teorema 23.3, ambos conjuntos son conexo. Como dos componentes que no son disjuntas son siguales, $xCx^{-1}=C$.
+\section{Tema 3 Sección 25 Ejercicio 10}
+Sea $X$ un espacio y definamos la relación $x\sim y$ si no existe una separación $X=A\cup B$ de abiertos disjuntos $A$ y $B$ tales que $x\in A$ e $y\in B$.
+\begin{itemize}
+\item \bf (a) \rm Veamos que $x\sim y$ es una relación de equivalencia.
+\end{itemize}
+Si $x\sim x$ entonces, como $x\in A$ para el abierto $A$, se tiene que $X=A\cup A$ y $A\cap A\neq \varnothing$. Si para los abiertos $A$ y $B$, $X=A\cup B$ y $A\cap B\neq \varnothing$, se tiene que $x\sim y$ para $x\in A$ e $y\in B$, y $y\sim x$ para $y\in A$ y $x\in B$. Si $x\sim y$ e $y\sim z$ para $x\in A$, $y\in B$ y $z\in C$ con $X=A\cup B$, $A\cap B\neq \varnothing$, $X=B\cup C$ y $B\cap C\neq \varnothing$ resulta que $x\sim z$ ya que $x\in A\cup B$, $z\in C$, $X=(A\cup B)\cup C$ y $(A\cup B)\cap C\neq \varnothing$ para los abiertos $A\cup B$ y $C$.
+\begin{itemize}
+\item \bf (b) \rm Veamos que cada componente de $X$ está contenida en una cuasicomponente y que las compomentes coinciden con las cuasicomponentes si $X$ es localmente conexo.
+\end{itemize}
+Si $x$ e $y$ pertenecen a la misma componente $C$, entonces  pertenecen al mismo subespacio conexo de $X$. Por tanto, existen abiertos $A$ y $B$ tales que $A\cup B=X$ y que $A\cap B\supset C\neq \varnothing$ con $x\in A$ e $y\in B$. Por tanto, $x$ e $y$ pertenecen a la misma cuasicompotente $Q$. Es decir $C\subset Q$. Supongamos que $X$ es localmente conexo. Entonces, para todo $x\in X$, cada abierto $U$ de $x$ contiene un entorno conexo de $x$. Entonces, dados $x,y\in Q$, existen abiertos $A$ y $B$ tales que $x\in A$, $y\in B$ y además $A\cap B \neq \varnothing$ y $X=A\cup B$. Por tanto existe un abierto conexo $C$ tal que $A\cap B\subset C$ y que contiene a $x$ y a $y$. Por tanto, si $x,y \in Q$ se tiene que $x,y\in C$. Esto es $Q\subset C$. Por tanto $Q=C$. por teorema 25.3, cada componente del abierto $U$ de $X$ es abierta. Supongamos que $X$ es localmente conexo y hay dos componentes $C$, $D$ disjuntas tales que $D\cup C \subset Q$. Entonces existen abiertos $U$ y $V$ tales que  $C\cap Q\subset U$ y $D\cap Q\subset V$, que $U\cup V= X$ y que $U\cap V\neq \varnothing$, cuyos elementos pertenecen a la misma cuasicomponente. Esto  contradice el hecho de que una cuasi componente es un subconjunto de una componente. Por tanto, $C = D = Q$ y $Q$ es una componente y cuasicomponente cuando $X$ es localmente conexo.
+\begin{itemize}
+\item \bf (c) \rm Sean $K=\{\frac{1}{n}|n\in\mathbb{Z}_+\}$ y $-K=\{-\frac{1}{n}|n\in\mathbb{Z}_+\}$. Veamos cuales son la componentes, la componentes conexas por caminos y cuasicomponentes de los siguientes subespacios de $\mathbb{R}^2$:
+\begin{eqnarray}
+A=(K\times [0,1])\cup \{0\times 0\}\cup \{0\times 1\}\nonumber\\
+B=A\cup([0,1]\times\{0\})\nonumber\\
+C=(K\times [0,1])\cup (-K\times [-1,0])\cup ([0,1]\times -K)\cup ([-1,0]\times K)\nonumber
+\end{eqnarray}
+\end{itemize}
+Según las definiciones, las componentes de $A$ son las rectas $\{1/n\}\times [0,1]$ y los puntos $\{0\times 0\}$ y $\{0\times 1\}$; las cuasicomponentes de $A$ son los conjuntos $\{1/n\}\times [0,1]\cup\{0\times 0\}\cup\{0\times 1\}$; las componentes conexas por caminos de $A$ son las rectas $\{1/n\}\times [0,1]$ y los puntos $\{0\times 0\}$ y $\{0\times 1\}$.
+
+Según las definiciones, las componentes de $B$ son las rectas $B-\{0\times 1\}$ y el punto $\{0\times 1\}$; la cuasicomponente de $B$ es $B$; las componentes conexas por caminos de $B$ es $B-\{0\times 1$ y el punto $\{0\times 1\}$.
+
+Según las definiciones, las componentes de $C$ son las rectas $\{1/n\}\times [0,1]$, $\{-1/n\}\times [-1,0]$, $[0,1]\times \{-1/n\}$ y $[-1,0]\times\{1/n\}$; las cuasicomponentes de $C$ son los conjuntos $\{1/n\}\times [0,1]\cup\{-1/n\}\times [-1,0]\cup[0,1]\times \{-1/n\}\cup[-1,0]\times\{1/n\}$; las componentes conexas por caminos de $C$ son las mismas rectas $\{1/n\}\times [0,1]$, $\{-1/n\}\times [-1,0]$, $[0,1]\times \{-1/n\}$ y $[-1,0]\times\{1/n\}$.
+\end{document}

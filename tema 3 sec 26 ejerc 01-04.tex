@@ -1,0 +1,37 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 26 Ejercicio 1}
+\begin{itemize}
+\item \bf (a) \rm Sean $\mathcal{T}$ y $\mathcal{T}'$ dos topologías de $X$; supongamos que $\mathcal{T}'\supset \mathcal{T}$. Veamos que se puede decir de la compacidad de $X$ respecto de cada una de las topologías. 
+\end{itemize}
+Sea $\mathcal{A}$ un cubrimiento abierto de $X$ tal que $\mathcal{A}\subset\mathcal{T}$. Sea $\{A_{\alpha_i}\}_{i\leq n\in \mathbb{Z}}\subset \mathcal{A}$ un cubrimiento finito abierto de $X$. Como $A_{\alpha_i}\in \mathcal{T}\Rightarrow A_{\alpha_i}\in \mathcal{T}'$, se tiene que si $X$ es compacto en la topología $\mathcal{T}$ entonces $X$ es compacto en la topología $\mathcal{T}'$
+\begin{itemize}
+\item \bf (b) \rm Veamos que si $X$ es un espacio compacto y de Hausdorff con respecto a las dos topologías, entonces bien $\mathcal{T}$ y $\mathcal{T}'$ coinciden, bien ambas topologías no son comparables.
+\end{itemize}
+Supongamos que $X$ es compacto en ambas topologías, que son de Hausdorff, y que $\mathcal{T}\subsetneq\mathcal{T}'$. Sea $\mathcal{A}$ un cubrimiento abierto de $X$ en $\mathcal{T}$ y sea $\{A_{\alpha_i}\}_{i\leq n\in \mathbb{Z}}\subset \mathcal{A}$ un cubrimiento finito abierto de $X$. Los abiertos $A_{\alpha_i}$ también son abiertos de $\mathcal{T}'$. Existe $B$ abierto  de $\mathcal{T}'$ que no es abierto de $\mathcal{T}$, por ser $\mathcal{T}'\neq \mathcal{T}$. Por tanto, $B$ es cerrado en $\mathcal{T}$. Entonces $X-B$ es subespacio abierto compacto, ya que hay un cubrimiento abierto finito, por estar contenido en $\bigcup_{i\leq n\in \mathbb{Z}}A_{\alpha_i}$. Pero eso contradice el teorema 26.3, ya que $X-B$ es Hausdorff.
+\section{Tema 3 Sección 26 Ejercicio 2}
+\begin{itemize}
+\item \bf (a) \rm Veamos que en la recta real con la topología de  los complementos finitos,  cualquier subespacio es compacto.
+\end{itemize}
+Sea $U$ tal que $\mathbb{R}-U$ es finito o es todo $\mathbb{R}$. Sea $Y$ un subespacio de $\mathbb{R}$ con la topología de los complementos finitos. Entonces $V=U\cap Y$ es abierto de $Y$ como subespacio de $X$. Por lema 26.1, hay que demostrar que existe una subcoleción finita de abiertos de la topología de complementos finitos sobre $\mathbb{R}$ que cubre a $Y$. Sea $\mathcal{A}=\{A_\alpha\}$ un cubrimiento de $\mathbb{R}$ en la topología de los complementos finitos. Entonces $\mathbb{R}\subset\bigcup_{\alpha\in J} A_\alpha$ ya que $\mathbb{R}-\bigcup_{\alpha\in J}A_\alpha=\bigcap_{\alpha\in J}\left(\mathbb{R}-A_\alpha\right)=\varnothing$, puesto que los $\mathbb{R}-A_\alpha$ son finitos. Por el mismo motivo, existe una subcolección finita $\{A_{\alpha_1},A_{\alpha_2},...,A_{\alpha_n}\}$ tal que $\mathbb{R}\subset\bigcup_{\alpha_i\in J,i\leq n} A_\alpha$ ya que $\mathbb{R}-\bigcup_{\alpha_i\in J,i\leq n}A_{\alpha_i}=\bigcap_{\alpha_i\in J,i\leq n}\left(\mathbb{R}-A_{\alpha_i}\right)=\varnothing$. Y como $Y\subset \mathbb{R}\subset\bigcup_{\alpha_i\in J,i\leq n} A_\alpha$, se tiene que $Y$ es compacto por lema 26.1
+\begin{itemize}
+\item \bf (b) \rm Si $\mathbb{R}$ tiene la topología formada por los conjuntos tales que $\mathbb{R}-A$ es numerable o es todo $\mathbb{R}$, veamos si $[0,1]$ es un subespacio compacto.
+\end{itemize}
+Se vió en ejercicio 13.3, que la topología descrita, cumple las condiciones de una topología. Sea $\{A_\alpha\}$ con $\alpha\in J$ un cubrimiento de dicha topología. Entonces $\mathbb{R}-\bigcup_{\alpha\in J}A_\alpha=\bigcap_{\alpha\in J}\left(\mathbb{R}-A_\alpha\right)=\varnothing$. Pero la intersección finita de conjuntos numerables no tiene por qué ser vacia. Por ejemplo, sean los $A_n$ tales que $\mathbb{R}-A_n=\{i| i \geq n \text{ con } i,n\in \mathbb{Z}_+\}$. Entonces $\bigcap_{n\in \mathbb{Z}_+}\left(\mathbb{R}-A_n\right)=\varnothing$ implica que $\mathbb{R}=\bigcup_{n\in \mathbb{Z}_+}A_n$, pero $\bigcap_{n< N}\left(\mathbb{R}-A_n\right)=\mathbb{R}-A_N$ no es finito. Por tanto con esa topología, $\mathbb{R}$ no es compacto y el subespacio $Y=[0,1]$ tampoco lo es. Por teorema 26.1 el cubrimiento de $Y$ por abiertos $B_\alpha$ de $\mathbb{R}$ en la topología dada cumple $Y-\bigcup_{\alpha\in J}B_\alpha=\bigcap_{\alpha\in J}\left(Y-B_\alpha\right)=\varnothing$. Además como $\mathbb{R}-B_\alpha$ es numerable, $\left(\mathbb{R}-B_\alpha\right)\cap \left(Y-B_\alpha\right)=\left(Y-B_\alpha\right)$ es numerable por corolario 7.3. Sea $B_n$ tales que $Y-B_n=\{1-1/i| i \geq n \text{ con } i,n\in \mathbb{Z}_+\}$. Entonces $\bigcap_{n\in \mathbb{Z}_+}\left(Y-B_n\right)=\varnothing$ implica que $Y=\bigcup_{n\in \mathbb{Z}_+}B_n$, pero $\bigcap_{n< N}\left(Y-B_n\right)=Y-B_N$ no es finito. Por tanto con la topología de subespacio, $Y$ no es compacto.
+\section{Tema 3 Sección 26 Ejercicio 3}
+Veamos que la unión finita de subespacios compactos de $X$ es compacto. Sean $Y_j$ con $j\in \mathbb{Z}_+$ tal que $j<n$ los subespacios compactos de $X$. Sean $\mathcal{A}_j=\{A_{ij}\}$ para $i\in \mathbb{Z}_+$ y $i<m_j$ los cubrimientos finitos de $Y_j$, de tal manera que $A_{ij}=Y_j\cap U_{ij}$. Entonces $\varnothing =Y_j-\bigcup_{i<m_j}A_{ij}=Y_j-Y_j\cap\bigcup_{i<m_j}U_{ij}$, renombrando $U_j=\bigcup_{i<m_j}U_{ij}$, se tiene que $\varnothing=\left(Y_j-Y_j\cap U_{j}\right)=\left(Y_j- U_j\right)\cup\left(Y_j-Y_j\right)$, por tanto $\varnothing=Y_j-U_j$. Es decir $Y_j=U_j$ y $\bigcup_{j<n}Y_j= \bigcup_{j<n}U_j$, existe un cubrimiento finito de de abiertos de $X$. Por lema 26.1 es compacto.
+\section{Tema 3 Sección 26 Ejercicio 4}
+Veamos que cada subespacio compacto de un espacio métrico está acotado en la distancia y además es cerrado. Sea $Y$ un subespacio del espacio métrico $X$ con una distancia $d:X\times X\rightarrow \mathbb{R}$. Como $Y$ es compacto, si $Y\subset\bigcup_{\alpha\in J} U_\alpha$ entonces existe un cubrimiento finito de abiertos $U_{\alpha_i}$ tales que $Y-\bigcup_{i<n} U_{\alpha_i}=\varnothing$. Existe un cubrimiento finito de bolas $B_{d,i}(x,\epsilon)$ tales que $U_{\alpha_i}\subset B_{d,i}(x,\epsilon)$ para cada $i<n$ y para todo $x\in U_{\alpha_i}$. Por tanto, $Y\subset \bigcup_{i<n} B_{d,i}(x,\epsilon)$ y $d(x,y)\leq 2n\epsilon$ para todo $x,y\in Y$. Por tanto, $Y$ está acotado. Por otro lado, se vió que los espacios métricos satisfacen el axioma de Hausdorff, ya que si $x,y\in X$ son distintos y $\epsilon=\frac{1}{2}d(x,y)$, la desigualdad triangular implica que $B_d(x,\epsilon)$ y $B_d(y,\epsilon)$ son bolas disjuntas. Por teorema 26.3  los subespacios compactos de un espacio de Hausdorff son cerrados, por tanto $Y$ es cerrado.
+
+Veamos un espacio métrico en el cual no todo subespacio cerrado y acotado es compacto. Esto es, veamos que existe un espacio métrico cerrado y acotado que no es compacto. Sea $Y=(0,1]$ como subespacio de $\mathbb{R}$ con la topología metrica. Se tiene que $Y$ es cerrado puesto que $Y-\varnothing$ es abierto. Entonces el cubrimiento dado por $\mathcal{A}=\{(1/n,1]|n\in\mathbb{Z}_+\}$ para $(0,1]$ no tiene un cubrimiento finito, luego no es compacto.
+\end{document}

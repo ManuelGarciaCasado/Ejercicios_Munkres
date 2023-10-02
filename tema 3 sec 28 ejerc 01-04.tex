@@ -1,0 +1,39 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 28 Ejercicio 1}
+Sea $[0,1]^\omega$ con la topología uniforme. Esta topología se define por la distancia uniforme $\overline{\rho}(\vect{x},\vect{y})=\sup_{i\in \mathbb{Z}_+}\{\min\{|x_i-y_i|,1\}\}$. Veamos un subconjunto infinito de este espacio que no tiene puntos límite. Sea $A\subset [0,1]^\omega$ tal conjunto. Entonces se tiene que no existe $\vect{x}$ en $A$ tal que $B_{\overline{\rho}}(\vect{x},\epsilon)\cap (A-\vect{x})=\varnothing$, para cualquier $\epsilon>0$. el conjunto de los puntos $\vect{x}_N=(x_n)_{n\in \mathbb{Z}_+}$ tales que $x_i=1$ si $i\leq N$ y $x_i=0$ si $i>N$, y $N\in \mathbb{Z}_+$. Entonces $B_{\overline{\rho}}(\vect{x}_N,\epsilon)$ para $\epsilon<1$ sólo contiene a $\vect{x}_N$ ya que $\overline{\rho}(\vect{x}_N,\vect{x}_M)=\sup_{i\in \mathbb{Z}_+}\{\min\{|x_{N,i}-x_{M,i}|,1\}\}=1$ para $\vect{x}_N,\vect{x}_M\in A$ y $N\neq M$.
+\section{Tema 3 Sección 28 Ejercicio 2}
+Veamos que $[0,1]$ no es compacto por punto límite como subespacio de $\mathbb{R}_\ell$. Hay que probar que algún conjunto infinito no tiene algún punto límite. Supongamos que $[0,1]$ es compacto por punto límite. Considérese el subconjunto infinito $\{a-a/n\}_{n\in \mathbb{Z}_+}$ y el abierto $U=[0,1] \cap [a,b)$, en la topología de subespacio, con $0<a\leq 1$ y $a<b$. Entonces $U$ es entorno de $a$ pero $\{a-a/n\}_{n\in \mathbb{Z}_+}\cap U=\varnothing$. Además dados los entornos $V=[a-a/n,a-a/n+\epsilon)$ de $a-a/n$ se tiene que $(V-\{a-a/n\})\cap \{a-a/n\}_{n\in \mathbb{Z}_+}=\varnothing$.  Por tanto, $\{a-a/n\}_{n\in \mathbb{Z}_+}$ es infinito y no tiene puntos límite.
+\section{Tema 3 Sección 28 Ejercicio 3}
+Sea $X$ compacto por punto límite.
+\begin{itemize}
+\item \bf (a) \rm Si $f:X\rightarrow Y$ es continua. Veamos si $f(X)$ es compacto por punto límite. 
+\end{itemize}
+Veamos un contraejemplo. La función constante definida por $f(x)=a$ para todo $x\in X$ y un único $a\in Y$ no tiene puntos límite, ya que $\{a\}$ es un conjunto que no tiene puntos límite.
+\begin{itemize}
+\item \bf (b) \rm Si $A$ es un subconjunto cerrado de $X$, veamos si $A$ es compacto por punto límite. 
+\end{itemize}
+Si $A$ es cerrado, por corolario 17.7, $A$ contiene a todos sus puntos límite. Por tanto, si $A$ tiene un subconjunto infinito, ese subconjunto es subconjunto infinito de $X$, luego tiene punto límite en $X$ y en $A$. Luego $A$ es compacto por punto límite.
+\begin{itemize}
+\item \bf (c) \rm Si $X$ es un subespacio de un espacio de Hausdorff $Z$. Veamos si $X$ es cerrado en $Z$. 
+\end{itemize}
+Por ejercicio 17.12, $X$ es de Hausdorff. Como $X$ es compacto por punto límite, cada subconjunto infinito tiene punto límite. Por ser Hausdorff, cada sucesión converge únicamente a un punto. Además, el teorema 26.3 dice que cada subespacio compacto de un espacio de Hausdorff es cerrado. Veamos si se puede aplicar una demostración análoga. Hay que ver si $Z-X$ es abierto. Sea $z_0\in Z-X$, veamos si existe un entorno de $z_0$ que no interseca a $X$. Sea $\{x_\alpha\}_{\alpha\in J}$ un conjunto infinito de $X$. Se tiene que $\{x_\alpha\}_{\alpha\in J}$ tiene punto límite que además es único, por ser Hausdorff. Si $x_0$ es el punto límite de un subconjunto infinito de $\{x_\alpha\}_{\alpha\in J}$ y $z_0\neq x_0$, existen abiertos $U_{z_0}$ y $U_{x_0}$ disjuntos que contienen a $z_0$ y a $x_0$, respectivamente, y tales que $U_{z_0}\subset Z-X$ y $U_{x_0}\subset X$. Por tanto, $Z-X$ contiene a la unión de todos los $U_z$ tales que $z\neq x$ donde $x$ es el punto límite de alguna subsucesión infinita $\{x_\alpha\}_{\alpha\in J}\subset X$. Sin embargo, los puntos límite no tienen por qué pertenecer a $X$. Por tanto, no está garantizado que $X$ sea cerrado, ya que si todos los puntos límite $x$ de cada $\{x_\alpha\}_{\alpha\in J}$ son tales que $x\in Z-X$, se tiene que $X$ es abierto.
+\section{Tema 3 Sección 28 Ejercicio 4}
+Un espacio se dice numeralmente compacto si cada recubrimiento numerable de abiertos de $X$ que cubre a $X$, contiene una subcolección finita que también cubre a $X$. Veamos que un espacio que cumple el axioma $T_1$ es numeralmente compacto si, y sólo si, es compacto por punto límite.
+
+Veamos la demostración de la suficiencia. Supongamos que cualquier sucesión infinita numerable $\{x_n\}_{n\in\mathbb{Z}_+}$ tiene punto un límite en $X$. Veamos que $X$ es numeralmente compacto.  Entonces hay que demostrar que todo recubrimiento numerable $\{U_m\}_{m\in\mathbb{Z}_+}$ de abiertos de $X$ contiene un subrecubrimiento finito de $X$. Sea $x\in X$ un punto límite de la sucesión $\{x_n\}_{n\in\mathbb{Z}_+}$ definida como sigue. Supongamos que el recubrimiento numerable $\{U_m\}_{m\in\mathbb{Z}_+}$ de $X$ no contiene un subrecubrimiento finito de $X$. Entonces dado que $U_1$ no es cubrimiento de $X$ elijamos $x_1\notin U_1$. Entonces elijamos $x_n\notin U_1\cup U_2\cup ... \cup U_n$ para cada $n\in \mathbb{Z}_+$. Por tanto, $x\notin \bigcup_{n\in \mathbb{Z}_+}U_n$. Pero $\bigcup_{n\in \mathbb{Z}_+}U_n=X$ y $x\in X$. Esto contradice la suposición. Y la afirmación de que no hay subrecubrimiento finito es falsa.
+
+Veamos la demostración de la necesidad. Supongamos que todo recubrimiento numerable $\{U_m\}_{m\in\mathbb{Z}_+}$ de abiertos de $X$ contiene un subrecubrimiento finito de $X$. Veamos que cualquier sucesión infinita numerable $\{x_n\}_{n\in\mathbb{Z}_+}$ tiene punto
+ límite en $X$. Sea $\{U_{m_1},...,U_{m_n}\}$ el cubrimiento finito de abiertos de $X$. Construyamos $\{U_m\}_{m\in\mathbb{Z}_+}$ como sigue. Tenga $U_{m_1}$ un número finito de puntos de $\{x_n\}_{n\in\mathbb{Z}_+}$. Del mismo modo $U_{m_1}\cup U_{m_2}$ tenga un número finito de puntos de $\{x_n\}_{n\in\mathbb{Z}_+}$. Procediendo de este modo, para todo $i\in \{1,..,n-1\}$, el conjunto abierto $U_{m_1}\cup U_{m_2}\cup...\cup U_{m_{i}}$ tiene un número finito de puntos de $\{x_n\}_{n\in\mathbb{Z}_+}$. Resulta que $U_{m_n}$ es abierto y cerrado a la vez, ya que $U_{m_n}=X-U_{m_1}\cup U_{m_2}\cup...\cup U_{m_{n-1}}$. Además $U_{m_n}$ tiene un número infinito de puntos de $\{x_n\}_{n\in\mathbb{Z}_+}$. Como satisface el axioma $T_1$, cualquier subconjunto finito de $X$ es cerrado. Pero por corolario 17.7, $U_{m_n}$ contiene a todos sus puntos límite. Luego $U_{m_n}\cap \{x_n\}_{n\in\mathbb{Z}_+}$ tiene a todos sus puntos límite en $U_{m_n}$. Dado que $U_{m_n}=\bigcap_{i\in\mathbb{Z}_+-\{m_1,m_2,...,m_{n-1}\}}U_i$, existe un punto $x\in U_{m_n}$ tal que cada entorno suyo interseca a $\{x_n\}_{n\in\mathbb{Z}_+}-\{x\}$.
+
+\end{document}

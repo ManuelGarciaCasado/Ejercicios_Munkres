@@ -1,0 +1,54 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 24 Ejercicio 1}
+\begin{itemize}
+\item \bf (a) \rm Dados los espacios $(0,1)$, $(0,1]$ y $[0,1]$, veamos que no son homeomorfos entre ellos dos a dos.
+\end{itemize}
+Dado que los subconjuntos del conjunto $(0,1)$ que tienen cota superior en $(0,1)$ tienen supremo, $(0,1)$ tiene la propiedad del supremo. Igualmente $(0,1]$ y $[0,1]$ tienen la propiedad del supremo. Como $(0,1)\cup \{1\}=(0,1]$, se tiene que no hay aplicación biyectiva entre $(0,1)$ y $(0,1]$. De la misma manera, como $(0,1]\cup \{1
+0\}=[0,1]$, no hay aplicación biyectiva entre $(0,1]$ y $[0,1]$. Como no hay aplicación biyectiva entre $(0,1)$ y $(0,1]$ ni entre $(0,1]$ y $[0,1]$, tampoco hay aplicación biyectiva entre $(0,1)$ y $[0,1]$.
+\begin{itemize}
+\item \bf (b) \rm Supongamos que hay embebimientos $f:X\rightarrow Y$ y $g:Y\rightarrow X$. Veamos que $X$ y $Y$ no son necesariamente homeomorfos.
+\end{itemize}
+Si son embebimientos, entonces $f$ y $g$ son inyectivas; existen funciones $f':X\rightarrow f(X)$ y $g':Y\rightarrow g(Y)$ que son biyectivas; $X$ es homeomorfo a $f(X)$ e $Y$ es homeomorfo a $g(Y)$. Resulta que $g'(Y)=g(Y)\subset X$ y que $f'(X)=f(X)\subset Y$. Por tanto, $f'(g'(Y))\subset f'(X)\subset Y$ y $g'(f'(X))\subset g'(Y) \subset X$ indica que no hay necesariamente una biyección $g'\circ f'$ ni $f'\circ g'$ entre $X$ e $Y$.
+\begin{itemize}
+\item \bf (c) \rm Veamos que $\mathbb{R}^n$ y $\mathbb{R}$ no son homeomorfos si $n>1$.
+\end{itemize}
+Sea $\{a_i\}_{i<n}\subset \mathbb{R}$ y $a_1\times a_2\times...\times a_{n-1}\times \mathbb{R}$ un espacio. Como $a_1\times a_2\times...\times a_{n-1}\times \mathbb{R}$ es homeomorfo a $\mathbb{R}$ y $a_1\times a_2\times...\times a_{n-1}\times \mathbb{R}$ es un subconjuto propio de $\mathbb{R}^n$, se tiene por apartado (b) que $\mathbb{R}^n$ no puede ser homeomorfo a $\mathbb{R}$.
+\section{Tema 3 Sección 24 Ejercicio 2}
+Sea $f:S^1\rightarrow \mathbb{R}$
+una aplicación continua. Veamos que existe un punto en $S^1$ tal que $f(x)=f(-x)$. Se tiene que $S^1=\{\vect{x}| \lVert \vect{x}\rVert=1,\vect{x}\in \mathbb{R}^2\}$ es la esfera unitaria para $n=2$. Veamos que dado un $\vect{x}\in S^1$ existe un $-\vect{x}\in S^1$. Como $\lVert \vect{x}\rVert=1$ y $\lVert -\vect{x}\rVert=(|-x_1|^2+|-x_2|^2)^{1/2}= (|x_1|^2+|x_2|^2)^{1/2}=\lVert \vect{x}\rVert$. Resulta que $\lVert -\vect{x}\rVert=1$. Por tanto $-\vect{x}\in S^1$. Como la función continua $g:[0,1)\rightarrow S^1$ definida por $g(t)=\cos(2\pi t)\times\sin(2\pi t)$ define un camino, $S^1$ es conexo. Entonces $S^1$ es la unión de los caminos $A_{1}=g([0,a))$ y $A_{2}=g([a,1))$ que conectan $\vect{x}$ con $-\vect{x}$ y $-\vect{x}$ con $\vect{x}$. Además $A_{1}\cap A_{2}=\varnothing$. Si se da que $f(\vect{x})\neq f(-\vect{x})$ para todo par de puntos $\vect{x},-\vect{x}\in S^1$ se tendría que, por el orden simple de los números reales, habría un $b\in\mathbb{R}$ tal que $f(\vect{x})< b<f(-\vect{x})$ para cada par de puntos $\vect{x},-\vect{x}\in S^1$. Por tanto, sean $\vect{x}\in A_1$ y $-\vect{x}\in A_2$. Como $S^1= \bigcup_{\vect{x}\in A_{1}\cup A_{2}}\{\vect{x}\}$, se tiene que $f(S_1)\cap (-\infty, b)= \bigcup_{\vect{x}\in A_{1}}f(\vect{x})$ y  $f(S_1)\cap (b,\infty)=\bigcup_{-\vect{x}\in A_{1}}f(-\vect{x})$ pero  $\bigcup_{\vect{x}\in A_{1}}f(\vect{x})\cap \bigcup_{-\vect{x}\in A_{2}}f(-\vect{x})=\varnothing$. Entonces, se tiene una separación de $f(S^1)$. Pero esto contradice el teorema 23.5 de que las imagenes de espacios conexos bajo funciones continuas son conexas.
+\section{Tema 3 Sección 24 Ejercicio 3}
+Sea $f:X\rightarrow X$ continua. Veamos que si $X=[0,1]$, entonces existe un punto tal que $f(x)=x$. Como $f$ es continua y $g:[0,1]\rightarrow[0,1]$ definida por $g(x)=x$ es continua, $f-g$ es continua ( por teorema 21.5 y por teorema 18.2 (e)) y conexa (puesto que $[0,1]$ es conexo). Como $0\leq f(0)\leq f(1)\leq 1$ o $0\leq f(1)\leq f(0)\leq 1$, se tiene que $ f(0)-1\leq f(1)-1\leq 0 \leq f(0)-0$ o $f(1)-1\leq f(0)-1\leq 0\leq f(0)-0$. Por el teorema del valor intermedio, existe un $c$ tal que $f(c)-c=0$.
+
+Si fuera $X=(0,1]$ o $X=(0,1)$, se tendría que no existe $f(0)$, y por tanto, no se puede aplicar el teorema del valor intermedio.
+\section{Tema 3 Sección 24 Ejercicio 4}
+Sea $X$ un conjunto ordenado con la topología del orden. Veamos que si $X$ es conexo entonces $X$ es continuo lineal. Si $X$ es ordenado, para cada par de elementos $a,b\in X$, se tiene que $a<b$ o $b<a$. Si $a<b$ no existiera un $x$ tal que $a<x<b$, $a$ sería inmeadiato predecesor de $b$. Supongamos que $a$ es inmediato predecesor de $b$ en $X$; entonces se tendría que el conjuto $A=\{x| x< b, x\in X\}$ y el conjunto $B=\{x| x > a, x\in X\}$ son disjuntos no vacíos y además $A\cup B=X$. Por tanto, constituirían una separación de $X$, lo cual contradice el hecho de que $X$ es conexo. Por tanto, $a$ no es inmediato predecesor de $b$ y existe un $x$ tal que $a<x<b$. Entonces, para todo subconjunto $C$ de $X$ que tiene una cota superior, $a\in X$ (esto es, $c<a$ para todo $c\in C$), existe un $c\leq a$. Por tanto, si $X$ es conexo, tiene la propiedad del supremo. Por tanto, si $X$ es conexo con la topología del orden, es continuo lineal.
+\section{Tema 3 Sección 24 Ejercicio 5}
+Sean los siguientes conjuntos con la topología del orden.
+\begin{itemize}
+\item \bf (a) \rm Veamos si $\mathbb{Z}_+\times [0,1)$ es continuo lineal o no.
+\end{itemize}
+En el ejemplo 12 de la sección 3 se vio que $f:\mathbb{Z}_+\times [0,1)\rightarrow [0,\infty)$ definida por $f(n\times t)=n+ t-1$ es una correspondencia biyectiva. Además, $f$ es continua en la topología del orden puesto que para todo $(a,b)$ existen $m,n\in \mathbb{Z}_+$ y $s,t\in [0,1)$ tales que $a=m+s-1$ y $b=n+t-1$ y, por tanto, tales que   $(m\times s, n\times t)= f^{-1}((a,b))$ es abierto de $\mathbb{Z}_+\times [0,1)$ en la topología del orden. Esto se debe a que $m\times s < n\times t$ si $m<n$ o si $n=m$ y $s<t$. Del mismo modo, si $[0,a)$ es abierto de $[0,\infty)$, $f^{-1}([0,a))=[0, m\times s)$ es abierto de $\mathbb{Z}_+\times [0,1)$. Reciprocamente, dado el abierto $(m\times s, n\times t)$, se tiene que $f((m\times s, n\times t))=(f(m\times s),f(n\times t))= (m+s-1,n+t-1)$ es abierto de $[0,\infty)$ en la topología del orden. Luego $f$ y $f^{-1}$ son continuas en la topología del orden. Luego hay un homeomorfismo entre $\mathbb{Z}_+\times [0,1)$ y $[0,\infty)$. Por tanto, como el rayo $[0,\infty)$ es conexo por teorema 24.2, también lo es $\mathbb{Z}_+\times [0,1)$ y por ejercicio 4, $[0,\infty)$ tambien es continuo lineal.
+\begin{itemize}
+\item \bf (b) \rm Veamos si $ [0,1)\times \mathbb{Z}_+$ es continuo lineal o no.
+\end{itemize}
+Sea $g:[0,1)\times\mathbb{Z}_+ \rightarrow \mathbb{Z}_+\times [0,1)$ definida por $g(t\times n)=n\times t$. Entonces $g$ es biyectiva y $(f\circ g)$ también es un función biyectiva entre $[0,1)\times\mathbb{Z}_+$ y $[0,\infty)$. Pero veamos que no es un isomorfismo. $(n\times 0,n+2\times 0)=\{n+1\times 0\}$ es cerrado de $\mathbb{Z}_+\times [0,1)$ en la topología del orden pero $g^{-1}([n\times 0,n+1\times 0))= (0\times n,0\times n+2)$ es abierto de $[0,1)\times \mathbb{Z}_+$  en la topología del orden. Por tanto, no hay un homeomorfismo entre $[0,1)\times \mathbb{Z}_+ $ y $\mathbb{Z}_+ \times [0,1) $. Por tanto, no hay un homeomorfismo entre $[0,1)\times \mathbb{Z}_+ $ y $[0,\infty)$. Por tanto, $[0,1)\times \mathbb{Z}_+$ no es conexo y tampoco es continuo lineal.
+\begin{itemize}
+\item \bf (c) \rm Veamos si $ [0,1)\times [0,1]$ es continuo lineal o no.
+\end{itemize}
+Veamos si el espacio $[0,1)\times [0,1]$ con la topología del orden tiene la propiedad del supremo. Se tiene que los intervalos $[0\times 0, x\times y)$ tienen que el mínimo de las cotas superiores es $x\times y$, y los intervalos $[x\times y, 1\times 0)$ no tienen cotas superiores. Por tanto, todos los conjuntos que tienen una cota superior, tienen supremo. Veamos si se cumple que existe un $x\times y$ tal que $x_1\times y_1<x\times y< x_2\times y_2$ para cada par de puntos  $x_1\times y_1, x_2\times y_2\in [0,1)\times [0,1]$. Por las propiedades de los subconjuntos de $[0,1)$ y $[0,1]$ de $\mathbb{R}$ se tiene que  $x_1\times y_1<x_1\times y < x_1\times y_2 < x_2\times y_2$. Por tanto, $[0,1)\times [0,1]$ es continuo lineal.
+\begin{itemize}
+\item \bf (d) \rm Veamos si $ [0,1]\times [0,1)$ es continuo lineal o no.
+\end{itemize}
+Se tiene que $(x+1/n)\times 0$ es cota superior de $[0\times 0,x\times 1)$ para todo $n\in \mathbb{Z}_+$. Pero las cotas superiores no tienen un mínimo. Por tanto,  el intervalo $[0\times 0,x\times 1)$ no tiene supremo. Por tanto, $[0,1]\times [0,1)$ no tiene la propiedad del supremo y, entonces, no es continuo lineal.
+\end{document}

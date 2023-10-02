@@ -1,0 +1,55 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+
+\section{Tema 3 Sección 29 Ejercicio Complementario 1}
+\begin{itemize}
+\item \bf (a) \rm Veamos que cualquier conjunto simplemente ordenado con la topología del orden $\leq$ es un conjunto dirigido.
+\end{itemize}
+De las relaciones de orden simple de la sección 26 sobre el conjunto $A$ resulta que
+(1) para cualesquiera $x$ e $y$ de $A$, si $x\neq y$, bien $x<y$, bien $y<x$;
+(2) ningún $x$ verifica que $x<x$;
+(3) $x<y$ e $y<z$ implica que $x<z$. Para $\leq$ se tiene además que (4) para cualesquiera $x,y\in A$ bien $x<y$, bien $x=y$. Por tanto, $\leq $ es un orden parcial. Además para todo par de puntos $x,y\in A$ existe un $z$ tal que $x\leq z$ y $y\leq z$, ya que $z=y$ si $x\leq y$, o $z=x$ si $y\leq x$.
+\begin{itemize}
+\item \bf (b) \rm Veamos que la colección de subconjuntos de un conjunto $S$ ordenado por la inclusión (es decir, $A\preceq B$ si $A\subset B$) es un conjunto dirigido.
+\end{itemize}
+Sea $\cal{P}(S)$ el conjunto potencia de subconjuntos de $S$. De la definición de inclusión, se tiene que  
+(1) para cualesquier $A$ de $\cal{P}(S)$, $A\subset A$;
+(2) para cualesquiera $A$ y $B$ de $\cal{P}(S)$, si $A\subset B$ y $B\subset A$ entonces $A=B$;
+(3) $A\subset B$ e $B\subset C$ implica que $A\subset C$. Además que (4) para cualesquiera $A,B\in \cal{P}(S)$ se tiene que  $A\subset S$ y que $B\subset S$, ya que $S\in\cal{P}(S)$.
+\begin{itemize}
+\item \bf (c) \rm Veamos que la colección $\cal{A}$ de subconjuntos de un conjunto $S$ que son cerrados bajo intersección finita, parcialmente ordenados por la inclusión inversa (es decir, $A\preceq B$ si $A\supset B$) es un conjunto dirigido.
+\end{itemize}
+Como $\cal{A}\subset \cal{P}(S)$ De la definición de inclusión, se tiene que  
+(1) para cualesquier $A$ de $\cal{A}$, $A\supset A$;
+(2) para cualesquiera cerrados $A$ y $B$ de $\cal{A}$ tales que, si $A\supset B$ y $B\supset A$ entonces $A=B$;
+(3) $A\supset B$ e $B\supset C$ implica que $A\supset C$. Además que (4) para cualesquiera $A,B\in \cal{A}$ se tiene que  $A\supset A\cap B$ y que $B\supset A\cap B$. Como existe un cerrado $A\cap B\in\cal{A}$ para todo par de conjuntos cerrados $A$ y $B$, $\cal{A}$ es un conjunto dirigido.
+\begin{itemize}
+\item \bf (d) \rm Veamos que la colección de los subconjuntos cerrados de un espacio $X$, parcialmente ordenados por la inclusión, es un conjunto dirigido.
+\end{itemize}
+Como si $U$ es abierto del espacio $X$. De la definición de inclusión, se tiene que  
+(1) para cualesquier abierto $U$ de $X$, $X-U\subset X-U$;
+(2) para cualesquiera abiertos $U$ y $V$ de $X$ tales que, si $X-U\subset X-V$ y $X-V\supset X-U$ entonces $X-V=X-U$;
+(3) $X-U\subset X-V$ e $X-V\supset X-W$ implica que $X-U\supset X-W$. Además que (4) para cualesquiera par de abiertos $U,V$ se tiene que  $X-U\subset (X-U)\cup (X-V)$ y que $X-V\subset (X-U)\cup (X-V)$. Como existe un cerrado $(X-U)\cup (X-V)$ para todo par de conjuntos cerrados $X-U$ y $X-V$, la colección de conjuntos cerrados del espacio $X$ es un conjunto dirigido.
+\section{Tema 3 Sección 29 Ejercicio Complementario 2}
+Por definición, $K$ es cofinal en $J$ si, y solo si, $K\subset J$ y para cada $\alpha\in J$ existe un $\beta\in K$ tal que $\alpha\preceq \beta$. Veamos que si $J$ es un conjunto dirigido y $K$ es cofinal en $J$, entonces $K$ es un conjunto dirigido.  Como $J$ es dirigido, para cada par de puntos $\gamma, \delta\in J$ existe un $\epsilon\in J$ tal que $\gamma\preceq\epsilon$ y que $\delta\preceq\epsilon$. Como $K\subset J$, para cada par de puntos $\gamma, \delta\in K$ existe un $\epsilon\in J$ tal que $\gamma\preceq\epsilon$ y $\delta\preceq\epsilon$. Como $K$ es cofinal en $J$, para cada $\epsilon \in J$ existe un $\beta\in K$ tal que $\epsilon\preceq \beta$. En particular, si $\epsilon \in K$ entonces existe un $\beta\in K$ tal que $\epsilon\preceq \beta$; y si $\mu \in K$ entonces existe un $\alpha \in K$ tal que $\mu\preceq \alpha$. Por tanto, para cada para de puntos $\epsilon ,\mu \in K$ existe un $\nu \in K$ tal que $\epsilon\preceq\nu $ y $\mu\preceq\nu$; ya que bien $\nu =\beta$ si $\alpha\preceq\beta$, bien $\nu =\alpha$ si $\beta\preceq\alpha$
+\section{Tema 3 Sección 29 Ejercicio Complementario 3}
+Siendo $X$ un espacio topológico, la función $f$ de un conjunto dirigido $J$ en $X$ es una red. Para $\alpha\in J$ se denota  $f(\alpha)$ por $x_\alpha$. La red se denota por $(x_\alpha)_{\alpha\in J}$ o por $(x_\alpha)$ si $J$ es único. Se dice que la red $(x_\alpha)$ converge al punto $x$ de $X$ si para cada entorno $U$ de $x$ existe un $\alpha \in J$ tal que $\alpha \preceq \beta$ implica que $x_\beta\in U$. Veamos que la definición natural de sucesión se da para $J=\mathbb{Z}_+$. Si $J=\mathbb{Z}_+$, por ejercicio 1(a), el conjunto $\mathbb{Z}_+$ la relación $\leq$ es un conjunto dirigido. Por tanto se puede sustituir la relación $\preceq$ por $\leq$. Luego, la red $(x_n)_{n\in \mathbb{Z}_+}$ converge a $x\in X$ si para cada entono $U$ de $x$ existe un $n \in \mathbb{Z}_+$ tal que $n \leq m$ implica que $x_m\in U$. Esto es la definición de convergencia de una susesión al punto $x$.
+\section{Tema 3 Sección 29 Ejercicio Complementario 4}
+Supongamos que $(x_\alpha)_{\alpha\in \mathbb{Z}_+}\longrightarrow x$ en $X$ y $(y_\alpha)_{\alpha\in \mathbb{Z}_+}\longrightarrow y$ en $Y$. Veamos que $(x_\alpha\times y_\alpha)_{\alpha\in \mathbb{Z}_+}\longrightarrow x\times y$ en $X\times Y$.
+Como para cada entorno $U$ de $x$ existe un $\alpha_1\in J$ tal que $\alpha_1\preceq \beta_1 \Rightarrow x_{\beta_1}\in U$ y para cada $V$ de $y$ existe un $\alpha_2 \in J$ tal que $\alpha_2\preceq \beta_2 \Rightarrow y_{\beta_2} \in V$, entonces para cada entorno $U\times V$ de $x\times y$ existen $\alpha_1,\alpha_2\in J$  tal que $\alpha_2\preceq \beta_2 \Rightarrow x_{\alpha_1}\times y_{\beta_2}\in U\times V$ y tal que $\alpha_1\preceq \beta_1 \Rightarrow x_{\beta_1}\times y_{\alpha_2}\in U\times V$. Como $J$ es un conjunto dirigido, sea $\alpha=\alpha_1$ si $\alpha_1\preceq \alpha_2$, y sea $\alpha=\alpha_2$ si $\alpha_2\preceq \alpha_1$; sea $\beta=\beta_1$ si $\beta_2\preceq \beta_1$, y sea $\beta=\beta_2$ si $\beta_1\preceq \beta_2$. De este modo, para cada entorno $U\times V$ de $x\times y$ existe un $\alpha \in J$ tal que $\alpha \preceq \beta\Rightarrow x_\beta\times y_\beta \in U\times V$.
+\section{Tema 3 Sección 29 Ejercicio Complementario 5}
+Veamos que si $X$ es Hausdorff, cualquier red converge a lo sumo a un punto. Si $X$ es Hausdorff, para cada par de puntos $x, y$ existen respectivos entornos $U,V$ tales que $U\cap V=\varnothing$. Supongamos que la red $(x_\alpha\times y_\alpha)_{\alpha\in \mathbb{Z}_+}$ converge a $x$ y a $y$. Entonces existen entornos $U$ y $V$ de $x$ e $y$ que son disjuntos. Pero entonces existe un $\alpha \in J$ para todo $\beta\in J$ tal que $\alpha\preceq \beta \Rightarrow x_\beta\in U$ y tal que $\alpha\preceq \beta\Rightarrow x_\beta\in V$. Pero esto es imposible, salvo que $x=y$.
+\section{Tema 3 Sección 29 Ejercicio Complementario 6}
+Sea $A\subset X$. Veamos que $x\in\overline{A}$ si, y sólo si, existe una red de puntos en $A$ que convergen a $x$. Para la necesidadad, sea $J$ el conjunto de subconjuntos de $X$ que son entornos de $x\in \overline{ A}$ y sean los índices los entornos $U_{\alpha}$ de $x$ de modo que $\alpha \preceq \beta$ si $U_{\alpha}\supset U_{\beta}$ (procediendo como ejercicio 1(b) se vé que $J$ es un conjunto dirigido). Por tanto, dado $x\in U$ sean $x_{\alpha}\in U_{\alpha}$ para el conjunto de índices $\alpha\in J$, entonces $U\cap A\supset U_\alpha\supset U_\beta$ si $\alpha\preceq \beta$. Entonces, para todo entorno $U$ de $x$ existe un $U_\alpha$ tal que $U_\alpha\supset U_\beta\Rightarrow x_\beta\in U$, para todo entorno $U_\beta$ de $x$. Esto es que para todo entorno $U$ de $x$ tal que $x\in \overline{A}$, existe un $\alpha$ tal que $\alpha\preceq \beta\Rightarrow x_\beta\in U\cap A$, para todo $\beta$. Por tanto, para todo $x\in \overline{A}$ existe una red en $A$ que converge a $x$. Reciprocamente, si existe una red que converge en $A\subset X$ a un $x$, veamos que $x\in \overline{A}$. En efecto, como existe un $\alpha\in J$ para los entornos en $\{U_\alpha\}_{\alpha\in J}$ de $x$ tal que $\alpha\preceq\beta \Rightarrow x_\beta \in A\cap U_\beta$, para todo $\beta$. Es decir, $A\cap U_\beta\neq \varnothing$ para todo $\beta$ tal que $\alpha\preceq \beta$. Entonces $x\in \overline{A}$.
+\end{document}
+

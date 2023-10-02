@@ -1,0 +1,21 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+
+\section{Tema 3 Sección 29 Ejercicio Complementario 11}
+Veamos que dado el grupo topológico $G$ y los subconjunto $A$ y $B$ de $G$; si $A$ es cerrado en $G$ y $B$ es compacto en $G$, entonces $A\cdot B$ es cerrado en $G$.
+Primero consideremos el caso de que $G$ sea metrizable. Entonces por el teorema 28.2 cada sucesión convergente, tiene una subsucesión convergente. Como cada subconjunto de $G$ que contiene a todos sus puntos límite, es cerrado, $A$ contiene a todos sus puntos límite. Veamos que $A\cdot B$ contiene a todos sus puntos límite. Supongamos que la sucesión $(x_n)_{n\in \mathbb{Z}_+}$ en $B$ es tal que $\{B(x_n,\epsilon)\}$ es un cubrimiento de $B$, tal que converge a $x\in B$, y tal que $a\cdot x\notin A\cdot B$ para algún $a\in A$. Entonces existe un subrecubrimiento finito $\{B(x_n,\epsilon)\}_{n \leq N}$ de $B$ con $N\in \mathbb{Z}_+$ y una subsucesión $(x_\alpha)_{\alpha\in J\subset \mathbb{Z}_+}$ que converge a $x$. Entonces $A\cdot \{B(x_n,\epsilon)\}$ es un cubrimiento de $A\cdot B$ y $A\cdot \{B(x_n,\epsilon)\}_{n \leq N}$ es un subrecubrimiento finito de $A\cdot B$. Entonces existe un $\alpha\leq N$ en $J$ para el cual $A\cdot B(x_\alpha,\epsilon)$  contiene a $a\cdot x$ y, por tanto, $a\cdot x\in A\cdot B$, contradiciendo la suposición inicial. Análogamente, supongamos que $(x_\alpha)_{\alpha \in J}$ es una red  convergente y $U_\alpha$ son entornos de $x_\alpha$ que cubren $B$. Entonces hay un subrecubrimiento finito $\{U_{\alpha_i}\}_{\alpha_i\in J,i\leq N}$ de $B$. Además, para toda red $(x_\alpha)_{\alpha \in J}$ convergente de $B$, existe una subred convergente $(x_\alpha)_{\alpha \in K\subset J}$. Como la red y la subred convergen a algún $x\in B$, supongamos que existe un $a\in A$ tal que $a\cdot x\notin A\cdot B$. Entonces $A\cdot \{U_\alpha\}_{\alpha \in J}$ es un cubrimiento de $A\cdot B$ y $A\cdot\{U_{\alpha_i}\}_{\alpha_i\in J,i\leq N}$ es un subrecubrimiento finito de $A\cdot B$. Entonces existe un $\alpha_i\in K\subset J$, para el cual $A\cdot U_{\alpha_i}$  contiene a $a\cdot x$ y, por tanto, $a\cdot x\in A\cdot B$, contradiciendo la suposición inicial.
+\section{Tema 3 Sección 29 Ejercicio Complementario 12}
+Veamos que los ejercicios anteriores siguen siendo ciertos si, en la definición de conjunto dirigido, se omite la condición de que $\alpha\preceq\beta,\beta\preceq\alpha\Rightarrow \alpha=\beta$. La condición $\alpha\preceq\beta,\beta\preceq\alpha\nRightarrow \alpha=\beta$ equivale a la condición $\alpha\neq\beta\Rightarrow\alpha\preceq\beta \text{ o }\beta\preceq\alpha$   
+Por tanto hay que sustituir, en el ejercicio 1, $a\leq b$ por $a<b$ y $a\leq a$ por $a=a$; $A\subset B$ por $A\subsetneq B$ y $A\subset A$ por $A=A$; y $A\supset B$ por $A\supsetneq B$ y $A\supset A$ por $A=A$. Entonces no hay contradicción en las definiciones de conjunto dirigido. En el ejercicio 2, la definición de conjunto cofinal sigue siendo válida. Si $K\subset J$ y $J$ es dirigido y $K$ es cofinal. Para cada par de puntos $\gamma, \delta\in K\subset J$  existe un $\epsilon \in J$ tal que $\gamma\prec \epsilon$ y $\delta\prec \epsilon$ y un $\alpha \in K$ tal que $\epsilon \prec \alpha$. Por tanto, $K$ es cofinal. En ejercicio 3, la definición de convergencia de una red $(x_\alpha)$ al punto $x$ no necesita la condición (2) del orden parcial. Por tanto, la convergencia de una sucesión en $\mathbb{Z}_+$ tampoco se ve afectada puesto que es un conjunto dirigido que con el $<$. Los ejercicios 4-11 no se ven afectados por la omisión de la condición (2) del orden parcial porque se basan en las definiciones de los ejercicios 1-3.
+\end{document}
+

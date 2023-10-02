@@ -1,0 +1,57 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 24 Ejercicio 11}
+Si $A$ es subespacio conexo de $X$, veamos si $\rm Int \it A$ y $\rm Fr \it A$ son también conexos.
+
+Supongamos que $\rm Int \it A$ no es conexo. Entonces existe una separación $B$ y $C$ tal que $B\cup C=\rm Int \it A$ y $B\cap C=\varnothing$. Entonces, como $\rm Int \it A \subset A $, al ser $C$ y $B$ abiertos y  cerrados, simultaneamente, de $\rm Int \it A$ como subespacio de $A$, no son necesariamente abiertos y cerrados, simultaneamente, de $A$ como subespacio de $X$. Esto no contradice el hecho de que $A$ es conexo. Luego $\rm Int \it A$ puede ser no conexo.
+
+Por otro lado, del ejercicio 19.(a) se tiene que $\overline{A}=\rm Fr \it A\cup \rm Int \it A$ y $\rm Fr \it A\cap \rm Int \it A=\varnothing$. Sea $\rm Fr \it A$ separable en $B$ y $C$. Si $A=\rm Int \it A$ entonces $B\cap A=\varnothing$ y $C\cap A=\varnothing$ y no hay contradicción en que $A$ sea conexo.
+
+Reciprocamente, si $\rm Fr \it A$ es conexo y $A=\rm Int \it A$, puede haber una separación de $A$ en $B$ y $C$, ya que $B\cap A=\varnothing$ y $C\cap A=\varnothing$. Del mismo modo, si $\rm Int \it A$ y $\rm Fr \it A$ son conexos, y $A=\overline{A}$, $A$ puede ser separable en $\rm Int \it A$ y $\rm Fr \it A$, ya que $\rm Int \it A \cap \rm Fr \it A=\varnothing$ y $\rm Int \it A \cup \rm Fr \it A=A$.
+\section{Tema 3 Sección 24 Ejercicio 12}
+Sea $S_\Omega$ el conjunto no numerable minimal y bien ordenado. Sea $a_0$ el mínimo de $S_\Omega$ y sea $L = S_\Omega \times [0,1)-\{a_0\times 0\}$.
+\begin{itemize}
+\item \bf (a) \rm Sea $X$ un conjunto ordenado; sean $a<b<c$ puntos de $X$. Veamos que $[a,c)$ tiene el mismo tipo de orden que $[0,1)$ si, y solo si, $[a,b)$ y $[b,c)$ tienen el mismo tipo de orden que $[0,1)$
+\end{itemize}
+Por definición de mismo tipo de orden entre $[a,c)$ y $[0,1)$, existe una aplicación biyectiva $f:[a,c)\rightarrow [0,1)$. Por tanto hay aplicaciones biyectivas $g_1:[a,b)\rightarrow [0,f(b))$ y $g_2:[b,c)\rightarrow [f(b),1)$ dadas por la restrición de dominio e imagen de $f$. Sean las aplicaciones biyectivas $h_1:[0,f(b))\rightarrow [0,1)$ y  $h_2:[f(b),1)\rightarrow [0,1)$ dadas por $h_1(x)=\frac{x}{f(b)}$ y $h_2(x)=\frac{x-f(b)}{1-f(b)}$, respectivamente. Entonces $g_1\circ h_1: [a,b)\rightarrow [0,1)$ y $g_2\circ h_2: [c,b)\rightarrow [0,1)$ son aplicaciones biyectivas. Por tanto, si hay relación biyectiva entre $ [a,c)$ y $[0,1)$, entonces hay relación biyectiva entre $[a,b)$ y $[0,1)$ y entre $[b,c)$ y $[0,1)$. Y reciprocamente, si hay relaciones biyectivas entre $[a,b)$ y $[0,1)$ y entre $[b,c)$ y $[0,1)$, entonces hay relación biyectiva entre $ [a,c)$ y $[0,1)$.
+\begin{itemize}
+\item \bf (b) \rm Sea $X$ un conjunto ordenado. Sean $x_0<x_1<...$ una sucesión creciente de puntos de $X$; supongamos que $b=\rm sup \it \{x_i\}$. Veamos que $[x_0,b)$ tiene el mismo tipo de orden que $[0,1)$ si, y solo si, cada intervalo $[x_n,x_{n+1})$ tiene el mismo tipo de orden que $[0,1)$. 
+\end{itemize}
+Por apartado (a), se tiene que existe una aplicación biyectiva $f$ de $[x_0,b)$ a $[0,1)$ si, y solo si, existe aplicaciones biyectivas de $[x_n,x_{n+1})$ a $[0,1)$ dadas por $g_n\circ h_n: [x_n,x_{n+1})\rightarrow [0,1)$ donde $g_n:[x_n,x_{n+1})\rightarrow [f(x_n),f(x_{n+1}))$ tal que $g_n(x)=f(x)$ y $h_n:[f(x_n),f(x_{n+1}))\rightarrow [0,1)$ tal que $h_n(x)=\frac{x-f(x_n)}{f(x_{n+1})-f(x_n)}$
+\begin{itemize}
+\item \bf (c) \rm Sea $a_0$ el mínimo de $S_\Omega$ conjunto ordenado. Veamos que para cada $a\neq a_0$ el intervalo $[a_0\times 0,a\times 0)$ de $S_\Omega \times [0,1)$ tiene el mismo tipo de orden que $[0,1)$.
+\end{itemize}
+Veamos por inducción transfinita que bien $a$ tiene un inmediato predecesor en $S_\Omega$, o bien existe una sucesión creciente $a_i$ en $S_\Omega$ tal que $a=\rm sup \it \{a_i\}$.
+Se tiene que $a_0$ es inmediato predecesor de $a$, o existe un $a_1$ tal que $a_0<a_1<a$. Entonces se tiene que $a_1$ es inmediato predecesor de $a$, o existe un $a_2$ tal que $a_1<a_2<a$. Sea $\{a_i\}$ el conjunto de puntos tales que $a_0\leq a_i<a$ y sea $\{a_n\}=\{a_0,a_1,...,a_n\}$ subconjunto de $\{a_i\}$. Veamos que $\{a_{n+1}\}$ es inductivo. Se tiene que para todo $a_n\in \{a_i\}$, dado $S_{a_{n+1}}=\{a_0,a_1,...,a_{n}\}\subset \{a_{n+1}\}$ tenemos que $a_{n+1}\in \{a_{n+1}\}$, ya que $a_{n}$ es inmediato predecesor de $a$ o existe un $a_{n+1}$ tal que $a_{n}<a_{n+1}<a$. Por tanto, $\{a_{n+1}\}$ es inductivo. Veamos que $\{a_i\}$ está biem ordenado. Como $\{a_i\}$ es una sucesión creciente, y como $a_0$ es el mínimo, todo subconjuto no vacío tiene un mínimo. Luego $\{a_i\}$ es un conjunto bien ordenado. Por el principio de inducción transfinita, $\{a_{n+1}\}=\{a_i\}$. Por tanto, todo $a_i$, tal que $a_0\leq a_i<a$, bien tiene inmediato predecesor o bien existe un $a_{i+1}$ tal que $a_i<a_{i+1}<a$. Por teorema 10.2, $\{a_i\}$ es numerable, y por teorema 10.3, $\{a_i\}$ tiene cota superior. Se tiene que $\Omega$ y $a$ son cotas superiores de $\{a_i\}$, pero $a<\Omega$. Por tanto, $a$ es el mínimo de las cotas superiores de $\{a_i\}$ y $a=\rm sup \it \{a_i\}$. Por apartado (a) hay aplicaciones biyectivas entre $[a_i,a_{i+1})$ y $[0,1)$. Por apartado (b), aplicando el principio de inducción transfinita, si hay aplicación biyectiva entre $[a_n,a_{n+1})$ y $[0,1)$ para todo $a_n\in \{a_i\}$, entonces hay aplicación biyectiva entre $[a_i,a_{i+1})$ y $[0,1)$ para todo $a_i \in [a_0,a)$. Por tanto hay aplicación biyectiva entre $[a_0,a)$ y $[0,1)$.
+\begin{itemize}
+\item \bf (d) \rm Veamos que $L$ es conexo por caminos.
+\end{itemize}
+Veamos que $L$ es conexo. Por ejercicio 24.6, como $S_\Omega$ está bien ordenado, con la topología del orden, $S_\Omega\times [0,1)$ es continuo lineal. Por teorema 24.1, $S_\Omega\times [0,1)$ y $L$ son conexos.
+
+Ahora veamos que $L$ es conexa por caminos. Pero primero veamos que $S_\Omega\times [0,1)$ es conexo por caminos, esto es que para cada par de puntos $x_1\times y_1,x_2\times y_2\in S_\Omega\times [0,1)$ hay una aplicación continua $f:[t_1,t_2]\rightarrow S_\Omega\times [0,1)$ tal que $f(t_1)=x_1\times y_1$ y $f(t_2)=x_2\times y_2$.  Por apartado (c), los intervalos $[a_0,a)\times {y}$ tienen el mismo tipo de orden que $[0,1)$ para todo $y\in [0,1)$ . Sean $[t_1,t_1]\subset [a_0,a)$ y sea $[a_0,a)=\bigcup_{y\in [0,1)}[a_0,a_y)$ y además $f_y:[a_0,a_y)\rightarrow S_\Omega$ funciones continuas que conservan el orden con $y\in [0,1)$. El intervalo $[a_0\times 0,x_\alpha\times y_\alpha)=\bigcup_{y\in [0,y_\alpha]}
+\left( f_y([a_0,b_y))\times y\right)$ es abierto por ser unión de abiertos. Se tiene que $f^{-1}([a_0\times 0,x_\alpha\times y_\alpha))= \bigcup_{y\in [0,y_\alpha]}
+f^{-1}\left( f_y([a_0,b_y))\times y\right)$. Definamos las $f_y$ tales que $f^{-1}\left(f_y([a_0,b_y))\times y\right)= [a_0,b_y)$. Entonces 
+$f^{-1}([a_0\times 0,x_\alpha\times y_\alpha))=\bigcup_{y\in [0,y_\alpha]}
+[a_0,b_y)$ es abierto por ser la unión de abiertos. Por tanto $f$ es continua y $S_\Omega$ es conexo por caminos. Veamos que $L=S_\Omega-\{a_0\times 0\}$ es conexo por caminos. Sea $a_1$ el inmediato sucesor de $a_0$. Entonces, para cualquier punto $b\times x$ con $b>a_1$ y $x\geq 0$, existe un camino que une $a_1\times 0$ con $b\times x$, puesto que, como $f:[t_1,t_2]\rightarrow S_\Omega$ es continua, $f:[t_1,t_2]\rightarrow L$ es continua por ser $L$ subespacio de $S_\Omega$.
+\begin{itemize}
+\item \bf (e) \rm Veamos que cada punto de $L$ tiene un entorno homeomorfo a un abierto de $\mathbb{R}$.
+\end{itemize}
+Sea $y\in (0,1)$ y $a\neq a_0$ el entorno $a\times (y-\epsilon,y+\epsilon)$ de $a\times y$ es homeomorfo a $(y-\epsilon,y+\epsilon)$. Y si $y=0$, $a\times (1-\epsilon,b \times \epsilon)$, con $b$ inmediato sucesor de $a$, es entorno de $a\times 0$ y es homeomorfo a $(1-\epsilon,1)\cup (0,\epsilon)$
+
+\begin{itemize}
+\item \bf (f) \rm Veamos que $L$ no puede ser embebido en $\mathbb{R}$ ni en ninguno de los espacios de $\mathbb{R}^n$.
+\end{itemize}
+Hay que demostrar que no hay una aplicación continua inyectiva $f:L\rightarrow \mathbb{R}^n$ tal que la restricción $f':L\rightarrow f(L)$ es un homeomorfismo y $f(L)$ es subespacio de $\mathbb{R}^n$.
+Primero veamos que cualquier subespacio de $\mathbb{R}^n$ tiene una base numerable de entornos. Sea $A$ subconjunto de $\mathbb{R}^n$. Entonces los conjuntos $A\cap \prod_{i=1}^n(x_i-\epsilon/m,x_i+\epsilon/m)$, con $\epsilon>0$, son una base numerable de entornos de $\vect{x}$ en $A$ como subespacio de $\mathbb{R}^n$. Supongamos que para $L$ fuera homeomorfo a un subespacio de $\mathbb{R}^n$. Entonces para cada entorno de $a\times y\in L$ habría una base numerable $f^{-1}\left(f(L)\cap \prod_{i=1}^n(x_i-\epsilon/m,x_i+\epsilon/m)\right)=L\cap f^{-1}\left(\prod_{i=1}^n(x_i-\epsilon/m,x_i+\epsilon/m)\right)$. Pero si $b$ es el supremo de $S_\Omega$, el entorno $(a\times 0,b\times 0)$ de $x\times 0$ con $a_0<a<b$ es abierto de $L$ que no se puede definir como unión infinita o intersección finita de elementos de la base numerable $L\cap f^{-1}\left(\prod_{i=1}^n(x_i-\epsilon/m,x_i+\epsilon/m)\right)$.
+
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+\section{Tema 3 Sección 27 Ejercicio 1}
+Veamos que si $X$ es un conjunto ordenado en el que cada intervalo cerrado es compacto, entonces $X$ tiene la propiedad del supremo. Recordemos que $X$ tiene la propiedad del supremo si cada subconjunto no vacío de $X$ que esté acotado superiormente tiene supremo.   Sea $[a,b]$ un conjunto cerrado de $X$, entonces como $b$ es una cota superior de $[a,b]$, $b$ es el supremo de $[a,b]$. Además, como $X$ es abierto, $X=X-\varnothing$ es cerrado. Por tanto, $X$ es compacto. Además, por teorema 17.1, $X$ es la unión arbitraria de cerrados. Sea $\mathcal{A}$ un recubrimiento de cerrados del tipo $[a_\alpha,b_\alpha]$ de $X=\bigcup_{\alpha\in J}[a_\alpha,b_\alpha]$ entonces hay un cubrimiento tal que $X=\bigcup_{i\leq N}[a_{\alpha_i},b_{\alpha_i}]$ por tanto, $X\leq c$ tal que $c=\max_{i\leq N}\{b_i\}$ y $c$ es una cota superior de cualquier subconjunto de $X$. Ahora supongamos que $C$ es el conjunto de todas las cotas superiores de un subconjunto abierto $A$ de $X$ y sea $x> a$, $y> a$ para todo $a\in A$ y $c>x$, $c>y$ para todo $c\in C$. Como $c\in C$, $C\neq \varnothing$. Entonces, si $x>y$, resulta que $x,y\in C$; y si $y<x$, resulta que $x,y\in C$. En todo caso hay contradicción. Por tanto, bien $x$ es el mínimo de  $C$, bien $y$ es el mínimo de $C$. Luego, $C$ tiene mínimo. Luego, cualquier abierto $A$ tiene supremo. Por tanto, $X$ tiene la propiedad del supremo.
+\section{Tema 3 Sección 27 Ejercicio 2}
+Sea $X$ un espacio métrico con distancia $d$ y sea $A\subset X$ no vacío.
+\begin{itemize}
+\item \bf (a) \rm Veamos que $d(x,A)=0$ si, y sólo si, $x\in \overline{A}$.
+\end{itemize}
+Supongamos que $x\in \overline{A}$. Por teorema 21.2, como $X$ es metrizable, $x\in \overline{A}$ si, y sólo si, existe una sucesión de puntos de $A$ que converge a él. Esto es, si cada bola $B_d(x,\epsilon)$ para cualquier $\epsilon>0$ contiene un numero infinito $\{x_i\}_{i\geq N}$ de elementos de la sucesión, para un cierto $N\in \mathbb{Z}_+$. Sea $x_i\in A$ con $i\in \mathbb{Z}_+$ una sucesión de puntos que convergen a $x$. Esto se puede hacer porque un espacio metrizable es de Hausdorff. Entonces, por definición, $d(x_i,A)=\inf\{d(x_i,a)|a\in A\}=d(x_i,x_i)=0$. Como $d(x,A)$ es una función continua, por teorema 21.3, si $x_i$ converge a $x$, $d(x_i,A)$ converge a $d(x,A)$. Por tanto, $d(x,A)=0$.
+Reciprocamente, supongamos que $d(x,A)\neq 0$ para algún $x\in \overline{A}$, entonces $x\notin A$ ya que, $d(x,A)=\inf\{d(x,a)|a\in A\}=0$ para todo $x\in A$. Entoces $x\in \overline{A}-A$, pero hay una sucesión $\{x_i\}$ de puntos en $A$ que convergen a $x$. Por tanto $d(x_i,A)=0$ converge a $d(x,A)$, y $d(x,A)=0$ por ser $d$ una función continua. Esto contradice la suposición de $d(x,A)\neq 0$ para algún $x\in \overline{A}$.
+\begin{itemize}
+\item \bf (b) \rm Veamos que si $A$ es compacto, existe un $a\in A$ tal que $d(x,A)=d(x,a)$.
+\end{itemize}
+Se tiene que $d(x,A)=\inf\{d(x,y)|y\in A\}$. Por el teorema 27.4, fijado un $x\in X$, la distancia $d$ es una función continua de $\{x\}\times A$ en $\mathbb{R}$, como $\{x\}\times A$ es compacto (por ser homeomorfo a $A$) y como $\mathbb{R}$ es un espacio ordenado, existen $a$ y $c$ tales que $d(x,a)\leq d(x,y)\leq d(x,c)$ para todo $y\in A$. Por tanto, $d(x,a)=\min\{d(x,y)|y\in A\}=\inf\{d(x,y)|y\in A\}=d(x,A)$
+\begin{itemize}
+\item \bf (c) \rm Sea el $\epsilon$-entorno de $A$ en $X$ definido por $U(A,\epsilon)=\{x|d(x,A)<\epsilon\}$. Veamos que $U(A,\epsilon)$ coincide con la unión de bolas abiertas $B_d(a,\epsilon)$ para todo $a\in A$.
+\end{itemize}
+Dado que $B_d(a,\epsilon)=\{x|d(x,a)<\epsilon\}$ resulta que $\bigcup_{a\in A}B_d(a,\epsilon)=\bigcup_{a\in A}\{x|d(x,a)<\epsilon\}$. Como $\bigcup_{a\in A}\{x|d(x,a)<\epsilon\}=\{x|d(x,a)<\epsilon, \text{ para algún }a\in A\}$. Por (b), como existe un $a\in A$ tal que $d(x,a)=d(x,A)$, $\{x|d(x,a)<\epsilon, \text{ para algún }a\in A\}=\{x|d(x,A)<\epsilon\}$. Entonces $\bigcup_{a\in A}B_d(a,\epsilon)=\{x|d(x,A)<\epsilon\}= U(A,\epsilon)$.
+\begin{itemize}
+\item \bf (d) \rm Supongamos que $A$ es compacto y sea $U$ un abierto conteniendo a $A$. Veamos que algún $\epsilon$-entorno de $A$ está contenido en $U$.
+\end{itemize}
+Si $U$ es abierto, $X-U$ es cerrado. Luego $X-U=\overline{X-U}$. Por apartado (a) $d(x, X-U)=0$ si, y solo si, $x\in X-U$. Es decir, si $a\in A$ entonces $d(a, X-U)>0$ ya que $ \left(X-U\right)\cap A=\varnothing$. Por apartado (b), existe un $a\in A$ tal que $d(x,a)=d(x,A)$. Por tanto, existe el mínimo de los $d(a, X-U)>0$ para algún $a\in A$. Sea $\epsilon= \min_{a\in A}\{d(a,X-U)\}$, entonces $A\subset V(A,\epsilon/2)=\{x|d(x,A)<\epsilon/2\}\subset U$
+\begin{itemize}
+\item \bf (e) \rm Supongamos que $A$ es cerrado y sea $U$ un abierto conteniendo a $A$. Veamos que ningún $\epsilon$-entorno de $A$ está contenido en $U$.
+\end{itemize}
+Como $A$ no es cerrado, no se puede garantizar que exista un $a\in A$ tal que $d(x,a)=d(x,A)$. Por tanto, no existe el mínimo de los $d(a, X-U)>0$ para algún $a\in A$. Entonces, dado $\epsilon=\inf_{a\in A}\{d(a,X-U)\}$, esto no excluye la posibilidad de que $\epsilon =0$ y, por tanto, $V(A,\epsilon/2)=\{x|d(x,A)<\epsilon/2\}=\varnothing$
+\section{Tema 3 Sección 27 Ejercicio 3}
+Recordemos que $\mathbb{R}_K$ es $\mathbb{R}$ con la $K$-topología.
+\begin{itemize}
+\item \bf (a) \rm Veamos que $[0,1]$ no es compacto como subespacio de $\mathbb{R}_K$.
+\end{itemize}
+Recordemos que los elementos base de la topología $\mathbb{R}_K$ son los elementos del tipo $(a,b)$, con $a<b$, junto con los del tipo $(a,b)-K$ donde $K=\{1/n|n\in \mathbb{Z}_{+}\}$. 
+Sea $\mathcal{A}=\{(1/(n+1),1/n)|n\in \mathbb{Z}_+\}\cup \{\{0\}\cup \{1\}\}$ un cubrimiento de $[0,1]$. Entonces no existe un cubrimiento finito de $[0,1]$ por elementos de $\mathcal{A}$ ya que $[0,1]=\bigcup_{A\in \mathcal{A}}A$
+\begin{itemize}
+\item \bf (b) \rm Veamos que $\mathbb{R}_K$ es conexo.
+\end{itemize}
+Sean los elementos base $(a,b)$ con $a<b$ de $\mathbb{R}_K$. Entonces, los elementos $(a,0)=(-\infty,0)\cap (a,b)$, si $a<0<b$; o $(a,b)=(-\infty,0)\cap (a,b)$ , si $a<b<0$; son elementos base de $\mathbb{R}_K$ como subespacio de $(-\infty,0)$. Del mismo modo, los elementos $(0,b)=(0,\infty)\cap (a,b)$, si $a<0<b$; o $(a,b)=(0,\infty)\cap (a,b)$ , si $0<a<b$; son elementos base de $\mathbb{R}_K$ como suespacio de $(0,\infty)$. Por tanto, $(-\infty,0)$ y $(0,\infty)$ son espacios conexos de como subespacios de $\mathbb{R}_K$ porque, por teorema 24.1, tienen la topología del orden, tienen la propiedad del supremo y son continuo lineales. Puesto que la adherencia $(-\infty,0]$ de $(-\infty,0)$ y la adherencia $[0,\infty)$ de $(0,\infty)$ tienen el punto $0\in \mathbb{R}_K$ en común, $\mathbb{R}_K$ es conexo.
+\begin{itemize}
+\item \bf (c) \rm Veamos que $\mathbb{R}_K$ no es conexo por caminos.
+\end{itemize}
+Se tiene que $\mathbb{R}_K$ es conexo por caminos si existen $a,b\in\mathbb{R}$ y una aplicación continua $f$ del intervalo $[a,b]$ de $\mathbb{R}$ en $\mathbb{R}_K$, de tal manera que $f(a)=x$ y $f(b)=y$ para cada pares de puntos $x,y\in \mathbb{R}_K$. Por teorema 26.2, el intervalo $[a,b]$ es compacto en la topología de $\mathbb{R}$, pero como por apartado a) $[0,1]$ no es compacto en la topología de $\mathbb{R}_K$, se tiene que no existe función continua de $f:[a,b]\rightarrow \mathbb{R}_K$, porque de lo contrario, se violaría el teorema 26.5. Por tanto, no existe tal función continua y como consecuencia $\mathbb{R}_K$ no es conexo por caminos.
+
+\end{document}

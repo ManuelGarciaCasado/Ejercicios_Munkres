@@ -1,0 +1,39 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx9990}o0y
+% Comment the following line to NOT allow the usage ofp0 umlauts
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Start the document00
+\begin{document}
+
+\section{Tema 4 Sección 30 Ejercicio 1}
+\begin{itemize}
+\item \bf (a) \rm El conjunto $A$ del espacio $X$ que es la intersección numerable de abiertos  de $X$ se dice que es conjunto $G_\delta$ en $X$. Veamos si el espacio es $T_1$ uno-numerable, cada conjunto unipuntual es un conjunto $G_\delta$.
+\end{itemize}
+Como $X$ es $T_1$, cada conjunto con un número finito de puntos es cerrado. Por tanto, $\{x\}$ es cerrado y $X-\{x\}$ es abierto. Además, $X-\{x\}$ es denso en $X$ pues $\overline{X-\{x\}}=X$. Por teorema 30.1, hay una sucesión de puntos en $X$ que converge a $x$. Sea $\{x_i\}_{i\in\mathbb{Z}_+}$ tal sucesión y sea $U_i$ un entorno de $x$ que contiene a $x_i$ para cada $i\in\mathbb{Z}_+$. Entonces $\{x\}=\bigcap_{i\in \mathbb{Z}_+}U_i$.
+\begin{itemize}
+\item \bf (b) \rm Veamos cuál es el espacio familiar en el que cada conjunto unipuntual es $G_\delta$ pero no satisface el primer axioma de numerabilidad. 
+\end{itemize}
+Por Ejemplo 1 y 2 en la sección 21 sabemos que $\mathbb{R}^\omega$ en la topología por cajas y $\mathbb{R}^J$ en la topología producto no son metrizables. Para $\mathbb{R}^J$ en la topología producto y $J$ conjunto de índices no numerable, sea un conjunto $A$ formado por los puntos $(x)_\alpha$ tales que $x_\alpha=1$ salvo para un número finito de $\alpha$. Por el ejemplo 2 sección 21 sabemos que $\vect{0}\in \overline{A}$ aunque no hay ninguna sucesión en $A$ que converja a $\vect{0}$. Por teorema 30.1 (a), se deduce que $\mathbb{R}^J$ no es $1AN$ en la topología producto. Además los conjuntos unipuntuales son conjuntos $G_\delta$ porque los $x_\alpha$ están contenidos en entornos $(a_\alpha,b_\alpha)$ con $a_\alpha,b_\alpha\in \mathbb{Q}$ para un número finito de índices $\alpha$ y $\mathbb{R}$ para el resto de índices.
+\section{Tema 4 Sección 30 Ejercicio 2}
+Veamos que si $X$ tiene una base numerable $\{B_n\}$, entonces cada base $\mathcal{C}$ en $X$ contiene una base numerable. Para cada par $n,m$ para los que sea posible, elijamos $C_{n,m}\in \mathcal{C}$ tal que $B_n\subset C_{n,m}\subset B_m$. Por otro lado, si $U$ es un abierto, se tiene que $B_m\subset U$ para algún $m$. Como $B_n$ es abierto en $X$, podemos encontra un $C_\beta\in \mathcal{C}$ tal que $C_\beta\subset B_n$. Y como $C_\alpha$ es abierto en $X$, podemos encontrar un $B_m\in \{B_n\}$ tal que $B_m\subset C_\alpha$. Por tanto para todo $B_m\in \{B_n\}$, siempre existe $n,m$ tales que $B_n\subset C_{n,m}\subset B_m$. Por tanto, para cada abierto $U$ existe un par $n,m\in\mathbb{Z}_+$ tal que $C_{n,m}\subset U$. Luego $\{C_{n,m}\}_{n,m\in\mathbb{Z}_+}$ es una base numerable.
+\section{Tema 4 Sección 30 Ejercicio 3}
+Sean $X$ un espacio con una base numerable y $A$ un subconjunto no numerable. Veamos que una cantidad  no numerable puntos de $A$ son puntos límite de $A$. Esto es lo mismo que decir que existe un conjunto $\{x_\alpha\}_{\alpha\in J}\subset A$ donde $J$ es no numerable y los $x_\alpha$ son puntos límite de $A$. Hay que probar que el conjunto de índices $J$ es no numerable. El punto $x_\alpha$ es punto límite de $A$ si para todo entorno $U$ de $x_\alpha$ resulta que $(A-\{x_\alpha\})\cap U\neq \varnothing$. Entonces, existe un entorno $U$ de $x$ y un elemento $B_n$ de la base tales que $B_n\cap  (A-\{x\})\subset U\cap  (A-\{x\})=\varnothing$ para un conjunto no numerable de elementos $x\in A$. Como $B_n\cap  (A-\{x\})=\varnothing \Rightarrow B_n\cap A-\{x\} =\varnothing\Rightarrow B_n\cap A =\{x\}$. Esto quiere decir que para cada $B_n$ hay, a lo sumo, un único elemento de $A$ tal que  $x\in B_n$ donde $x$ no es punto límite de $A$. Esto contradice que $A$ contenga un conjunto no numerable de puntos límite de $A$.
+\section{Tema 4 Sección 30 Ejercicio 4}
+Veamos que cada espacio compacto metrizable $X$ tiene una base numerable. Sea $\mathcal{A}_n$ un recubrimiento finito de $X$ por bolas de radio $1/n$. Un espacio métrico siempre es $1AN$. Si $U$ es un entorno de $x\in X$, se tiene que $U\subset \bigcup_{i\leq N} B_d(x_i,1/n)$ para algún $N\in \mathbb{Z}_+$. Por tanto, existe algún $i$ tal que $x\in U\cap B_d(x_i,1/n)$. Entonces existe un $i\in \mathbb{Z}_+$ tal que $B_d(x,\epsilon_i)\subset U \cap B_d(x_i,1/n)$ donde $\epsilon_i<\min\{ d(x,X-U),d(x,X-B_d(x_i,1/n)\}$, donde $d(y,A)=\inf\{d(y,a)|a\in A\}$. Por tanto, para cada $x\in X$ existe una base $\{B_d(x,\epsilon_i)\}_{i\in\mathbb{Z}_+}$ de la topología métrica.
+\section{Tema 4 Sección 30 Ejercicio 5}
+\begin{itemize}
+\item \bf (a) \rm Veamos que cada espacio metrizable con un subconjunto denso numerable tiene una base numerable.
+\end{itemize}
+Sea $X$ el espacio metrizable y sea $A=\{x_n\}_{n\in \mathbb{Z}_+}\subset X$ tal que $X=\overline{A}$. Como $X$ es metrizable, es uno-numerable, y como $x\in \overline{A}$, por el teorema 30.1, para cada $x\in X$ y cada entorno $U$ de $x$ existe un $N$ tal que $x_n\in U$ para $n\geq N$ con $x_n\in A$. Entonces, para cada $x_n$ con $n\geq N$ existen bolas $B_d(x_n,\epsilon_n)$ contenidas en $U$. Entonces se tiene que $x\in B_d(x_n, \epsilon_n)\subset U$ para alguno de los $n\geq N$. Por tanto, existe una base numerable para la topología métrica.
+\begin{itemize}
+\item \bf (b) \rm Veamos que cada espacio metrizable y de Lindelof tiene una base numerable.
+\end{itemize}
+Sea $X$ el espacio metrizable y de Lindelof. Por ser Lindelof, el cubrimiento por abiertos $\mathcal{A}=\{U_\alpha\}_{\alpha\in J}$ admite un subcubrimiento numerable $\{U_n\}_{n\in \mathbb{Z}_+}$. Por ser metrizable, es 1AN y para cada $x\in X$ existe una base de entornos de $x$ tal que cualquier entorno de $x$ contiene una elemento de la base. Por tanto, para cada $U_n$ del subcubrimiento, existe un $x_n\in U_n$. Y para cada $x_n$ se tiene que existe una bola $B_n(x_n,\epsilon_n)$ tal que $ B_n(x_n,\epsilon_n)\subset U_n$. De este modo, para cualquier $x\in X$ y cada entorno $U$ de $x$ existe una bola $B_d(x_n,\epsilon_n)$ que contiene a $x$ y está contenida en $U$ y que partenece al conjunto numerable de elementos base $\{B_d(x_n,\epsilon_n)\}_{n\in \mathbb{Z}_+}$.
+\end{document}
+
